@@ -39,10 +39,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --font-rajdhani: "Rajdhani", ui-sans-serif, system-ui, sans-serif;
+  /* --font-poppins, --font-rajdhani, and --font-carrois are set on <html>
+     by next/font in src/app/layout.tsx. */
   --font-goldie: "Goldie Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-carrois: "Carrois Gothic", ui-sans-serif, system-ui, sans-serif;
 }
 
 .dark {

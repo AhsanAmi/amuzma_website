@@ -27,7 +27,27 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "/vi/**",
+      },
     ],
+  },
+  async headers() {
+    // Static assets in public/ never change without a filename change,
+    // so let browsers and the CDN cache them for a year.
+    return [
+      {
+        source: "/:prefix(media|fonts|assets)/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [

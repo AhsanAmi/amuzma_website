@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { ExpertiseCard } from "../components/ExpertiseCard";
 
 const HERO_SLIDES = [
@@ -218,10 +219,14 @@ export function Home() {
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
           >
-            <img
+            <Image
               src={slide.image}
               alt={slide.alt}
-              className="h-full w-full object-cover object-center"
+              fill
+              priority={i === 0}
+              loading={i === 0 ? undefined : "lazy"}
+              sizes="100vw"
+              className="object-cover object-center"
             />
           </div>
         ))}
@@ -243,16 +248,20 @@ export function Home() {
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3 sm:bottom-10">
+        <div className="absolute bottom-1 left-1/2 z-10 flex -translate-x-1/2 items-center sm:bottom-7">
           {HERO_SLIDES.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
-                i === currentSlide ? "bg-[#BF1A2B]" : "bg-[#BDBDBD]"
-              }`}
-            />
+              className="flex h-6 w-6 items-center justify-center"
+            >
+              <span
+                className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
+                  i === currentSlide ? "bg-[#BF1A2B]" : "bg-[#BDBDBD]"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </section>
@@ -318,9 +327,12 @@ export function Home() {
               </div>
             </div>
             <div>
-              <img
+              <Image
                 src="/media/office-image-copy.webp"
                 alt="AMUZMA office"
+                width={1280}
+                height={853}
+                sizes="(min-width: 1024px) 640px, 100vw"
                 className="h-auto w-full object-cover"
               />
             </div>
@@ -396,7 +408,7 @@ export function Home() {
             </div>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-3">
+          <div className="mt-8 flex items-center justify-center">
             {TESTIMONIALS.map((_, i) => (
               <button
                 key={i}
@@ -406,10 +418,14 @@ export function Home() {
                   setTestimonialSlide(i);
                 }}
                 aria-label={`Go to testimonial ${i + 1}`}
-                className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
-                  i === testimonialIdx ? "bg-[#666666]" : "bg-[#D9D9D9]"
-                }`}
-              />
+                className="flex h-6 w-6 items-center justify-center"
+              >
+                <span
+                  className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
+                    i === testimonialIdx ? "bg-[#666666]" : "bg-[#D9D9D9]"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
@@ -547,13 +563,7 @@ function ProductVideoCarousel() {
             <div key={video.id} className="w-full shrink-0 px-[10px] lg:w-1/3">
               <div className="mx-auto max-w-[443px]">
                 <div className="aspect-video w-full overflow-hidden bg-black">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="h-full w-full border-0"
-                  />
+                  <YouTubeFacade videoId={video.videoId} title={video.title} />
                 </div>
                 {video.title ? (
                   <h3 className="mt-3 text-left text-[16px] font-normal leading-snug text-black">
@@ -566,20 +576,66 @@ function ProductVideoCarousel() {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-[12px]">
+      <div className="mt-6 flex items-center justify-center">
         {Array.from({ length: dotCount }).map((_, i) => (
           <button
             key={i}
             type="button"
             onClick={() => setVideoSlide(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`h-[6px] w-[6px] rounded-full transition-colors duration-300 ${
-              i === videoSlide ? "bg-black" : "bg-[#D9D9D9]"
-            }`}
-          />
+            className="flex h-6 w-6 items-center justify-center"
+          >
+            <span
+              className={`h-[6px] w-[6px] rounded-full transition-colors duration-300 ${
+                i === videoSlide ? "bg-black" : "bg-[#D9D9D9]"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
+  );
+}
+
+/**
+ * Click-to-load YouTube embed: shows only the thumbnail until the user
+ * plays it, so the heavy YouTube player JS never loads on page load.
+ */
+function YouTubeFacade({ videoId, title }: { videoId: string; title: string }) {
+  const [activated, setActivated] = useState(false);
+
+  if (activated) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="h-full w-full border-0"
+      />
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => setActivated(true)}
+      aria-label={`Play video: ${title}`}
+      className="group relative block h-full w-full cursor-pointer"
+    >
+      <Image
+        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+        alt={title}
+        fill
+        sizes="(min-width: 1024px) 33vw, 100vw"
+        className="object-cover"
+      />
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-[#C0202F]">
+          <Play size={22} fill="white" stroke="white" className="ml-1" />
+        </span>
+      </span>
+    </button>
   );
 }
 
@@ -590,9 +646,11 @@ function TestimonialCard({
 }) {
   return (
     <div className="mx-auto flex min-h-[350px] max-w-[460px] flex-col items-center bg-white p-[30px] text-center">
-      <img
+      <Image
         src={testimonial.logo}
         alt={testimonial.name}
+        width={111}
+        height={111}
         className="mb-6 h-[111px] w-[111px] object-contain"
       />
       <p className="mb-1 font-heading text-[15px] font-bold leading-normal text-black">
@@ -611,18 +669,22 @@ function TestimonialCard({
 function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
   return (
     <div className="flex flex-col border border-[#E5E5E5] bg-white">
-      <div className="flex h-[220px] items-center justify-center bg-white p-5 sm:h-[280px] sm:p-6">
-        <img
+      <div className="relative flex h-[220px] items-center justify-center bg-white p-5 sm:h-[280px] sm:p-6">
+        <Image
           src={product.image}
           alt={product.model}
-          className="max-h-full max-w-full object-contain"
+          fill
+          sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-contain p-5 sm:p-6"
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
-          <img
+          <Image
             src="/media/logoheader.jpg"
             alt="AMUZMA"
+            width={89}
+            height={20}
             className="h-5 w-auto object-contain"
           />
           <span className="text-[#D0D0D0]">|</span>
@@ -695,7 +757,7 @@ function EmailIcon() {
 }
 
 const getInTouchInputClass =
-  "h-[43px] w-full border border-[#E5E5E5] bg-white px-[14px] font-heading text-[15px] text-[#333333] placeholder:text-[#999999] focus:outline-none focus:border-[#C4C4C4]";
+  "h-[43px] w-full border border-[#E5E5E5] bg-white px-[14px] font-heading text-[15px] text-[#333333] placeholder:text-[#757575] focus:outline-none focus:border-[#C4C4C4]";
 
 function GetInTouchForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -748,6 +810,8 @@ function GetInTouchForm() {
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         className={getInTouchInputClass}
         placeholder="Name"
+        aria-label="Name"
+        autoComplete="name"
       />
       <div className="grid gap-[10px] sm:grid-cols-2">
         <input
@@ -757,6 +821,8 @@ function GetInTouchForm() {
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={getInTouchInputClass}
           placeholder="Email"
+          aria-label="Email"
+          autoComplete="email"
         />
         <input
           type="tel"
@@ -765,20 +831,27 @@ function GetInTouchForm() {
           onChange={(e) => setForm({ ...form, phone: e.target.value })}
           className={getInTouchInputClass}
           placeholder="Phone No."
+          aria-label="Phone number"
+          autoComplete="tel"
         />
       </div>
       <textarea
         required
         value={form.message}
         onChange={(e) => setForm({ ...form, message: e.target.value })}
-        className="min-h-[120px] w-full resize-y border border-[#E5E5E5] bg-white p-[14px] font-heading text-[15px] text-[#333333] placeholder:text-[#999999] focus:outline-none focus:border-[#C4C4C4]"
+        className="min-h-[120px] w-full resize-y border border-[#E5E5E5] bg-white p-[14px] font-heading text-[15px] text-[#333333] placeholder:text-[#757575] focus:outline-none focus:border-[#C4C4C4]"
         placeholder="Message"
+        aria-label="Message"
       />
       <div>
-        <p className="mb-1 font-heading text-[16px] font-normal text-black/85">
+        <label
+          htmlFor="get-in-touch-captcha"
+          className="mb-1 block font-heading text-[16px] font-normal text-black/85"
+        >
           What is 7+4?
-        </p>
+        </label>
         <input
+          id="get-in-touch-captcha"
           type="text"
           required
           value={form.captcha}

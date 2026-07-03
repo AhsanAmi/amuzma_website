@@ -43,7 +43,8 @@ export function ExpertiseCard({ title, desc, bg, video }: ExpertiseCardProps) {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
+        aria-hidden="true"
         className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-in-out ${
           hovered ? "opacity-100" : "opacity-0"
         }`}

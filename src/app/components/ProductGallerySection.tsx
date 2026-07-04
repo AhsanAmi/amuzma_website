@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Eye, FileText, X } from "lucide-react";
+import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 
 const DEFAULT_GALLERY_IMAGES = [
   "/media/cnc-1-1.webp",
@@ -18,11 +19,13 @@ const DEFAULT_PRODUCT_DESCRIPTION =
 type ProductGallerySectionProps = {
   images?: string[];
   description?: string;
+  productCataloguePdf?: string;
 };
 
 export function ProductGallerySection({
   images = DEFAULT_GALLERY_IMAGES,
   description = DEFAULT_PRODUCT_DESCRIPTION,
+  productCataloguePdf,
 }: ProductGallerySectionProps) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -152,16 +155,22 @@ export function ProductGallerySection({
                 Add to Quote
               </Link>
 
-              <a
-                href="#"
-                className="flex items-center gap-2 font-gothic text-[15px] font-normal text-black transition-opacity hover:opacity-80"
-              >
-                <FileText size={18} className="shrink-0 text-[#C0202F]" />
-                Product catalogue
-              </a>
+              {productCataloguePdf ? (
+                <a
+                  href={encodeURI(productCataloguePdf)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 font-gothic text-[15px] font-normal text-black transition-opacity hover:opacity-80"
+                >
+                  <FileText size={18} className="shrink-0 text-[#C0202F]" />
+                  Product catalogue
+                </a>
+              ) : null}
 
               <a
-                href="#"
+                href={encodeURI(FULL_CATALOGUE_PDF)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 font-gothic text-[15px] font-normal text-black transition-opacity hover:opacity-80"
               >
                 <FileText size={18} className="shrink-0 text-[#C0202F]" />

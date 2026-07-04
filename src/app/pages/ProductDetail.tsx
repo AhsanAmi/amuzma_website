@@ -10,6 +10,7 @@ import { ProductSpecificationsSection } from "../components/ProductSpecification
 import { ProductVideoContactSection } from "../components/ProductVideoContactSection";
 import { ProductPartsSection } from "../components/ProductPartsSection";
 import { SAW_PRODUCT_OVERRIDES } from "../data/sawProducts";
+import { PRODUCT_CATALOGUE_PDFS } from "../data/productDocuments";
 
 const PRODUCTS_DATA: Record<string, {
   name: string;
@@ -1507,6 +1508,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
         <ProductGallerySection
           images={product.gallery}
           description={product.galleryDescription}
+          productCataloguePdf={id ? PRODUCT_CATALOGUE_PDFS[id] : undefined}
         />
 
       </div>

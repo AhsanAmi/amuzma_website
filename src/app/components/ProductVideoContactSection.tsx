@@ -254,7 +254,7 @@ export function ProductVideoContactSection() {
               Product Video
             </h2>
             <div className="mt-6 flex-1">
-              <div className="aspect-video h-full w-full overflow-hidden bg-black lg:aspect-auto lg:min-h-[540px]">
+              <div className="aspect-video h-full min-h-0 w-full overflow-hidden bg-black lg:aspect-auto">
                 <iframe
                   src={`https://www.youtube.com/embed/${PRODUCT_VIDEO_ID}`}
                   title="Product Video"
@@ -270,7 +270,7 @@ export function ProductVideoContactSection() {
             <h2 className="font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px] sm:leading-[30px]">
               Reach Out To Us!
             </h2>
-            <div className="mt-6 flex-1 lg:min-h-[540px]">
+            <div className="mt-6">
               <ReachOutForm />
             </div>
           </div>

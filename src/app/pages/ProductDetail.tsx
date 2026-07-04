@@ -42,42 +42,42 @@ const PRODUCTS_DATA: Record<string, {
     model: "Forte 13CR",
     category: "CNC Router",
     tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
-    heroImage: "/media/CNC-13CR-1.png",
+    heroImage: "/media/CNC-13CR-1.webp",
     featuresSubtitle:
       "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
       "The FORTE 1325CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
-    dimensionsImage: "/media/CNC-13CR-scaled.png",
+    dimensionsImage: "/media/CNC-13CR-scaled.webp",
     dimensionsDescription:
       "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
     partsLabel: "Forte 1325CR",
     partsImages: [
-      "/media/CNC-01.jpg-scaled.jpeg",
-      "/media/CNC-03.jpg-scaled.jpeg",
-      "/media/CNC-04.jpg-scaled.jpeg",
-      "/media/1-1.png",
-      "/media/2-1.png",
-      "/media/3.png",
+      "/media/CNC-01.jpg-scaled.webp",
+      "/media/CNC-03.jpg-scaled.webp",
+      "/media/CNC-04.jpg-scaled.webp",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
     ],
     features: [
       {
         title: "Aluminum Profile Working",
-        image: "/media/CNC-01.jpg-scaled.jpeg",
+        image: "/media/CNC-01.jpg-scaled.webp",
         desc: "The AMUZMA FORTE 13CR is designed to deliver precise and efficient machining of aluminum profiles and components. Its rigid machine structure, high-precision motion system, and advanced CNC control technology.",
       },
       {
         title: "Air-Cooling Spindle",
-        image: "/media/CNC-03.jpg-scaled.jpeg",
+        image: "/media/CNC-03.jpg-scaled.webp",
         desc: "The AMUZMA FORTE 13CR is equipped with a high-performance Air-Cooling Spindle, designed to deliver reliable, continuous operation with excellent machining precision. The air-cooled system efficiently.",
       },
       {
         title: "DSP Handheld Controller",
-        image: "/media/CNC-04.jpg-scaled.jpeg",
+        image: "/media/CNC-04.jpg-scaled.webp",
         desc: "The AMUZMA FORTE 13CR features an advanced DSP Handheld Controller, providing simple, intuitive, and reliable machine control. Designed for ease of operation, the controller allows users to manage.",
       },
       {
         title: "Gantry Side Support",
-        image: "/media/CNC-05.jpg-scaled.jpeg",
+        image: "/media/CNC-05.jpg-scaled.webp",
         desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 1325CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
       },
     ],
@@ -85,27 +85,27 @@ const PRODUCTS_DATA: Record<string, {
       "Fast cutting and smooth motion improve workflow and output speed.",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "High Productivity",
         desc: "Fast cutting and smooth motion improve workflow and output speed.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Large Work Area",
         desc: "1300 × 2500 mm table handles full sheets easily and efficiently.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Strong Construction",
         desc: "Rigid steel frame ensures stability and long service life.",
       },
     ],
     gallery: [
       "/media/cnc-1-1.webp",
-      "/media/1-1.png",
-      "/media/2-1.png",
-      "/media/3.png",
-      "/media/4.jpg",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
+      "/media/4.webp",
     ],
     specs: [
       { label: "Working Area", value: "1300 × 2500 × 200 mm" },
@@ -134,12 +134,12 @@ const PRODUCTS_DATA: Record<string, {
     model: "Forte 15CR",
     category: "CNC Router",
     tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
-    heroImage: "/media/CNC-13CR-1.png",
+    heroImage: "/media/CNC-13CR-1.webp",
     featuresSubtitle:
       "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
       "The FORTE 1325CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
-    dimensionsImage: "/media/CNC-15CR-scaled.png",
+    dimensionsImage: "/media/CNC-15CR-scaled.webp",
     dimensionsDescription:
       "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
     partsLabel: "Forte 1325CR",
@@ -154,22 +154,22 @@ const PRODUCTS_DATA: Record<string, {
     features: [
       {
         title: "Large Working Area",
-        image: "/media/CNC-01.jpg-scaled.jpeg",
+        image: "/media/CNC-01.jpg-scaled.webp",
         desc: "The FORTE 15CR features a 1500 x 3000 mm working area, ideal for full-size sheets. It enables efficient cutting, carving, and shaping without repositioning, saving time and boosting productivity.",
       },
       {
         title: "High-Speed Performance",
-        image: "/media/CNC-03.jpg-scaled.jpeg",
+        image: "/media/CNC-03.jpg-scaled.webp",
         desc: "Designed for speed and precision, this CNC router delivers smooth, accurate performance in continuous production. Its advanced motion system ensures consistent results in woodworking, signage, and panel processing tasks.",
       },
       {
         title: "Rigid Steel Frame Build",
-        image: "/media/CNC-04.jpg-scaled.jpeg",
+        image: "/media/CNC-04.jpg-scaled.webp",
         desc: "Built with a heavy-duty steel frame, it delivers strong stability and vibration control, ensuring smooth finishes and lasting durability in industry.",
       },
       {
         title: "Precision Motion System",
-        image: "/media/CNC-05.jpg-scaled.jpeg",
+        image: "/media/CNC-05.jpg-scaled.webp",
         desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 15CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
       },
     ],
@@ -177,27 +177,27 @@ const PRODUCTS_DATA: Record<string, {
       "Fast cutting and smooth motion improve workflow and output speed.",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "High Productivity",
         desc: "Fast cutting and smooth motion improve workflow and output speed.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Large Work Area",
         desc: "1300 × 2500 mm table handles full sheets easily and efficiently.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Strong Construction",
         desc: "Rigid steel frame ensures stability and long service life.",
       },
     ],
     gallery: [
       "/media/cnc-1-1.webp",
-      "/media/1-1.png",
-      "/media/2-1.png",
-      "/media/3.png",
-      "/media/4.jpg",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
+      "/media/4.webp",
     ],
     specs: [
       { label: "Working Area", value: "1500 × 3000 × 200 mm" },
@@ -226,43 +226,43 @@ const PRODUCTS_DATA: Record<string, {
     model: "Firma 1300WS",
     category: "Sanders",
     tagline: "Precision Wide Belt Sanding for Superior Surface Finishing Performance",
-    heroImage: "/media/wide-belt-sander.png",
+    heroImage: "/media/wide-belt-sander.webp",
     featuresSubtitle:
       "1300mm capacity, powerful motor, and smooth feed control for consistent professional results.",
     galleryDescription:
       "The Wide Belt Sander Firma 1300WS delivers precision sanding for wood panels, doors, and furniture components. Its 1300mm working width, powerful motor, and adjustable feed speed ensure smooth, consistent finishes. Built with a heavy-duty frame and user-friendly controls, it's ideal for professional workshops seeking efficiency, accuracy, and reliable performance.",
-    dimensionsImage: "/media/wide_belt_sander_21.jpg-removebg-preview.png",
+    dimensionsImage: "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
     dimensionsHeading: "Wide Belt Sander Firma 1300WS:",
     dimensionsDescription:
       "Working Width: 1300 mm\nWorking Thickness: 3–110 mm\nConveyor Table Length: 2200 mm\nMachine Length: 2500 mm\nMachine Width: 2000 mm\nMachine Height: 2100 mm\nNet Weight: 2800 kg\nGross Weight: 3200 kg\n\nIf you need exact factory-certified dimensions, I can format them according to your brochure style.",
     partsLabel: "Firma 1300WS",
     partsImages: [
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
     ],
     features: [
       {
         title: "Wide Capacity",
-        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.png",
+        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.webp",
         desc: "Handles panels up to 1300mm wide with consistent sanding pressure, making it ideal for doors, cabinets, tabletops, and large furniture components requiring smooth and even surface finishing.",
       },
       {
         title: "Powerful Motor",
-        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.png",
+        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.webp",
         desc: "Equipped with a high-performance motor that delivers stable torque and reliable output, ensuring efficient material removal and smooth operation even during continuous industrial workloads.",
       },
       {
         title: "Adjustable Feed",
-        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.png",
+        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.webp",
         desc: "Variable feed speed control allows precise adjustment based on material type and sanding requirements, improving finish quality while optimizing productivity and reducing material waste.",
       },
       {
         title: "Heavy-Duty Frame",
-        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.png",
+        image: "/media/wide_belt_sander_21.jpg-removebg-preview-600x414-1.webp",
         desc: "Robust machine construction minimizes vibration, enhances stability, and ensures long-term durability, making it a dependable solution for professional woodworking workshops and production lines.",
       },
     ],
@@ -270,24 +270,24 @@ const PRODUCTS_DATA: Record<string, {
       "Key Benefits of Wide Belt Sander Firma 1300WS",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Superior Surface Finish",
         desc: "Delivers smooth, even sanding results that reduce the need for rework and ensure high-quality finishing on panels, doors, and furniture components.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Increased Productivity",
         desc: "Wide 1300mm capacity and efficient material removal speed up production, allowing workshops to process more pieces in less time.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Consistent Performance",
         desc: "Stable motor power and controlled feed speed maintain uniform sanding pressure for reliable, repeatable results.",
       },
     ],
     gallery: [
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
-      "/media/wide_belt_sander_21.jpg-removebg-preview.png",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
+      "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
     ],
     specs: [
       { label: "Conveyor Belt Width", value: "240 mm" },
@@ -303,12 +303,12 @@ const PRODUCTS_DATA: Record<string, {
     ],
     videoId: "YD5zLrIn_AI",
     parts: [
-      { name: "Sanding Belt Unit", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
-      { name: "Main Motor", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
-      { name: "Conveyor Feed System", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
-      { name: "Adjustment System", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
-      { name: "Dust Extraction Port", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
-      { name: "Control Panel", image: "/media/wide_belt_sander_21.jpg-removebg-preview.png" },
+      { name: "Sanding Belt Unit", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
+      { name: "Main Motor", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
+      { name: "Conveyor Feed System", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
+      { name: "Adjustment System", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
+      { name: "Dust Extraction Port", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
+      { name: "Control Panel", image: "/media/wide_belt_sander_21.jpg-removebg-preview.webp" },
     ],
   },
 };
@@ -329,7 +329,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "DUST COLLECTOR",
     model: "DC2200",
     category: "Dust Collector",
-    heroImage: "/media/New-Project-28.jpg",
+    heroImage: "/media/New-Project-28.webp",
     heroImageClassName: "object-cover object-center origin-center scale-[1.11]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
@@ -337,39 +337,39 @@ const ADDITIONAL_PRODUCTS: Record<
     features: [
       {
         title: "3-Way Intake Manifold",
-        image: "/media/1-4.png",
+        image: "/media/1-4.webp",
         desc: "Delivers consistent and efficient airflow to effectively capture fine dust and wood chips, ensuring a cleaner and safer workspace during daily operations.",
       },
       {
         title: "Y-Shaped Distribution",
-        image: "/media/2-4.png",
+        image: "/media/2-4.webp",
         desc: "Designed with a small footprint, making it ideal for workshops with limited space without compromising extraction performance.",
       },
       {
         title: "Filter Bag",
-        image: "/media/3-3.png",
+        image: "/media/3-3.webp",
         desc: "Built with sturdy materials for long-lasting reliability, even in light to moderate continuous workshop use.",
       },
       {
         title: "Magnetic Safety Switch",
-        image: "/media/4-4.jpg",
+        image: "/media/4-4.webp",
         desc: "Features a user-friendly collection bag setup that allows quick removal and replacement for minimal downtime.",
       },
     ],
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Cleaner Work Environment",
         desc: "Effectively removes fine dust and wood chips, keeping the workspace clean and reducing airborne particles.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Improved Safety",
         desc: "Helps maintain better air quality, creating a safer and healthier environment for operators and students.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Excellence",
         desc: "Compact design saves valuable workshop space while still delivering strong extraction performance.",
       },
@@ -377,49 +377,49 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The Dust Collector DC2200 is designed to deliver powerful and consistent dust extraction for professional woodworking environments. Featuring a multi-stage filtration system, large-capacity collection unit, and high-performance motor, it ensures efficient removal of fine particles and heavy debris. Its durable construction, balanced airflow design, and easy maintenance system support long-term reliability, improved air quality, and safer workshop operations.",
     gallery: [
-      "/media/Dust-Collector-DC2200-scaled.jpg",
-      "/media/1-4.png",
-      "/media/2-4.png",
-      "/media/3-3.png",
-      "/media/4-4.jpg",
+      "/media/Dust-Collector-DC2200-scaled.webp",
+      "/media/1-4.webp",
+      "/media/2-4.webp",
+      "/media/3-3.webp",
+      "/media/4-4.webp",
     ],
-    dimensionsImage: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+    dimensionsImage: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
     dimensionsHeading: "Clear dimensional",
     dimensionsDescription:
       "The Dust Collector DC2200 is designed with practical and space-efficient dimensions to ensure easy installation and seamless integration into workshop environments. Its balanced structure allows stable positioning while maintaining optimal airflow performance. The compact yet durable build makes it suitable for both small and large production facilities.",
     partsSectionTitle: "Product Image",
     partsImages: [
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
-      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
+      "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
     ],
     parts: [
       {
         name: "frist one J1",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
       {
         name: "frist one J2",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
       {
         name: "frist one J3",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
       {
         name: "frist one J4",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
       {
         name: "frist one J5",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
       {
         name: "frist one J6",
-        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.png",
+        image: "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp",
       },
     ],
   },
@@ -427,7 +427,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "DUST COLLECTOR",
     model: "ABS5000",
     category: "Dust Collector",
-    heroImage: "/media/New-Project-30.jpg",
+    heroImage: "/media/New-Project-30.webp",
     heroHeightClassName:
       "h-[420px] sm:h-[475px] md:h-[530px] lg:h-[570px]",
     heroImageClassName:
@@ -438,22 +438,22 @@ const ADDITIONAL_PRODUCTS: Record<
     features: [
       {
         title: "Motor with Magnetic Safe",
-        image: "/media/1-3.png",
+        image: "/media/1-3.webp",
         desc: "The ABS5000 dust collector provides strong suction capacity to remove dust, wood particles, and fine waste quickly. It keeps the workspace clean and improves overall machine performance and safety.",
       },
       {
         title: "Multi-Port Intake Manifold",
-        image: "/media/2-3.png",
+        image: "/media/2-3.webp",
         desc: "This machine is built with high-quality steel material for long-lasting durability. Its strong body ensures reliable performance in industrial environments and continuous operation without damage.",
       },
       {
         title: "Filter Bags",
-        image: "/media/3-2.png",
+        image: "/media/3-2.webp",
         desc: "The ABS5000 comes with a large filter bag and dust collection bag. It captures fine dust particles effectively and improves air quality, creating a healthier and safer working environment.",
       },
       {
         title: "Swivel Casters",
-        image: "/media/4-3.jpg",
+        image: "/media/4-3.webp",
         desc: "The dust collector has wheels for easy movement within the workshop. Its simple design allows quick bag replacement and easy maintenance, saving time and effort for users.",
       },
     ],
@@ -461,17 +461,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Improves Air Quality",
         desc: "The dust collector efficiently removes fine dust particles from the air, keeping the workspace clean, fresh, and healthy for daily operations.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Increases Machine Life",
         desc: "By capturing harmful dust and airborne particles, it reduces health risks and creates a safer working environment for employees.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Reduces Cleaning Time",
         desc: "Regular dust removal prevents dust buildup inside machines, reducing wear and tear and extending equipment lifespan.",
       },
@@ -479,49 +479,49 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The DUST COLLECTOR – ABS5000 is a high-performance industrial dust extraction system designed for efficient and reliable operation. Featuring dual vertical filter bags and large-capacity dust collection units, it ensures superior filtration and clean air circulation. Its heavy-duty steel frame provides durability and stability, while the powerful motor unit delivers strong suction performance. The compact vertical design saves workspace area, making it ideal for woodworking units, manufacturing plants, and industrial workshops requiring continuous dust control and operational efficiency.",
     gallery: [
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/1-3.png",
-      "/media/2-3.png",
-      "/media/3-2.png",
-      "/media/4-3.jpg",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/1-3.webp",
+      "/media/2-3.webp",
+      "/media/3-2.webp",
+      "/media/4-3.webp",
     ],
-    dimensionsImage: "/media/DSC_2375-removebg-preview-2.png",
+    dimensionsImage: "/media/DSC_2375-removebg-preview-2.webp",
     dimensionsHeading: "Dust Reduction",
     dimensionsDescription:
       "The ABS5000 dust collector efficiently removes airborne dust, fine particles, and industrial waste generated during machine operation. Its powerful suction system ensures cleaner air circulation, reduces dust accumulation on equipment, and improves workplace safety.",
     partsSectionTitle: "Product Images",
     partsImages: [
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/DSC_2375-removebg-preview-2.png",
-      "/media/DSC_2375-removebg-preview-2.png",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/DSC_2375-removebg-preview-2.webp",
+      "/media/DSC_2375-removebg-preview-2.webp",
     ],
     parts: [
       {
         name: "Dual Filter Bag System",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
       {
         name: "High-Capacity Dust Collection",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
       {
         name: "Heavy-Duty Steel Structure",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
       {
         name: "Powerful Motor Unit",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
       {
         name: "Compact Vertical Design",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
       {
         name: "Industrial-Grade Performance",
-        image: "/media/DSC_2375-removebg-preview-2.png",
+        image: "/media/DSC_2375-removebg-preview-2.webp",
       },
     ],
   },
@@ -540,22 +540,22 @@ const ADDITIONAL_PRODUCTS: Record<
     features: [
       {
         title: "Motor with Magnetic",
-        image: "/media/1-2.png",
+        image: "/media/1-2.webp",
         desc: "Engineered to fit in small workshop spaces without sacrificing suction power, making it ideal for benchtop tools and multiple workstations.",
       },
       {
         title: "Reinforced Base",
-        image: "/media/2-2.png",
+        image: "/media/2-2.webp",
         desc: "Delivers robust airflow and suction performance to capture dust and chips effectively from saws, sanders, planers, routers, and other shop equipment.",
       },
       {
         title: "High-Efficiency Filter Bag",
-        image: "/media/3-1.png",
+        image: "/media/3-1.webp",
         desc: "Built with sturdy steel housing and durable components that withstand daily use in demanding environments.",
       },
       {
         title: "Multi-Port Intake Manifold",
-        image: "/media/4-2.jpg",
+        image: "/media/4-2.webp",
         desc: "The dust and chips are collected in a convenient bin or bag that's simple to remove and empty — minimizing downtime during use.",
       },
     ],
@@ -563,17 +563,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Reliable for daily workshop operations",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Keeps Your Workspace",
         desc: "The RDC3800 efficiently captures dust and debris from your tools, preventing buildup on floors and surfaces. A cleaner workspace reduces hazards.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Reduces Wear on Tools",
         desc: "Consistently removing dust and chips, the RDC3800 prevents abrasive particles from settling on machinery.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Improves Air Quality",
         desc: "High-efficiency filtration traps even microscopic dust, preventing it from circulating in your workshop. Cleaner air protects your lungs, reduces.",
       },
@@ -581,49 +581,49 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The RDC3800 is designed for small to mid-sized workshops, providing consistent dust and chip removal while keeping your workspace clean. Its durable build, efficient filtration, and easy maintenance make it suitable for everyday workshop use.",
     gallery: [
-      "/media/Dusy-Collector-RDC3800.png",
-      "/media/1-2.png",
-      "/media/2-2.png",
-      "/media/3-1.png",
-      "/media/4-2.jpg",
+      "/media/Dusy-Collector-RDC3800.webp",
+      "/media/1-2.webp",
+      "/media/2-2.webp",
+      "/media/3-1.webp",
+      "/media/4-2.webp",
     ],
-    dimensionsImage: "/media/Dusy-Collector-RDC3800.png",
+    dimensionsImage: "/media/Dusy-Collector-RDC3800.webp",
     dimensionsHeading: "Dust Reduction",
     dimensionsDescription:
       "The RDC3800 is a compact yet powerful dust collector engineered to deliver efficient dust and chip extraction for small to mid-sized workshops. Designed with performance and reliability at its core, it strikes the perfect balance between strong suction power and convenient portability—keeping your workspace cleaner and your equipment operating smoothly.",
     partsSectionTitle: "Product Images",
     partsImages: [
-      "/media/Dusy-Collector-RDC3800-1.png",
-      "/media/Dusy-Collector-RDC3800-1.png",
-      "/media/Dusy-Collector-RDC3800-1.png",
-      "/media/Dusy-Collector-RDC3800-1.png",
-      "/media/Dusy-Collector-RDC3800-1.png",
-      "/media/Dusy-Collector-RDC3800-1.png",
+      "/media/Dusy-Collector-RDC3800-1.webp",
+      "/media/Dusy-Collector-RDC3800-1.webp",
+      "/media/Dusy-Collector-RDC3800-1.webp",
+      "/media/Dusy-Collector-RDC3800-1.webp",
+      "/media/Dusy-Collector-RDC3800-1.webp",
+      "/media/Dusy-Collector-RDC3800-1.webp",
     ],
     parts: [
       {
         name: "High-Efficiency Dust",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
       {
         name: "Dust Extraction System",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
       {
         name: "Powerful Workshop",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
       {
         name: "Compact Industrial",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
       {
         name: "Reliable Dust Extraction",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
       {
         name: "Heavy-Duty Dust",
-        image: "/media/Dusy-Collector-RDC3800-1.png",
+        image: "/media/Dusy-Collector-RDC3800-1.webp",
       },
     ],
   },
@@ -632,28 +632,28 @@ const ADDITIONAL_PRODUCTS: Record<
     model: "Elite 30SM",
     category: "Moulder",
     tagline: "Precision Engineering. Built for the Professional Workshop.",
-    heroImage: "/media/Spindle-moulder-30SM.png",
+    heroImage: "/media/Spindle-moulder-30SM.webp",
     featuresSubtitle:
       "High-performance spindle moulder with precision, durability, and smooth operation for professional woodworking tasks.",
     features: [
       {
         title: "Heavy-Duty Construction",
-        image: "/media/frist-one-J4-1.jpg",
+        image: "/media/frist-one-J4-1.webp",
         desc: "Built with a precision-ground cast iron bed, the Elite 30SM offers exceptional durability and stability. Its robust construction ensures long-term reliability, supporting heavy workloads without compromising performance.",
       },
       {
         title: "Precision Cutting",
-        image: "/media/frist-one-J3-1.jpg",
+        image: "/media/frist-one-J3-1.webp",
         desc: "Engineered for accurate shaping and profiling, this spindle moulder delivers consistent, clean cuts. The precision components maintain exact tolerances, allowing professional-grade results on hardwoods.",
       },
       {
         title: "Smooth Operation",
-        image: "/media/frist-one-J2-1.jpg",
+        image: "/media/frist-one-J2-1.webp",
         desc: "The Elite 30SM provides vibration-free, stable operation. Its balanced spindle and rigid frame reduce operator strain and improve control, ensuring effortless, consistent performance during long production cycles.",
       },
       {
         title: "Versatile Shaping",
-        image: "/media/frist-one-J1-1.jpg",
+        image: "/media/frist-one-J1-1.webp",
         desc: "Perfect for joinery, moldings, and custom profiles, this machine handles a variety of woodworking tasks. It adapts easily to different cutters and materials, making it ideal for diverse shop applications.",
       },
     ],
@@ -662,17 +662,17 @@ const ADDITIONAL_PRODUCTS: Record<
       "The Elite 30SM spindle moulder offers durable, precise, and stable performance.",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Long-Term Durability",
         desc: "Heavy-duty cast iron bed ensures reliable performance over years of use.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Precision Cutting",
         desc: "Precision-ground components deliver consistent, accurate shaping and profiling results.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Smooth Operation",
         desc: "Vibration-free design reduces operator fatigue and ensures stable, controlled work.",
       },
@@ -680,48 +680,48 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "Elite 30SM is a high-performance spindle moulder designed for precise shaping, smooth cutting, and reliable operation, making it ideal for professional furniture and woodworking applications.",
     gallery: [
-      "/media/Untitled-design-12-1.png",
-      "/media/frist-one-J3-1.jpg",
-      "/media/frist-one-J4-1.jpg",
-      "/media/frist-one-J1-1.jpg",
-      "/media/frist-one-J2-1.jpg",
+      "/media/Untitled-design-12-1.webp",
+      "/media/frist-one-J3-1.webp",
+      "/media/frist-one-J4-1.webp",
+      "/media/frist-one-J1-1.webp",
+      "/media/frist-one-J2-1.webp",
     ],
-    dimensionsImage: "/media/Spindle-Moulder-01-scaled.png",
+    dimensionsImage: "/media/Spindle-Moulder-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Elite 30SM features a compact yet sturdy structure designed for workshop efficiency, ensuring stable operation, optimal space utilization, and easy installation without compromising performance or durability.",
     partsImages: [
-      "/media/frist-one-J1-1.jpg",
-      "/media/frist-one-J2-1.jpg",
-      "/media/frist-one-J3-1.jpg",
-      "/media/frist-one-J4-1.jpg",
-      "/media/frist-one-J3-1.jpg",
-      "/media/frist-one-J4-1.jpg",
+      "/media/frist-one-J1-1.webp",
+      "/media/frist-one-J2-1.webp",
+      "/media/frist-one-J3-1.webp",
+      "/media/frist-one-J4-1.webp",
+      "/media/frist-one-J3-1.webp",
+      "/media/frist-one-J4-1.webp",
     ],
     parts: [
       {
         name: "Elite 30SM Pro",
-        image: "/media/frist-one-J1-1.jpg",
+        image: "/media/frist-one-J1-1.webp",
       },
       {
         name: "Elite 30SM Advance",
-        image: "/media/frist-one-J2-1.jpg",
+        image: "/media/frist-one-J2-1.webp",
       },
       {
         name: "Elite 30SM Industrial",
-        image: "/media/frist-one-J3-1.jpg",
+        image: "/media/frist-one-J3-1.webp",
       },
       {
         name: "Elite 30SM Master",
-        image: "/media/frist-one-J4-1.jpg",
+        image: "/media/frist-one-J4-1.webp",
       },
       {
         name: "Elite 30SM Pricison",
-        image: "/media/frist-one-J3-1.jpg",
+        image: "/media/frist-one-J3-1.webp",
       },
       {
         name: "Elite 30SM Master",
-        image: "/media/frist-one-J4-1.jpg",
+        image: "/media/frist-one-J4-1.webp",
       },
     ],
   },
@@ -729,7 +729,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "E5",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.png",
+    heroImage: "/media/Edge-banding.webp",
     tagline: "Precision Edging. Compact Design. Professional Finish.",
     featuresSubtitle:
       "The Edge Banding E5 delivers precise, efficient edge finishing for compact professional workshops.",
@@ -760,17 +760,17 @@ const ADDITIONAL_PRODUCTS: Record<
       "Boost productivity, ensure flawless edge quality, and simplify operations",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Faster Production",
         desc: "Boosts workflow speed while maintaining consistent quality output.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Perfect Edge Finish",
         desc: "Ensures smooth, seamless edges with a clean professional look.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Easy Operation",
         desc: "User-friendly controls simplify setup and daily machine use.",
       },
@@ -778,13 +778,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The Panel Saw 12″Elite 35TS is the perfect solution for workshops that demand precision cutting without sacrificing valuable floor space. Designed as a compact yet fully featured panel saw, it offers the performance and build quality of a full-sized machine in a space-efficient footprint.Built on a robust, heavy-gauge steel chassis, the 35TS delivers exceptional durability and stability. Its generous grey cast iron table and true panel saw trunnion system ensure smooth, vibration-free operation — providing clean, accurate cuts every time.Whether you're sizing panels or working with solid timber, the Elite 35TS brings professional-grade performance to any workshop, big or small.",
     gallery: [
-      "/media/Untitled-design-9.png",
+      "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
-      "/media/Amuzma-E5-5-2.png",
+      "/media/Amuzma-E5-5-2.webp",
     ],
-    dimensionsImage: "/media/Edge-banding-E5-01-scaled.png",
+    dimensionsImage: "/media/Edge-banding-E5-01-scaled.webp",
     dimensionsHeading: "Compact & Efficient",
     dimensionsDescription:
       "Here's a professional way to present machine dimensions (you can adjust numbers as per your actual model):Machine Dimensions Length: 4200 mm Width: 900 mm Height: 1600 mmWorking Height 850 mmNet Weight 1500 kgIf you share the exact model (Firma 150ATC or Amuzma P6), I can format the precise technical dimension section accordingly.",
@@ -801,14 +801,14 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "P6",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.png",
+    heroImage: "/media/Edge-banding.webp",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
     features: [
       {
         title: "PLC Touchscreen Control",
-        image: "/media/4-1.jpg",
+        image: "/media/4-1.webp",
         desc: "Equipped with a high-performance gluing unit, Elite P6 ensures strong and uniform adhesive application for secure edge bonding and long-lasting durability.",
       },
       {
@@ -831,17 +831,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Flawless Edge Quality",
         desc: "Elite P6 ensures perfectly bonded edges with precise trimming and finishing units, delivering a clean, seamless appearance.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Increased Production",
         desc: "With its stable feeding system and optimized operating speed, the Elite P6 reduces manual effort and production time.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Long-Term Reliability",
         desc: "Constructed with durable components and advanced engineering, Elite P6 offers dependable operation, reduced maintenance needs.",
       },
@@ -849,13 +849,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "Elite E6 is a high-performance edge banding machine designed for precision, efficiency, and durability. It delivers smooth edge bonding, accurate trimming, and reliable operation for professional woodworking environments.",
     gallery: [
-      "/media/Untitled-design-9.png",
+      "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
       "/media/Amuzma-E5-1-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
     ],
-    dimensionsImage: "/media/Edge-banding-P6-01-scaled.png",
+    dimensionsImage: "/media/Edge-banding-P6-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "The Elite P6 is designed with balanced and space-efficient dimensions to ensure easy installation and seamless integration into professional workshop layouts. Its optimized structure supports stable operation while maximizing available workspace efficiency.",
@@ -873,29 +873,29 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "Edge Banding",
     model: "C7",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.png",
+    heroImage: "/media/Edge-banding.webp",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
     features: [
       {
         title: "Precision Gluing",
-        image: "/media/Amuzma-E5-2.png",
+        image: "/media/Amuzma-E5-2.webp",
         desc: "Advanced gluing system ensures strong and uniform adhesive application, providing secure edge bonding and long-lasting durability for furniture panels and board materials",
       },
       {
         title: "Clean Trimming",
-        image: "/media/Amuzma-E5-4.png",
+        image: "/media/Amuzma-E5-4-opt.webp",
         desc: "Equipped with accurate trimming units, the C7 delivers smooth and precise edge finishing, reducing manual rework and enhancing overall product appearance.",
       },
       {
         title: "Efficient Operation",
-        image: "/media/Amuzma-E5-3.png",
+        image: "/media/Amuzma-E5-3.webp",
         desc: "Designed for high productivity, the machine supports continuous edge banding with consistent speed, improving workflow efficiency.",
       },
       {
         title: "Stable Structure",
-        image: "/media/Amuzma-E5-5.png",
+        image: "/media/Amuzma-E5-5.webp",
         desc: "Built with a robust frame and vibration-resistant design, the Edge Banding C7 ensures reliable performance, operational stability.",
       },
     ],
@@ -903,43 +903,43 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Precision",
         desc: "The Edge Banding C7 improves production efficiency by delivering strong edge bonding, smooth finishing, and consistent performance, reducing manually.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Efficiency",
         desc: "Combines planing and thicknessing functions in one machine, reducing workflow time, saving space, and improving overall workshop productivity.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Durability",
         desc: "Built with a heavy-duty structure and reliable components, providing long-lasting performance and stable operation even during continuous industrial.",
       },
     ],
     galleryDescription:
       "The Edge Banding C7 is a high-performance machine designed for precise and efficient edge finishing. It delivers strong adhesive bonding, smooth trimming, and clean finishing, ensuring professional-quality results for furniture manufacturing and panel processing applications.",
-    gallery: ["/media/Untitled-design-9.png"],
-    dimensionsImage: "/media/Amuzma-E5-2.png",
+    gallery: ["/media/Untitled-design-9.webp"],
+    dimensionsImage: "/media/Amuzma-E5-2.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Designed with a compact yet robust structure, the Edge Banding C7 offers optimized dimensions that ensure space efficiency, operational stability, and smooth integration into professional woodworking production setups.",
     partsSectionTitle: "Product Image",
     parts: [
-      { name: "EdgeLine C7 Industrial", image: "/media/Amuzma-E5-5.png" },
-      { name: "EdgeMaster C7 Pro", image: "/media/Amuzma-E5-2.png" },
-      { name: "ProEdge C7 Series", image: "/media/Amuzma-E5-4.png" },
-      { name: "EdgeCraft C7", image: "/media/Amuzma-E5-3.png" },
-      { name: "UltraBond C7", image: "/media/Amuzma-E5-5.png" },
-      { name: "SmartEdge C7 Pro", image: "/media/Amuzma-E5-4.png" },
+      { name: "EdgeLine C7 Industrial", image: "/media/Amuzma-E5-5.webp" },
+      { name: "EdgeMaster C7 Pro", image: "/media/Amuzma-E5-2.webp" },
+      { name: "ProEdge C7 Series", image: "/media/Amuzma-E5-4-opt.webp" },
+      { name: "EdgeCraft C7", image: "/media/Amuzma-E5-3.webp" },
+      { name: "UltraBond C7", image: "/media/Amuzma-E5-5.webp" },
+      { name: "SmartEdge C7 Pro", image: "/media/Amuzma-E5-4-opt.webp" },
     ],
   },
   "planer-elite-41pf": {
     name: "PLANER",
     model: "Elite 41PF",
     category: "Planer",
-    heroImage: "/media/Planer-41PF-1.png",
+    heroImage: "/media/Planer-41PF-1.webp",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle: "Precision Cutting. Powerful Performance",
     features: [
@@ -968,17 +968,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Planer Elite 41PF – Durability and Comfort",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Precision Planing",
         desc: "Elite 41PF ensures accurate and consistent wood thickness, providing smooth surfaces every time. Its adjustable cutting depth allows professional.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Enhanced Productivity",
         desc: "With a heavy-duty motor and high-efficiency operation, Elite 41PF speeds up workflow, reduces downtime, and allows woodworkers to complete tasks.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Durability and Comfort",
         desc: "Designed for industrial use, Elite 41PF combines robust construction with ergonomic features, ensuring long-lasting performance, operator comfort.",
       },
@@ -986,13 +986,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "Elite 41PF provides precise wood planing, smooth finishes, and consistent thickness. Durable design and powerful motor ensure high efficiency, reliability, and professional-grade performance for woodworking and industrial applications.",
     gallery: [
-      "/media/Planer-16-Elite-41PF-profile.jpg",
+      "/media/Planer-16-Elite-41PF-profile.webp",
       "/media/pf3-1.webp",
       "/media/pf4-1.webp",
       "/media/pf2.webp",
       "/media/pf11-2.webp",
     ],
-    dimensionsImage: "/media/Planner-41PF-03-scaled.png",
+    dimensionsImage: "/media/Planner-41PF-03-scaled.webp",
     dimensionsHeading: "Planing Blades",
     dimensionsDescription:
       "Elite 41PF features high-quality, durable planing blades that ensure smooth, precise cuts. Designed for professional woodworking, these blades provide consistent surface finish and long-lasting performance for all types of wood.",
@@ -1004,7 +1004,7 @@ const ADDITIONAL_PRODUCTS: Record<
       { name: "Panel Saw Machine", image: "/media/pf11.webp" },
       {
         name: "Panel Saw Equipment",
-        image: "/media/Planer-16-Elite-41PF-profile-J-L-3.jpg",
+        image: "/media/Planer-16-Elite-41PF-profile-J-L-3.webp",
       },
       { name: "Industrial Panel Saw", image: "/media/pf3.webp" },
     ],
@@ -1014,7 +1014,7 @@ const ADDITIONAL_PRODUCTS: Record<
     model: "Elite 41CM/CS",
     category: "Planer",
     heroImage:
-      "/media/Thicknesser-41CM.png",
+      "/media/Thicknesser-41CM.webp",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1044,17 +1044,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Precision",
         desc: "Provides precise thickness calibration and smooth finishing for consistent, high-quality woodworking results.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Efficiency",
         desc: "Combines planing and thicknessing functions in one machine, reducing workflow time, saving space, and improving overall workshop productivity.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Durability",
         desc: "Built with a heavy-duty structure and reliable components, providing long-lasting performance and stable operation even during continuous industrial.",
       },
@@ -1062,13 +1062,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "Elite 41CS / CM Planer & Thicknesser is a powerful and versatile woodworking machine designed for precise surface planing and accurate thickness calibration, ensuring smooth finishes and consistent material dimensions.",
     gallery: [
-      "/media/Untitled-design-13-1.png",
+      "/media/Untitled-design-13-1.webp",
       "/media/Planer-Thicknesser-16-Elite-41CS-profile-J-L-1-1.webp",
       "/media/Planer-Thicknesser-16-Elite-41CS-profile-J-L-2.webp",
       "/media/Planer-Thicknesser-16-Elite-41CS-profile-J-L-3.webp",
       "/media/Planer-Thicknesser-16-Elite-41CS-profile-J-L-4.webp",
     ],
-    dimensionsImage: "/media/Thicknesser-and-planner-41CS-02-scaled.png",
+    dimensionsImage: "/media/Thicknesser-and-planner-41CS-02-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Elite 41CS / CM features a space-efficient yet heavy-duty design, ensuring stable operation, easy installation, and optimal workspace utilization without compromising machining accuracy or performance.",
@@ -1104,7 +1104,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "THICKNESSER",
     model: "Elite 41TH",
     category: "Planer",
-    heroImage: "/media/IMG_9016.jpeg",
+    heroImage: "/media/IMG_9016.webp",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1116,17 +1116,17 @@ const ADDITIONAL_PRODUCTS: Record<
       },
       {
         title: "Power Feed Roller Assembl",
-        image: "/media/Thicknesser-25-Elite-41th-2.jpg",
+        image: "/media/Thicknesser-25-Elite-41th-2.webp",
         desc: "Designed for accurate thickness calibration, this machine ensures uniform material removal and smooth surface finishing, helping achieve precise dimensions for professional woodworking projects.",
       },
       {
         title: "Table Height Handwheel",
-        image: "/media/Thicknesser-25-Elite-41th-3.jpg",
+        image: "/media/Thicknesser-25-Elite-41th-3-opt.webp",
         desc: "Equipped with a high-speed cutter block, the Elite 41TH provides clean, sharp cuts with reduced vibration, improving surface quality and enhancing overall machining efficiency.",
       },
       {
         title: "Cast-Iron Table",
-        image: "/media/Thicknesser-25-Elite-41th-4.jpg",
+        image: "/media/Thicknesser-25-Elite-41th-4.webp",
         desc: "Featuring a strong and well-balanced table structure, it ensures stable material feeding, minimizes movement during operation.",
       },
     ],
@@ -1134,17 +1134,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Precision",
         desc: "Provides precise thickness calibration and smooth finishing for consistent, high-quality woodworking results.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Efficiency",
         desc: "Combines planing and thicknessing functions in one machine, reducing workflow time, saving space, and improving overall workshop productivity.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Durability",
         desc: "Built with a heavy-duty structure and reliable components, providing long-lasting performance and stable operation even during continuous industrial.",
       },
@@ -1152,13 +1152,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The Elite 41TH is a high-performance thicknesser designed for precise material calibration and smooth surface finishing. Built with robust construction and reliable cutting power, it ensures consistent thickness accuracy and professional woodworking results.",
     gallery: [
-      "/media/Untitled-design-14.png",
-      "/media/Thicknesser-25-Elite-41th-1.jpg",
-      "/media/Thicknesser-25-Elite-41th-3.jpg",
-      "/media/Thicknesser-25-Elite-41th-2.jpg",
-      "/media/Thicknesser-25-Elite-41th-4.jpg",
+      "/media/Untitled-design-14.webp",
+      "/media/Thicknesser-25-Elite-41th-1-opt.webp",
+      "/media/Thicknesser-25-Elite-41th-3-opt.webp",
+      "/media/Thicknesser-25-Elite-41th-2.webp",
+      "/media/Thicknesser-25-Elite-41th-4.webp",
     ],
-    dimensionsImage: "/media/Thicknesser-41th-04-scaled.png",
+    dimensionsImage: "/media/Thicknesser-41th-04-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Designed with a compact yet robust structure, the Elite 41TH offers optimized dimensions that ensure workspace efficiency while maintaining stability, strength, and smooth operational performance.",
@@ -1166,7 +1166,7 @@ const ADDITIONAL_PRODUCTS: Record<
     parts: [
       {
         name: "Elite 41TH Precision",
-        image: "/media/Thicknesser-25-Elite-41th-1.jpg",
+        image: "/media/Thicknesser-25-Elite-41th-1-opt.webp",
       },
       {
         name: "ProCut 41 Industrial",
@@ -1174,7 +1174,7 @@ const ADDITIONAL_PRODUCTS: Record<
       },
       {
         name: "Titan 41 Wood Thickness",
-        image: "/media/Thicknesser-25-Elite-41th-3-1.jpg",
+        image: "/media/Thicknesser-25-Elite-41th-3-1.webp",
       },
       {
         name: "MaxPlaner 41 Heavy-Duty",
@@ -1194,7 +1194,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "THICKNESSER",
     model: "Firma 63TH",
     category: "Planer",
-    heroImage: "/media/63th.png",
+    heroImage: "/media/63th.webp",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1224,17 +1224,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Precision",
         desc: "Provides precise thickness calibration and smooth finishing for consistent, high-quality woodworking results.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Efficiency",
         desc: "Combines planing and thicknessing functions in one machine, reducing workflow time, saving space, and improving overall workshop productivity.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Durability",
         desc: "Built with a heavy-duty structure and reliable components, providing long-lasting performance and stable operation even during continuous industrial.",
       },
@@ -1242,13 +1242,13 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "The Firma 63TH is a high-capacity industrial thicknesser engineered for demanding production workshops. Its precision spiral cutter head, sound-insulated cabinet, and heavy-duty thicknessing bed deliver consistent calibration, superior surface finish, and reliable performance on wide workpieces.",
     gallery: [
-      "/media/Untitled-design-15.png",
+      "/media/Untitled-design-15.webp",
       "/media/Thicknesser-25-Firma-63TH-J1.webp",
       "/media/Thicknesser-25-Firma-63TH-J2.webp",
       "/media/Thicknesser-25-Firma-63TH-J3.webp",
       "/media/Thicknesser-25-Firma-63TH-J4.webp",
     ],
-    dimensionsImage: "/media/Thicknesser-63th-05-scaled.png",
+    dimensionsImage: "/media/Thicknesser-63th-05-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Designed with a compact yet robust structure, the Elite 41TH offers optimized dimensions that ensure workspace efficiency while maintaining stability, strength, and smooth operational performance.",
@@ -1266,7 +1266,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "VENEER DOOR PRESS",
     model: "P 100T",
     category: "Pressing",
-    heroImage: "/media/Veneer-Door-Press.png",
+    heroImage: "/media/Veneer-Door-Press.webp",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
@@ -1296,17 +1296,17 @@ const ADDITIONAL_PRODUCTS: Record<
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "High Press Capacity",
         desc: "Equipped with a powerful 100-ton hydraulic system, ensuring uniform and strong bonding across veneer doors for durable and high-quality production results.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Uniform Pressure",
         desc: "Advanced hydraulic design provides even pressure across the entire panel surface, preventing bubbles, gaps, or uneven bonding during veneer pressing.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Heavy-Duty Structure",
         desc: "Built with a rigid steel frame construction for maximum stability, vibration resistance, and long-term industrial performance in demanding production environments.",
       },
@@ -1314,30 +1314,30 @@ const ADDITIONAL_PRODUCTS: Record<
     galleryDescription:
       "Veneer Door Press P 100T is a high-performance edge banding machine designed for precision, efficiency, and durability. It delivers smooth edge bonding, accurate trimming, and reliable operation for professional woodworking environments.",
     gallery: [
-      "/media/Untitled-design-11.png",
+      "/media/Untitled-design-11.webp",
       "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
       "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp",
       "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
     ],
-    dimensionsImage: "/media/Veneer-Door-Press-1.png",
+    dimensionsImage: "/media/Veneer-Door-Press-1.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Designed with a robust industrial structure, the P 100T offers optimized dimensions for efficient veneer door pressing while maintaining stability, strength, and smooth operational performance in commercial production environments.",
     partsSectionTitle: "Product Image",
     partsImages: [
-      "/media/Untitled-design-11.png",
+      "/media/Untitled-design-11.webp",
       "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
       "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp",
       "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
-      "/media/Untitled-design-11.png",
+      "/media/Untitled-design-11.webp",
       "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
     ],
     parts: [
-      { name: "PressMaster 100T", image: "/media/Untitled-design-11.png" },
+      { name: "PressMaster 100T", image: "/media/Untitled-design-11.webp" },
       { name: "VeneerPro 100T", image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp" },
       { name: "HydroPress P100", image: "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp" },
       { name: "DoorBond 100T", image: "/media/185573b1-4a69-419c-9489-394dab282514-1.webp" },
-      { name: "UltraPress 100T", image: "/media/Untitled-design-11.png" },
+      { name: "UltraPress 100T", image: "/media/Untitled-design-11.webp" },
       { name: "PowerPlaten P100", image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp" },
     ],
   },

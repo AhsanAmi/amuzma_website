@@ -4,7 +4,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const SAW_PRODUCTS = [
   {
-    image: "/media/img48.png",
+    image: "/media/img48.webp",
     model: "65 BS",
     name: "Band Saw",
     specs: [
@@ -15,7 +15,7 @@ const SAW_PRODUCTS = [
     detailsHref: "/products/band-saw-65bs",
   },
   {
-    image: "/media/img49.png",
+    image: "/media/img49.webp",
     model: "Firma 40PL",
     name: "Panel Saw",
     specs: [
@@ -26,7 +26,7 @@ const SAW_PRODUCTS = [
     detailsHref: "/products/panel-saw-firma-40pl",
   },
   {
-    image: "/media/img.png",
+    image: "/media/img.webp",
     model: "Firma 35PS",
     name: "Panel Saw",
     specs: [
@@ -37,7 +37,7 @@ const SAW_PRODUCTS = [
     detailsHref: "/products/panel-saw-firma-35ps",
   },
   {
-    image: "/media/img2.png",
+    image: "/media/img2.webp",
     model: "Forte 40PK",
     name: "Panel Saw",
     specs: [
@@ -48,7 +48,7 @@ const SAW_PRODUCTS = [
     detailsHref: "/products/panel-saw-forte-40pa",
   },
   {
-    image: "/media/img3.png",
+    image: "/media/img3.webp",
     model: "Elite 35TS",
     name: "Panel Saw",
     specs: [
@@ -77,7 +77,7 @@ function ProductCard({
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <img
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             className="h-5 w-auto object-contain"
           />

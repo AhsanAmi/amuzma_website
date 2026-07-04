@@ -3,7 +3,7 @@ import Link from "next/link";
 const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const SANDER_PRODUCT = {
-  image: "/media/sander.png",
+  image: "/media/sander.webp",
   model: "1300WS",
   name: "Wide Belt Sander",
   specs: [
@@ -47,7 +47,7 @@ export function Sanders() {
               <div className="flex flex-1 flex-col p-5 pt-4">
                 <div className="mb-2 flex items-center gap-2">
                   <img
-                    src="/media/logoheader.jpg"
+                    src="/media/logoheader.webp"
                     alt="AMUZMA"
                     className="h-5 w-auto object-contain"
                   />

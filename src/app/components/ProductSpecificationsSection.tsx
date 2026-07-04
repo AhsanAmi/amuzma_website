@@ -474,7 +474,7 @@ function ColumnTab({
 
 export function ProductSpecificationsSection({
   productId = "cnc-router-forte-13cr",
-  dimensionsImage = "/media/CNC-13CR-scaled.png",
+  dimensionsImage = "/media/CNC-13CR-scaled.webp",
   dimensionsHeading = "Machine Dimensions & Working Area",
   dimensionsDescription = "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
 }: {

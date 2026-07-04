@@ -2,15 +2,16 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, Eye, FileText, X } from "lucide-react";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 
 const DEFAULT_GALLERY_IMAGES = [
   "/media/cnc-1-1.webp",
-  "/media/1-1.png",
-  "/media/2-1.png",
-  "/media/3.png",
-  "/media/4.jpg",
+  "/media/1-1.webp",
+  "/media/2-1.webp",
+  "/media/3.webp",
+  "/media/4.webp",
 ];
 
 const DEFAULT_PRODUCT_DESCRIPTION =
@@ -96,12 +97,14 @@ export function ProductGallerySection({
               onMouseMove={handleMouseMove}
             >
               <div className="relative aspect-[4/3] w-full">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   key={activeImage}
                   src={activeImage}
                   alt="Product gallery"
-                  className="h-full w-full object-contain transition-transform duration-100 ease-out"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-contain transition-transform duration-100 ease-out"
                   style={{
                     transform: zooming ? "scale(2.2)" : "scale(1)",
                     transformOrigin: `${zoomOrigin.x}% ${zoomOrigin.y}%`,
@@ -131,10 +134,11 @@ export function ProductGallerySection({
                   aria-label={`View gallery image ${index + 1}`}
                   aria-current={index === activeIdx ? "true" : undefined}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={image}
                     alt=""
+                    width={72}
+                    height={72}
                     className="h-full w-full object-cover"
                   />
                 </button>
@@ -211,12 +215,13 @@ export function ProductGallerySection({
           </button>
 
           <div className="relative h-[75vh] w-[90vw] max-w-5xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               key={activeImage}
               src={activeImage}
               alt="Product gallery enlarged"
-              className="h-full w-full object-contain"
+              fill
+              sizes="90vw"
+              className="object-contain"
             />
           </div>
 

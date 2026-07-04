@@ -4,7 +4,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const CNC_PRODUCTS = [
   {
-    image: "/media/34.png",
+    image: "/media/34.webp",
     model: "FORTE 13CR",
     name: "CNC Router",
     specs: [
@@ -15,7 +15,7 @@ const CNC_PRODUCTS = [
     detailsHref: "/products/cnc-router-forte-13cr",
   },
   {
-    image: "/media/img34.png",
+    image: "/media/img34.webp",
     model: "FORTE 15CR",
     name: "CNC Router",
     specs: [
@@ -44,7 +44,7 @@ function ProductCard({
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <img
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             className="h-5 w-auto object-contain"
           />

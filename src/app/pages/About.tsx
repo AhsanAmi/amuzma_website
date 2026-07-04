@@ -61,7 +61,7 @@ export function About() {
 
           <div className="flex shrink-0 justify-center lg:-translate-x-[10%] lg:justify-start lg:pl-[10%]">
             <img
-              src="/media/New-Project-57.jpg"
+              src="/media/New-Project-57.webp"
               alt="Asif Javed – Founder & CEO"
               className="h-auto w-full max-w-[609px] object-contain lg:max-w-[668px]"
             />

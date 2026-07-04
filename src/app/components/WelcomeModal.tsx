@@ -68,7 +68,7 @@ export function WelcomeModal() {
         <div className="relative max-h-[85vh] overflow-y-auto rounded-[10px] border-2 border-[#4F4F4F] bg-white px-5 py-7 shadow-[4px_6px_18px_rgba(0,0,0,0.22)] sm:px-12 sm:py-11">
           <div className="mb-6 flex justify-center sm:mb-9">
             <Image
-              src="/media/logoheader.jpg"
+              src="/media/logoheader.webp"
               alt="AMUZMA"
               width={230}
               height={52}

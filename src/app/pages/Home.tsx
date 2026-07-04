@@ -9,17 +9,17 @@ import { ExpertiseCard } from "../components/ExpertiseCard";
 const HERO_SLIDES = [
   {
     id: 1,
-    image: "/media/Web-Front-Dubai-Exhibition-02.jpeg",
+    image: "/media/Web-Front-Dubai-Exhibition-02.webp",
     alt: "AMUZMA at the Dubai Woodshow — Dubai World Trade Center",
   },
   {
     id: 2,
-    image: "/media/homepageslide1.jpg",
+    image: "/media/homepageslide1.webp",
     alt: "You know what counts — Your safety",
   },
   {
     id: 3,
-    image: "/media/homepageslide2.jpg",
+    image: "/media/homepageslide2.webp",
     alt: "You know what counts — Your passion",
   },
 ];
@@ -34,7 +34,7 @@ const COUNTERS = [
 const FACILITIES = [
   {
     id: 1,
-    image: "/media/Band-Saw-16-Elite-65BS-.png",
+    image: "/media/Band-Saw-16-Elite-65BS-.webp",
     category: "BAND SAW",
     model: "Elite 65BS",
     specs: [
@@ -46,7 +46,7 @@ const FACILITIES = [
   },
   {
     id: 2,
-    image: "/media/E5-finalist.png",
+    image: "/media/E5-finalist.webp",
     category: "EDGE BANDING",
     model: "E5",
     specs: [
@@ -58,7 +58,7 @@ const FACILITIES = [
   },
   {
     id: 3,
-    image: "/media/Panel-Saw-Firma-35PS-1-1-1.png",
+    image: "/media/Panel-Saw-Firma-35PS-1-1-1.webp",
     category: "PANEL SAW",
     model: "Firma 40PL",
     specs: [
@@ -681,7 +681,7 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <Image
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             width={89}
             height={20}

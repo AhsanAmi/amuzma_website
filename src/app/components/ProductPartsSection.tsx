@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const DEFAULT_PART_IMAGES = [
-  "/media/CNC-01.jpg-scaled.jpeg",
-  "/media/CNC-03.jpg-scaled.jpeg",
-  "/media/CNC-04.jpg-scaled.jpeg",
-  "/media/1-1.png",
-  "/media/2-1.png",
-  "/media/3.png",
+  "/media/CNC-01.jpg-scaled.webp",
+  "/media/CNC-03.jpg-scaled.webp",
+  "/media/CNC-04.jpg-scaled.webp",
+  "/media/1-1.webp",
+  "/media/2-1.webp",
+  "/media/3.webp",
 ];
 
 export function ProductPartsSection({
@@ -40,10 +41,11 @@ export function ProductPartsSection({
           {items.map((item, index) => (
             <div key={`${item.name}-${index}`} className="p-[10px]">
               <div className="group overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
+                  width={220}
+                  height={140}
                   className="mx-auto h-[130px] w-full object-contain object-bottom transition-transform duration-300 ease-out group-hover:scale-110 sm:h-[140px]"
                 />
               </div>

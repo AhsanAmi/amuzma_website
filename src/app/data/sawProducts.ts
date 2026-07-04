@@ -18,10 +18,10 @@ type SpecConfig = {
 };
 
 const MATERIAL_ICONS = [
-  "/media/New-Project-9.png",
-  "/media/New-Project-10.png",
-  "/media/New-Project-11.png",
-  "/media/New-Project-12.png",
+  "/media/New-Project-9.webp",
+  "/media/New-Project-10.webp",
+  "/media/New-Project-11.webp",
+  "/media/New-Project-12.webp",
 ];
 
 function materialTabs(
@@ -36,28 +36,28 @@ function materialTabs(
       heading: "Aluminium Cutting Performance",
       description: aluminium,
       icon: MATERIAL_ICONS[0],
-      image: "/media/material_aluminium.jpg",
+      image: "/media/material_aluminium.webp",
     },
     {
       label: "Solid Wood",
       heading: "Solid Wood Processing",
       description: solidWood,
       icon: MATERIAL_ICONS[1],
-      image: "/media/Solid-Wood.jpg",
+      image: "/media/Solid-Wood.webp",
     },
     {
       label: "Plastic",
       heading: "Plastic Processing",
       description: plastic,
       icon: MATERIAL_ICONS[2],
-      image: "/media/material_kunststoff_.jpg",
+      image: "/media/material_kunststoff_.webp",
     },
     {
       label: "Panel Processing",
       heading: "Panel Processing",
       description: panel,
       icon: MATERIAL_ICONS[3],
-      image: "/media/material_platten.jpg",
+      image: "/media/material_platten.webp",
     },
   ];
 }
@@ -67,7 +67,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "BAND SAW",
     model: "Elite 65BS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-Band-Saw.jpg",
+    heroImage: "/media/amuzma-web-banners-for-Band-Saw.webp",
     tagline: "Powerful Performance. Precision Control. Built for Professionals.",
     featuresSubtitle:
       "The AMUZMA Elite 65BS is a heavy-duty industrial band saw engineered for precision cutting, exceptional stability, and long-lasting reliability.",
@@ -97,17 +97,17 @@ export const SAW_PRODUCT_OVERRIDES = {
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Flawless Edge Quality",
         desc: "Equipped with a strong motor system that ensures consistent cutting power for hardwood, softwood, and heavy-duty industrial tasks.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Increased Production",
         desc: "Delivers accurate and smooth cutting performance for straight, curved, and detailed woodworking applications with minimal material wastage.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Long-Term Reliability",
         desc: "Heavy-duty frame construction reduces vibration, ensuring safer operation, better control, and long-lasting machine durability.",
       },
@@ -115,13 +115,13 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Band Saw 65BS is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
     gallery: [
-      "/media/Band-Saw-16-Elite-65BS-finlist.png",
+      "/media/Band-Saw-16-Elite-65BS-finlist.webp",
       "/media/Band-Saw-16-Elite-65BS-Important-J1.webp",
       "/media/Band-Saw-16-Elite-65BS-Important-J2.webp",
       "/media/Band-Saw-16-Elite-65BS-Important-J3.webp",
       "/media/Band-Saw-16-Elite-65BS-Important-J4.webp",
     ],
-    dimensionsImage: "/media/Band-Saw-65BS-01-scaled.png",
+    dimensionsImage: "/media/Band-Saw-65BS-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "Net/Gross Weight: 323/359 Kgs. Wooden box package size: 1119×777×2070 mm.",
@@ -147,29 +147,29 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Firma 40PL",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-40PL.jpg",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-40PL.webp",
     tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
     featuresSubtitle:
       "The Panel Saw Firma 40PL is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
     features: [
       {
         title: "Handle and Control Panel",
-        image: "/media/Panel-Saw-Elite-40PL-frist-one-J1.jpg",
+        image: "/media/Panel-Saw-Elite-40PL-frist-one-J1.webp",
         desc: "The Firma 40PL Panel Saw ensures precise, clean cuts on plywood, MDF, and laminated boards, delivering smooth edges, accuracy, and consistent performance for professional woodworking applications.",
       },
       {
         title: "Overhead Saw Blade Guard",
-        image: "/media/Panel-Saw-Elite-40PL-frist-one-J2.jpg",
+        image: "/media/Panel-Saw-Elite-40PL-frist-one-J2.webp",
         desc: "Equipped with a powerful motor, the Firma 40PL delivers stable cutting performance, supports continuous operation, and improves productivity while maintaining efficiency, reliability, and smooth cutting results.",
       },
       {
         title: "Handwheel for Blade Tilt",
-        image: "/media/Panel-Saw-Elite-40PL-frist-one-J3.jpg",
+        image: "/media/Panel-Saw-Elite-40PL-frist-one-J3.webp",
         desc: "The robust and vibration-free construction provides excellent stability during operation, ensuring safe usage, long service life, reduced maintenance, and consistent cutting accuracy in demanding environments.",
       },
       {
         title: "Scoring Blade Adjustment",
-        image: "/media/Panel-Saw-Elite-40PL-frist-one-J4.jpg",
+        image: "/media/Panel-Saw-Elite-40PL-frist-one-J4.webp",
         desc: "The precision sliding table allows easy panel movement, improves operator control, enhances cutting efficiency, reduces effort, and ensures smooth, accurate handling of large materials safely.",
       },
     ],
@@ -177,17 +177,17 @@ export const SAW_PRODUCT_OVERRIDES = {
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Increases Production",
         desc: "Enhances workflow speed with powerful motor and smooth sliding system, allowing faster panel processing, increased productivity, and improved.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Reduces Material Wastage",
         desc: "Accurate cutting minimizes material loss, optimizes panel usage, lowers production costs, and improves efficiency by ensuring precise measurements.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Easy Operation",
         desc: "User-friendly controls and accessible components simplify operation and maintenance, reducing operator effort, saving time, and ensuring smooth.",
       },
@@ -195,39 +195,39 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Firma 40PL Panel Saw delivers precise, smooth, and efficient panel cutting with powerful performance, durable construction, and reliable operation for professional woodworking and industrial applications.",
     gallery: [
-      "/media/Untitled-design-17.png",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J2.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J3.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J4.jpg",
+      "/media/Untitled-design-17.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J2.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J3.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J4.webp",
     ],
-    dimensionsImage: "/media/Panel-Saw-40PL-01-scaled.png",
+    dimensionsImage: "/media/Panel-Saw-40PL-01-scaled.webp",
     dimensionsHeading: "Precision Cutting Performance",
     dimensionsDescription:
       "The Firma 40PL Panel Saw delivers precise, smooth cutting performance with powerful motor, durable construction, and advanced sliding system, ensuring efficient, reliable, and professional woodworking operations.",
     partsSectionTitle: "Product Images",
     partsImages: [
-      "/media/Panel-Saw-Elite-40PL-frist-one-J1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.jpg",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.webp",
     ],
     parts: [
-      { name: "Firma 40PL Panel Saw", image: "/media/Panel-Saw-Elite-40PL-frist-one-J1.jpg" },
-      { name: "Precision Sliding", image: "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.jpg" },
-      { name: "Panel Saw System", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg" },
-      { name: "Panel Saw Machine", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg" },
-      { name: "Panel Saw Equipment", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.jpg" },
-      { name: "Industrial Panel Saw", image: "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.jpg" },
+      { name: "Firma 40PL Panel Saw", image: "/media/Panel-Saw-Elite-40PL-frist-one-J1.webp" },
+      { name: "Precision Sliding", image: "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.webp" },
+      { name: "Panel Saw System", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp" },
+      { name: "Panel Saw Machine", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp" },
+      { name: "Panel Saw Equipment", image: "/media/Panel-Saw-Elite-40PL-frist-one-J3-1.webp" },
+      { name: "Industrial Panel Saw", image: "/media/Panel-Saw-Elite-40PL-frist-one-J2-1.webp" },
     ],
   },
   "panel-saw-firma-35ps": {
     name: "PANEL SAW",
     model: "Firma 35PS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-35PS-final-1.jpg",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-35PS-final-1.webp",
     tagline: "Professional Performance. Precision Cutting. Built to Last.",
     featuresSubtitle:
       "The Amuzma Firma 35PS is a compact yet powerful panel saw designed to deliver exceptional accuracy and reliability for professional woodworking.",
@@ -257,17 +257,17 @@ export const SAW_PRODUCT_OVERRIDES = {
     benefitsSubtitle: "",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Space Saving Build",
         desc: "Compact design saves space while delivering powerful cutting performance.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "High Cut Accuracy",
         desc: "Ensures straight, clean cuts with stable and repeatable precision.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Smooth Operation",
         desc: "Motorized blade rise allows easy, effortless and efficient cutting control.",
       },
@@ -275,12 +275,12 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Panel Saw Firma 35PS is a compact, high-performance panel saw designed for small to medium-sized workshops that require precise and efficient panel cutting. Despite its space-saving footprint, it delivers the power, accuracy, and features of a full-size industrial machine. Capable of cutting panels up to 3200mm in length, the 35PS is ideal for cabinetry, furniture making, and general woodworking. It comes standard with a motorized blade rise, making operation smooth and effortless — even during long production runs.",
     gallery: [
-      "/media/Untitled-design-18.png",
+      "/media/Untitled-design-18.webp",
       "/media/Panel-Saw-Firma-35PS-frist-one-J2-1.webp",
-      "/media/Panel-Saw-Firma-35PS-frist-one-J1-1-removebg-preview.png",
-      "/media/Panel-Saw-Elite-40PL-frist-one-J4.jpg",
+      "/media/Panel-Saw-Firma-35PS-frist-one-J1-1-removebg-preview.webp",
+      "/media/Panel-Saw-Elite-40PL-frist-one-J4.webp",
     ],
-    dimensionsImage: "/media/Panel-Saw-Firma-35PS-04-scaled.png",
+    dimensionsImage: "/media/Panel-Saw-Firma-35PS-04-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "The Panel Saw Firma 35PS is designed for a compact yet efficient footprint, ideal for workshops of all sizes. Its overall dimensions are approximately 3400 mm (Length) × 3700 mm (Width) × 1300 mm (Height), providing ample workspace while maintaining stability. The sliding table measures around 1600 × 360 mm, and the main table is 910 × 550 mm, ensuring smooth panel handling and precise cuts.",
@@ -306,29 +306,29 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Forte 40PA",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-FORTE-40PA-finlisted-scaled.jpg",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-FORTE-40PA-finlisted-scaled.webp",
     tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
     featuresSubtitle:
       "The Panel Saw Forte 40PA is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
     features: [
       {
         title: "Digital Readout (DRO)",
-        image: "/media/Panel-Saw-Elite-40PA-profile-1.png",
+        image: "/media/Panel-Saw-Elite-40PA-profile-1.webp",
         desc: "The Forte 40PA is equipped with an advanced Digital Measurement System for precise and reliable fence positioning. Featuring a clear LCD display, the system allows operators to make fast and accurate adjustments.",
       },
       {
         title: "Outrigger Table",
-        image: "/media/Panel-Saw-Elite-40PA-profile-2.png",
+        image: "/media/Panel-Saw-Elite-40PA-profile-2.webp",
         desc: "The Forte 40PA features an advanced Motorised Cross-Cut Table with 4th Axis control, designed for fast, accurate, and efficient rectangular cutting operations. the system automatically positions the saw blades.",
       },
       {
         title: "Overhead Saw Blade Guard",
-        image: "/media/Panel-Saw-Elite-40PA-profile-3.png",
+        image: "/media/Panel-Saw-Elite-40PA-profile-3.webp",
         desc: "The Forte 40PA features a fully integrated Scoring Saw System designed to deliver exceptional cutting precision and operator convenience.",
       },
       {
         title: "Carriage Handle",
-        image: "/media/Panel-Saw-Elite-40PA-profile-4.png",
+        image: "/media/Panel-Saw-Elite-40PA-profile-4.webp",
         desc: "The Forte 40PA is equipped with a robust Sliding Table Lock System designed to provide maximum stability, safety, and precision during cutting operations.",
       },
     ],
@@ -336,17 +336,17 @@ export const SAW_PRODUCT_OVERRIDES = {
     benefitsSubtitle: "Power, Precision, Profitability",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Flawless Edge Quality",
         desc: "Equipped with a strong motor system that ensures consistent cutting power for hardwood, softwood, and heavy-duty industrial tasks.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Increased Production",
         desc: "Delivers accurate and smooth cutting performance for straight, curved, and detailed woodworking applications with minimal material wastage.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Long-Term Reliability",
         desc: "Heavy-duty frame construction reduces vibration, ensuring safer operation, better control, and long-lasting machine durability.",
       },
@@ -354,38 +354,38 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Panel saw Forte 40PA is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
     gallery: [
-      "/media/Panel-Saw-Elite-40PA-profile-5.png",
-      "/media/Panel-Saw-Elite-40PA-profile-1.png",
-      "/media/Panel-Saw-Elite-40PA-profile-2.png",
-      "/media/Panel-Saw-Elite-40PA-profile-3.png",
-      "/media/Panel-Saw-Elite-40PA-profile-4.png",
+      "/media/Panel-Saw-Elite-40PA-profile-5.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-1.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-2.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-3.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-4.webp",
     ],
-    dimensionsImage: "/media/PANEL-SAW-Forte-40PA-04-scaled.png",
+    dimensionsImage: "/media/PANEL-SAW-Forte-40PA-04-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription: "",
     partsSectionTitle: "Product Image",
     partsImages: [
-      "/media/Panel-Saw-Elite-40PA-profile-1.png",
-      "/media/Panel-Saw-Elite-40PA-profile-2.png",
-      "/media/Panel-Saw-Elite-40PA-profile-3.png",
-      "/media/Panel-Saw-Elite-40PA-profile-4.png",
-      "/media/Panel-Saw-Elite-40PA-profile-5.png",
-      "/media/Panel-Saw-Elite-40PA-profile.png",
+      "/media/Panel-Saw-Elite-40PA-profile-1.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-2.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-3.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-4.webp",
+      "/media/Panel-Saw-Elite-40PA-profile-5.webp",
+      "/media/Panel-Saw-Elite-40PA-profile.webp",
     ],
     parts: [
-      { name: "UltraSaw 65", image: "/media/Panel-Saw-Elite-40PA-profile-1.png" },
-      { name: "PowerCut 65BS", image: "/media/Panel-Saw-Elite-40PA-profile-2.png" },
-      { name: "ProBand 65", image: "/media/Panel-Saw-Elite-40PA-profile-3.png" },
-      { name: "MasterCut 65", image: "/media/Panel-Saw-Elite-40PA-profile-4.png" },
-      { name: "PrecisionSaw 65", image: "/media/Panel-Saw-Elite-40PA-profile-5.png" },
-      { name: "HeavyBand 65", image: "/media/Panel-Saw-Elite-40PA-profile.png" },
+      { name: "UltraSaw 65", image: "/media/Panel-Saw-Elite-40PA-profile-1.webp" },
+      { name: "PowerCut 65BS", image: "/media/Panel-Saw-Elite-40PA-profile-2.webp" },
+      { name: "ProBand 65", image: "/media/Panel-Saw-Elite-40PA-profile-3.webp" },
+      { name: "MasterCut 65", image: "/media/Panel-Saw-Elite-40PA-profile-4.webp" },
+      { name: "PrecisionSaw 65", image: "/media/Panel-Saw-Elite-40PA-profile-5.webp" },
+      { name: "HeavyBand 65", image: "/media/Panel-Saw-Elite-40PA-profile.webp" },
     ],
   },
   "panel-saw-elite-35ts": {
     name: "PANEL SAW",
     model: "Elite 35TS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-Panel-Saw-12-Elite-35TS.jpg",
+    heroImage: "/media/amuzma-web-banners-for-Panel-Saw-12-Elite-35TS.webp",
     tagline: "Compact Size. Industrial Performance. Precision You Can Trust.",
     featuresSubtitle:
       "The Amuzma Elite 35TS is a compact yet fully featured panel saw, designed for professional woodworkers who need exceptional cutting performance.",
@@ -415,17 +415,17 @@ export const SAW_PRODUCT_OVERRIDES = {
     benefitsSubtitle: "",
     benefits: [
       {
-        icon: "/media/Untitled-design-7.png",
+        icon: "/media/Untitled-design-7.webp",
         title: "Space Optimization",
         desc: "Compact footprint saves valuable workshop floor space while delivering full panel saw capability and uncompromised cutting performance.",
       },
       {
-        icon: "/media/Untitled-design-5.png",
+        icon: "/media/Untitled-design-5.webp",
         title: "Superior Cutting Accuracy",
         desc: "Advanced trunnion system and cast iron table ensure stable operation, reduced vibration, and consistently precise cutting results.",
       },
       {
-        icon: "/media/Untitled-design-6.png",
+        icon: "/media/Untitled-design-6.webp",
         title: "Long-Term Durability",
         desc: "Heavy-gauge steel construction provides exceptional strength, reliability, and long-lasting performance in demanding professional workshop environment",
       },
@@ -433,13 +433,13 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Panel Saw 12 Elite 35TS combines compact workshop footprint with full industrial panel saw capability, delivering precise, repeatable cuts for professional woodworking production.",
     gallery: [
-      "/media/Untitled-design-20.png",
+      "/media/Untitled-design-20.webp",
       "/media/frist-one-J11.webp",
       "/media/frist-one-J2.webp",
       "/media/frist-one-J3.webp",
       "/media/frist-one-J4.webp",
     ],
-    dimensionsImage: "/media/Panel-Saw-Elite-35TS-03-scaled.png",
+    dimensionsImage: "/media/Panel-Saw-Elite-35TS-03-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "For the Panel Saw 12″ Elite 35TS, typical machine overall dimensions (comparable to similar industrial panel saw models) are approximately: Machine Dimensions (L × W × H): ≈ 3400 × 3700 × 1300 mm (Length × Width × Height). These dimensions reflect a standard sliding table panel saw layout that supports large panel handling while fitting into a professional workshop space.",

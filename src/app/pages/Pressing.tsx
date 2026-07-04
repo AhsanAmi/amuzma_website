@@ -3,7 +3,7 @@ import Link from "next/link";
 const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const PRESS_PRODUCT = {
-  image: "/media/img42-1.png",
+  image: "/media/img42-1.webp",
   model: "P 100T",
   name: "Veneer Door Press",
   specs: [
@@ -47,7 +47,7 @@ export function Pressing() {
               <div className="flex flex-1 flex-col p-5 pt-4">
                 <div className="mb-2 flex items-center gap-2">
                   <img
-                    src="/media/logoheader.jpg"
+                    src="/media/logoheader.webp"
                     alt="AMUZMA"
                     className="h-5 w-auto object-contain"
                   />

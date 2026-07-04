@@ -14,7 +14,7 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <img
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             className="h-5 w-auto object-contain"
           />

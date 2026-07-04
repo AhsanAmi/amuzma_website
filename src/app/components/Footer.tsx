@@ -17,32 +17,32 @@ const SOCIAL_LINKS = [
   {
     href: "https://www.facebook.com/amuzmamachinery/",
     label: "Facebook",
-    icon: "/media/footer-social-facebook.png",
+    icon: "/media/footer-social-facebook.webp",
   },
   {
     href: "https://www.instagram.com/amuzmamachinery/",
     label: "Instagram",
-    icon: "/media/footer-social-instagram.png",
+    icon: "/media/footer-social-instagram.webp",
   },
   {
     href: "https://www.linkedin.com/company/amuzma-machinery/",
     label: "LinkedIn",
-    icon: "/media/footer-social-linkedin.png",
+    icon: "/media/footer-social-linkedin.webp",
   },
   {
     href: "https://www.youtube.com/@AmuzmaMachinery",
     label: "YouTube",
-    icon: "/media/footer-social-youtube.png",
+    icon: "/media/footer-social-youtube.webp",
   },
   {
     href: "https://www.tiktok.com/@amuzma.official",
     label: "TikTok",
-    icon: "/media/footer-social-tiktok.png",
+    icon: "/media/footer-social-tiktok.webp",
   },
   {
     href: "https://x.com/amuzma_uae",
     label: "X",
-    icon: "/media/footer-social-x.png",
+    icon: "/media/footer-social-x.webp",
   },
 ];
 

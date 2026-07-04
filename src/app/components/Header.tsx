@@ -227,7 +227,7 @@ export function Header() {
           onClick={closeMenu}
         >
           <Image
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             width={258}
             height={58}

@@ -4,7 +4,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const PLANER_PRODUCTS = [
   {
-    image: "/media/img44-1.png",
+    image: "/media/img44-1.webp",
     model: "Elite 41PF",
     name: "Planer",
     specs: [
@@ -15,7 +15,7 @@ const PLANER_PRODUCTS = [
     detailsHref: "/products/planer-elite-41pf",
   },
   {
-    image: "/media/img45.png",
+    image: "/media/img45.webp",
     model: "Elite 41CM/CS",
     name: "Planer & Thicknesser",
     specs: [
@@ -26,7 +26,7 @@ const PLANER_PRODUCTS = [
     detailsHref: "/products/planer-elite-41cm-cs",
   },
   {
-    image: "/media/img46.png",
+    image: "/media/img46.webp",
     model: "Elite 41TH",
     name: "Thicknesser",
     specs: [
@@ -37,7 +37,7 @@ const PLANER_PRODUCTS = [
     detailsHref: "/products/thicknesser-elite-41th",
   },
   {
-    image: "/media/img47.png",
+    image: "/media/img47.webp",
     model: "Firma 63TH",
     name: "Thicknesser",
     specs: [
@@ -66,7 +66,7 @@ function ProductCard({
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <img
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             className="h-5 w-auto object-contain"
           />

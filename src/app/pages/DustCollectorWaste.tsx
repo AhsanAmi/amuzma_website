@@ -4,7 +4,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const DUST_COLLECTOR_PRODUCTS = [
   {
-    image: "/media/img36.png",
+    image: "/media/img36.webp",
     model: "DC2200",
     name: "Dust Collector",
     specs: [
@@ -15,7 +15,7 @@ const DUST_COLLECTOR_PRODUCTS = [
     detailsHref: "/products/dust-collector-dc2200",
   },
   {
-    image: "/media/img37.png",
+    image: "/media/img37.webp",
     model: "ABS5000",
     name: "Dust Collector",
     specs: [
@@ -26,7 +26,7 @@ const DUST_COLLECTOR_PRODUCTS = [
     detailsHref: "/products/dust-collector-abs5000",
   },
   {
-    image: "/media/img38-1.png",
+    image: "/media/img38-1.webp",
     model: "RDC3800",
     name: "Dust Collector",
     specs: [
@@ -55,7 +55,7 @@ function ProductCard({
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
           <img
-            src="/media/logoheader.jpg"
+            src="/media/logoheader.webp"
             alt="AMUZMA"
             className="h-5 w-auto object-contain"
           />

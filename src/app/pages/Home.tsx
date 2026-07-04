@@ -92,7 +92,7 @@ const EXPERTISE = [
     title: "Edge Banding",
     desc: "High-performance edge banding machines deliver seamless finishes, strong adhesion, precise trimming, enhanced durability, and premium aesthetics for modern furniture manufacturing needs.",
     bg: "#FBAD12",
-    video: { src: "/media/CNC Router AMUZMA.mp4" },
+    video: { src: "/media/CNC Router AMUZMA optimized.mp4" },
   },
   {
     title: "CNC Router",

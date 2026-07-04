@@ -402,13 +402,14 @@ export function Home() {
             accurate cutting, smooth surfaces, detailed shaping, and flawless finishing.
           </p>
           <div className="grid gap-[3px] sm:grid-cols-2 lg:grid-cols-4">
-            {EXPERTISE.map((item) => (
+            {EXPERTISE.map((item, index) => (
               <ExpertiseCard
                 key={item.title}
                 title={item.title}
                 desc={item.desc}
                 bg={item.bg}
                 video={item.video}
+                loadDelayMs={index * 250}
               />
             ))}
           </div>

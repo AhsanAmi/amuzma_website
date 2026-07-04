@@ -10,7 +10,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { useQuoteCart } from "../context/QuoteCartContext";
 
 const headerTextClass =
-  "font-heading font-medium text-[21.6px] text-[#333333] hover:text-[#BF1A2B] transition-colors";
+  "font-heading font-medium text-[17px] text-[#333333] transition-colors hover:text-[#BF1A2B] lg:text-[18px] xl:text-[20px] 2xl:text-[21.6px]";
 
 const COMPANY_RED = "#BF1A2B";
 const COMPANY_GREEN = "#75A14F";
@@ -192,9 +192,9 @@ export function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-white">
-      <div className="relative flex h-[64px] w-full items-center justify-between px-4 sm:px-6 lg:h-[92.16px] lg:px-24 xl:px-36 2xl:px-48">
+      <div className="relative grid h-[64px] w-full grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:h-[92.16px] lg:px-10 xl:px-16 2xl:px-24">
         {/* Left Nav */}
-        <nav className="hidden lg:flex items-center gap-[57.6px]">
+        <nav className="col-start-1 row-start-1 hidden min-w-0 items-center gap-6 justify-self-start lg:flex xl:gap-10 2xl:gap-14">
           <button
             ref={companyRef}
             type="button"
@@ -225,7 +225,7 @@ export function Header() {
         {/* Center Logo */}
         <Link
           href="/"
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex-shrink-0"
+          className="col-start-2 row-start-1 flex-shrink-0 justify-self-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16"
           onClick={closeMenu}
         >
           <Image
@@ -234,12 +234,12 @@ export function Header() {
             width={258}
             height={58}
             priority
-            className="h-[42px] w-auto object-contain lg:h-[58.08px]"
+            className="h-[38px] w-auto object-contain sm:h-[42px] lg:h-[50px] xl:h-[54px] 2xl:h-[58px]"
           />
         </Link>
 
         {/* Right Actions */}
-        <div className="hidden lg:flex items-center gap-[34.56px]">
+        <div className="col-start-3 row-start-1 hidden min-w-0 items-center gap-5 justify-self-end lg:flex xl:gap-7 2xl:gap-9">
           <button
             onClick={() => router.push("/quote")}
             className={headerTextClass}
@@ -267,7 +267,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden ml-auto flex h-11 w-11 items-center justify-center text-[#333333]"
+          className="col-start-3 row-start-1 ml-auto flex h-11 w-11 items-center justify-center justify-self-end text-[#333333] lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >

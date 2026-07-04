@@ -133,9 +133,9 @@ export function FooterWithRedPanel() {
   return (
     <footer>
       <div className="flex flex-col lg:flex-row lg:items-stretch">
-        <div className="flex-1 bg-[#F0F1F1] px-6 pb-12 pt-14 lg:px-0 lg:pb-14 lg:pl-[55px] lg:pr-10 lg:pt-16">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:max-w-[1040px] lg:gap-x-24 lg:gap-y-0">
-            <div className="py-5">
+        <div className="flex-1 bg-[#F0F1F1] px-6 pb-7 pt-7 lg:px-0 lg:pb-7 lg:pl-[55px] lg:pr-8 lg:pt-7">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-x-10 lg:gap-y-0">
+            <div className="py-1">
               <p className={FOOTER_HEADING_CLASS}>Quick Links</p>
               <ul className="space-y-0">
                 <li>
@@ -148,7 +148,7 @@ export function FooterWithRedPanel() {
                 </li>
               </ul>
 
-              <p className={`${FOOTER_HEADING_CLASS} mt-8`}>Important Links</p>
+              <p className={`${FOOTER_HEADING_CLASS} mt-6`}>Important Links</p>
               <ul className="space-y-0">
                 <li>
                   <FooterLink href="/about">About Us</FooterLink>
@@ -159,7 +159,7 @@ export function FooterWithRedPanel() {
               </ul>
             </div>
 
-            <div className="py-5">
+            <div className="py-1">
               <p className={FOOTER_EXPERIENCE_HEADING_CLASS}>
                 Experience machines live.
               </p>
@@ -188,9 +188,9 @@ export function FooterWithRedPanel() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:max-w-[1040px] lg:gap-x-24 lg:mt-12">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:gap-x-10 lg:mt-6">
             <div className="hidden sm:block" aria-hidden="true" />
-            <div className="flex flex-wrap items-center justify-center gap-6 p-[10px] sm:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-5 p-1 sm:justify-start">
               {SOCIAL_LINKS.map((social) => (
                 <SocialIcon
                   key={social.label}
@@ -203,15 +203,15 @@ export function FooterWithRedPanel() {
           </div>
         </div>
 
-        <div className="flex w-full shrink-0 items-center justify-center bg-[#C0202F] px-10 py-[50px] sm:px-12 lg:w-[65%] lg:px-16 xl:w-[68%] 2xl:w-[996px]">
-          <Link href="/" className="mx-auto block w-[58%] max-w-[540px] min-w-[220px]">
+        <div className="flex w-full shrink-0 items-center justify-center bg-[#C0202F] px-4 py-4 sm:px-6 lg:w-[42%] lg:px-8 lg:py-5 xl:w-[44%] 2xl:w-[490px]">
+          <Link href="/" className="mx-auto block w-[79%] max-w-[277px] min-w-[132px]">
             <Image
               src="/media/amuzma-R-e1737443063117.webp"
               alt="AMUZMA"
               width={1288}
               height={312}
-              sizes="540px"
-              className="h-auto w-full object-contain"
+              sizes="277px"
+              className="h-auto max-h-[55px] w-full object-contain sm:max-h-[64px] lg:max-h-[74px]"
             />
           </Link>
         </div>

@@ -2,11 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 import { useRouter } from "next/navigation";
 import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { CountryFlag } from "./CountryFlag";
 import { useLanguage } from "../context/LanguageContext";
+import { useQuoteCart } from "../context/QuoteCartContext";
 
 const headerTextClass =
   "font-heading font-medium text-[21.6px] text-[#333333] hover:text-[#BF1A2B] transition-colors";
@@ -112,8 +113,9 @@ const productCategories = [
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
-  const [cartCount] = useState(0);
+  const { itemCount } = useQuoteCart();
   const { selectedLanguage, openLanguageModal } = useLanguage();
+  const cartLabel = itemCount === 1 ? "1 item" : `${itemCount} items`;
   const router = useRouter();
   const headerRef = useRef<HTMLElement>(null);
   const companyRef = useRef<HTMLButtonElement>(null);
@@ -242,7 +244,7 @@ export function Header() {
             onClick={() => router.push("/quote")}
             className={headerTextClass}
           >
-            {cartCount} items
+            {cartLabel}
           </button>
           <button
             ref={searchRef}
@@ -499,7 +501,7 @@ export function Header() {
               }}
               className="text-[18px] text-[#333333] hover:text-[#BF1A2B]"
             >
-              {cartCount} items
+              {cartLabel}
             </button>
             <button className="text-[#333333]" aria-label="Search">
               <Search size={24} strokeWidth={1.5} />

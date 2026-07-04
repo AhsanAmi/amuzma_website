@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 import { ChevronLeft, ChevronRight, Eye, FileText, X } from "lucide-react";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
+import { AddToQuoteButton } from "./AddToQuoteButton";
 
 const DEFAULT_GALLERY_IMAGES = [
   "/media/cnc-1-1.webp",
@@ -21,18 +21,67 @@ type ProductGallerySectionProps = {
   images?: string[];
   description?: string;
   productCataloguePdf?: string;
+  productId?: string;
+  productName?: string;
+  productModel?: string;
+  productImage?: string;
 };
+
+/**
+ * Warms the browser HTTP cache for the catalogue PDFs during idle time, so
+ * that clicking "Product catalogue" / "Full catalogue" opens instantly
+ * instead of waiting on a multi-second download. Assets under /assets/ are
+ * served with immutable caching, so the prefetched response is reused.
+ */
+function usePrefetchPdfs(urls: (string | undefined)[]) {
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const prefetch = () => {
+      for (const url of urls) {
+        if (!url) continue;
+        fetch(encodeURI(url), {
+          signal: controller.signal,
+          priority: "low",
+        } as RequestInit).catch(() => {
+          // Prefetching is best-effort; the link still works without it.
+        });
+      }
+    };
+
+    const idleId =
+      "requestIdleCallback" in window
+        ? window.requestIdleCallback(prefetch)
+        : setTimeout(prefetch, 1500);
+
+    return () => {
+      controller.abort();
+      if ("requestIdleCallback" in window) {
+        window.cancelIdleCallback(idleId as number);
+      } else {
+        clearTimeout(idleId as ReturnType<typeof setTimeout>);
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, urls);
+}
 
 export function ProductGallerySection({
   images = DEFAULT_GALLERY_IMAGES,
   description = DEFAULT_PRODUCT_DESCRIPTION,
   productCataloguePdf,
+  productId,
+  productName,
+  productModel,
+  productImage,
 }: ProductGallerySectionProps) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [zooming, setZooming] = useState(false);
   const [zoomOrigin, setZoomOrigin] = useState({ x: 50, y: 50 });
   const containerRef = useRef<HTMLDivElement>(null);
+
+  usePrefetchPdfs([productCataloguePdf, FULL_CATALOGUE_PDF]);
 
   const activeImage = images[activeIdx];
 
@@ -102,7 +151,6 @@ export function ProductGallerySection({
                   src={activeImage}
                   alt="Product gallery"
                   fill
-                  priority
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-contain transition-transform duration-100 ease-out"
                   style={{
@@ -152,12 +200,17 @@ export function ProductGallerySection({
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <Link
-                href="/quote"
-                className="inline-block bg-[#C0202F] px-[15px] py-[10px] font-gothic text-[12px] font-normal uppercase leading-none text-white transition-opacity hover:opacity-90"
-              >
-                Add to Quote
-              </Link>
+              {productId && productName && productImage ? (
+                <AddToQuoteButton
+                  productId={productId}
+                  name={productName}
+                  model={productModel}
+                  image={productImage}
+                  className="inline-block bg-[#C0202F] px-[15px] py-[10px] font-gothic text-[12px] font-normal uppercase leading-none text-white transition-opacity hover:opacity-90"
+                >
+                  Add to Quote
+                </AddToQuoteButton>
+              ) : null}
 
               {productCataloguePdf ? (
                 <a

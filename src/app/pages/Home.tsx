@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "../components/MediaImage";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { ExpertiseCard } from "../components/ExpertiseCard";
+import { AddToQuoteButton } from "../components/AddToQuoteButton";
+import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 
 const HERO_SLIDES = [
   {
@@ -36,37 +38,40 @@ const FACILITIES = [
     id: 1,
     image: "/media/Band-Saw-16-Elite-65BS-.webp",
     category: "BAND SAW",
+    name: "Band Saw",
     model: "Elite 65BS",
     specs: [
       "Blade Length : 4470 mm",
       "Blade Width : 10-35 mm",
       "Motor Power Output : 4kW S1",
     ],
-    href: "/products",
+    href: "/products/band-saw-65bs",
   },
   {
     id: 2,
     image: "/media/E5-finalist.webp",
     category: "EDGE BANDING",
+    name: "Edge Banding",
     model: "E5",
     specs: [
       "Thickness of edge-banding belt : 0.4-3 mm",
       "Height of Edge-banding tape : 12-45 mm",
       "Gross power : 6.5 kw",
     ],
-    href: "/products",
+    href: "/products/edge-banding-e5",
   },
   {
     id: 3,
     image: "/media/Panel-Saw-Firma-35PS-1-1-1.webp",
     category: "PANEL SAW",
+    name: "Panel Saw",
     model: "Firma 40PL",
     specs: [
       "Main Blade Diameter : 400 mm",
       "Main Blade Speed : 4500 rpm",
       "Scoring Blade Diameter : 120 mm",
     ],
-    href: "/products",
+    href: "/products/panel-saw-firma-40pl",
   },
 ];
 
@@ -207,6 +212,33 @@ export function Home() {
     setTestimonialIdx(testimonialSlide % TESTIMONIALS.length);
   }, [testimonialSlide]);
 
+  // Warm the browser cache so "Full Catelouge" opens the PDF instantly.
+  useEffect(() => {
+    const controller = new AbortController();
+    const prefetch = () => {
+      fetch(encodeURI(FULL_CATALOGUE_PDF), {
+        signal: controller.signal,
+        priority: "low",
+      } as RequestInit).catch(() => {});
+    };
+
+    let idleId: number | ReturnType<typeof setTimeout>;
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(prefetch);
+    } else {
+      idleId = setTimeout(prefetch, 1500);
+    }
+
+    return () => {
+      controller.abort();
+      if ("requestIdleCallback" in window) {
+        window.cancelIdleCallback(idleId as number);
+      } else {
+        clearTimeout(idleId as ReturnType<typeof setTimeout>);
+      }
+    };
+  }, []);
+
   const testimonialOffset =
     testimonialSlide * (100 / testimonialCardsPerView);
 
@@ -318,12 +350,14 @@ export function Home() {
                 >
                   View More
                 </Link>
-                <Link
-                  href="/products"
+                <a
+                  href={encodeURI(FULL_CATALOGUE_PDF)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center border border-[#C0202F] bg-white px-6 py-3 text-[15px] font-normal text-black transition-colors hover:bg-[#FFF8F8]"
                 >
                   Full Catelouge
-                </Link>
+                </a>
               </div>
             </div>
             <div>
@@ -711,12 +745,15 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
           >
             View Details
           </Link>
-          <Link
-            href="/quote"
+          <AddToQuoteButton
+            name={product.name}
+            model={product.model}
+            image={product.image}
+            href={product.href}
             className="inline-flex h-[41px] items-center justify-center bg-black px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-white transition-colors hover:bg-[#222222]"
           >
             Get Quote
-          </Link>
+          </AddToQuoteButton>
         </div>
       </div>
     </div>

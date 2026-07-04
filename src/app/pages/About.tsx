@@ -1,3 +1,5 @@
+import { MediaImage } from "../components/MediaImage";
+
 const PAGE_X =
   "px-5 sm:px-8 lg:px-24 xl:px-36 2xl:px-48";
 
@@ -60,9 +62,11 @@ export function About() {
           </div>
 
           <div className="flex shrink-0 justify-center lg:-translate-x-[10%] lg:justify-start lg:pl-[10%]">
-            <img
+            <MediaImage
               src="/media/New-Project-57.webp"
               alt="Asif Javed – Founder & CEO"
+              width={668}
+              height={800}
               className="h-auto w-full max-w-[609px] object-contain lg:max-w-[668px]"
             />
           </div>

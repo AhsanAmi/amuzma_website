@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CategoryProductCard } from "../components/CategoryProductCard";
+import { PageBanner } from "../components/PageBanner";
 import { ALL_PRODUCTS } from "../data/productCatalog";
 
 const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
@@ -23,20 +24,7 @@ export function Products() {
 
   return (
     <div className="bg-white pt-10 lg:pt-16">
-      {/* Hero Banner */}
-      <section className="relative overflow-hidden">
-        <img
-          src="/media/banner_for_amuzma_website_10-6.jpg-1.webp"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-          aria-hidden="true"
-        />
-        <div className={`relative ${PAGE_CONTAINER} py-10 text-center sm:py-[63px]`}>
-          <h1 className="font-display text-[28px] font-bold uppercase leading-tight text-white sm:text-[36px] sm:leading-[36px]">
-            Products
-          </h1>
-        </div>
-      </section>
+      <PageBanner title="Products" />
 
       {/* Product Grid */}
       <section className="bg-white py-10">

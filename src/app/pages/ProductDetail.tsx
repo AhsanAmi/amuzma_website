@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "../components/MediaImage";
 import { useParams } from "next/navigation";
 import { ProductGallerySection } from "../components/ProductGallerySection";
 import { ProductOperationalSection } from "../components/ProductOperationalSection";
@@ -11,6 +10,7 @@ import { ProductVideoContactSection } from "../components/ProductVideoContactSec
 import { ProductPartsSection } from "../components/ProductPartsSection";
 import { SAW_PRODUCT_OVERRIDES } from "../data/sawProducts";
 import { PRODUCT_CATALOGUE_PDFS } from "../data/productDocuments";
+import { AddToQuoteButton } from "../components/AddToQuoteButton";
 
 const PRODUCTS_DATA: Record<string, {
   name: string;
@@ -1407,12 +1407,15 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                   <p className="font-gothic text-[12px] font-normal text-[#666666]">
                     Click &apos;Get Free Quote&apos; to customize
                   </p>
-                  <Link
-                    href="/quote"
+                  <AddToQuoteButton
+                    productId={id}
+                    name={product.name}
+                    model={product.model}
+                    image={product.gallery?.[0] ?? product.heroImage}
                     className="inline-block w-auto self-start bg-[#C0202F] px-[15px] py-[10px] font-gothic text-[12px] font-normal uppercase leading-none text-white transition-opacity hover:opacity-90"
                   >
                     Add to Quote
-                  </Link>
+                  </AddToQuoteButton>
                 </div>
               </div>
             </div>
@@ -1509,6 +1512,10 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
           images={product.gallery}
           description={product.galleryDescription}
           productCataloguePdf={id ? PRODUCT_CATALOGUE_PDFS[id] : undefined}
+          productId={id}
+          productName={product.name}
+          productModel={product.model}
+          productImage={product.gallery?.[0] ?? product.heroImage}
         />
 
       </div>

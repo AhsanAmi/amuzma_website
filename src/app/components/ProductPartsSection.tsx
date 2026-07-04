@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 
 const DEFAULT_PART_IMAGES = [
   "/media/CNC-01.jpg-scaled.webp",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 import { SAW_SPEC_CONFIGS } from "../data/sawProducts";
 
 const SPECIFICATIONS_LEFT = [

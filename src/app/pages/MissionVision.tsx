@@ -1,3 +1,6 @@
+import { MediaImage } from "../components/MediaImage";
+import { PageBanner } from "../components/PageBanner";
+
 const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 const MISSION_PILLARS = [
@@ -65,20 +68,7 @@ function RedSquareBulletList({
 export function MissionVision() {
   return (
     <div className="bg-white pt-10 lg:pt-16">
-      {/* Hero Banner */}
-      <section className="relative overflow-hidden">
-        <img
-          src="/media/banner_for_amuzma_website_10-6.jpg-1.webp"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-          aria-hidden="true"
-        />
-        <div className={`relative ${PAGE_CONTAINER} py-10 text-center sm:py-[63px]`}>
-          <h1 className="font-display text-[28px] font-bold uppercase leading-tight text-white sm:text-[36px] sm:leading-[36px]">
-            MISSION &amp; VISION
-          </h1>
-        </div>
-      </section>
+      <PageBanner title="MISSION & VISION" />
 
       {/* Mission & Vision */}
       <section className="bg-white py-10">
@@ -86,7 +76,7 @@ export function MissionVision() {
           className={`${PAGE_CONTAINER} grid items-center gap-10 lg:grid-cols-[685px_minmax(0,1fr)] lg:gap-x-6`}
         >
           <div className="flex justify-center lg:-translate-x-[8%] lg:justify-center">
-            <img
+            <MediaImage
               src="/media/Mission-r78y6ts3bxikuf8bjl8sc6xnuv20i7ndarhkf33rug.webp"
               alt="Mission"
               width={300}
@@ -166,7 +156,7 @@ export function MissionVision() {
           </div>
 
           <div className="order-first flex justify-center lg:order-none lg:-translate-x-[12%] lg:justify-center">
-            <img
+            <MediaImage
               src="/media/Vision-r78ygazi8shnwvgp76qczatzhqc94c9xloatmj1v3s.webp"
               alt="Vision"
               width={300}

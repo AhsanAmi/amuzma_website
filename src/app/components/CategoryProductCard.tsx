@@ -1,21 +1,27 @@
 import Link from "next/link";
 import type { CatalogProduct } from "../data/productCatalog";
+import { AddToQuoteButton } from "./AddToQuoteButton";
+import { MediaImage } from "./MediaImage";
 
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
   return (
     <div className="flex flex-col border border-[#E5E5E5] bg-white">
       <div className="flex h-[220px] items-center justify-center bg-white p-5 sm:h-[280px] sm:p-6">
-        <img
+        <MediaImage
           src={product.image}
           alt={product.model}
+          width={400}
+          height={280}
           className="max-h-full max-w-full object-contain"
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
         <div className="mb-2 flex items-center gap-2">
-          <img
+          <MediaImage
             src="/media/logoheader.webp"
             alt="AMUZMA"
+            width={80}
+            height={20}
             className="h-5 w-auto object-contain"
           />
           <span className="text-[#D0D0D0]">|</span>
@@ -42,12 +48,15 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
           >
             View Details
           </Link>
-          <Link
-            href="/quote"
+          <AddToQuoteButton
+            name={product.name}
+            model={product.model}
+            image={product.image}
+            href={product.detailsHref}
             className="inline-flex h-[41px] items-center justify-center bg-black px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-white transition-colors hover:bg-[#222222]"
           >
             Get Quote
-          </Link>
+          </AddToQuoteButton>
         </div>
       </div>
     </div>

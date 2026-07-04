@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 
 const FOOTER_HEADING_CLASS =
   "mb-1 font-gothic text-[22px] font-normal leading-[22px] text-black";

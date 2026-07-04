@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { MediaImage as Image } from "./MediaImage";
 import { X } from "lucide-react";
 
 const STORAGE_KEY = "amuzma-welcome-dismissed";

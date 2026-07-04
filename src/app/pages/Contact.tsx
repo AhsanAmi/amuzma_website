@@ -1,124 +1,170 @@
-import { Phone, Mail, MapPin, Headphones } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { MediaImage as Image } from "../components/MediaImage";
+import { Phone, Headphones, Mail, MapPin, Globe } from "lucide-react";
 
 const CONTACT_CARDS = [
   {
-    icon: Headphones,
+    icon: Phone,
     title: "Service Hotline",
-    value: "+971 414 886",
-    sub: "Mon–Fri: 9am–6pm GST",
+    lines: [{ text: "+971 4547 8088", href: "tel:+97145478088" }],
   },
   {
-    icon: Phone,
-    title: "After Sales Phone",
-    value: "+971 55 857 857",
-    sub: "Technical support & service",
+    icon: Headphones,
+    title: "After-Sales Phone",
+    lines: [{ text: "+971 50 857 6840", href: "tel:+971508576840" }],
   },
   {
     icon: Mail,
     title: "Business Cooperation",
-    value: "info@amuzma.com",
-    sub: "partnerships@amuzma.com",
+    lines: [
+      { text: "info@amuzmamachinery.com", href: "mailto:info@amuzmamachinery.com" },
+      { text: "sales@amuzmamachinery.com", href: "mailto:sales@amuzmamachinery.com" },
+    ],
   },
   {
     icon: MapPin,
     title: "Address",
-    value: "No. 01 Roxy Industrial Area",
-    sub: "Dubai, United Arab Emirates",
+    lines: [
+      { text: "Ras Al Khor Industrial Area 2, Dubai, United Arab Emirates" },
+    ],
   },
 ];
 
-const REGIONS = [
+type PartnerItem = {
+  icon: "phone" | "mail" | "globe";
+  text: string;
+  href?: string;
+};
+
+type Partner = {
+  country: string;
+  company: string;
+  address: string;
+  items: PartnerItem[];
+};
+
+const REGIONS: { name: string; partners: Partner[] }[] = [
   {
-    name: "ASIA",
+    name: "Asia",
     partners: [
       {
         country: "PAKISTAN",
-        company: "Airtech",
-        details: ["Lahore", "+92 334 4344 806", "airtech@gmail.com"],
-        hasMore: true,
+        company: "Asmach",
+        address: "12 km G T Road okara near University",
+        items: [
+          { icon: "phone", text: "+92 316 4106 088", href: "tel:+923164106088" },
+          {
+            icon: "mail",
+            text: "asmachtraders@gmail.com",
+            href: "mailto:asmachtraders@gmail.com",
+          },
+        ],
       },
-    ],
-  },
-  {
-    name: "AUSTRALIA",
-    partners: [],
-  },
-  {
-    name: "AFRICA",
-    partners: [],
-  },
-  {
-    name: "CENTRAL AND SOUTH AMERICA",
-    partners: [
       {
         country: "UNITED ARAB EMIRATES",
-        company: "MYG Trading",
-        details: ["+971 55 125 244", "info@mygtrading.com", "Se Habla Español"],
-        hasMore: true,
+        company: "MYQ Trading",
+        address: "Ras al Khor Industrial Area 2 Dubai",
+        items: [
+          { icon: "phone", text: "+971-50 722 4796", href: "tel:+971507224796" },
+          {
+            icon: "mail",
+            text: "info@myqtrading.com",
+            href: "mailto:info@myqtrading.com",
+          },
+          {
+            icon: "mail",
+            text: "sales@myqtrading.com",
+            href: "mailto:sales@myqtrading.com",
+          },
+          {
+            icon: "globe",
+            text: "www.myqtrading.com",
+            href: "https://www.myqtrading.com",
+          },
+        ],
       },
-    ],
-  },
-  {
-    name: "EUROPE",
-    partners: [
       {
         country: "OMAN",
-        company: "VK Trading",
-        details: ["+968 7515 244", "vktrading@gmail.com"],
-        hasMore: false,
+        company: "SA Trading",
+        address: "Wadam AL Gauf Shop N0.3 Al Mussna",
+        items: [
+          { icon: "phone", text: "+968 7635 2309", href: "tel:+96876352309" },
+          {
+            icon: "mail",
+            text: "satradingspc@gmail.com",
+            href: "mailto:satradingspc@gmail.com",
+          },
+        ],
       },
     ],
   },
-  {
-    name: "NORTH AMERICA",
-    partners: [],
-  },
+  { name: "Australia", partners: [] },
+  { name: "Africa", partners: [] },
+  { name: "Central and South America", partners: [] },
+  { name: "Europe", partners: [] },
+  { name: "North America", partners: [] },
 ];
 
+const PARTNER_ICONS = { phone: Phone, mail: Mail, globe: Globe };
+
 export function Contact() {
+  const [activeRegion, setActiveRegion] = useState(0);
+  const region = REGIONS[activeRegion];
+
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-64 md:h-80 bg-gray-200 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600&q=80"
-          alt="Contact AMUZMA"
-          className="w-full h-full object-cover"
+      <section className="relative h-[198px] w-full overflow-hidden sm:h-[242px] md:h-[286px] lg:h-[330px]">
+        <Image
+          src="/media/contactapge.jpeg"
+          alt="AMUZMA — worldwide sales partners"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center">
-          <div className="max-w-[1320px] mx-auto px-6 w-full">
-            <div className="max-w-lg flex flex-col gap-2">
-              <svg viewBox="0 0 160 44" className="h-10 w-auto" fill="none">
-                <text x="80" y="32" textAnchor="middle" fontFamily="Poppins,sans-serif" fontWeight="900" fontSize="28" letterSpacing="2" fill="white" style={{ fontStyle: "italic" }}>AMUZMA</text>
-                <circle cx="154" cy="10" r="5" fill="none" stroke="white" strokeWidth="1.5" />
-                <text x="154" y="13.5" textAnchor="middle" fontFamily="Poppins" fontSize="6" fill="white">®</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      {/* Contact Cards */}
-      <section className="py-14 bg-white">
-        <div className="max-w-[1320px] mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-gray-900" style={{ fontSize: "1.75rem", fontWeight: 700 }}>Choose How We Can Help You</h2>
-            <div className="w-12 h-1 bg-[#B5122B] mx-auto mt-3" />
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Choose How We Can Help You */}
+      <section className="bg-white py-10 font-gothic sm:py-16">
+        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+          <h2 className="mb-8 text-center text-[26px] font-normal leading-tight text-black sm:mb-12 sm:text-[32px] sm:leading-[35px]">
+            Choose How We Can Help You
+          </h2>
+          <div className="mx-auto grid max-w-[1000px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {CONTACT_CARDS.map((card) => {
               const Icon = card.icon;
               return (
                 <div
                   key={card.title}
-                  className="border border-[#E5E5E5] rounded p-6 text-center hover:shadow-md hover:border-[#B5122B] transition-all"
+                  className="flex min-h-[170px] flex-col items-center justify-center rounded-md border border-black/60 bg-white px-4 py-8 text-center transition-colors hover:border-[#C0202F]"
                 >
-                  <div className="w-12 h-12 rounded-full border-2 border-[#E5E5E5] flex items-center justify-center mx-auto mb-4">
-                    <Icon size={22} className="text-gray-600" />
+                  <Icon size={22} strokeWidth={1.5} className="mb-4 text-black" />
+                  <h3 className="mb-3 text-[15px] font-normal text-black">
+                    {card.title}
+                  </h3>
+                  <div className="space-y-1">
+                    {card.lines.map((line) =>
+                      "href" in line && line.href ? (
+                        <a
+                          key={line.text}
+                          href={line.href}
+                          className="block break-all text-[13px] font-normal leading-snug text-[#C0202F] transition-opacity hover:opacity-80"
+                        >
+                          {line.text}
+                        </a>
+                      ) : (
+                        <p
+                          key={line.text}
+                          className="text-[13px] font-normal leading-snug text-[#C0202F]"
+                        >
+                          {line.text}
+                        </p>
+                      )
+                    )}
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">{card.title}</h4>
-                  <p className="text-sm text-gray-700 font-medium">{card.value}</p>
-                  <p className="text-xs text-gray-500 mt-1">{card.sub}</p>
                 </div>
               );
             })}
@@ -126,66 +172,107 @@ export function Contact() {
         </div>
       </section>
 
-      {/* International Sales Partners */}
-      <section className="py-14 bg-[#F5F5F5]">
-        <div className="max-w-[1320px] mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-gray-900" style={{ fontSize: "1.75rem", fontWeight: 700 }}>Find Your International Sales Partner</h2>
-            <div className="w-12 h-1 bg-[#B5122B] mx-auto mt-3" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 mb-8">
-            {REGIONS.map((r) => (
+      {/* Find Your International Sales Partner */}
+      <section className="bg-white pb-10 font-gothic sm:pb-16">
+        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+          <h2 className="mb-8 text-center text-[26px] font-normal leading-tight text-black sm:mb-10 sm:text-[32px] sm:leading-[35px]">
+            Find Your International Sales Partner
+          </h2>
+
+          {/* Region Tabs */}
+          <div className="mb-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+            {REGIONS.map((r, i) => (
               <button
                 key={r.name}
-                className="py-2 px-3 text-xs font-semibold border border-[#E5E5E5] bg-white rounded hover:border-[#B5122B] hover:text-[#B5122B] transition-colors"
+                type="button"
+                onClick={() => setActiveRegion(i)}
+                className={`px-3 py-2 text-[12px] font-normal uppercase tracking-wide transition-colors ${
+                  i === activeRegion
+                    ? "border border-[#E5E5E5] bg-[#F7F7F7] text-black"
+                    : "border border-transparent text-black hover:text-[#C0202F]"
+                }`}
               >
                 {r.name}
               </button>
             ))}
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {REGIONS.filter(r => r.partners.length > 0).map((region) =>
-              region.partners.map((partner, i) => (
-                <div key={`${region.name}-${i}`} className="bg-white border border-[#E5E5E5] rounded p-5">
-                  <div className="mb-3">
-                    <span className="text-xs font-bold text-[#B5122B] uppercase tracking-wider">{partner.country}</span>
-                    <h4 className="font-semibold text-gray-900 mt-1">{partner.company}</h4>
+
+          {/* Partners */}
+          <div className="mx-auto max-w-[1000px]">
+            {region.partners.length > 0 ? (
+              <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                {region.partners.map((partner) => (
+                  <div key={partner.country}>
+                    <h3 className="mb-2 text-[15px] font-normal uppercase text-black">
+                      {partner.country}
+                    </h3>
+                    <p className="mb-1 text-[14px] font-normal text-black">
+                      {partner.company}
+                    </p>
+                    <p className="mb-4 text-[13px] font-normal leading-snug text-[#666666]">
+                      {partner.address}
+                    </p>
+                    <ul className="space-y-2">
+                      {partner.items.map((item) => {
+                        const ItemIcon = PARTNER_ICONS[item.icon];
+                        return (
+                          <li key={item.text} className="flex items-center gap-2">
+                            <ItemIcon
+                              size={14}
+                              strokeWidth={2}
+                              className="shrink-0 text-[#C0202F]"
+                            />
+                            {item.href ? (
+                              <a
+                                href={item.href}
+                                target={item.icon === "globe" ? "_blank" : undefined}
+                                rel={
+                                  item.icon === "globe"
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
+                                className="break-all text-[13px] font-normal text-[#C0202F] transition-opacity hover:opacity-80"
+                              >
+                                {item.text}
+                              </a>
+                            ) : (
+                              <span className="text-[13px] font-normal text-[#C0202F]">
+                                {item.text}
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                  <ul className="space-y-1">
-                    {partner.details.map((d) => (
-                      <li key={d} className="text-sm text-gray-600">{d}</li>
-                    ))}
-                  </ul>
-                  {partner.hasMore && (
-                    <button className="mt-3 text-xs text-[#B5122B] hover:underline">
-                      + More locations
-                    </button>
-                  )}
-                </div>
-              ))
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-[14px] font-normal text-[#666666]">
+                No sales partners listed in this region yet. Please contact us
+                directly at info@amuzmamachinery.com.
+              </p>
             )}
           </div>
-        </div>
-      </section>
 
-      {/* Factory + Map */}
-      <section className="py-14 bg-white">
-        <div className="max-w-[1320px] mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-6">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
-                alt="AMUZMA Factory"
-                className="w-full h-72 object-cover rounded"
-              />
-            </div>
-            <div className="rounded overflow-hidden h-72 bg-gray-200 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin size={40} className="mx-auto mb-3 text-[#B5122B]" />
-                <p className="font-medium text-gray-700">AMUZMA Machinery</p>
-                <p className="text-sm">No. 01 Roxy Industrial Area, Dubai, UAE</p>
-              </div>
-            </div>
+          {/* Factory Image + Map */}
+          <div className="mx-auto mt-12 grid max-w-[1000px] gap-2 md:grid-cols-2">
+            <Image
+              src="/media/office-image-copy.webp"
+              alt="AMUZMA Machinery building"
+              width={1140}
+              height={641}
+              sizes="(min-width: 768px) 500px, 100vw"
+              className="h-[260px] w-full object-cover"
+            />
+            <iframe
+              src="https://www.google.com/maps?q=Amuzma%20Machinery%2C%20Ras%20Al%20Khor%20Industrial%20Area%202%2C%20Dubai%2C%20United%20Arab%20Emirates&output=embed"
+              title="Amuzma Machinery — Ras Al Khor Industrial Area 2, Dubai"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              className="h-[260px] w-full border-0"
+            />
           </div>
         </div>
       </section>

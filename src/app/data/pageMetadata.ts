@@ -8,6 +8,7 @@ export const PAGE_TITLES: Record<string, string> = {
   contact: "Contact – Amuzma",
   quote: "Quote – Amuzma",
   products: "Products – Amuzma",
+  search: "Search – Amuzma",
   "cnc-machines": "CNC Machines – Amuzma",
   "dust-collector-waste": "Dust Collector & Waste – Amuzma",
   "edge-banders": "Edgebanders – Amuzma",

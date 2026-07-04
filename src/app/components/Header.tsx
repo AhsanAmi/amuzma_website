@@ -8,6 +8,7 @@ import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { CountryFlag } from "./CountryFlag";
 import { useLanguage } from "../context/LanguageContext";
 import { useQuoteCart } from "../context/QuoteCartContext";
+import { SearchOverlay } from "./SearchOverlay";
 
 const headerTextClass =
   "font-heading font-medium text-[17px] text-[#333333] transition-colors hover:text-[#BF1A2B] lg:text-[18px] xl:text-[20px] 2xl:text-[21.6px]";
@@ -126,6 +127,8 @@ export function Header() {
   const [productsMenuBounds, setProductsMenuBounds] = useState({ left: 0, width: 0 });
   const [mobileCompanyExpanded, setMobileCompanyExpanded] = useState(false);
   const [mobileProductsExpanded, setMobileProductsExpanded] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const updateMenuBounds = useCallback(() => {
     if (!headerRef.current || !productsRef.current || !searchRef.current) return;
@@ -166,6 +169,27 @@ export function Header() {
   }, []);
 
   const closeMenu = useCallback(() => setActiveMenu(null), []);
+
+  const openSearch = useCallback(() => {
+    setActiveMenu(null);
+    setMobileOpen(false);
+    setSearchOpen(true);
+  }, []);
+
+  const closeSearch = useCallback(() => {
+    setSearchOpen(false);
+    setSearchQuery("");
+  }, []);
+
+  const submitSearch = useCallback(
+    (query: string) => {
+      const trimmed = query.trim();
+      if (!trimmed) return;
+      closeSearch();
+      router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+    },
+    [closeSearch, router],
+  );
 
   useEffect(() => {
     updateMenuBounds();
@@ -248,6 +272,8 @@ export function Header() {
           </button>
           <button
             ref={searchRef}
+            type="button"
+            onClick={openSearch}
             className="text-[#333333] hover:text-[#BF1A2B] transition-colors"
             aria-label="Search"
           >
@@ -503,7 +529,12 @@ export function Header() {
             >
               {cartLabel}
             </button>
-            <button className="text-[#333333]" aria-label="Search">
+            <button
+              type="button"
+              onClick={openSearch}
+              className="text-[#333333]"
+              aria-label="Search"
+            >
               <Search size={24} strokeWidth={1.5} />
             </button>
             <button
@@ -520,6 +551,14 @@ export function Header() {
           </div>
         </div>
       )}
+
+      <SearchOverlay
+        open={searchOpen}
+        query={searchQuery}
+        onQueryChange={setSearchQuery}
+        onClose={closeSearch}
+        onSubmit={submitSearch}
+      />
     </header>
   );
 }

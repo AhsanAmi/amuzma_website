@@ -218,7 +218,62 @@ export function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-white">
-      <div className="relative grid h-[64px] w-full grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:h-[92.16px] lg:px-10 xl:px-16 2xl:px-24">
+      {/* Mobile utility bar */}
+      <div className="flex h-[36px] items-center justify-between bg-[#F5F5F5] px-4 sm:px-6 lg:hidden">
+        <button
+          type="button"
+          onClick={openLanguageModal}
+          className="flex items-center gap-1 font-heading text-[13px] font-medium text-[#333333]"
+          aria-label="Select language"
+        >
+          <CountryFlag code={selectedLanguage.flagCode} width={20} height={14} />
+          <span>{selectedLanguage.name}</span>
+          <ChevronDown size={14} strokeWidth={1.5} />
+        </button>
+
+        <button
+          type="button"
+          onClick={() => router.push("/quote")}
+          className="font-heading text-[13px] font-medium text-[#333333]"
+        >
+          {cartLabel}
+        </button>
+
+        <button
+          type="button"
+          onClick={openSearch}
+          className="text-[#333333]"
+          aria-label="Search"
+        >
+          <Search size={20} strokeWidth={1.5} />
+        </button>
+      </div>
+
+      {/* Mobile main bar */}
+      <div className="flex h-[64px] items-center justify-between px-4 sm:px-6 lg:hidden">
+        <button
+          type="button"
+          className="flex h-11 w-11 items-center justify-center border border-[#E5E5E5] text-[#333333]"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
+          <Image
+            src="/media/logoheader.webp"
+            alt="AMUZMA"
+            width={258}
+            height={58}
+            priority
+            className="h-[38px] w-auto object-contain sm:h-[42px]"
+          />
+        </Link>
+      </div>
+
+      {/* Desktop header */}
+      <div className="relative hidden h-[92.16px] w-full grid-cols-[1fr_auto_1fr] items-center px-10 xl:px-16 2xl:px-24 lg:grid">
         {/* Left Nav */}
         <nav className="col-start-1 row-start-1 hidden min-w-0 items-center gap-6 justify-self-start lg:flex xl:gap-10 2xl:gap-14">
           <button
@@ -292,15 +347,6 @@ export function Header() {
             <ChevronDown size={20} strokeWidth={1.5} />
           </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="col-start-3 row-start-1 ml-auto flex h-11 w-11 items-center justify-center justify-self-end text-[#333333] lg:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
       </div>
 
       {/* Company Mega Menu */}
@@ -403,7 +449,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden max-h-[calc(100vh-64px)] overflow-y-auto overscroll-contain bg-white border-t border-[#E5E5E5] px-4 sm:px-6 py-4 space-y-4 font-heading font-medium">
+        <div className="lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain bg-white border-t border-[#E5E5E5] px-4 sm:px-6 py-4 space-y-4 font-heading font-medium">
           <div>
             <button
               type="button"
@@ -520,37 +566,6 @@ export function Header() {
           >
             Contact
           </Link>
-
-          <div className="pt-3 border-t border-[#E5E5E5] flex flex-wrap items-center gap-x-6 gap-y-3">
-            <button
-              onClick={() => {
-                router.push("/quote");
-                setMobileOpen(false);
-              }}
-              className="text-[18px] text-[#333333] hover:text-[#BF1A2B]"
-            >
-              {cartLabel}
-            </button>
-            <button
-              type="button"
-              onClick={openSearch}
-              className="text-[#333333]"
-              aria-label="Search"
-            >
-              <Search size={24} strokeWidth={1.5} />
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                openLanguageModal();
-                setMobileOpen(false);
-              }}
-              className="flex items-center gap-1.5 text-[18px] text-[#333333]"
-            >
-              <CountryFlag code={selectedLanguage.flagCode} />
-              {selectedLanguage.name}
-            </button>
-          </div>
         </div>
       )}
 

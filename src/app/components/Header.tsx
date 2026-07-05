@@ -219,22 +219,22 @@ export function Header() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 bg-white">
       {/* Mobile utility bar */}
-      <div className="flex h-[36px] items-center justify-between bg-[#F5F5F5] px-4 sm:px-6 lg:hidden">
+      <div className="flex h-[47px] items-center justify-between bg-[#F5F5F5] px-4 sm:px-6 lg:hidden">
         <button
           type="button"
           onClick={openLanguageModal}
-          className="flex items-center gap-1 font-heading text-[13px] font-medium text-[#333333]"
+          className="flex items-center gap-1.5 font-heading text-[17px] font-medium text-[#333333]"
           aria-label="Select language"
         >
-          <CountryFlag code={selectedLanguage.flagCode} width={20} height={14} />
+          <CountryFlag code={selectedLanguage.flagCode} width={26} height={18} />
           <span>{selectedLanguage.name}</span>
-          <ChevronDown size={14} strokeWidth={1.5} />
+          <ChevronDown size={18} strokeWidth={1.5} />
         </button>
 
         <button
           type="button"
           onClick={() => router.push("/quote")}
-          className="font-heading text-[13px] font-medium text-[#333333]"
+          className="font-heading text-[17px] font-medium text-[#333333]"
         >
           {cartLabel}
         </button>
@@ -245,22 +245,17 @@ export function Header() {
           className="text-[#333333]"
           aria-label="Search"
         >
-          <Search size={20} strokeWidth={1.5} />
+          <Search size={26} strokeWidth={1.5} />
         </button>
       </div>
 
       {/* Mobile main bar */}
-      <div className="flex h-[64px] items-center justify-between px-4 sm:px-6 lg:hidden">
-        <button
-          type="button"
-          className="flex h-11 w-11 items-center justify-center border border-[#E5E5E5] text-[#333333]"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+      <div className="relative grid h-[64px] grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:hidden">
+        <Link
+          href="/"
+          className="col-start-2 row-start-1 flex-shrink-0 justify-self-center"
+          onClick={closeMenu}
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
           <Image
             src="/media/logoheader.webp"
             alt="AMUZMA"
@@ -270,6 +265,15 @@ export function Header() {
             className="h-[38px] w-auto object-contain sm:h-[42px]"
           />
         </Link>
+
+        <button
+          type="button"
+          className="col-start-3 row-start-1 flex h-11 w-11 items-center justify-center justify-self-end border border-[#E5E5E5] text-[#333333]"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Desktop header */}
@@ -449,7 +453,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain bg-white border-t border-[#E5E5E5] px-4 sm:px-6 py-4 space-y-4 font-heading font-medium">
+        <div className="lg:hidden max-h-[calc(100vh-111px)] overflow-y-auto overscroll-contain bg-white border-t border-[#E5E5E5] px-4 sm:px-6 py-4 space-y-4 font-heading font-medium">
           <div>
             <button
               type="button"

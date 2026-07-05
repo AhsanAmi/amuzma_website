@@ -9,6 +9,7 @@ import { CountryFlag } from "./CountryFlag";
 import { useLanguage } from "../context/LanguageContext";
 import { useQuoteCart } from "../context/QuoteCartContext";
 import { SearchOverlay } from "./SearchOverlay";
+import { signalNavigationStart } from "./NavigationProgress";
 
 const headerTextClass =
   "font-heading font-medium text-[17px] text-[#333333] transition-colors hover:text-[#BF1A2B] lg:text-[18px] xl:text-[20px] 2xl:text-[21.6px]";
@@ -186,6 +187,7 @@ export function Header() {
       const trimmed = query.trim();
       if (!trimmed) return;
       closeSearch();
+      signalNavigationStart();
       router.push(`/search?q=${encodeURIComponent(trimmed)}`);
     },
     [closeSearch, router],

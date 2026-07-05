@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Poppins, Rajdhani, Carrois_Gothic } from "next/font/google";
 import { Header } from "./components/Header";
+import { NavigationProgress } from "./components/NavigationProgress";
 import { FooterWithRedPanel } from "./components/Footer";
 import { FloatingSocialBar } from "./components/FloatingSocialBar";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -49,6 +51,9 @@ export default function RootLayout({
       className={`${poppins.variable} ${rajdhani.variable} ${carroisGothic.variable}`}
     >
       <body className="min-h-screen flex flex-col font-sans antialiased">
+        <Suspense fallback={null}>
+          <NavigationProgress />
+        </Suspense>
         <LanguageProvider>
           <QuoteCartProvider>
             <Header />

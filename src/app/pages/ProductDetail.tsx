@@ -330,7 +330,8 @@ const ADDITIONAL_PRODUCTS: Record<
     model: "DC2200",
     category: "Dust Collector",
     heroImage: "/media/New-Project-28.webp",
-    heroImageClassName: "object-cover object-center origin-center scale-[1.11]",
+    heroImageClassName:
+      "object-cover max-lg:object-[78%_center] lg:object-center lg:origin-center lg:scale-[1.11]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -429,9 +430,9 @@ const ADDITIONAL_PRODUCTS: Record<
     category: "Dust Collector",
     heroImage: "/media/New-Project-30.webp",
     heroHeightClassName:
-      "h-[420px] sm:h-[475px] md:h-[530px] lg:h-[570px]",
+      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
     heroImageClassName:
-      "object-cover object-[84%_center]",
+      "object-cover max-lg:object-[78%_center] lg:object-[84%_center]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "Powerful Suction. Space-Saving Design. Reliable Performance.",
@@ -532,8 +533,9 @@ const ADDITIONAL_PRODUCTS: Record<
     heroImage:
       "/media/amuzma_web_banners_for_products_Dust_Collector_DC_3800_1.jpg.webp",
     heroHeightClassName:
-      "h-[420px] sm:h-[475px] md:h-[530px] lg:h-[570px]",
-    heroImageClassName: "object-cover object-[84%_center]",
+      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
+    heroImageClassName:
+      "object-cover max-lg:object-[78%_center] lg:object-[84%_center]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "Compact, Powerful & Workshop‑Ready Dust Extraction",
@@ -1361,7 +1363,10 @@ Object.assign(
 const DEFAULT_PRODUCT = PRODUCTS_DATA["cnc-router-forte-13cr"];
 
 const DEFAULT_HERO_HEIGHT_CLASS =
-  "h-[475px] sm:h-[539px] md:h-[602px] lg:h-[649px]";
+  "h-[304px] sm:h-[345px] md:h-[386px] lg:h-[649px]";
+
+const DEFAULT_HERO_IMAGE_CLASS =
+  "object-cover max-lg:object-[78%_center] lg:object-center";
 
 const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"];
 
@@ -1377,12 +1382,14 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const heroImageClassName = product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS;
+
   return (
-    <div>
+    <div className="max-w-full overflow-x-hidden">
       {/* Hero */}
-      <div className="relative w-full">
+      <div className="relative w-full max-w-full">
         <div
-          className={`relative w-full overflow-hidden ${product.heroHeightClassName ?? DEFAULT_HERO_HEIGHT_CLASS}`}
+          className={`relative w-full max-w-full overflow-hidden ${product.heroHeightClassName ?? DEFAULT_HERO_HEIGHT_CLASS}`}
         >
           <Image
             src={product.heroImage}
@@ -1390,7 +1397,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
             fill
             priority
             sizes="100vw"
-            className={product.heroImageClassName ?? "object-cover object-center"}
+            className={heroImageClassName}
           />
 
           <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
@@ -1403,8 +1410,8 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                   {product.model}
                 </p>
 
-                <div className="mt-6 flex min-h-[130px] w-full max-w-[280px] flex-col items-start justify-between gap-3 bg-white px-4 pb-5 pt-4 sm:min-h-[150px] sm:max-w-[310px] sm:px-5 sm:pb-6">
-                  <p className="font-gothic text-[12px] font-normal text-[#666666]">
+                <div className="mt-6 flex w-full flex-col items-start gap-3 lg:min-h-[150px] lg:max-w-[310px] lg:justify-between lg:bg-white lg:px-5 lg:pb-6 lg:pt-4">
+                  <p className="hidden font-gothic text-[12px] font-normal text-[#666666] lg:block">
                     Click &apos;Get Free Quote&apos; to customize
                   </p>
                   <AddToQuoteButton
@@ -1412,9 +1419,10 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                     name={product.name}
                     model={product.model}
                     image={product.gallery?.[0] ?? product.heroImage}
-                    className="inline-block w-auto self-start bg-[#C0202F] px-[15px] py-[10px] font-gothic text-[12px] font-normal uppercase leading-none text-white transition-opacity hover:opacity-90"
+                    className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
                   >
-                    Add to Quote
+                    <span className="lg:hidden">Get Quote</span>
+                    <span className="hidden lg:inline">Add to Quote</span>
                   </AddToQuoteButton>
                 </div>
               </div>
@@ -1423,7 +1431,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
         </div>
 
         {/* Secondary Nav */}
-        <div className="sticky top-[64px] z-30 bg-[#E4E4E4] lg:top-[92.16px]">
+        <div className="sticky top-[64px] z-30 hidden bg-[#E4E4E4] lg:block lg:top-[92.16px]">
           <div className="mx-auto w-full max-w-[1410px] px-4 sm:px-6 lg:px-[100px]">
             <div className="flex w-full items-center justify-between gap-5 overflow-x-auto py-1 scrollbar-hide sm:gap-6 lg:gap-0">
               {NAV_SECTIONS.map((section) => (

@@ -373,6 +373,7 @@ export function Header() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    prefetch={activeMenu === "company" ? null : false}
                     className="font-heading font-medium text-[18px] text-white/95 hover:text-white transition-colors"
                     onClick={closeMenu}
                   >
@@ -394,6 +395,7 @@ export function Header() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    prefetch={activeMenu === "company" ? null : false}
                     className="font-heading font-medium text-[18px] text-white/95 hover:text-white transition-colors"
                     onClick={closeMenu}
                   >
@@ -424,6 +426,7 @@ export function Header() {
                 {"href" in category && category.href ? (
                   <Link
                     href={category.href}
+                    prefetch={activeMenu === "products" ? null : false}
                     className="hover:text-white/90 transition-colors"
                     onClick={closeMenu}
                   >
@@ -438,6 +441,7 @@ export function Header() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
+                      prefetch={activeMenu === "products" ? null : false}
                       className="font-heading text-[13px] font-medium leading-snug text-white/95 transition-colors hover:text-white xl:text-[14px]"
                       onClick={closeMenu}
                     >

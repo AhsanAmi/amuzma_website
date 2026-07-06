@@ -95,7 +95,7 @@ const EXPERTISE = [
     bg: "#FBAD12",
     video: {
       src: mediaUrl(
-        "/Precision%20Meets%20Efficiency%20_%20Amuzma%20Edge%20Banding%20P6%20in%20Action%20_%20AMUZMA.mp4",
+        "/Precision Meets Efficiency _ Amuzma Edge Banding P6 in Action _ AMUZMA.mp4",
       ),
     },
   },
@@ -103,7 +103,7 @@ const EXPERTISE = [
     title: "CNC Router",
     desc: "Innovative CNC router machines deliver accurate cutting, detailed carving, and smooth shaping with smart automation, reliability, speed, and consistent results for woodworking.",
     bg: "#639247",
-    video: { src: mediaUrl("/CNC%20Router%20AMUZMA%20optimized.mp4") },
+    video: { src: mediaUrl("/CNC Router AMUZMA optimized.mp4") },
   },
 ];
 
@@ -347,12 +347,12 @@ export function Home() {
                 European and Chinese brands.
               </p>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <Link
+                <HoverPrefetchLink
                   href="/about"
                   className="inline-flex items-center border border-[#C0202F] bg-white px-6 py-3 text-[15px] font-normal text-black transition-colors hover:bg-[#FFF8F8]"
                 >
                   View More
-                </Link>
+                </HoverPrefetchLink>
                 <a
                   href={encodeURI(FULL_CATALOGUE_PDF)}
                   target="_blank"
@@ -677,6 +677,38 @@ function YouTubeFacade({ videoId, title }: { videoId: string; title: string }) {
   );
 }
 
+/**
+ * Defers route prefetching until the user shows intent (hover/focus) instead
+ * of firing as soon as the link scrolls into view. Several of these render
+ * above the "Crafted By Experience" video section, and Next.js's automatic
+ * viewport prefetching was competing with the expertise videos for
+ * bandwidth, delaying video playback.
+ */
+function HoverPrefetchLink({
+  href,
+  children,
+  className,
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const [active, setActive] = useState(false);
+
+  return (
+    <Link
+      href={href}
+      prefetch={active ? null : false}
+      onMouseEnter={() => setActive(true)}
+      onTouchStart={() => setActive(true)}
+      onFocus={() => setActive(true)}
+      className={className}
+    >
+      {children}
+    </Link>
+  );
+}
+
 function TestimonialCard({
   testimonial,
 }: {
@@ -743,12 +775,12 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
           ))}
         </ul>
         <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
-          <Link
+          <HoverPrefetchLink
             href={product.href}
             className="inline-flex h-[41px] items-center justify-center border border-[#C0202F] bg-white px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-[#C0202F] transition-colors hover:bg-[#FFF8F8]"
           >
             View Details
-          </Link>
+          </HoverPrefetchLink>
           <AddToQuoteButton
             name={product.name}
             model={product.model}

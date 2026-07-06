@@ -22,10 +22,12 @@ export function ExpertiseCard({
   const [shouldLoad, setShouldLoad] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const videoSrc = encodeURI(video.src);
+  const videoSrc = video.src;
 
-  // Start downloading as soon as the card is near the viewport so hover
-  // playback is already buffered instead of waiting on a cold request.
+  // Fetch metadata only once the card nears the viewport, staggered so the
+  // four cards don't open simultaneous large downloads and starve each
+  // other (and the rest of the page) of bandwidth. Full playback data is
+  // streamed on demand via range requests once the user actually hovers.
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;
@@ -52,7 +54,7 @@ export function ExpertiseCard({
     const element = videoRef.current;
     if (!element || !shouldLoad) return;
 
-    element.preload = "auto";
+    element.preload = "metadata";
     element.load();
   }, [shouldLoad, videoSrc]);
 
@@ -61,8 +63,10 @@ export function ExpertiseCard({
     if (!element) return;
 
     if (hovered) {
-      // If the user hovers before the staggered preload, start immediately.
+      // If the user hovers before the staggered metadata fetch, start
+      // immediately instead of waiting for the observer's delay.
       if (!shouldLoad) setShouldLoad(true);
+      element.preload = "auto";
       element.play().catch(() => {});
       return;
     }

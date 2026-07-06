@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { ExpertiseCard } from "../components/ExpertiseCard";
 import { AddToQuoteButton } from "../components/AddToQuoteButton";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
+import { mediaUrl } from "../lib/mediaUrl";
 
 const HERO_SLIDES = [
   {
@@ -80,27 +81,29 @@ const EXPERTISE = [
     title: "Sawing",
     desc: "High-precision sawing solutions engineered for clean, accurate cuts, maximizing material efficiency, safety, and productivity across solid wood and panel processing applications.",
     bg: "#CB3737",
-    video: { src: "/media/Panel-Saw-Video-Main-Pages.mp4" },
+    video: { src: mediaUrl("/Panel-Saw-Video-Main-Pages.mp4") },
   },
   {
     title: "Moulder",
     desc: "Advanced moulding technology designed to deliver precise profiling and smooth, consistent finishes, improving product quality, design accuracy, and overall efficiency in professional woodworking and furniture manufacturing.",
     bg: "#DC620C",
-    video: { src: "/media/Planing.mp4" },
+    video: { src: mediaUrl("/Planing.mp4") },
   },
   {
     title: "Edge Banding",
     desc: "High-performance edge banding machines deliver seamless finishes, strong adhesion, precise trimming, enhanced durability, and premium aesthetics for modern furniture manufacturing needs.",
     bg: "#FBAD12",
-    video: { src: "/media/CNC Router AMUZMA optimized.mp4" },
+    video: {
+      src: mediaUrl(
+        "/Precision%20Meets%20Efficiency%20_%20Amuzma%20Edge%20Banding%20P6%20in%20Action%20_%20AMUZMA.mp4",
+      ),
+    },
   },
   {
     title: "CNC Router",
     desc: "Innovative CNC router machines deliver accurate cutting, detailed carving, and smooth shaping with smart automation, reliability, speed, and consistent results for woodworking.",
     bg: "#639247",
-    video: {
-      src: "/media/Precision Meets Efficiency _ Amuzma Edge Banding P6 in Action _ AMUZMA.mp4",
-    },
+    video: { src: mediaUrl("/CNC%20Router%20AMUZMA%20optimized.mp4") },
   },
 ];
 

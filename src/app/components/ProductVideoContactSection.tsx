@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { YouTubeFacade } from "./YouTubeFacade";
 
 const PRODUCT_VIDEO_ID = "YD5zLrIn_AI";
 
@@ -255,13 +256,7 @@ export function ProductVideoContactSection() {
             </h2>
             <div className="mt-6 flex-1">
               <div className="aspect-video h-full min-h-0 w-full overflow-hidden bg-black lg:aspect-auto">
-                <iframe
-                  src={`https://www.youtube.com/embed/${PRODUCT_VIDEO_ID}`}
-                  title="Product Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
+                <YouTubeFacade videoId={PRODUCT_VIDEO_ID} title="Product Video" />
               </div>
             </div>
           </div>

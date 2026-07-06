@@ -20,6 +20,17 @@ body {
   overflow-x: clip;
 }
 
+/*
+ * Reserve space for the vertical scrollbar at all times so that opening a
+ * modal (which sets `overflow: hidden` to lock scroll) never removes the
+ * scrollbar and shifts page content sideways — a common source of
+ * unexpected layout shift, especially from the welcome modal that can open
+ * automatically on first visit.
+ */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Hide Google Translate's default UI — language switching is driven by our own modal. */
 iframe.goog-te-banner-frame,
 iframe.skiptranslate,

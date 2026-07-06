@@ -24,34 +24,32 @@ export function ExpertiseCard({
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSrc = video.src;
 
-  // Start downloading as soon as the browser is idle after the initial page
-  // render, instead of waiting for the card to scroll into view. Cards are
-  // staggered via loadDelayMs so the four videos don't all start at once and
-  // starve the critical page content (hero image, fonts) of bandwidth. By
-  // the time the visitor scrolls down to this section, the video is already
-  // fully buffered and plays instantly on hover.
+  // Only start downloading once the card is about to scroll into view. These
+  // are full multi-megabyte videos — eagerly fetching all of them on every
+  // page load (even for visitors who never scroll this far) was inflating
+  // the total network payload by several MB and hurting performance scores.
+  // Cards are staggered via loadDelayMs so, once visible, the four videos
+  // don't all start downloading at once and starve each other's bandwidth.
   useEffect(() => {
+    const element = cardRef.current;
+    if (!element) return;
+
     let delayTimer: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | ReturnType<typeof setTimeout>;
 
-    const trigger = () => setShouldLoad(true);
-    const schedule = () => {
-      delayTimer = setTimeout(trigger, loadDelayMs);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        delayTimer = setTimeout(() => setShouldLoad(true), loadDelayMs);
+      },
+      { rootMargin: "300px 0px" }
+    );
 
-    if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(schedule, { timeout: 2000 });
-    } else {
-      idleId = setTimeout(schedule, 1000);
-    }
+    observer.observe(element);
 
     return () => {
+      observer.disconnect();
       if (delayTimer) clearTimeout(delayTimer);
-      if ("requestIdleCallback" in window) {
-        window.cancelIdleCallback(idleId as number);
-      } else {
-        clearTimeout(idleId as ReturnType<typeof setTimeout>);
-      }
     };
   }, [loadDelayMs]);
 

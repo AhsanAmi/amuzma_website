@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MediaImage as Image } from "../components/MediaImage";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ExpertiseCard } from "../components/ExpertiseCard";
+import { YouTubeFacade } from "../components/YouTubeFacade";
 import { AddToQuoteButton } from "../components/AddToQuoteButton";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 import { mediaUrl } from "../lib/mediaUrl";
@@ -215,33 +216,6 @@ export function Home() {
     setTestimonialIdx(testimonialSlide % TESTIMONIALS.length);
   }, [testimonialSlide]);
 
-  // Warm the browser cache so "Full Catelouge" opens the PDF instantly.
-  useEffect(() => {
-    const controller = new AbortController();
-    const prefetch = () => {
-      fetch(encodeURI(FULL_CATALOGUE_PDF), {
-        signal: controller.signal,
-        priority: "low",
-      } as RequestInit).catch(() => {});
-    };
-
-    let idleId: number | ReturnType<typeof setTimeout>;
-    if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(prefetch);
-    } else {
-      idleId = setTimeout(prefetch, 1500);
-    }
-
-    return () => {
-      controller.abort();
-      if ("requestIdleCallback" in window) {
-        window.cancelIdleCallback(idleId as number);
-      } else {
-        clearTimeout(idleId as ReturnType<typeof setTimeout>);
-      }
-    };
-  }, []);
-
   const testimonialOffset =
     testimonialSlide * (100 / testimonialCardsPerView);
 
@@ -357,6 +331,9 @@ export function Home() {
                   href={encodeURI(FULL_CATALOGUE_PDF)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onMouseEnter={prefetchCatalogue}
+                  onTouchStart={prefetchCatalogue}
+                  onFocus={prefetchCatalogue}
                   className="inline-flex items-center border border-[#C0202F] bg-white px-6 py-3 text-[15px] font-normal text-black transition-colors hover:bg-[#FFF8F8]"
                 >
                   Full Catelouge
@@ -635,45 +612,22 @@ function ProductVideoCarousel() {
   );
 }
 
+let catalogueFetched = false;
+
 /**
- * Click-to-load YouTube embed: shows only the thumbnail until the user
- * plays it, so the heavy YouTube player JS never loads on page load.
+ * Warms the browser cache for the (multi-MB) full catalogue PDF, but only
+ * once the visitor shows intent to open it — hovering, focusing, or
+ * touching the link. Prefetching it unconditionally on page load used to
+ * add several megabytes to every homepage visit's network payload even
+ * though most visitors never click it.
  */
-function YouTubeFacade({ videoId, title }: { videoId: string; title: string }) {
-  const [activated, setActivated] = useState(false);
-
-  if (activated) {
-    return (
-      <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="h-full w-full border-0"
-      />
-    );
-  }
-
-  return (
-    <button
-      type="button"
-      onClick={() => setActivated(true)}
-      aria-label={`Play video: ${title}`}
-      className="group relative block h-full w-full cursor-pointer"
-    >
-      <Image
-        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
-        alt={title}
-        fill
-        sizes="(min-width: 1024px) 33vw, 100vw"
-        className="object-cover"
-      />
-      <span className="absolute inset-0 flex items-center justify-center">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-[#C0202F]">
-          <Play size={22} fill="white" stroke="white" className="ml-1" />
-        </span>
-      </span>
-    </button>
+function prefetchCatalogue() {
+  if (catalogueFetched) return;
+  catalogueFetched = true;
+  fetch(encodeURI(FULL_CATALOGUE_PDF), { priority: "low" } as RequestInit).catch(
+    () => {
+      catalogueFetched = false;
+    }
   );
 }
 

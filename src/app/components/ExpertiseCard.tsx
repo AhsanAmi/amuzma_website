@@ -24,29 +24,34 @@ export function ExpertiseCard({
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSrc = video.src;
 
-  // Fetch metadata only once the card nears the viewport, staggered so the
-  // four cards don't open simultaneous large downloads and starve each
-  // other (and the rest of the page) of bandwidth. Full playback data is
-  // streamed on demand via range requests once the user actually hovers.
+  // Start downloading as soon as the browser is idle after the initial page
+  // render, instead of waiting for the card to scroll into view. Cards are
+  // staggered via loadDelayMs so the four videos don't all start at once and
+  // starve the critical page content (hero image, fonts) of bandwidth. By
+  // the time the visitor scrolls down to this section, the video is already
+  // fully buffered and plays instantly on hover.
   useEffect(() => {
-    const card = cardRef.current;
-    if (!card) return;
-
     let delayTimer: ReturnType<typeof setTimeout> | undefined;
+    let idleId: number | ReturnType<typeof setTimeout>;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry?.isIntersecting) return;
-        observer.disconnect();
-        delayTimer = setTimeout(() => setShouldLoad(true), loadDelayMs);
-      },
-      { rootMargin: "400px 0px" },
-    );
+    const trigger = () => setShouldLoad(true);
+    const schedule = () => {
+      delayTimer = setTimeout(trigger, loadDelayMs);
+    };
 
-    observer.observe(card);
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(schedule, { timeout: 2000 });
+    } else {
+      idleId = setTimeout(schedule, 1000);
+    }
+
     return () => {
-      observer.disconnect();
       if (delayTimer) clearTimeout(delayTimer);
+      if ("requestIdleCallback" in window) {
+        window.cancelIdleCallback(idleId as number);
+      } else {
+        clearTimeout(idleId as ReturnType<typeof setTimeout>);
+      }
     };
   }, [loadDelayMs]);
 
@@ -54,7 +59,7 @@ export function ExpertiseCard({
     const element = videoRef.current;
     if (!element || !shouldLoad) return;
 
-    element.preload = "metadata";
+    element.preload = "auto";
     element.load();
   }, [shouldLoad, videoSrc]);
 
@@ -63,10 +68,9 @@ export function ExpertiseCard({
     if (!element) return;
 
     if (hovered) {
-      // If the user hovers before the staggered metadata fetch, start
-      // immediately instead of waiting for the observer's delay.
+      // If the user hovers before the staggered preload kicks in, start
+      // immediately instead of waiting.
       if (!shouldLoad) setShouldLoad(true);
-      element.preload = "auto";
       element.play().catch(() => {});
       return;
     }

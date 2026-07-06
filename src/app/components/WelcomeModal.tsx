@@ -8,7 +8,7 @@ const STORAGE_KEY = "amuzma-welcome-dismissed";
 const BRAND_RED = "#BF1A2B";
 
 const inputClass =
-  "w-full border-[1.5px] border-[#C4C4C4] rounded-[4px] px-3 py-[9px] text-[15px] text-[#333333] bg-white focus:outline-none focus:border-[#999999] font-heading";
+  "w-full border border-[#C4C4C4] rounded-[3px] px-2.5 py-[7px] text-[12px] text-[#333333] bg-white focus:outline-none focus:border-[#999999] font-heading";
 
 export function WelcomeModal() {
   const [open, setOpen] = useState(false);
@@ -27,10 +27,16 @@ export function WelcomeModal() {
 
   useEffect(() => {
     if (!open) return;
-    const previousOverflow = document.body.style.overflow;
+
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
     };
   }, [open]);
 
@@ -47,7 +53,7 @@ export function WelcomeModal() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto px-4 py-6 sm:px-6 sm:py-10">
+    <div className="fixed inset-0 z-[100] overflow-hidden">
       <button
         type="button"
         className="absolute inset-0 bg-[#8A8A8A]/45"
@@ -55,106 +61,108 @@ export function WelcomeModal() {
         onClick={dismiss}
       />
 
-      <div className="relative my-auto w-full max-w-[548px] pt-8 sm:pt-10 sm:pr-10">
-        <button
-          type="button"
-          onClick={dismiss}
-          aria-label="Close"
-          className="absolute top-2 right-3 z-10 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-black/25 transition-colors hover:bg-black/35"
-        >
-          <X size={14} strokeWidth={2} className="text-white" />
-        </button>
+      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
+        <div className="relative w-full max-w-[438px] max-h-[calc(100dvh-2rem)]">
+          <div className="relative max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[8px] border-2 border-[#4F4F4F] bg-white px-4 py-5 shadow-[3px_5px_14px_rgba(0,0,0,0.22)] sm:px-10 sm:py-6">
+            <button
+              type="button"
+              onClick={dismiss}
+              aria-label="Close"
+              className="absolute top-2.5 right-2.5 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-[#4F4F4F] bg-white transition-colors hover:bg-[#F5F5F5]"
+            >
+              <X size={11} strokeWidth={2} className="text-[#333333]" />
+            </button>
 
-        <div className="relative max-h-[85vh] overflow-y-auto rounded-[10px] border-2 border-[#4F4F4F] bg-white px-5 py-7 shadow-[4px_6px_18px_rgba(0,0,0,0.22)] sm:px-12 sm:py-11">
-          <div className="mb-6 flex justify-center sm:mb-9">
-            <Image
-              src="/media/logoheader.webp"
-              alt="AMUZMA"
-              width={230}
-              height={52}
-              priority
-              className="h-[42px] w-auto object-contain sm:h-[50px]"
-            />
-          </div>
+            <div className="mb-4 flex justify-center sm:mb-5">
+              <Image
+                src="/media/logoheader.webp"
+                alt="AMUZMA"
+                width={184}
+                height={42}
+                priority
+                className="h-[34px] w-auto object-contain sm:h-[38px]"
+              />
+            </div>
 
-          <form onSubmit={handleSubmit} className="space-y-[18px]">
-            <div>
-              <label className="mb-[6px] block font-heading text-[15px] font-medium text-[#1A1A1A]">
-                Name <span style={{ color: BRAND_RED }}>*</span>
-              </label>
-              <div className="grid grid-cols-2 gap-[10px]">
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <div>
+                <label className="mb-1 block font-heading text-[12px] font-medium text-[#1A1A1A]">
+                  Name <span style={{ color: BRAND_RED }}>*</span>
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  <input
+                    type="text"
+                    required
+                    value={form.firstName}
+                    onChange={(event) =>
+                      setForm({ ...form, firstName: event.target.value })
+                    }
+                    className={inputClass}
+                  />
+                  <input
+                    type="text"
+                    required
+                    value={form.lastName}
+                    onChange={(event) =>
+                      setForm({ ...form, lastName: event.target.value })
+                    }
+                    className={inputClass}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="mb-1 block font-heading text-[12px] font-medium text-[#1A1A1A]">
+                  Email <span style={{ color: BRAND_RED }}>*</span>
+                </label>
                 <input
-                  type="text"
+                  type="email"
                   required
-                  value={form.firstName}
+                  value={form.email}
                   onChange={(event) =>
-                    setForm({ ...form, firstName: event.target.value })
-                  }
-                  className={inputClass}
-                />
-                <input
-                  type="text"
-                  required
-                  value={form.lastName}
-                  onChange={(event) =>
-                    setForm({ ...form, lastName: event.target.value })
+                    setForm({ ...form, email: event.target.value })
                   }
                   className={inputClass}
                 />
               </div>
-            </div>
 
-            <div>
-              <label className="mb-[6px] block font-heading text-[15px] font-medium text-[#1A1A1A]">
-                Email <span style={{ color: BRAND_RED }}>*</span>
-              </label>
-              <input
-                type="email"
-                required
-                value={form.email}
-                onChange={(event) =>
-                  setForm({ ...form, email: event.target.value })
-                }
-                className={inputClass}
-              />
-            </div>
+              <div>
+                <label className="mb-1 block font-heading text-[12px] font-medium text-[#1A1A1A]">
+                  Number
+                </label>
+                <input
+                  type="tel"
+                  value={form.number}
+                  onChange={(event) =>
+                    setForm({ ...form, number: event.target.value })
+                  }
+                  className={inputClass}
+                />
+              </div>
 
-            <div>
-              <label className="mb-[6px] block font-heading text-[15px] font-medium text-[#1A1A1A]">
-                Number
-              </label>
-              <input
-                type="tel"
-                value={form.number}
-                onChange={(event) =>
-                  setForm({ ...form, number: event.target.value })
-                }
-                className={inputClass}
-              />
-            </div>
+              <div>
+                <label className="mb-1 block font-heading text-[12px] font-medium text-[#1A1A1A]">
+                  Message
+                </label>
+                <textarea
+                  rows={3}
+                  value={form.message}
+                  onChange={(event) =>
+                    setForm({ ...form, message: event.target.value })
+                  }
+                  className={`${inputClass} min-h-[67px] resize-none`}
+                />
+              </div>
 
-            <div>
-              <label className="mb-[6px] block font-heading text-[15px] font-medium text-[#1A1A1A]">
-                Message
-              </label>
-              <textarea
-                rows={5}
-                value={form.message}
-                onChange={(event) =>
-                  setForm({ ...form, message: event.target.value })
-                }
-                className={`${inputClass} min-h-[118px] resize-y`}
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="mt-1 rounded-[4px] border-[1.5px] bg-white px-9 py-[7px] font-heading text-[15px] font-medium text-[#1A1A1A] transition-colors hover:bg-[#FFF8F8]"
-              style={{ borderColor: BRAND_RED }}
-            >
-              Submit
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="rounded-[3px] border bg-white px-7 py-[6px] font-heading text-[12px] font-medium text-[#1A1A1A] transition-colors hover:bg-[#FFF8F8]"
+                style={{ borderColor: BRAND_RED }}
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

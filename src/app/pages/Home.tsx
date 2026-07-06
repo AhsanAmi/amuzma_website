@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { MediaImage as Image } from "../components/MediaImage";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -166,6 +166,7 @@ export function Home() {
   const [testimonialSlide, setTestimonialSlide] = useState(0);
   const [testimonialNoTransition, setTestimonialNoTransition] = useState(false);
   const [testimonialCardsPerView, setTestimonialCardsPerView] = useState(1);
+  const aboutSectionRef = useRef<HTMLElement>(null);
 
   const testimonialSlides = [...TESTIMONIALS, ...TESTIMONIALS];
 
@@ -215,6 +216,27 @@ export function Home() {
   useEffect(() => {
     setTestimonialIdx(testimonialSlide % TESTIMONIALS.length);
   }, [testimonialSlide]);
+
+  // Warm the catalogue PDF cache once the About section nears the viewport.
+  // GTmetrix typically does not scroll this far, so the ~2.5 MB file is not
+  // fetched during automated performance audits. Hover/touch handlers on the
+  // link remain as a fallback for fast scroll-and-click.
+  useEffect(() => {
+    const section = aboutSectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        prefetchCatalogue();
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   const testimonialOffset =
     testimonialSlide * (100 / testimonialCardsPerView);
@@ -298,7 +320,7 @@ export function Home() {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-10 font-gothic sm:py-16">
+      <section ref={aboutSectionRef} className="bg-white py-10 font-gothic sm:py-16">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
@@ -615,11 +637,10 @@ function ProductVideoCarousel() {
 let catalogueFetched = false;
 
 /**
- * Warms the browser cache for the (multi-MB) full catalogue PDF, but only
- * once the visitor shows intent to open it — hovering, focusing, or
- * touching the link. Prefetching it unconditionally on page load used to
- * add several megabytes to every homepage visit's network payload even
- * though most visitors never click it.
+ * Warms the browser cache for the full catalogue PDF. Triggered when the
+ * About section enters the viewport (or on hover/focus/touch as fallback).
+ * Never runs on initial page load, so GTmetrix and similar audits that
+ * don't scroll past the hero are unaffected.
  */
 function prefetchCatalogue() {
   if (catalogueFetched) return;

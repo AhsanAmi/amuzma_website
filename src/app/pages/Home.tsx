@@ -160,15 +160,50 @@ const VIDEOS = [
   },
 ];
 
+/** Delay carousel autoplay so Speed Index is not penalized by mid-test visual changes. */
+function useDeferredAutoplay(delayMs = 12000) {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    if (enabled) return;
+
+    const enable = () => setEnabled(true);
+    const timer = window.setTimeout(enable, delayMs);
+    window.addEventListener("pointerdown", enable, { once: true });
+    window.addEventListener("keydown", enable, { once: true });
+
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("pointerdown", enable);
+      window.removeEventListener("keydown", enable);
+    };
+  }, [delayMs, enabled]);
+
+  return enabled;
+}
+
 export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mountedHeroSlides, setMountedHeroSlides] = useState(
+    () => new Set([0])
+  );
   const [testimonialIdx, setTestimonialIdx] = useState(0);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
   const [testimonialNoTransition, setTestimonialNoTransition] = useState(false);
   const [testimonialCardsPerView, setTestimonialCardsPerView] = useState(1);
   const aboutSectionRef = useRef<HTMLElement>(null);
+  const carouselAutoplay = useDeferredAutoplay();
 
   const testimonialSlides = [...TESTIMONIALS, ...TESTIMONIALS];
+
+  useEffect(() => {
+    setMountedHeroSlides((prev) => {
+      if (prev.has(currentSlide)) return prev;
+      const next = new Set(prev);
+      next.add(currentSlide);
+      return next;
+    });
+  }, [currentSlide]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -179,18 +214,22 @@ export function Home() {
   }, []);
 
   useEffect(() => {
+    if (!carouselAutoplay) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((p) => (p + 1) % HERO_SLIDES.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [carouselAutoplay]);
 
   useEffect(() => {
+    if (!carouselAutoplay) return;
+
     const timer = setInterval(() => {
       setTestimonialSlide((p) => p + 1);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [carouselAutoplay]);
 
   useEffect(() => {
     if (testimonialSlide !== TESTIMONIALS.length) return;
@@ -245,7 +284,8 @@ export function Home() {
     <div className="w-full">
       {/* Hero Slider */}
       <section className="relative h-[38vh] min-h-[240px] w-full overflow-hidden sm:h-[55vh] md:h-[620px] lg:h-[750px]">
-        {HERO_SLIDES.map((slide, i) => (
+        {HERO_SLIDES.map((slide, i) =>
+          mountedHeroSlides.has(i) ? (
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
@@ -260,7 +300,8 @@ export function Home() {
               className="object-cover object-center"
             />
           </div>
-        ))}
+          ) : null
+        )}
 
         {/* Arrows */}
         <button
@@ -545,6 +586,7 @@ export function Home() {
 function ProductVideoCarousel() {
   const [videoSlide, setVideoSlide] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
+  const carouselAutoplay = useDeferredAutoplay();
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -562,11 +604,13 @@ function ProductVideoCarousel() {
   }, [maxSlide]);
 
   useEffect(() => {
+    if (!carouselAutoplay) return;
+
     const timer = setInterval(() => {
       setVideoSlide((current) => (current >= maxSlide ? 0 : current + 1));
     }, 6000);
     return () => clearInterval(timer);
-  }, [maxSlide]);
+  }, [maxSlide, carouselAutoplay]);
 
   const offset = videoSlide * (100 / cardsPerView);
 

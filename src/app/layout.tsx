@@ -15,23 +15,26 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-rajdhani",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 const carroisGothic = Carrois_Gothic({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-carrois",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

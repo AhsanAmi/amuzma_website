@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 type GoogleTranslateWindow = Window & {
   googleTranslateElementInit?: () => void;
@@ -13,6 +14,13 @@ type GoogleTranslateWindow = Window & {
     };
   };
 };
+
+function hasNonEnglishTranslateCookie() {
+  const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]*)/);
+  if (!match?.[1]) return false;
+  const value = decodeURIComponent(match[1]).trim();
+  return value !== "" && value !== "/en/en" && value !== "/auto/en";
+}
 
 /**
  * Hides Google's banner bar without removing it from the DOM — the translate
@@ -29,22 +37,36 @@ function hideGoogleBanner() {
     banner.style.setProperty("visibility", "hidden", "important");
   });
 
-  // Google pushes the page down to make room for the banner — undo it.
   if (document.body.style.top && document.body.style.top !== "0px") {
     document.body.style.top = "0px";
   }
 }
 
 /**
- * Loads the Google Website Translator widget invisibly. The actual language
- * switching is driven by the `googtrans` cookie (see LanguageContext), so the
- * default Google UI stays hidden and our own language modal is the only UI.
+ * Loads the Google Website Translator widget invisibly. The script is
+ * deferred until the visitor opens the language picker (or already has a
+ * non-English translation cookie) so it does not inflate CLS, TBT, or Speed
+ * Index on the default English homepage load.
  */
 export function GoogleTranslate() {
+  const { isLanguageModalOpen } = useLanguage();
+  const [shouldLoad, setShouldLoad] = useState(false);
+
   useEffect(() => {
+    if (hasNonEnglishTranslateCookie()) {
+      setShouldLoad(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isLanguageModalOpen) setShouldLoad(true);
+  }, [isLanguageModalOpen]);
+
+  useEffect(() => {
+    if (!shouldLoad) return;
+
     const win = window as GoogleTranslateWindow;
 
-    // Re-hide the banner whenever Google injects it or nudges the body down.
     const observer = new MutationObserver(hideGoogleBanner);
     observer.observe(document.documentElement, {
       childList: true,
@@ -78,7 +100,7 @@ export function GoogleTranslate() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [shouldLoad]);
 
   return (
     <div

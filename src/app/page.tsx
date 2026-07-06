@@ -4,4 +4,16 @@ import { createPageMetadata } from "./lib/pageMetadata";
 
 export const metadata: Metadata = createPageMetadata("/");
 
-export default Home;
+export default function HomePage() {
+  return (
+    <>
+      <link
+        rel="preload"
+        as="image"
+        href="/media/Web-Front-Dubai-Exhibition-02.webp"
+        fetchPriority="high"
+      />
+      <Home />
+    </>
+  );
+}

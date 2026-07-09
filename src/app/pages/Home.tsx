@@ -758,13 +758,13 @@ function TestimonialCard({
 function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
   return (
     <div className="flex flex-col border border-[#E5E5E5] bg-white">
-      <div className="relative flex h-[220px] items-center justify-center bg-white p-5 sm:h-[280px] sm:p-6">
+      <div className="group relative flex h-[220px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[280px] sm:p-6">
         <Image
           src={product.image}
           alt={product.model}
           fill
           sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-contain p-5 sm:p-6"
+          className="object-contain p-5 sm:p-6 transition-transform duration-300 ease-out group-hover:scale-110"
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">

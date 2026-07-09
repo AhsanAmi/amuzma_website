@@ -6,13 +6,13 @@ import { MediaImage } from "./MediaImage";
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
   return (
     <div className="flex flex-col border border-[#E5E5E5] bg-white">
-      <div className="flex h-[220px] items-center justify-center bg-white p-5 sm:h-[280px] sm:p-6">
+      <div className="group flex h-[220px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[280px] sm:p-6">
         <MediaImage
           src={product.image}
           alt={product.model}
           width={400}
           height={280}
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain transition-transform duration-300 ease-out group-hover:scale-110"
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">

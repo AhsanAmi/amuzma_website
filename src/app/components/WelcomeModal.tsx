@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { MediaImage as Image } from "./MediaImage";
 import { X } from "lucide-react";
 
-const AUTO_CLOSE_MS = 5000;
+const AUTO_CLOSE_MS = 10000;
 const BRAND_RED = "#BF1A2B";
 
 const inputClass =
@@ -53,17 +53,17 @@ export function WelcomeModal() {
       />
 
       <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-        <div className="relative w-full max-w-[438px] max-h-[calc(100dvh-2rem)]">
-          <div className="relative max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[8px] border-2 border-[#4F4F4F] bg-white px-4 py-5 shadow-[3px_5px_14px_rgba(0,0,0,0.22)] sm:px-10 sm:py-6">
-            <button
-              type="button"
-              onClick={dismiss}
-              aria-label="Close"
-              className="absolute top-2.5 right-2.5 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-[#4F4F4F] bg-white transition-colors hover:bg-[#F5F5F5]"
-            >
-              <X size={11} strokeWidth={2} className="text-[#333333]" />
-            </button>
+        <div className="relative w-full max-w-[438px] max-h-[calc(100dvh-2rem)] pt-7 pr-7 sm:pt-8 sm:pr-8">
+          <button
+            type="button"
+            onClick={dismiss}
+            aria-label="Close"
+            className="absolute top-0 right-0 z-20 flex h-6 w-6 items-center justify-center rounded-full border border-[#4F4F4F] bg-white transition-colors hover:bg-[#F5F5F5]"
+          >
+            <X size={11} strokeWidth={2} className="text-[#333333]" />
+          </button>
 
+          <div className="relative max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[8px] border-2 border-[#4F4F4F] bg-white px-4 py-5 shadow-[3px_5px_14px_rgba(0,0,0,0.22)] sm:px-10 sm:py-6">
             <div className="mb-4 flex justify-center sm:mb-5">
               <Image
                 src="/media/logoheader.webp"

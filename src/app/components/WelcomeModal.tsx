@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { MediaImage as Image } from "./MediaImage";
 import { X } from "lucide-react";
 
-const STORAGE_KEY = "amuzma-welcome-dismissed";
+const AUTO_CLOSE_MS = 5000;
 const BRAND_RED = "#BF1A2B";
 
 const inputClass =
   "w-full border border-[#C4C4C4] rounded-[3px] px-2.5 py-[7px] text-[12px] text-[#333333] bg-white focus:outline-none focus:border-[#999999] font-heading";
 
 export function WelcomeModal() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
     firstName: "",
@@ -21,34 +24,17 @@ export function WelcomeModal() {
   });
 
   useEffect(() => {
-    const dismissed = localStorage.getItem(STORAGE_KEY);
-    if (dismissed) return;
+    setOpen(isHome);
+  }, [isHome]);
 
-    // Defer until after LCP and initial paint so automated audits are not
-    // penalized for the overlay appearing during critical metrics.
-    let cancelled = false;
-    const timer = window.setTimeout(() => {
-      const schedule = () => {
-        if (!cancelled) setOpen(true);
-      };
+  useEffect(() => {
+    if (!open) return;
 
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(schedule, { timeout: 6000 });
-      } else {
-        schedule();
-      }
-    }, 5000);
+    const timer = window.setTimeout(() => setOpen(false), AUTO_CLOSE_MS);
+    return () => window.clearTimeout(timer);
+  }, [open]);
 
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-    };
-  }, []);
-
-  const dismiss = () => {
-    localStorage.setItem(STORAGE_KEY, "true");
-    setOpen(false);
-  };
+  const dismiss = () => setOpen(false);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();

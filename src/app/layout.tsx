@@ -73,7 +73,9 @@ export default function RootLayout({
             <FooterWithRedPanel />
             <FloatingSocialBar />
             <ScrollToTop />
-            <WelcomeModal />
+            <Suspense fallback={null}>
+              <WelcomeModal />
+            </Suspense>
             <LanguageModal />
             <GoogleTranslate />
           </QuoteCartProvider>

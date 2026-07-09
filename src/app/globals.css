@@ -15,6 +15,13 @@
   }
 }
 
+@utility banner-title {
+  font-family: var(--font-goldie);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 html,
 body {
   overflow-x: clip;

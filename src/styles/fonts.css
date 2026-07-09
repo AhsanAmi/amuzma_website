@@ -10,7 +10,7 @@
   src: url("/fonts/Goldie/GoldieSans-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,5 +18,5 @@
   src: url("/fonts/Goldie/GoldieSans-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }

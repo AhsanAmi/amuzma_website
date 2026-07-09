@@ -53,6 +53,15 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${rajdhani.variable} ${carroisGothic.variable}`}
     >
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/Goldie/GoldieSans-Bold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <Suspense fallback={null}>
           <NavigationProgress />

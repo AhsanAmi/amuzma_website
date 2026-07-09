@@ -122,7 +122,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-sans: var(--font-poppins);
   --font-heading: var(--font-rajdhani);
-  --font-display: var(--font-goldie);
+  --font-display: "Goldie Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-goldie: "Goldie Sans", ui-sans-serif, system-ui, sans-serif;
   --font-gothic: var(--font-carrois);
 }
 

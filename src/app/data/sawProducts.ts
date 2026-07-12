@@ -67,7 +67,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "BAND SAW",
     model: "Elite 65BS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-Band-Saw.webp",
+    heroImage: "/media/amuzma-web-banners-for-Band-Saw.jpg",
     tagline: "Powerful Performance. Precision Control. Built for Professionals.",
     featuresSubtitle:
       "The AMUZMA Elite 65BS is a heavy-duty industrial band saw engineered for precision cutting, exceptional stability, and long-lasting reliability.",
@@ -147,7 +147,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Firma 40PL",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-40PL.webp",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-40PL.jpg",
     tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
     featuresSubtitle:
       "The Panel Saw Firma 40PL is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
@@ -227,7 +227,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Firma 35PS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-35PS-final-1.webp",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-35PS.jpg",
     tagline: "Professional Performance. Precision Cutting. Built to Last.",
     featuresSubtitle:
       "The Amuzma Firma 35PS is a compact yet powerful panel saw designed to deliver exceptional accuracy and reliability for professional woodworking.",
@@ -306,7 +306,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Forte 40PA",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-FORTE-40PA-finlisted-scaled.webp",
+    heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-FORTE-40PA.jpg",
     tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
     featuresSubtitle:
       "The Panel Saw Forte 40PA is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
@@ -385,7 +385,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     name: "PANEL SAW",
     model: "Elite 35TS",
     category: "Saws",
-    heroImage: "/media/amuzma-web-banners-for-Panel-Saw-12-Elite-35TS.webp",
+    heroImage: "/media/amuzma-web-banners-for-Panel-Saw-12-Elite-35TS.jpg",
     tagline: "Compact Size. Industrial Performance. Precision You Can Trust.",
     featuresSubtitle:
       "The Amuzma Elite 35TS is a compact yet fully featured panel saw, designed for professional woodworkers who need exceptional cutting performance.",

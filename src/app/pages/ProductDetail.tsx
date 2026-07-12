@@ -329,7 +329,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "DUST COLLECTOR",
     model: "DC2200",
     category: "Dust Collector",
-    heroImage: "/media/New-Project-28.webp",
+    heroImage: "/media/amuzma-web-banners-for-Dust-Collector-DC2200.jpg",
     heroImageClassName:
       "object-cover max-lg:object-[78%_center] lg:object-center lg:origin-center lg:scale-[1.11]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -428,7 +428,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "DUST COLLECTOR",
     model: "ABS5000",
     category: "Dust Collector",
-    heroImage: "/media/New-Project-30.webp",
+    heroImage: "/media/amuzma-web-banners-for-Dust-Collector-ABS5000.jpg",
     heroHeightClassName:
       "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
     heroImageClassName:
@@ -530,8 +530,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "DUST COLLECTOR",
     model: "RDC3800",
     category: "Dust Collector",
-    heroImage:
-      "/media/amuzma_web_banners_for_products_Dust_Collector_DC_3800_1.jpg.webp",
+    heroImage: "/media/amuzma-web-banners-for-Dust-Collector-DC3800.jpg",
     heroHeightClassName:
       "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
     heroImageClassName:
@@ -634,7 +633,7 @@ const ADDITIONAL_PRODUCTS: Record<
     model: "Elite 30SM",
     category: "Moulder",
     tagline: "Precision Engineering. Built for the Professional Workshop.",
-    heroImage: "/media/Spindle-moulder-30SM.webp",
+    heroImage: "/media/amuzma-web-banners-for-Spindle-Moulder.jpg",
     featuresSubtitle:
       "High-performance spindle moulder with precision, durability, and smooth operation for professional woodworking tasks.",
     features: [
@@ -731,7 +730,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "E5",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.webp",
+    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-E5.jpg",
     tagline: "Precision Edging. Compact Design. Professional Finish.",
     featuresSubtitle:
       "The Edge Banding E5 delivers precise, efficient edge finishing for compact professional workshops.",
@@ -803,7 +802,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "P6",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.webp",
+    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-P6.jpg",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
@@ -875,7 +874,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "Edge Banding",
     model: "C7",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.webp",
+    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-C7.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -941,7 +940,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "PLANER",
     model: "Elite 41PF",
     category: "Planer",
-    heroImage: "/media/Planer-41PF-1.webp",
+    heroImage: "/media/amuzma-web-banners-for-Planer.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle: "Precision Cutting. Powerful Performance",
     features: [
@@ -1015,8 +1014,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "PLANER & THICKNESSER",
     model: "Elite 41CM/CS",
     category: "Planer",
-    heroImage:
-      "/media/Thicknesser-41CM.webp",
+    heroImage: "/media/amuzma-web-banners-for-Planer-Thicknesser.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1106,7 +1104,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "THICKNESSER",
     model: "Elite 41TH",
     category: "Planer",
-    heroImage: "/media/IMG_9016.webp",
+    heroImage: "/media/amuzma-web-banners-for-thicknesser-41th.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1196,7 +1194,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "THICKNESSER",
     model: "Firma 63TH",
     category: "Planer",
-    heroImage: "/media/63th.webp",
+    heroImage: "/media/amuzma-web-banners-for-Thicknesser-Firma-63TH.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
     featuresSubtitle:
       "High suction capacity with efficient dust filtration ensures stable airflow and low-noise operation.",
@@ -1268,7 +1266,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "VENEER DOOR PRESS",
     model: "P 100T",
     category: "Pressing",
-    heroImage: "/media/Veneer-Door-Press.webp",
+    heroImage: "/media/Web-photos-hot-press-C8.jpg",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",

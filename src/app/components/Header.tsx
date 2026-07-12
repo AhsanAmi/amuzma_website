@@ -12,7 +12,7 @@ import { SearchOverlay } from "./SearchOverlay";
 import { signalNavigationStart } from "./NavigationProgress";
 
 const headerTextClass =
-  "font-heading font-medium text-[17px] text-[#333333] transition-colors hover:text-[#BF1A2B] lg:text-[18px] xl:text-[20px] 2xl:text-[21.6px]";
+  "font-heading font-medium text-[16px] leading-[27.2px] text-[#333333] transition-colors hover:text-[#BF1A2B]";
 
 const COMPANY_RED = "#BF1A2B";
 const COMPANY_GREEN = "#75A14F";

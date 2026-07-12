@@ -191,7 +191,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   {
     category: "Saws",
     image: "/media/img48.webp",
-    model: "65 BS",
+    model: "Elite 65BS",
     name: "Band Saw",
     specs: [
       "Main Blade Diameter : 315 mm",
@@ -199,6 +199,18 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Scoring Blade Diameter : 120 mm",
     ],
     detailsHref: "/products/band-saw-65bs",
+  },
+  {
+    category: "Saws",
+    image: "/media/Web-photos-beam-saw-33bs-final.jpg",
+    model: "Firma 33BS",
+    name: "Beam Saw",
+    specs: [
+      "Main Blade Diameter : 315 mm",
+      "Main Blade Speed : 4500 rpm",
+      "Scoring Blade Diameter : 120 mm",
+    ],
+    detailsHref: "/products/beam-saw-firma-33bs",
   },
   {
     category: "Saws",
@@ -223,18 +235,6 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Scoring Blade Diameter : 120 mm",
     ],
     detailsHref: "/products/panel-saw-firma-35ps",
-  },
-  {
-    category: "Saws",
-    image: "/media/img2.webp",
-    model: "Forte 40PK",
-    name: "Panel Saw",
-    specs: [
-      "Main Blade Diameter : 315 mm",
-      "Main Blade Speed : 4500 rpm",
-      "Scoring Blade Diameter : 120 mm",
-    ],
-    detailsHref: "/products/panel-saw-forte-40pa",
   },
   {
     category: "Saws",

@@ -8,7 +8,7 @@ const SAW_PRODUCTS: CatalogProduct[] = [
   {
     category: "Saw",
     image: "/media/img48.webp",
-    model: "65 BS",
+    model: "Elite 65BS",
     name: "Band Saw",
     specs: [
       "Main Blade Diameter : 315 mm",
@@ -16,6 +16,18 @@ const SAW_PRODUCTS: CatalogProduct[] = [
       "Scoring Blade Diameter : 120 mm",
     ],
     detailsHref: "/products/band-saw-65bs",
+  },
+  {
+    category: "Saw",
+    image: "/media/Web-photos-beam-saw-33bs-final.jpg",
+    model: "Firma 33BS",
+    name: "Beam Saw",
+    specs: [
+      "Main Blade Diameter : 315 mm",
+      "Main Blade Speed : 4500 rpm",
+      "Scoring Blade Diameter : 120 mm",
+    ],
+    detailsHref: "/products/beam-saw-firma-33bs",
   },
   {
     category: "Saw",
@@ -43,18 +55,6 @@ const SAW_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saw",
-    image: "/media/img2.webp",
-    model: "Forte 40PK",
-    name: "Panel Saw",
-    specs: [
-      "Main Blade Diameter : 315 mm",
-      "Main Blade Speed : 4500 rpm",
-      "Scoring Blade Diameter : 120 mm",
-    ],
-    detailsHref: "/products/panel-saw-forte-40pa",
-  },
-  {
-    category: "Saw",
     image: "/media/img3.webp",
     model: "Elite 35TS",
     name: "Panel Saw",
@@ -76,7 +76,7 @@ export function Saws() {
         <div className={PAGE_CONTAINER}>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SAW_PRODUCTS.map((product) => (
-              <CategoryProductCard key={product.model} product={product} />
+              <CategoryProductCard key={product.detailsHref} product={product} />
             ))}
           </div>
         </div>

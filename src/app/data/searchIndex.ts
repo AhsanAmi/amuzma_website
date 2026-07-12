@@ -120,10 +120,17 @@ const PRODUCT_META: Record<
     date: "February 14, 2026",
   },
   "band-saw-65bs": {
-    title: "Band Saw 65BS",
+    title: "Band Saw Elite 65BS",
     excerpt:
       "High-precision band saw with 315 mm main blade diameter and variable speed 3000 / 4000 / 5000 rpm.",
     image: "/media/img48.webp",
+    date: "February 13, 2026",
+  },
+  "beam-saw-firma-33bs": {
+    title: "Beam Saw Firma 33BS",
+    excerpt:
+      "Industrial beam saw engineered for high-volume panel cutting with precision, stability, and reliable production performance.",
+    image: "/media/Web-photos-beam-saw-33bs-final.jpg",
     date: "February 13, 2026",
   },
   "panel-saw-firma-40pl": {

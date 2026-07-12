@@ -19,6 +19,7 @@ export const PRODUCT_CATALOGUE_PDFS: Record<string, string> = {
   "thicknesser-elite-41th": "/assets/documents/Thicknesser Elite 41TH.pdf",
   "thicknesser-firma-63th": "/assets/documents/Thicknesser Firma 63th (1).pdf",
   "band-saw-65bs": "/assets/documents/Band Saw 65BS (1).pdf",
+  "beam-saw-firma-33bs": "/assets/documents/Beam-saw-Firma-33BS.pdf",
   "panel-saw-firma-40pl": "/assets/documents/Panel Saw 40PL.pdf",
   "panel-saw-firma-35ps": "/assets/documents/Panel Saw Firma 35PS U.pdf",
   "panel-saw-forte-40pa": "/assets/documents/Panel Saw Forte 40PA n.pdf",

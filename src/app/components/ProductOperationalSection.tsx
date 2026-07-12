@@ -22,66 +22,66 @@ const OPERATIONAL_TABS_13CR: OperationalTab[] = [
     description:
       "The machine performs smooth and high-speed cutting with consistent feed rates. Its advanced motion control system ensures accurate tool paths and efficient material processing.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/cnc-1-2-1024x640-1-removebg-preview.webp",
+    image: "/media/Wood-Panel-Materials-in-cnc-router.webp",
   },
   {
     label: "Plastic Materials",
     heading: "Plastic Materials",
     description:
-      "The machine performs smooth and high-speed cutting with consistent feed rates. Its advanced motion control system ensures accurate tool paths and efficient material processing.",
+      "Equipped with precision linear guides and servo motors, the router maintains stable and controlled movement across X, Y, and Z axes for accurate carving and shaping.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/cnc-1-3-1024x640-1-removebg-preview.webp",
+    image: "/media/Plastic-Materials-CNC-router.webp",
   },
   {
     label: "Composite Materials",
     heading: "Composite Materials",
     description:
-      "The machine performs smooth and high-speed cutting with consistent feed rates. Its advanced motion control system ensures accurate tool paths and efficient material processing.",
+      "The Forte 13CR cuts all commercially available plastics in any desired form. The machine can easily handle even complex composite materials.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/cnc-1-2-1024x640-1-removebg-preview.webp",
+    image: "/media/Composite-Materials-in-cnc-router-1.webp",
   },
   {
-    label: "Soft Metals (with proper tooling)",
-    heading: "Soft Metals (with proper tooling)",
+    label: "Aluminium",
+    heading: "Aluminium",
     description:
-      "The machine performs smooth and high-speed cutting with consistent feed rates. Its advanced motion control system ensures accurate tool paths and efficient material processing.",
+      "Designed for industrial use, the machine supports long working hours with minimal vibration, ensuring stable output and reliable performance in continuous production environments.",
     icon: "/media/New-Project-12.webp",
-    image: "/media/cnc-1-3-1024x640-1-removebg-preview.webp",
+    image: "/media/aluminium.webp",
   },
 ];
 
 const OPERATIONAL_TABS_15CR: OperationalTab[] = [
   {
-    label: "High - Speed",
-    heading: "Continuous Production Capability",
+    label: "Wood & Panel Materials",
+    heading: "Wood & Panel Materials",
     description:
       "Designed for industrial use, the machine supports long working hours with minimal vibration, ensuring stable output and reliable performance in continuous production environments.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/cnc-1-2-1024x640-1-removebg-preview.webp",
+    image: "/media/Wood-Panel-Materials-in-cnc-router.webp",
   },
   {
-    label: "Automatic",
-    heading: "Automatic",
+    label: "Plastic Materials",
+    heading: "Plastic Materials",
     description:
       "Equipped with precision linear guides and servo motors, the router maintains stable and controlled movement across X, Y, and Z axes for accurate carving and shaping.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/cnc-1-3-1024x640-1-removebg-preview.webp",
+    image: "/media/Plastic-Materials-CNC-router.webp",
   },
   {
-    label: "Processing",
-    heading: "Multi-Material Processing",
+    label: "Composite Materials",
+    heading: "Composite Materials",
     description:
-      "The FORTE 1500CR efficiently cuts wood, MDF, plywood, acrylic, and composites. Spindle speed adjustment allows optimized performance for different materials.",
+      "The FORTE 15CR efficiently cuts wood, MDF, plywood, acrylic, and composites. Spindle speed adjustment allows optimized performance for different materials.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/cnc-1-2-1024x640-1-removebg-preview.webp",
+    image: "/media/Composite-Materials-in-cnc-router-1.webp",
   },
   {
-    label: "Capability",
-    heading: "Continuous Production Capability",
+    label: "Aluminium",
+    heading: "Aluminium",
     description:
       "Designed for industrial use, the machine supports long working hours with minimal vibration, ensuring stable output and reliable performance in continuous production environments.",
     icon: "/media/New-Project-12.webp",
-    image: "/media/cnc-1-3-1024x640-1-removebg-preview.webp",
+    image: "/media/aluminium.webp",
   },
 ];
 

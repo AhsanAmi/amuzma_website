@@ -18,6 +18,7 @@ export const PAGE_TITLES: Record<string, string> = {
   planer: "Planer – Amuzma",
   saws: "Saws – Amuzma",
   "products/band-saw-65bs": "Band Saw Elite 65BS – Amuzma",
+  "products/beam-saw-firma-33bs": "Beam Saw Firma 33BS – Amuzma",
   "products/panel-saw-firma-40pl": "Panel Saw Firma 40PL – Amuzma",
   "products/panel-saw-firma-35ps": "Panel Saw Firma 35ps – Amuzma",
   "products/panel-saw-forte-40pa": "Panel saw Forte 40PA – Amuzma",

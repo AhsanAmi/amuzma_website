@@ -430,7 +430,7 @@ const ADDITIONAL_PRODUCTS: Record<
     category: "Dust Collector",
     heroImage: "/media/amuzma-web-banners-for-Dust-Collector-ABS5000.jpg",
     heroHeightClassName:
-      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
+      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px] min-[1800px]:h-[460px] min-[2200px]:h-[420px]",
     heroImageClassName:
       "object-cover max-lg:object-[78%_center] lg:object-[84%_center]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -532,7 +532,7 @@ const ADDITIONAL_PRODUCTS: Record<
     category: "Dust Collector",
     heroImage: "/media/amuzma-web-banners-for-Dust-Collector-DC3800.jpg",
     heroHeightClassName:
-      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px]",
+      "h-[269px] sm:h-[304px] md:h-[339px] lg:h-[570px] min-[1800px]:h-[460px] min-[2200px]:h-[420px]",
     heroImageClassName:
       "object-cover max-lg:object-[78%_center] lg:object-[84%_center]",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -1361,10 +1361,14 @@ Object.assign(
 const DEFAULT_PRODUCT = PRODUCTS_DATA["cnc-router-forte-13cr"];
 
 const DEFAULT_HERO_HEIGHT_CLASS =
-  "h-[304px] sm:h-[345px] md:h-[386px] lg:h-[649px]";
+  "h-[304px] sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]";
 
 const DEFAULT_HERO_IMAGE_CLASS =
   "object-cover max-lg:object-[78%_center] lg:object-center";
+
+/** Keeps laptop composition; mild zoom on ultra-wide so the machine stays near the text. */
+const LARGE_SCREEN_HERO_IMAGE_CLASS =
+  "origin-center min-[1800px]:scale-[1.05] min-[2200px]:scale-[1.1] min-[2800px]:scale-[1.15]";
 
 const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"];
 
@@ -1380,7 +1384,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const heroImageClassName = product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS;
+  const heroImageClassName = `${product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS} ${LARGE_SCREEN_HERO_IMAGE_CLASS}`;
 
   return (
     <div className="max-w-full overflow-x-hidden">
@@ -1399,7 +1403,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
           />
 
           <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex items-center justify-start px-6 lg:justify-end lg:pl-[100px] lg:pr-10">
+            <div className="flex items-center justify-start px-6 lg:justify-end lg:pl-[100px] lg:pr-10 min-[1800px]:justify-start min-[1800px]:pl-[72px] min-[1800px]:pr-6">
               <div className="w-full max-w-[513px]">
                 <h1 className="font-gothic text-[26px] font-normal uppercase leading-none text-white sm:text-[36px]">
                   {product.name}

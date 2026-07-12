@@ -103,10 +103,10 @@ const productCategories = [
     color: COMPANY_RED,
     href: "/saws",
     items: [
-      { label: "Band Saw 65BS", href: "/products/band-saw-65bs" },
+      { label: "Band Saw Elite 65BS", href: "/products/band-saw-65bs" },
+      { label: "Beam saw Firma 33BS", href: "/products/beam-saw-firma-33bs" },
       { label: "Panel saw Firma 40PL", href: "/products/panel-saw-firma-40pl" },
       { label: "Panel saw Firma 35PS", href: "/products/panel-saw-firma-35ps" },
-      { label: "Panel saw Forte 40PA", href: "/products/panel-saw-forte-40pa" },
       { label: "Panel saw Elite 35TS", href: "/products/panel-saw-elite-35ts" },
     ],
   },

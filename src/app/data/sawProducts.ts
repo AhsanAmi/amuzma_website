@@ -143,6 +143,86 @@ export const SAW_PRODUCT_OVERRIDES = {
       { name: "HeavyBand 65", image: "/media/Band-Saw-16-Elite-65BS-Important-J4.webp" },
     ],
   },
+  "beam-saw-firma-33bs": {
+    name: "BEAM SAW",
+    model: "Firma 33BS",
+    category: "Saws",
+    heroImage: "/media/Web-photos-beam-saw-33bs-final.jpg",
+    tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
+    featuresSubtitle:
+      "The Beam Saw Firma 33BS is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
+    features: [
+      {
+        title: "Infeed Air Tables",
+        image: "/media/Infeed-Air-Tables.webp",
+        desc: "The Amuzma Infeed Air Tables are designed to make panel handling faster, smoother, and more efficient. By creating a cushion of air beneath the workpiece, they reduce friction, allowing large and heavy panels to glide.",
+      },
+      {
+        title: "Gripper Guide Track",
+        image: "/media/Gripper-Guide-Track-Mechanisms.webp",
+        desc: "The Amuzma Beam Saw is engineered to ensure smooth, accurate, and reliable panel movement throughout the cutting process. Built for durability and precision, it provides stable guidance for the gripper system,",
+      },
+      {
+        title: "Electrical Control Cabinet",
+        image: "/media/Electrical-Control-Cabinet..webp",
+        desc: "The Amuzma Electrical Control Cabinet is the command center of your Beam Saw, engineered to deliver safe, stable, and efficient machine operation. Designed with high-quality electrical components, it ensures precise.",
+      },
+      {
+        title: "HMI Operator Station",
+        image: "/media/HMI-Operator-Station.webp",
+        desc: "The Amuzma HMI Operator Station is designed to give operators intuitive, precise, and efficient control of the Beam Saw. With a user-friendly interface and intelligent system management, it streamlines machine operation,",
+      },
+    ],
+    benefitsSectionTitle: "Performance Benefits",
+    benefitsSubtitle: "Power, Precision, Profitability",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "Flawless Edge Quality",
+        desc: "Equipped with a strong motor system that ensures consistent cutting power for hardwood, softwood, and heavy-duty industrial tasks.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Increased Production",
+        desc: "Delivers accurate and smooth cutting performance for straight, curved, and detailed woodworking applications with minimal material wastage.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Long-Term Reliability",
+        desc: "Heavy-duty frame construction reduces vibration, ensuring safer operation, better control, and long-lasting machine durability.",
+      },
+    ],
+    galleryDescription:
+      "The Beam saw is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
+    gallery: [
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Infeed-Air-Tables.webp",
+      "/media/Gripper-Guide-Track-Mechanisms.webp",
+      "/media/Electrical-Control-Cabinet..webp",
+      "/media/HMI-Operator-Station.webp",
+    ],
+    dimensionsImage: "/media/Beam-Saw-2-1024x702.webp",
+    dimensionsHeading: "Machine Dimensions",
+    dimensionsDescription:
+      "Table Size: 800 × 550 mm. Dust Extraction Outlet: 100 mm. Net / Gross Weight: 800 / 850 kg.",
+    partsSectionTitle: "Product Image",
+    partsImages: [
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Beam-Saw-32BS.webp",
+      "/media/Beam-Saw-32BS.webp",
+    ],
+    parts: [
+      { name: "UltraSaw 65", image: "/media/Beam-Saw-32BS.webp" },
+      { name: "PowerCut 65BS", image: "/media/Beam-Saw-32BS.webp" },
+      { name: "ProBand 65", image: "/media/Beam-Saw-32BS.webp" },
+      { name: "MasterCut 65", image: "/media/Beam-Saw-32BS.webp" },
+      { name: "PrecisionSaw 65", image: "/media/Beam-Saw-32BS.webp" },
+      { name: "HeavyBand 65", image: "/media/Beam-Saw-32BS.webp" },
+    ],
+  },
   "panel-saw-firma-40pl": {
     name: "PANEL SAW",
     model: "Firma 40PL",
@@ -470,6 +550,12 @@ export const SAW_OPERATIONAL_TABS: Record<string, OperationalTab[]> = {
     "The AMUZMA Elite 65BS is engineered to deliver precise and efficient performance when processing a wide range of plastic materials. Designed for accuracy and smooth operation, it provides clean cuts, minimal material waste, and excellent finish quality across various applications. From acrylic, PVC, and polycarbonate to advanced composite materials, the Elite 65BS offers reliable cutting performance and consistent results. Its precision blade guidance system and rigid construction ensure accurate cutting, smooth edges, and superior control, even when working with complex shapes and contours.",
     "The AMUZMA Elite 65BS is a versatile solution for a wide range of panel processing applications, delivering precision, efficiency, and reliability for professional woodworking environments. Whether cutting large panels, curved components, or custom-shaped parts, the machine provides smooth, accurate results with excellent finish quality. Its rigid construction, precision blade guidance system, and stable worktable ensure consistent cutting performance across a variety of panel materials, including MDF, plywood, particleboard, laminated panels, and composite boards. The Elite 65BS is ideal for workshops that require flexibility for both straight and curved cutting operations.",
   ),
+  "beam-saw-firma-33bs": materialTabs(
+    "The AMUZMA Beam saw is engineered to deliver exceptional precision for aluminium cutting applications. Trusted for years in the aluminium-processing industry, this sliding table saw provides outstanding accuracy, clean cutting results, and reliable performance for professional workshops. Designed as the ideal solution for cutting and sawing aluminium profiles and panels, the Forte 40PA achieves sharp contours and precision cutting accuracy within a tenth of a millimetre.Its advanced engineering ensures smooth operation, reduced vibration, and superior finishing quality across a wide range of aluminium applications.",
+    "The AMUZMA Beam saw is designed to handle the unique demands of solid wood processing with exceptional precision and reliability. From trimming and ripping to refining natural wood boards, the machine delivers smooth, accurate, and high-quality cutting performance for professional woodworking applications. Solid wood furniture is valued for its natural grain patterns, strength, and premium feel. To meet these demanding requirements, the Forte 40PA offers advanced feature options specifically engineered for efficient and effortless solid wood machining. Its precision engineering ensures clean cuts, smooth finishes, and consistent results, making complex woodworking operations simple and efficient.",
+    "The AMUZMA Beam saw is engineered for precise and efficient plastic processing across a wide range of applications. Capable of cutting all commercially available plastics in virtually any required shape or form, the machine delivers outstanding accuracy, smooth finishes, and reliable performance. The Forte 40PA also handles advanced composite materials such as carbon composite plates with exceptional precision, achieving cutting tolerances within a tenth of a millimetre. Its advanced engineering ensures clean cuts, reduced material damage, and consistent results for demanding industrial applications.",
+    "The AMUZMA Beam saw is designed to simplify and optimize modern panel processing for carpenters, cabinet-makers, and professional woodworking workshops. Large panel handling, precise sizing, and efficient material management are daily challenges in production environments — and the Forte 40PA is built to handle them with ease. Whether working with full-size panels, half-size boards, or reusable offcuts, the machine provides smooth handling, precise cutting accuracy, and efficient workflow support. Its advanced features help reduce material waste, improve productivity, and make complex panel-processing operations faster and more manageable.",
+  ),
   "panel-saw-firma-40pl": materialTabs(
     "The AMUZMA Firma 40PL is engineered to deliver exceptional precision and reliability for aluminium cutting applications. Trusted by professionals in the aluminium-processing industry, this high-performance sliding table saw provides outstanding accuracy, clean cutting results, and consistent performance for demanding workshop environments. Designed for cutting aluminium profiles, extrusions, sheets, and composite panels, the Firma 40PL achieves sharp contours and precision cuts with tolerances of up to a tenth of a millimetre. Its advanced engineering, rigid construction, and precision-guided sliding table ensure smooth operation, minimal vibration, and superior finish quality.",
     "The AMUZMA Firma 40PL is engineered to meet the demanding requirements of solid wood processing, delivering outstanding precision, power, and reliability. From trimming and ripping to sizing and refining natural timber, the machine provides smooth, accurate cuts and exceptional finish quality for professional woodworking applications. Solid wood is valued for its natural grain patterns, durability, and premium appearance. To preserve these qualities and achieve the highest standards of craftsmanship, the Firma 40PL is equipped with advanced features designed specifically for efficient and effortless solid wood machining.",
@@ -498,6 +584,7 @@ export const SAW_OPERATIONAL_TABS: Record<string, OperationalTab[]> = {
 
 export const SAW_OPERATIONAL_HEADINGS: Record<string, string> = {
   "band-saw-65bs": "Operational Excellence",
+  "beam-saw-firma-33bs": "Operational Excellence",
   "panel-saw-firma-40pl": "Operational Excellence",
   "panel-saw-firma-35ps": "Operational",
   "panel-saw-forte-40pa": "Operational Excellence",
@@ -523,6 +610,33 @@ const BAND_SAW_65BS_SPECS_RIGHT: SpecItem[] = [
   { label: "Net/Gross Weight", value: "323/359 Kgs" },
   { label: "Net / Package", value: "300x100x60 mm" },
   { label: "Wooden box Packegs Size", value: "1119x777x2070 mm" },
+];
+
+const BEAM_SAW_33BS_SPECS_LEFT: SpecItem[] = [
+  { label: "Main saw motor power", value: "16.5KW" },
+  { label: "Auxiliary saw motor power", value: "2.2KW" },
+  { label: "Saw car running motor power", value: "1.8KW" },
+  { label: "Robot servo motor power", value: "1.8KW" },
+  { label: "Maximum sawing length", value: "3300mm" },
+  { label: "Sawing height", value: "100mm" },
+  { label: "The speed of the saw", value: "0-120/min" },
+  { label: "Blade speeds", value: "0-100m/min" },
+];
+
+const BEAM_SAW_33BS_SPECS_RIGHT: SpecItem[] = [
+  { label: "Fan power", value: "4kw*1" },
+  { label: "Computer display screen", value: "19 inch" },
+  { label: "Gross power", value: "26.5kw" },
+  { label: "Overall dimensions", value: "5900*5900*1850mm" },
+];
+
+const BEAM_SAW_33BS_DIMENSIONS_ITEMS: SpecItem[] = [
+  { label: "Table Size", value: "800 × 550 mm" },
+  { label: "Dust Extraction Outlet", value: "100 mm" },
+  { label: "Main Motor Output", value: "3 × 400V : 5.5 KW / 7.5HP" },
+  { label: "Scoring Motor Output", value: "1.1 kW" },
+  { label: "Net / Gross Weight", value: "800 / 850 kg" },
+  { label: "Package Size", value: "1300 × 1190 × 1000 mm" },
 ];
 
 const FIRMA_40PL_SPECS_LEFT: SpecItem[] = [
@@ -660,6 +774,13 @@ export const SAW_SPEC_CONFIGS: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: BAND_SAW_65BS_SPECS_LEFT,
     right: BAND_SAW_65BS_SPECS_RIGHT,
+  },
+  "beam-saw-firma-33bs": {
+    parametersTabLabel: "System Specifications",
+    parametersTabWidthClass: "w-[280px] whitespace-nowrap",
+    left: BEAM_SAW_33BS_SPECS_LEFT,
+    right: BEAM_SAW_33BS_SPECS_RIGHT,
+    dimensionsItems: BEAM_SAW_33BS_DIMENSIONS_ITEMS,
   },
   "panel-saw-firma-40pl": {
     parametersTabLabel: "System Specifications",

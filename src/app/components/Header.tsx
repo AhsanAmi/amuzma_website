@@ -259,10 +259,10 @@ export function Header() {
           <Image
             src="/media/logoheader.webp"
             alt="AMUZMA"
-            width={258}
-            height={58}
+            width={206}
+            height={46}
             priority
-            className="h-[38px] w-auto object-contain sm:h-[42px]"
+            className="h-[30px] w-auto object-contain sm:h-[34px]"
           />
         </Link>
 
@@ -316,10 +316,10 @@ export function Header() {
           <Image
             src="/media/logoheader.webp"
             alt="AMUZMA"
-            width={258}
-            height={58}
+            width={206}
+            height={46}
             priority
-            className="h-[38px] w-auto object-contain sm:h-[42px] lg:h-[50px] xl:h-[54px] 2xl:h-[58px]"
+            className="h-[30px] w-auto object-contain sm:h-[34px] lg:h-[40px] xl:h-[43px] 2xl:h-[46px]"
           />
         </Link>
 

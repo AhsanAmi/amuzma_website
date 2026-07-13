@@ -29,11 +29,71 @@ const HERO_SLIDES = [
 ];
 
 const COUNTERS = [
-  { label: "Years Experience", value: "30", suffix: "+" },
-  { label: "Installations", value: "1,000", suffix: "+" },
-  { label: "Quality Focus", value: "100", suffix: "%" },
-  { label: "Mfg. Plants", value: "12", suffix: "+" },
+  {
+    label: "Years Experience",
+    target: 30,
+    suffix: "+",
+    format: (n: number) => String(n),
+  },
+  {
+    label: "Installations",
+    target: 1000,
+    suffix: "+",
+    format: (n: number) => n.toLocaleString("en-US"),
+  },
+  {
+    label: "Quality Focus",
+    target: 100,
+    suffix: "%",
+    format: (n: number) => String(n),
+  },
+  {
+    label: "Mfg. Plants",
+    target: 12,
+    suffix: "+",
+    format: (n: number) => String(n),
+  },
 ];
+
+/** Shared duration so every counter hits its max at the same moment. */
+const COUNTER_DURATION_MS = 1800;
+
+function AnimatedCounter({
+  target,
+  suffix,
+  format,
+}: {
+  target: number;
+  suffix: string;
+  format: (n: number) => string;
+}) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    let start: number | null = null;
+    let frame = 0;
+
+    const tick = (now: number) => {
+      if (start === null) start = now;
+      const progress = Math.min(1, (now - start) / COUNTER_DURATION_MS);
+      const eased = 1 - (1 - progress) ** 3;
+      setValue(Math.round(target * eased));
+      if (progress < 1) {
+        frame = requestAnimationFrame(tick);
+      }
+    };
+
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [target]);
+
+  return (
+    <>
+      {format(value)}
+      {suffix}
+    </>
+  );
+}
 
 const FACILITIES = [
   {
@@ -348,8 +408,11 @@ export function Home() {
             {COUNTERS.map((counter) => (
               <div key={counter.label} className="text-center">
                 <div className="mb-2 text-[38px] font-normal leading-none text-[#C0202F] sm:text-[50px]">
-                  {counter.value}
-                  {counter.suffix}
+                  <AnimatedCounter
+                    target={counter.target}
+                    suffix={counter.suffix}
+                    format={counter.format}
+                  />
                 </div>
                 <p className="text-[15px] font-normal leading-normal text-black sm:text-[18px]">
                   {counter.label}

@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const PLANER_PRODUCTS: CatalogProduct[] = [
   {
     category: "Planer",
-    image: "/media/img44-1.webp",
+    image: "/media/Prodocts/Elite 41PF.png",
     model: "Elite 41PF",
     name: "Planer",
     specs: [
@@ -19,7 +19,7 @@ const PLANER_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img45.webp",
+    image: "/media/Prodocts/Elite 41CM.png",
     model: "Elite 41CM/CS",
     name: "Planer & Thicknesser",
     specs: [
@@ -31,7 +31,7 @@ const PLANER_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img46.webp",
+    image: "/media/Prodocts/Elite 41TH.png",
     model: "Elite 41TH",
     name: "Thicknesser",
     specs: [
@@ -43,7 +43,7 @@ const PLANER_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img47.webp",
+    image: "/media/Prodocts/Firma 63TH.png",
     model: "Firma 63TH",
     name: "Thicknesser",
     specs: [

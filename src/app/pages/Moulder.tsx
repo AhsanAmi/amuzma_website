@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const MOULDER_PRODUCTS: CatalogProduct[] = [
   {
     category: "Moulder",
-    image: "/media/img43.webp",
+    image: "/media/Prodocts/Elite 30SM.png",
     model: "Elite 30SM",
     name: "Spindle Moulder",
     specs: [

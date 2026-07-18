@@ -98,7 +98,7 @@ function AnimatedCounter({
 const FACILITIES = [
   {
     id: 1,
-    image: "/media/Band-Saw-16-Elite-65BS-.webp",
+    image: "/media/Prodocts/Band Saw Elite 65BS.png",
     category: "BAND SAW",
     name: "Band Saw",
     model: "Elite 65BS",
@@ -111,7 +111,7 @@ const FACILITIES = [
   },
   {
     id: 2,
-    image: "/media/E5-finalist.webp",
+    image: "/media/Prodocts/Edge Banding E5.png",
     category: "EDGE BANDING",
     name: "Edge Banding",
     model: "E5",
@@ -124,7 +124,7 @@ const FACILITIES = [
   },
   {
     id: 3,
-    image: "/media/Panel-Saw-Firma-35PS-1-1-1.webp",
+    image: "/media/Prodocts/Panel Saw 40PL.png",
     category: "PANEL SAW",
     name: "Panel Saw",
     model: "Firma 40PL",

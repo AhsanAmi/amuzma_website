@@ -10,7 +10,7 @@ export type CatalogProduct = {
 export const ALL_PRODUCTS: CatalogProduct[] = [
   {
     category: "CNC Router",
-    image: "/media/34.webp",
+    image: "/media/Prodocts/CNC 13CR.png",
     model: "FORTE 13CR",
     name: "CNC Router",
     specs: [
@@ -22,7 +22,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "CNC Router",
-    image: "/media/img34.webp",
+    image: "/media/Prodocts/CNC Router 15CR.png",
     model: "FORTE 15CR",
     name: "CNC Router",
     specs: [
@@ -34,7 +34,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/img36.webp",
+    image: "/media/Prodocts/Dust Collector dc2200.png",
     model: "DC2200",
     name: "Dust Collector",
     specs: [
@@ -46,7 +46,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/img37.webp",
+    image: "/media/Prodocts/Dust Collector ABS5000 shadow.png",
     model: "ABS5000",
     name: "Dust Collector",
     specs: [
@@ -58,7 +58,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/img38-1.webp",
+    image: "/media/Prodocts/Dust Collector RDC3800.png",
     model: "RDC3800",
     name: "Dust Collector",
     specs: [
@@ -70,7 +70,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Edgebanders",
-    image: "/media/img39.webp",
+    image: "/media/Prodocts/Edge Banding E5.png",
     model: "E5",
     name: "Edge Banding",
     specs: [
@@ -82,7 +82,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Edgebanders",
-    image: "/media/img40.webp",
+    image: "/media/Prodocts/Edge Banding P6.png",
     model: "P6",
     name: "Edge Banding",
     specs: [
@@ -118,7 +118,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Sanders",
-    image: "/media/sander.webp",
+    image: "/media/Prodocts/wide belt sander.png",
     model: "1300WS",
     name: "Wide Belt Sander",
     specs: [
@@ -130,7 +130,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Moulder",
-    image: "/media/img43.webp",
+    image: "/media/Prodocts/Elite 30SM.png",
     model: "Elite 30SM",
     name: "Spindle Moulder",
     specs: [
@@ -142,7 +142,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img44-1.webp",
+    image: "/media/Prodocts/Elite 41PF.png",
     model: "Elite 41PF",
     name: "Planer",
     specs: [
@@ -154,7 +154,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img45.webp",
+    image: "/media/Prodocts/Elite 41CM.png",
     model: "Elite 41CM/CS",
     name: "Planer & Thicknesser",
     specs: [
@@ -166,7 +166,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img46.webp",
+    image: "/media/Prodocts/Elite 41TH.png",
     model: "Elite 41TH",
     name: "Thicknesser",
     specs: [
@@ -178,7 +178,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Planer",
-    image: "/media/img47.webp",
+    image: "/media/Prodocts/Firma 63TH.png",
     model: "Firma 63TH",
     name: "Thicknesser",
     specs: [
@@ -190,7 +190,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/img48.webp",
+    image: "/media/Prodocts/Band Saw Elite 65BS.png",
     model: "Elite 65BS",
     name: "Band Saw",
     specs: [
@@ -214,7 +214,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/img49.webp",
+    image: "/media/Prodocts/Panel Saw 40PL.png",
     model: "Firma 40PL",
     name: "Panel Saw",
     specs: [
@@ -226,7 +226,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/img.webp",
+    image: "/media/Prodocts/Firma 35PS.png",
     model: "Firma 35PS",
     name: "Panel Saw",
     specs: [
@@ -238,7 +238,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/img3.webp",
+    image: "/media/Prodocts/Panel Saw 35TS.png",
     model: "Elite 35TS",
     name: "Panel Saw",
     specs: [

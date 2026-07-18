@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const DUST_COLLECTOR_PRODUCTS: CatalogProduct[] = [
   {
     category: "Dust Collector",
-    image: "/media/img36.webp",
+    image: "/media/Prodocts/Dust Collector dc2200.png",
     model: "DC2200",
     name: "Dust Collector",
     specs: [
@@ -19,7 +19,7 @@ const DUST_COLLECTOR_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Collector",
-    image: "/media/img37.webp",
+    image: "/media/Prodocts/Dust Collector ABS5000 shadow.png",
     model: "ABS5000",
     name: "Dust Collector",
     specs: [
@@ -31,7 +31,7 @@ const DUST_COLLECTOR_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Collector",
-    image: "/media/img38-1.webp",
+    image: "/media/Prodocts/Dust Collector RDC3800.png",
     model: "RDC3800",
     name: "Dust Collector",
     specs: [

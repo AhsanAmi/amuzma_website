@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const SANDER_PRODUCTS: CatalogProduct[] = [
   {
     category: "Sander",
-    image: "/media/sander.webp",
+    image: "/media/Prodocts/wide belt sander.png",
     model: "1300WS",
     name: "Wide Belt Sander",
     specs: [

@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const CNC_PRODUCTS: CatalogProduct[] = [
   {
     category: "CNC Router",
-    image: "/media/34.webp",
+    image: "/media/Prodocts/CNC 13CR.png",
     model: "FORTE 13CR",
     name: "CNC Router",
     specs: [
@@ -19,7 +19,7 @@ const CNC_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "CNC Router",
-    image: "/media/img34.webp",
+    image: "/media/Prodocts/CNC Router 15CR.png",
     model: "FORTE 15CR",
     name: "CNC Router",
     specs: [

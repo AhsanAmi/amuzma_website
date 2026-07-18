@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const EDGE_BANDER_PRODUCTS: CatalogProduct[] = [
   {
     category: "Edge Banding",
-    image: "/media/img39.webp",
+    image: "/media/Prodocts/Edge Banding E5.png",
     model: "E5",
     name: "Edge Banding",
     specs: [
@@ -19,7 +19,7 @@ const EDGE_BANDER_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Edge Banding",
-    image: "/media/img40.webp",
+    image: "/media/Prodocts/Edge Banding P6.png",
     model: "P6",
     name: "Edge Banding",
     specs: [

@@ -7,7 +7,7 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const SAW_PRODUCTS: CatalogProduct[] = [
   {
     category: "Saw",
-    image: "/media/img48.webp",
+    image: "/media/Prodocts/Band Saw Elite 65BS.png",
     model: "Elite 65BS",
     name: "Band Saw",
     specs: [
@@ -31,7 +31,7 @@ const SAW_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saw",
-    image: "/media/img49.webp",
+    image: "/media/Prodocts/Panel Saw 40PL.png",
     model: "Firma 40PL",
     name: "Panel Saw",
     specs: [
@@ -43,7 +43,7 @@ const SAW_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saw",
-    image: "/media/img.webp",
+    image: "/media/Prodocts/Firma 35PS.png",
     model: "Firma 35PS",
     name: "Panel Saw",
     specs: [
@@ -55,7 +55,7 @@ const SAW_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saw",
-    image: "/media/img3.webp",
+    image: "/media/Prodocts/Panel Saw 35TS.png",
     model: "Elite 35TS",
     name: "Panel Saw",
     specs: [

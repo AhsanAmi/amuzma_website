@@ -24,7 +24,7 @@ export const PAGE_TITLES: Record<string, string> = {
   "products/panel-saw-forte-40pa": "Panel saw Forte 40PA – Amuzma",
   "products/panel-saw-elite-35ts": "Panel Saw 12 Elite 35ts – Amuzma",
   "products/edge-banding-e5": "Amuzma E5 Edge Banding – Amuzma",
-  "products/edge-banding-p6": "amuzma P6 Edge Banding – Amuzma",
+  "products/edge-banding-p6": "Amuzma P6 Edge Banding – Amuzma",
   "products/edge-banding-c7": "Edge Banding Elite C7 – Amuzma",
   "products/dust-collector-dc2200": "Dust Collector DC 2200 – Amuzma",
   "products/dust-collector-abs5000": "Dust Collector ABS5000 – Amuzma",

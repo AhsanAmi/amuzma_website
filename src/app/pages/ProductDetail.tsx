@@ -802,7 +802,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "P6",
     category: "Edge Banders",
-    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-P6.jpg",
+    heroImage: "/media/Edge-banding.webp",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",

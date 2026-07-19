@@ -42,7 +42,7 @@ const PRODUCTS_DATA: Record<string, {
     model: "Forte 13CR",
     category: "CNC Router",
     tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
-    heroImage: "/media/Prodocts/CNC 13CR.png",
+    heroImage: "/media/CNC-13CR-1.webp",
     featuresSubtitle:
       "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
@@ -134,7 +134,7 @@ const PRODUCTS_DATA: Record<string, {
     model: "Forte 15CR",
     category: "CNC Router",
     tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
-    heroImage: "/media/Prodocts/CNC Router 15CR.png",
+    heroImage: "/media/CNC-13CR-1.webp",
     featuresSubtitle:
       "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
@@ -226,7 +226,7 @@ const PRODUCTS_DATA: Record<string, {
     model: "Firma 1300WS",
     category: "Sanders",
     tagline: "Precision Wide Belt Sanding for Superior Surface Finishing Performance",
-    heroImage: "/media/Prodocts/wide belt sander.png",
+    heroImage: "/media/wide-belt-sander.webp",
     featuresSubtitle:
       "1300mm capacity, powerful motor, and smooth feed control for consistent professional results.",
     galleryDescription:

@@ -106,8 +106,8 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Pressing",
-    image: "/media/img42-1.webp",
-    model: "P 100T",
+    image: "/media/Prodocts/Hot Press C8.png",
+    model: "Firma C8",
     name: "Veneer Door Press",
     specs: [
       "Total Pressure : 1000 kN",
@@ -202,7 +202,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/Web-photos-beam-saw-33bs-final.jpg",
+    image: "/media/Prodocts/Beam Saw 33BS.png",
     model: "Firma 33BS",
     name: "Beam Saw",
     specs: [
@@ -226,7 +226,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/Prodocts/Firma 35PS.png",
+    image: "/media/Panel-Saw-Firma-35PS-1-1-1.webp",
     model: "Firma 35PS",
     name: "Panel Saw",
     specs: [
@@ -235,6 +235,18 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Scoring Blade Diameter : 120 mm",
     ],
     detailsHref: "/products/panel-saw-firma-35ps",
+  },
+  {
+    category: "Saws",
+    image: "/media/Prodocts/Panel Saw 40PA.png",
+    model: "Forte 40PA",
+    name: "Panel Saw",
+    specs: [
+      "Main Blade Diameter : 400 mm",
+      "Main Blade Speed : 4500 rpm",
+      "Scoring Blade Diameter : 120 mm",
+    ],
+    detailsHref: "/products/panel-saw-forte-40pa",
   },
   {
     category: "Saws",
@@ -247,5 +259,29 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Scoring Blade Diameter : 120 mm",
     ],
     detailsHref: "/products/panel-saw-elite-35ts",
+  },
+  {
+    category: "Saws",
+    image: "/media/Prodocts/Elite 35PS.png",
+    model: "Elite 35PS",
+    name: "Panel Saw",
+    specs: [
+      "Main Blade Diameter : 350 mm",
+      "Main Blade Speed : 4000 rpm",
+      "Scoring Blade Diameter : 120 mm",
+    ],
+    detailsHref: "/products/panel-saw-elite-35ps",
+  },
+  {
+    category: "Saws",
+    image: "/media/Prodocts/ELITE 35EU.png",
+    model: "Elite 35EU",
+    name: "Panel Saw",
+    specs: [
+      "Main Blade Diameter : 315 mm",
+      "Main Blade Speed : 3400rpm/50Hz",
+      "Scoring Blade Diameter : 120 mm",
+    ],
+    detailsHref: "/products/panel-saw-elite-35eu",
   },
 ];

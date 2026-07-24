@@ -96,33 +96,32 @@ const RDC3800_SPECIFICATIONS_RIGHT = [
 ];
 
 const ELITE_E5_SPECIFICATIONS_LEFT = [
-  { label: "Main Blade Diameter", value: "315 mm" },
-  { label: "Main Blade Speed", value: "4500 rpm" },
-  { label: "Scoring Blade Diameter", value: "120 mm" },
-  { label: "Scoring Blade Speed", value: "8000 rpm" },
-  { label: "Blade Tilt", value: "0 – 45°" },
-  { label: "Max Depth of Cut @ 45°", value: "67 mm" },
+  { label: "Thickness of edge-banding belt", value: "0.4-3 mm" },
+  { label: "Height of Edge-banding tape", value: "12-45 mm" },
+  { label: "Workpiece thickness", value: "10-45 mm" },
+  { label: "Feeding speed", value: "11m/min" },
+  { label: "Air pressure", value: "0.6-0.8 Mpa" },
+  { label: "Gross power", value: "6.5 kw" },
   { label: "Max Depth of Cut @ 90°", value: "95 mm" },
   { label: "Max Rip Capacity", value: "" },
-  { label: "Standard", value: "1250 mm" },
-  { label: "Option", value: "900 mm" },
-  { label: "Sliding Beam Size", value: "" },
-  { label: "Standard", value: "1600 × 360 mm" },
-  { label: "Option", value: "1200 × 360 mm" },
+  { label: "Machine outline size", value: "mm" },
 ];
 
 const ELITE_E5_SPECIFICATIONS_RIGHT = [
-  { label: "Sliding Beam Cutting Capacity", value: "" },
-  { label: "Standard", value: "1600 mm" },
-  { label: "Option", value: "1250 mm" },
-  { label: "Table Size", value: "800 × 550 mm" },
-  { label: "Dust Extraction Outlet", value: "120 mm" },
-  { label: "Main Motor Output", value: "" },
-  { label: "3 × 380V", value: "5 kW" },
-  { label: "Scoring Motor Output", value: "0.75 kW" },
-  { label: "Angle Cutting Device", value: "940 × 150 × 1500 mm / 44.5 kg" },
-  { label: "Net / Gross Weight", value: "400 / 460 kg" },
-  { label: "Package Size", value: "1300 × 1000 × 1100 mm" },
+  { label: "Weight", value: "800 Kg" },
+  { label: "Packing size", value: "" },
+  { label: "L", value: "2900 mm" },
+  { label: "W", value: "650 mm" },
+  { label: "H", value: "1280 mm" },
+  { label: "Overall Dimensions", value: "3150 x 700 x 1300 mm" },
+];
+
+const ELITE_E5_DIMENSIONS_ITEMS = [
+  { label: "Machine Weight", value: "800 kg" },
+  {
+    label: "Packing Dimensions",
+    value: "Length: 2900 mm, Width: 650 mm, Height: 1280 mm",
+  },
 ];
 
 const ELITE_P6_SPECIFICATIONS_LEFT = [
@@ -155,6 +154,23 @@ const ELITE_C7_SPECIFICATIONS_RIGHT = [
   { label: "Weight", value: "1230 kg" },
 ];
 
+const FIRMA_C8_SPECIFICATIONS_LEFT = [
+  { label: "Total pressure", value: "1000kN" },
+  { label: "Working layer", value: "2 layers" },
+  { label: "Specific pressure", value: "2.6kgf/cm²" },
+  { label: "Platen No.& Size", value: "3~3000x1300x42mm" },
+  { label: "Platen opening", value: "Automatic" },
+  { label: "Cylinder No. & Diameter", value: "8~85mm" },
+];
+
+const FIRMA_C8_SPECIFICATIONS_RIGHT = [
+  { label: "Max temperature", value: "120oC" },
+  { label: "Heating way", value: "electricity heat thermal oil" },
+  { label: "Installation power", value: "4+0.75+36 kW" },
+  { label: "Power", value: "3PE 380V 50Hz" },
+  { label: "Gross weight", value: "7300kg" },
+];
+
 const ELITE_30SM_SPECIFICATIONS_LEFT = [
   { label: "Spindle Diameter", value: "30 (32:35:40:50) mm" },
   { label: "Spindle Speeds", value: "1400 / 3500 / 6000 / 8000 RPM" },
@@ -164,14 +180,20 @@ const ELITE_30SM_SPECIFICATIONS_LEFT = [
   { label: "Max. Diameter of Table Opening", value: "220 mm" },
   { label: "Max. Tool Diameter Under the Table", value: "175 mm" },
   { label: "Max. Tool Diameter Above the Table", value: "200 / 250 mm" },
-  { label: "Height of Table", value: "890 mm" },
 ];
 
 const ELITE_30SM_SPECIFICATIONS_RIGHT = [
+  { label: "Height of Table", value: "890 mm" },
+  { label: "Max. Tool Diameter Above the Table", value: "200 / 250 mm" },
+  { label: "Height of Table", value: "890 mm" },
   { label: "Max. Height of Machine", value: "1300 mm" },
   { label: "Table Size", value: "1000 × 350 mm" },
   { label: "Suction Dust Hood Diameter", value: "100 mm" },
-  { label: "Motor", value: "3 × 380V : 4 kW" },
+  { label: "Motor", value: "" },
+  { label: "3 × 380V", value: "4 kW" },
+];
+
+const ELITE_30SM_DIMENSIONS_ITEMS = [
   { label: "Net / Gross Weight", value: "235 / 280 kg" },
   {
     label: "Optional Accessories",
@@ -244,12 +266,12 @@ const ELITE_41TH_SPECIFICATIONS_LEFT = [
   { label: "Max Thicknesser Width", value: "410 mm" },
   { label: "Min Length of Workpiece", value: "5 mm" },
   { label: "Depth Indicator", value: "" },
-  { label: "Digital Readout", value: "" },
-  { label: "Scale", value: "" },
-  { label: "Cutterhead", value: "" },
 ];
 
 const ELITE_41TH_SPECIFICATIONS_RIGHT = [
+  { label: "Digital Readout", value: "" },
+  { label: "Scale", value: "" },
+  { label: "Cutterhead", value: "" },
   { label: "Straight Knives Cutterhead", value: "3 pcs / 410 × 30 × 3 mm" },
   {
     label: "3 Slot Spiral Cutterhead",
@@ -259,6 +281,9 @@ const ELITE_41TH_SPECIFICATIONS_RIGHT = [
     label: "4 Slot Spiral Cutterhead",
     value: "72 pcs / 15 × 15 × 2.5 mm",
   },
+];
+
+const ELITE_41TH_DIMENSIONS_ITEMS = [
   { label: "Thickness Table Size", value: "750 × 408 mm" },
   { label: "Extractor Port Dia", value: "120 mm" },
   { label: "Cutting Motor Output", value: "" },
@@ -268,40 +293,32 @@ const ELITE_41TH_SPECIFICATIONS_RIGHT = [
 ];
 
 const FIRMA_63TH_SPECIFICATIONS_LEFT = [
-  { label: "Feed Speed", value: "7 m/min" },
+  { label: "Feed Speed", value: "4-16m/min (variable speed)" },
   { label: "Cutter Block Speed", value: "5500 rpm" },
-  { label: "Cutter Block Diameter", value: "70 mm" },
-  { label: "Max Thicknesser Height", value: "4–225 mm" },
-  { label: "Max Thicknesser Width", value: "410 mm" },
-  { label: "Min Length of Workpiece", value: "160 mm" },
-  { label: "Max Depth of Cut", value: "4 mm" },
+  { label: "Cutter Block Diameter", value: "115 mm" },
+  { label: "Max Thicknesser Height", value: "5-300 mm" },
+  { label: "Max Thicknesser Width", value: "630mm" },
+  { label: "Min Length of Workpiece", value: "280mm" },
+  { label: "Max Depth of Cut", value: "8 mm" },
+];
+
+const FIRMA_63TH_SPECIFICATIONS_RIGHT = [
   { label: "Depth Indicator", value: "" },
   { label: "Scale", value: "" },
   { label: "Digital Readout", value: "" },
   { label: "Cutter Head", value: "" },
+  { label: "Straight Knives Cutterhead", value: "4pcs/630x30x3mm" },
+  { label: "Thickness Table Size (Optional)", value: "1050×630 mm" },
+  { label: "Extractor Port Dia.", value: "150 mm" },
 ];
 
-const FIRMA_63TH_SPECIFICATIONS_RIGHT = [
-  {
-    label: "2 Slot Spiral Cutterhead (Optional)",
-    value: "44 pcs / 15×15×2.5 mm",
-  },
-  { label: "Straight Knives Cutterhead", value: "3 pcs 410×30×3 mm" },
-  {
-    label: "Over Length of Planer Tables (Optional)",
-    value: "1669 mm",
-  },
-  { label: "Thickness Table Size", value: "650–407 mm" },
-  { label: "Exactor Port Dia", value: "120 mm" },
+const FIRMA_63TH_DIMENSIONS_ITEMS = [
   { label: "Cutting Motor Output", value: "" },
-  { label: "3 × 380V", value: "4 kW S6" },
-  { label: "Optional Accessories", value: "" },
-  {
-    label: "Extension Table Package",
-    value: "450×400×100 mm / 12–13 kgs",
-  },
-  { label: "Net / Gross Weight", value: "294 / 352 kgs" },
-  { label: "Wooden Box Package Size", value: "1710 -740 -1117 mm" },
+  { label: "3*400V", value: "5.5kW S1" },
+  { label: "Lifting Motor Output", value: "0.25kW" },
+  { label: "Feeding Motor Output", value: "0.55kW" },
+  { label: "Net Gross Weight", value: "650/716kgs" },
+  { label: "Package Size", value: "1220×1150×1315mm" },
 ];
 
 const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
@@ -311,6 +328,7 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[220px] whitespace-nowrap",
     left: ELITE_E5_SPECIFICATIONS_LEFT,
     right: ELITE_E5_SPECIFICATIONS_RIGHT,
+    dimensionsItems: ELITE_E5_DIMENSIONS_ITEMS,
   },
   "edge-banding-p6": {
     parametersTabLabel: "System Specifications",
@@ -324,11 +342,18 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
     left: ELITE_C7_SPECIFICATIONS_LEFT,
     right: ELITE_C7_SPECIFICATIONS_RIGHT,
   },
+  "veneer-door-press-p-100t": {
+    parametersTabLabel: "System Specifications",
+    parametersTabWidthClass: "w-[280px] whitespace-nowrap",
+    left: FIRMA_C8_SPECIFICATIONS_LEFT,
+    right: FIRMA_C8_SPECIFICATIONS_RIGHT,
+  },
   "spindle-moulder-elite-30sm": {
     parametersTabLabel: "System Specifications",
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: ELITE_30SM_SPECIFICATIONS_LEFT,
     right: ELITE_30SM_SPECIFICATIONS_RIGHT,
+    dimensionsItems: ELITE_30SM_DIMENSIONS_ITEMS,
   },
   "planer-elite-41pf": {
     parametersTabLabel: "System Specifications",
@@ -348,12 +373,14 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: ELITE_41TH_SPECIFICATIONS_LEFT,
     right: ELITE_41TH_SPECIFICATIONS_RIGHT,
+    dimensionsItems: ELITE_41TH_DIMENSIONS_ITEMS,
   },
   "thicknesser-firma-63th": {
     parametersTabLabel: "System Specifications",
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: FIRMA_63TH_SPECIFICATIONS_LEFT,
     right: FIRMA_63TH_SPECIFICATIONS_RIGHT,
+    dimensionsItems: FIRMA_63TH_DIMENSIONS_ITEMS,
   },
   "wide-belt-sander-firma-1300ws": {
     parametersTabLabel: "Detailed Machine Parameters",
@@ -408,9 +435,11 @@ function SpecList({ items }: { items: { label: string; value: string }[] }) {
             >
               {item.label}
             </span>
-            {" :"}
             {item.value ? (
-              <span className="font-normal">{` ${item.value}`}</span>
+              <>
+                {" :"}
+                <span className="font-normal">{` ${item.value}`}</span>
+              </>
             ) : null}
           </span>
         </li>
@@ -429,7 +458,7 @@ function DimensionsSpecList({
       {items.map((item, index) => (
         <li
           key={`${item.label}-${index}`}
-          className="flex items-start gap-3 font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666]"
+          className="flex items-start gap-3 font-heading text-[16px] leading-[26px] text-[#555555] sm:text-[18px] sm:leading-[27.2px]"
         >
           <span
             className="mt-[9px] h-[7px] w-[7px] shrink-0 bg-[#C0202F]"
@@ -437,9 +466,13 @@ function DimensionsSpecList({
           />
 
           <span>
-            {item.label}
-            {" :"}
-            {item.value ? ` ${item.value}` : null}
+            <span className="font-semibold">{item.label}</span>
+            {item.value ? (
+              <>
+                {" :"}
+                <span className="font-normal">{` ${item.value}`}</span>
+              </>
+            ) : null}
           </span>
         </li>
       ))}
@@ -532,15 +565,16 @@ export function ProductSpecificationsSection({
                 <h3 className="font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px] sm:leading-[30px]">
                   {dimensionsHeading}
                 </h3>
-                {specConfig.dimensionsItems ? (
-                  <div className="mt-4">
-                    <DimensionsSpecList items={specConfig.dimensionsItems} />
-                  </div>
-                ) : (
+                {dimensionsDescription ? (
                   <p className="mt-4 whitespace-pre-line font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666]">
                     {dimensionsDescription}
                   </p>
-                )}
+                ) : null}
+                {specConfig.dimensionsItems ? (
+                  <div className={dimensionsDescription ? "mt-4" : "mt-4"}>
+                    <DimensionsSpecList items={specConfig.dimensionsItems} />
+                  </div>
+                ) : null}
               </div>
             </div>
           )}

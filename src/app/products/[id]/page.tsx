@@ -12,6 +12,8 @@ const PRODUCT_IDS = [
   "panel-saw-firma-35ps",
   "panel-saw-forte-40pa",
   "panel-saw-elite-35ts",
+  "panel-saw-elite-35ps",
+  "panel-saw-elite-35eu",
   "edge-banding-e5",
   "edge-banding-p6",
   "edge-banding-c7",

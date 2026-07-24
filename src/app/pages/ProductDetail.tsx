@@ -20,6 +20,7 @@ const PRODUCTS_DATA: Record<string, {
   heroImage: string;
   heroImageClassName?: string;
   heroHeightClassName?: string;
+  heroBackgroundColor?: string;
   featuresSubtitle: string;
   galleryDescription: string;
   dimensionsImage: string;
@@ -321,7 +322,7 @@ const ADDITIONAL_PRODUCTS: Record<
     Partial<
       Pick<
         (typeof PRODUCTS_DATA)[string],
-        "heroImage" | "heroImageClassName" | "heroHeightClassName" | "tagline" | "featuresSubtitle" | "features" | "benefitsSubtitle" | "benefitsSectionTitle" | "benefits" | "galleryDescription" | "gallery" | "dimensionsImage" | "dimensionsHeading" | "dimensionsDescription" | "partsSectionTitle" | "parts" | "partsImages"
+        "heroImage" | "heroImageClassName" | "heroHeightClassName" | "heroBackgroundColor" | "tagline" | "featuresSubtitle" | "features" | "benefitsSubtitle" | "benefitsSectionTitle" | "benefits" | "galleryDescription" | "gallery" | "dimensionsImage" | "dimensionsHeading" | "dimensionsDescription" | "partsSectionTitle" | "parts" | "partsImages"
       >
     >
 > = {
@@ -689,8 +690,7 @@ const ADDITIONAL_PRODUCTS: Record<
     ],
     dimensionsImage: "/media/Spindle-Moulder-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
-    dimensionsDescription:
-      "Elite 30SM features a compact yet sturdy structure designed for workshop efficiency, ensuring stable operation, optimal space utilization, and easy installation without compromising performance or durability.",
+    dimensionsDescription: "",
     partsImages: [
       "/media/frist-one-J1-1.webp",
       "/media/frist-one-J2-1.webp",
@@ -736,23 +736,23 @@ const ADDITIONAL_PRODUCTS: Record<
       "The Edge Banding E5 delivers precise, efficient edge finishing for compact professional workshops.",
     features: [
       {
-        title: "High-Speed Output",
+        title: "Trimming Units",
         image: "/media/Amuzma-E5-4-1.webp",
         desc: "Designed for fast, continuous operation, boosting productivity while maintaining consistent edge quality across every panel and project.",
       },
       {
-        title: "Precision Control",
+        title: "Gluing and Pressure Unit",
         image: "/media/Amuzma-E5-3-1.webp",
         desc: "Advanced control system ensures accurate trimming, clean edges, and professional finishing for flawless results every time.",
       },
       {
-        title: "Premium Finish",
+        title: "Position Adjustment Handl",
         image: "/media/Amuzma-E5-2-1-1.webp",
         desc: "Delivers smooth, seamless edge banding that enhances durability, appearance, and long-term product value.",
       },
       {
-        title: "Smart Automation",
-        image: "/media/Amuzma-E5-1-1-1.webp",
+        title: "PLC Touchscreen Control",
+        image: "/media/Amuzma-E5-5-2.webp",
         desc: "Integrated automatic functions reduce manual effort, improve efficiency, and support higher production capacity with ease.",
       },
     ],
@@ -777,18 +777,18 @@ const ADDITIONAL_PRODUCTS: Record<
       },
     ],
     galleryDescription:
-      "The Panel Saw 12″Elite 35TS is the perfect solution for workshops that demand precision cutting without sacrificing valuable floor space. Designed as a compact yet fully featured panel saw, it offers the performance and build quality of a full-sized machine in a space-efficient footprint.Built on a robust, heavy-gauge steel chassis, the 35TS delivers exceptional durability and stability. Its generous grey cast iron table and true panel saw trunnion system ensure smooth, vibration-free operation — providing clean, accurate cuts every time.Whether you're sizing panels or working with solid timber, the Elite 35TS brings professional-grade performance to any workshop, big or small.",
+      "The Amuzma E5 Edge Banding Machine combines industrial-grade performance with a compact, space-saving design, making it the ideal solution for small to medium-sized woodworking workshops. Designed for precision, reliability, and efficiency, the E5 delivers professional-quality edge finishing while maximizing productivity. Built with robust construction and high-quality components, the E5 ensures smooth operation, consistent edge bonding, and long-lasting performance for MDF, plywood, particleboard, and other panel materials.",
     gallery: [
       "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
+      "/media/Amuzma-E5-1-1-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
-      "/media/Amuzma-E5-5-2.webp",
     ],
     dimensionsImage: "/media/Edge-banding-E5-01-scaled.webp",
     dimensionsHeading: "Compact & Efficient",
     dimensionsDescription:
-      "Here's a professional way to present machine dimensions (you can adjust numbers as per your actual model):Machine Dimensions Length: 4200 mm Width: 900 mm Height: 1600 mmWorking Height 850 mmNet Weight 1500 kgIf you share the exact model (Firma 150ATC or Amuzma P6), I can format the precise technical dimension section accordingly.",
+      "Edge Banding E5 Its robust construction, 800 kg machine weight, and space-efficient design ensure excellent stability during operation while maintaining a compact footprint for easy installation.",
     parts: [
       { name: "Control Panel", image: "/media/Amuzma-E5-4-1.webp" },
       { name: "Feed Rollers", image: "/media/Amuzma-E5-3-1.webp" },
@@ -800,31 +800,31 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "edge-banding-p6": {
     name: "EDGE BANDING",
-    model: "P6",
+    model: "Elite P6",
     category: "Edge Banders",
-    heroImage: "/media/Edge-banding.webp",
+    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-P6.jpg",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
     features: [
       {
-        title: "PLC Touchscreen Control",
-        image: "/media/4-1.webp",
+        title: "Trimming Units",
+        image: "/media/Amuzma-E5-4-1.webp",
         desc: "Equipped with a high-performance gluing unit, Elite P6 ensures strong and uniform adhesive application for secure edge bonding and long-lasting durability.",
-      },
-      {
-        title: "Position Adjustment Handl",
-        image: "/media/Amuzma-E5-2-1-1.webp",
-        desc: "Integrated front and rear trimming systems provide clean, smooth, and accurate edge finishing, reducing manual rework and improving overall product quality.",
       },
       {
         title: "Gluing and Pressure Unit",
         image: "/media/Amuzma-E5-3-1.webp",
+        desc: "Integrated front and rear trimming systems provide clean, smooth, and accurate edge finishing, reducing manual rework and improving overall product quality.",
+      },
+      {
+        title: "Position Adjustment Handl",
+        image: "/media/Amuzma-E5-2-1-1.webp",
         desc: "The heavy-duty feeding system ensures consistent panel movement, minimizing vibration and delivering precise alignment throughout the edging process.",
       },
       {
-        title: "Trimming Units",
-        image: "/media/Amuzma-E5-4-1.webp",
+        title: "PLC Touchscreen Control",
+        image: "/media/Amuzma-E5-5-1.webp",
         desc: "Designed for professional workshops, Elite P6 offers reliable operation, optimized speed control, and enhanced productivity for continuous daily use.",
       },
     ],
@@ -852,15 +852,23 @@ const ADDITIONAL_PRODUCTS: Record<
     gallery: [
       "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
-      "/media/Amuzma-E5-1-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
+      "/media/Amuzma-E5-5-1.webp",
     ],
     dimensionsImage: "/media/Edge-banding-P6-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
       "The Elite P6 is designed with balanced and space-efficient dimensions to ensure easy installation and seamless integration into professional workshop layouts. Its optimized structure supports stable operation while maximizing available workspace efficiency.",
     partsSectionTitle: "Product Image",
+    partsImages: [
+      "/media/Amuzma-E5-1-1-1.webp",
+      "/media/Amuzma-E5-2-1-1.webp",
+      "/media/Amuzma-E5-3-1.webp",
+      "/media/Amuzma-E5-4-1.webp",
+      "/media/Amuzma-E5-1-1.webp",
+      "/media/Amuzma-E5-4.webp",
+    ],
     parts: [
       { name: "frist one J1", image: "/media/Amuzma-E5-1-1-1.webp" },
       { name: "frist one J2", image: "/media/Amuzma-E5-2-1-1.webp" },
@@ -928,12 +936,12 @@ const ADDITIONAL_PRODUCTS: Record<
       "Designed with a compact yet robust structure, the Edge Banding C7 offers optimized dimensions that ensure space efficiency, operational stability, and smooth integration into professional woodworking production setups.",
     partsSectionTitle: "Product Image",
     parts: [
-      { name: "EdgeLine C7 Industrial", image: "/media/Amuzma-E5-5.webp" },
-      { name: "EdgeMaster C7 Pro", image: "/media/Amuzma-E5-2.webp" },
-      { name: "ProEdge C7 Series", image: "/media/Amuzma-E5-4-opt.webp" },
-      { name: "EdgeCraft C7", image: "/media/Amuzma-E5-3.webp" },
-      { name: "UltraBond C7", image: "/media/Amuzma-E5-5.webp" },
-      { name: "SmartEdge C7 Pro", image: "/media/Amuzma-E5-4-opt.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-5.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-2.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-4-opt.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-3.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-5.webp" },
+      { name: "Elite C7", image: "/media/Amuzma-E5-4-opt.webp" },
     ],
   },
   "planer-elite-41pf": {
@@ -1160,8 +1168,7 @@ const ADDITIONAL_PRODUCTS: Record<
     ],
     dimensionsImage: "/media/Thicknesser-41th-04-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
-    dimensionsDescription:
-      "Designed with a compact yet robust structure, the Elite 41TH offers optimized dimensions that ensure workspace efficiency while maintaining stability, strength, and smooth operational performance.",
+    dimensionsDescription: "",
     partsSectionTitle: "Product Image",
     parts: [
       {
@@ -1250,8 +1257,7 @@ const ADDITIONAL_PRODUCTS: Record<
     ],
     dimensionsImage: "/media/Thicknesser-63th-05-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
-    dimensionsDescription:
-      "Designed with a compact yet robust structure, the Elite 41TH offers optimized dimensions that ensure workspace efficiency while maintaining stability, strength, and smooth operational performance.",
+    dimensionsDescription: "",
     partsSectionTitle: "Product Image",
     parts: [
       { name: "frist one T1", image: "/media/Thicknesser-25-Firma-63TH-J3.webp" },
@@ -1264,31 +1270,31 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "veneer-door-press-p-100t": {
     name: "VENEER DOOR PRESS",
-    model: "P 100T",
+    model: "Firma C8",
     category: "Pressing",
     heroImage: "/media/Web-photos-hot-press-C8.jpg",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
-      "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
+      "The Firma C8 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
     features: [
       {
-        title: "High Press Capacity",
-        image: "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
+        title: "Heavy-Duty Machine Frame.",
+        image: "/media/Heavy-Duty-Machine-Frame.jpg.jpeg",
         desc: "Equipped with a powerful 100-ton hydraulic system, ensuring uniform and strong bonding across veneer doors for durable and high-quality production results.",
       },
       {
-        title: "Uniform Pressure",
-        image: "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
+        title: "Control Panel _ PLC",
+        image: "/media/Control-Panel-PLC-Interface.png",
         desc: "Advanced hydraulic design provides even pressure across the entire panel surface, preventing bubbles, gaps, or uneven bonding during veneer pressing.",
       },
       {
-        title: "Heavy-Duty Structure",
-        image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
+        title: "Heating Platens Pressing",
+        image: "/media/Heating-Platens-Pressing-Plates.png",
         desc: "Built with a rigid steel frame construction for maximum stability, vibration resistance, and long-term industrial performance in demanding production environments.",
       },
       {
-        title: "Efficient Operation",
-        image: "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
+        title: "Hydraulic Cylinders",
+        image: "/media/Hydraulic-Cylinders-Pistons.png",
         desc: "Designed for smooth and user-friendly operation, improving workflow efficiency while maintaining consistent pressing quality for commercial door manufacturing.",
       },
     ],
@@ -1297,48 +1303,49 @@ const ADDITIONAL_PRODUCTS: Record<
     benefits: [
       {
         icon: "/media/Untitled-design-7.webp",
-        title: "High Press Capacity",
-        desc: "Equipped with a powerful 100-ton hydraulic system, ensuring uniform and strong bonding across veneer doors for durable and high-quality production results.",
+        title: "Flawless Edge Quality",
+        desc: "The Amuzma Firma C8 Hot Press is engineered to deliver uniform pressure, consistent heat distribution, and reliable performance for professional.",
       },
       {
         icon: "/media/Untitled-design-5.webp",
-        title: "Uniform Pressure",
-        desc: "Advanced hydraulic design provides even pressure across the entire panel surface, preventing bubbles, gaps, or uneven bonding during veneer pressing.",
+        title: "Increased Production",
+        desc: "With its stable feeding system and optimized operating speed, the Veneer Firma C8 reduces manual effort and production time.",
       },
       {
         icon: "/media/Untitled-design-6.webp",
-        title: "Heavy-Duty Structure",
-        desc: "Built with a rigid steel frame construction for maximum stability, vibration resistance, and long-term industrial performance in demanding production environments.",
+        title: "Long-Term Reliability",
+        desc: "Constructed with durable components and advanced engineering, Firma C8 offers dependable operation, reduced maintenance needs.",
       },
     ],
     galleryDescription:
-      "Veneer Door Press P 100T is a high-performance edge banding machine designed for precision, efficiency, and durability. It delivers smooth edge bonding, accurate trimming, and reliable operation for professional woodworking environments.",
+      "The Amuzma Firma C8 Hot Press is engineered to deliver uniform pressure, consistent heat distribution, and reliable performance for professional woodworking applications. Built with a robust frame and precision hydraulic system, it ensures superior bonding quality and outstanding productivity for demanding production environments. Whether you're producing furniture, doors, or decorative panels, the Firma C8 Hot Press provides the strength, precision, and reliability your workshop demands.",
     gallery: [
-      "/media/Untitled-design-11.webp",
-      "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
-      "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp",
-      "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
+      "/media/Hotpress-C8.jpeg",
+      "/media/Heavy-Duty-Machine-Frame.jpg.jpeg",
+      "/media/Control-Panel-PLC-Interface.png",
+      "/media/Heating-Platens-Pressing-Plates.png",
+      "/media/Hydraulic-Cylinders-Pistons.png",
     ],
-    dimensionsImage: "/media/Veneer-Door-Press-1.webp",
+    dimensionsImage: "/media/Veneer-Door-press-C8-02-1024x702.png",
     dimensionsHeading: "Machine Dimensions",
     dimensionsDescription:
-      "Designed with a robust industrial structure, the P 100T offers optimized dimensions for efficient veneer door pressing while maintaining stability, strength, and smooth operational performance in commercial production environments.",
+      "The Veneer Door Press Firma C8 is designed with balanced and space-efficient dimensions to ensure easy installation and seamless integration into professional workshop layouts. Its optimized structure supports stable operation while maximizing available workspace efficiency.",
     partsSectionTitle: "Product Image",
     partsImages: [
-      "/media/Untitled-design-11.webp",
-      "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
-      "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp",
-      "/media/185573b1-4a69-419c-9489-394dab282514-1.webp",
-      "/media/Untitled-design-11.webp",
-      "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
+      "/media/Heavy-Duty-Machine-Frame.jpg.jpeg",
+      "/media/Control-Panel-PLC-Interface.png",
+      "/media/Heating-Platens-Pressing-Plates.png",
+      "/media/Hydraulic-Cylinders-Pistons.png",
+      "/media/Hotpress-C8.jpeg",
+      "/media/Prodocts/Hot Press C8.png",
     ],
     parts: [
-      { name: "PressMaster 100T", image: "/media/Untitled-design-11.webp" },
-      { name: "VeneerPro 100T", image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp" },
-      { name: "HydroPress P100", image: "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0-1.webp" },
-      { name: "DoorBond 100T", image: "/media/185573b1-4a69-419c-9489-394dab282514-1.webp" },
-      { name: "UltraPress 100T", image: "/media/Untitled-design-11.webp" },
-      { name: "PowerPlaten P100", image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp" },
+      { name: "PressMaster Firma C8", image: "/media/Heavy-Duty-Machine-Frame.jpg.jpeg" },
+      { name: "VeneerProFirma C8", image: "/media/Control-Panel-PLC-Interface.png" },
+      { name: "HydroPressFirma C8", image: "/media/Heating-Platens-Pressing-Plates.png" },
+      { name: "DoorBond Firma C8", image: "/media/Hydraulic-Cylinders-Pistons.png" },
+      { name: "UltraPress Firma C8", image: "/media/Hotpress-C8.jpeg" },
+      { name: "PowerPlaten Firma C8", image: "/media/Prodocts/Hot Press C8.png" },
     ],
   },
   ...SAW_PRODUCT_OVERRIDES,
@@ -1392,6 +1399,11 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
       <div className="relative w-full max-w-full">
         <div
           className={`relative w-full max-w-full overflow-hidden ${product.heroHeightClassName ?? DEFAULT_HERO_HEIGHT_CLASS}`}
+          style={
+            product.heroBackgroundColor
+              ? { backgroundColor: product.heroBackgroundColor }
+              : undefined
+          }
         >
           <Image
             src={product.heroImage}

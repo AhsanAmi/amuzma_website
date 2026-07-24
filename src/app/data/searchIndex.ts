@@ -78,10 +78,10 @@ const PRODUCT_META: Record<
     date: "February 17, 2026",
   },
   "veneer-door-press-p-100t": {
-    title: "Veneer Door Press P 100T",
+    title: "Veneer Door Press Firma C8",
     excerpt:
-      "Industrial veneer door press with 1000 kN total pressure and 3 platen configuration for high-quality panel pressing.",
-    image: "/media/img42-1.webp",
+      "Firma C8 hot press with 1000 kN total pressure for uniform veneer door bonding and reliable industrial production.",
+    image: "/media/Prodocts/Hot Press C8.png",
     date: "February 16, 2026",
   },
   "spindle-moulder-elite-30sm": {
@@ -130,7 +130,7 @@ const PRODUCT_META: Record<
     title: "Beam Saw Firma 33BS",
     excerpt:
       "Industrial beam saw engineered for high-volume panel cutting with precision, stability, and reliable production performance.",
-    image: "/media/Web-photos-beam-saw-33bs-final.jpg",
+    image: "/media/Prodocts/Beam Saw 33BS.png",
     date: "February 13, 2026",
   },
   "panel-saw-firma-40pl": {
@@ -144,7 +144,7 @@ const PRODUCT_META: Record<
     title: "Panel Saw Firma 35PS",
     excerpt:
       "Compact panel saw engineered for clean, accurate cuts with 315 mm main blade and 4500 rpm performance.",
-    image: "/media/Prodocts/Firma 35PS.png",
+    image: "/media/Panel-Saw-Firma-35PS-1-1-1.webp",
     date: "February 13, 2026",
   },
   "panel-saw-forte-40pa": {
@@ -159,6 +159,20 @@ const PRODUCT_META: Record<
     excerpt:
       "Elite panel saw with 315 mm main blade diameter and 4500 rpm speed for accurate sheet processing.",
     image: "/media/Prodocts/Panel Saw 35TS.png",
+    date: "February 13, 2026",
+  },
+  "panel-saw-elite-35ps": {
+    title: "Panel Saw Elite 35PS",
+    excerpt:
+      "Heavy-duty panel saw with 350 mm main blade diameter and 4000 rpm for precise industrial cutting.",
+    image: "/media/Prodocts/Elite 35PS.png",
+    date: "February 13, 2026",
+  },
+  "panel-saw-elite-35eu": {
+    title: "Panel Saw Elite 35EU",
+    excerpt:
+      "Compact panel saw with 315 mm main blade diameter and 3400 rpm for efficient workshop production.",
+    image: "/media/Prodocts/ELITE 35EU.png",
     date: "February 13, 2026",
   },
 };

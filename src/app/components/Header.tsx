@@ -73,7 +73,7 @@ const productCategories = [
     title: "Pressing",
     color: COMPANY_GREEN,
     href: "/pressing",
-    items: [{ label: "Veneer Door Press P 100T", href: "/products/veneer-door-press-p-100t" }],
+    items: [{ label: "Veneer Door Press Firma C8", href: "/products/veneer-door-press-p-100t" }],
   },
   {
     title: "Sanders",
@@ -107,7 +107,10 @@ const productCategories = [
       { label: "Beam saw Firma 33BS", href: "/products/beam-saw-firma-33bs" },
       { label: "Panel saw Firma 40PL", href: "/products/panel-saw-firma-40pl" },
       { label: "Panel saw Firma 35PS", href: "/products/panel-saw-firma-35ps" },
+      { label: "Panel saw Forte 40PA", href: "/products/panel-saw-forte-40pa" },
       { label: "Panel saw Elite 35TS", href: "/products/panel-saw-elite-35ts" },
+      { label: "Panel saw Elite 35PS", href: "/products/panel-saw-elite-35ps" },
+      { label: "Panel saw Elite 35EU", href: "/products/panel-saw-elite-35eu" },
     ],
   },
 ];

@@ -7,8 +7,8 @@ const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 const PRESS_PRODUCTS: CatalogProduct[] = [
   {
     category: "Press",
-    image: "/media/img42-1.webp",
-    model: "P 100T",
+    image: "/media/Prodocts/Hot Press C8.png",
+    model: "Firma C8",
     name: "Veneer Door Press",
     specs: [
       "Total Pressure : 1000 kN",

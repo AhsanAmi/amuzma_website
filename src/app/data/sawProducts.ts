@@ -116,15 +116,13 @@ export const SAW_PRODUCT_OVERRIDES = {
       "The Band Saw 65BS is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
     gallery: [
       "/media/Band-Saw-16-Elite-65BS-finlist.webp",
-      "/media/Band-Saw-16-Elite-65BS-Important-J1.webp",
-      "/media/Band-Saw-16-Elite-65BS-Important-J2.webp",
       "/media/Band-Saw-16-Elite-65BS-Important-J3.webp",
-      "/media/Band-Saw-16-Elite-65BS-Important-J4.webp",
+      "/media/Band-Saw-16-Elite-65BS-Important-J2.webp",
+      "/media/Band-Saw-16-Elite-65BS-Important-J1.webp",
     ],
     dimensionsImage: "/media/Band-Saw-65BS-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
-    dimensionsDescription:
-      "Net/Gross Weight: 323/359 Kgs. Wooden box package size: 1119×777×2070 mm.",
+    dimensionsDescription: "",
     partsSectionTitle: "Product Image",
     partsImages: [
       "/media/Band-Saw-16-Elite-65BS-Important-J4.webp",
@@ -195,7 +193,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Beam saw is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
     gallery: [
-      "/media/Prodocts/Beam Saw 32BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
       "/media/Infeed-Air-Tables.webp",
       "/media/Gripper-Guide-Track-Mechanisms.webp",
       "/media/Electrical-Control-Cabinet..webp",
@@ -203,24 +201,23 @@ export const SAW_PRODUCT_OVERRIDES = {
     ],
     dimensionsImage: "/media/Beam-Saw-2-1024x702.webp",
     dimensionsHeading: "Machine Dimensions",
-    dimensionsDescription:
-      "Table Size: 800 × 550 mm. Dust Extraction Outlet: 100 mm. Net / Gross Weight: 800 / 850 kg.",
+    dimensionsDescription: "",
     partsSectionTitle: "Product Image",
     partsImages: [
-      "/media/Prodocts/Beam Saw 32BS.png",
-      "/media/Prodocts/Beam Saw 32BS.png",
-      "/media/Prodocts/Beam Saw 32BS.png",
-      "/media/Prodocts/Beam Saw 32BS.png",
-      "/media/Prodocts/Beam Saw 32BS.png",
-      "/media/Prodocts/Beam Saw 32BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
+      "/media/Prodocts/Beam Saw 33BS.png",
     ],
     parts: [
-      { name: "UltraSaw 65", image: "/media/Prodocts/Beam Saw 32BS.png" },
-      { name: "PowerCut 65BS", image: "/media/Prodocts/Beam Saw 32BS.png" },
-      { name: "ProBand 65", image: "/media/Prodocts/Beam Saw 32BS.png" },
-      { name: "MasterCut 65", image: "/media/Prodocts/Beam Saw 32BS.png" },
-      { name: "PrecisionSaw 65", image: "/media/Prodocts/Beam Saw 32BS.png" },
-      { name: "HeavyBand 65", image: "/media/Prodocts/Beam Saw 32BS.png" },
+      { name: "UltraSaw 65", image: "/media/Prodocts/Beam Saw 33BS.png" },
+      { name: "PowerCut 65BS", image: "/media/Prodocts/Beam Saw 33BS.png" },
+      { name: "ProBand 65", image: "/media/Prodocts/Beam Saw 33BS.png" },
+      { name: "MasterCut 65", image: "/media/Prodocts/Beam Saw 33BS.png" },
+      { name: "PrecisionSaw 65", image: "/media/Prodocts/Beam Saw 33BS.png" },
+      { name: "HeavyBand 65", image: "/media/Prodocts/Beam Saw 33BS.png" },
     ],
   },
   "panel-saw-firma-40pl": {
@@ -228,6 +225,8 @@ export const SAW_PRODUCT_OVERRIDES = {
     model: "Firma 40PL",
     category: "Saws",
     heroImage: "/media/amuzma-web-banners-for-PANEL-SAW-Firma-40PL.jpg",
+    heroImageClassName: "object-contain object-center",
+    heroBackgroundColor: "#840d1b",
     tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
     featuresSubtitle:
       "The Panel Saw Firma 40PL is a robust and high-powered , purpose-built for the demands of medium-sized workshops and expanding production facilities.",
@@ -283,8 +282,7 @@ export const SAW_PRODUCT_OVERRIDES = {
     ],
     dimensionsImage: "/media/Panel-Saw-40PL-01-scaled.webp",
     dimensionsHeading: "Precision Cutting Performance",
-    dimensionsDescription:
-      "The Firma 40PL Panel Saw delivers precise, smooth cutting performance with powerful motor, durable construction, and advanced sliding system, ensuring efficient, reliable, and professional woodworking operations.",
+    dimensionsDescription: "",
     partsSectionTitle: "Product Images",
     partsImages: [
       "/media/Panel-Saw-Elite-40PL-frist-one-J1.webp",
@@ -541,6 +539,164 @@ export const SAW_PRODUCT_OVERRIDES = {
       { name: "Blade Guard", image: "/media/Panel-Saw-Firma-35PS-frist-one-J2.webp" },
     ],
   },
+  "panel-saw-elite-35ps": {
+    name: "PANEL SAW",
+    model: "Elite 35PS",
+    category: "Saws",
+    heroImage: "/media/Panel-Saw-Elite-35PS-hero.jpg",
+    tagline: "Heavy-Duty Design. Industrial Precision. Trusted Performance.",
+    featuresSubtitle:
+      "The Panel Saw Elite 35PS is a robust and high-powered machine, purpose-built for the demands of medium-sized workshops and expanding production facilities.",
+    features: [
+      {
+        title: "Digital Readout (DRO)",
+        image: "/media/Panel-Saw-Elite-35PS-1.jpg",
+        desc: "The Elite 35PS is equipped with an advanced Digital Measurement System for precise and reliable fence positioning. Featuring a clear LCD display, the system allows operators to make fast and accurate adjustments.",
+      },
+      {
+        title: "Outrigger Table",
+        image: "/media/Panel-Saw-Elite-35PS-2.jpg",
+        desc: "The Elite 35PS features an advanced Motorised Cross-Cut Table with 4th Axis control, designed for fast, accurate, and efficient rectangular cutting operations. the system automatically positions the saw blades.",
+      },
+      {
+        title: "Overhead Saw Blade Guard",
+        image: "/media/Panel-Saw-Elite-35PS-4.jpg",
+        desc: "The Elite 35PS features a fully integrated Scoring Saw System designed to deliver exceptional cutting precision and operator convenience.",
+      },
+      {
+        title: "Carriage Handle",
+        image: "/media/Panel-Saw-Elite-35PS-5.jpg",
+        desc: "The Elite 35PS is equipped with a robust Sliding Table Lock System designed to provide maximum stability, safety, and precision during cutting operations.",
+      },
+    ],
+    benefitsSectionTitle: "Performance Benefits",
+    benefitsSubtitle: "Power, Precision, Profitability",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "Flawless Edge Quality",
+        desc: "Equipped with a strong motor system that ensures consistent cutting power for hardwood, softwood, and heavy-duty industrial tasks.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Increased Production",
+        desc: "Delivers accurate and smooth cutting performance for straight, curved, and detailed woodworking applications with minimal material wastage.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Long-Term Reliability",
+        desc: "Heavy-duty frame construction reduces vibration, ensuring safer operation, better control, and long-lasting machine durability.",
+      },
+    ],
+    galleryDescription:
+      "The Panel saw Elite 35PS is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
+    gallery: [
+      "/media/Panel-Saw-Elite-35PS-7.jpg",
+      "/media/Panel-Saw-Elite-35PS-1.jpg",
+      "/media/Panel-Saw-Elite-35PS-2.jpg",
+      "/media/Panel-Saw-Elite-35PS-4.jpg",
+      "/media/Panel-Saw-Elite-35PS-5.jpg",
+    ],
+    dimensionsImage: "/media/Panel-Saw-Elite-35PS-hero.jpg",
+    dimensionsHeading: "Machine Dimensions",
+    dimensionsDescription: "",
+    partsSectionTitle: "Product Image",
+    partsImages: [
+      "/media/Panel-Saw-Elite-35PS-1.jpg",
+      "/media/Panel-Saw-Elite-35PS-2.jpg",
+      "/media/Panel-Saw-Elite-35PS-4.jpg",
+      "/media/Panel-Saw-Elite-35PS-5.jpg",
+      "/media/Panel-Saw-Elite-35PS-7.jpg",
+      "/media/Prodocts/Elite 35PS.png",
+    ],
+    parts: [
+      { name: "UltraSaw 65", image: "/media/Panel-Saw-Elite-35PS-1.jpg" },
+      { name: "PowerCut 65BS", image: "/media/Panel-Saw-Elite-35PS-2.jpg" },
+      { name: "ProBand 65", image: "/media/Panel-Saw-Elite-35PS-4.jpg" },
+      { name: "MasterCut 65", image: "/media/Panel-Saw-Elite-35PS-5.jpg" },
+      { name: "PrecisionSaw 65", image: "/media/Panel-Saw-Elite-35PS-7.jpg" },
+      { name: "HeavyBand 65", image: "/media/Prodocts/Elite 35PS.png" },
+    ],
+  },
+  "panel-saw-elite-35eu": {
+    name: "PANEL SAW",
+    model: "Elite 35EU",
+    category: "Saws",
+    heroImage: "/media/Panel-Saw-Elite-35EU-hero.jpeg",
+    tagline: "Compact Design. Professional Performance.",
+    featuresSubtitle:
+      "The Amuzma Elite 35EU Panel Saw is built for workshops that demand precision, reliability, and efficiency in every cut.",
+    features: [
+      {
+        title: "Miter Gauge Assembly",
+        image: "/media/Panel-Saw-Elite-35EU-4.jpg",
+        desc: "The Amuzma Miter Gauge Assembly is designed to deliver accurate, repeatable angle cuts with confidence. Built for smooth operation and precise adjustments, it helps you achieve clean miters, crosscuts, and angled cuts.",
+      },
+      {
+        title: "Rip Fence Assembly",
+        image: "/media/Panel-Saw-Elite-35EU-3.png",
+        desc: "The Amuzma Rip Fence Assembly is engineered to deliver precise, smooth, and repeatable rip cuts with exceptional stability. Designed for professional woodworking, it provides reliable fence alignment and effortless adjustment.",
+      },
+      {
+        title: "Cutting Unit Assembly",
+        image: "/media/Panel-Saw-Elite-35EU-2.png",
+        desc: "The Amuzma 35EU Cutting Unit Assembly is engineered to deliver power, stability, and exceptional cutting accuracy. Built with high-quality components, it ensures smooth blade operation, reduced vibration, and reliable performance.",
+      },
+      {
+        title: "Blade Tilt and Height",
+        image: "/media/Panel-Saw-Elite-35EU-1.png",
+        desc: "The Amuzma Blade Tilt & Height Adjustment System is designed for maximum flexibility and cutting precision. Easily adjust the blade height and tilt angle to achieve accurate straight cuts, bevel cuts, and complex cuts.",
+      },
+    ],
+    benefitsSectionTitle: "Performance Benefits",
+    benefitsSubtitle: "Power, Precision, Profitability",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "Flawless Edge Quality",
+        desc: "Equipped with a strong motor system that ensures consistent cutting power for hardwood, softwood, and heavy-duty industrial tasks.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Increased Production",
+        desc: "Delivers accurate and smooth cutting performance for straight, curved, and detailed woodworking applications with minimal material wastage.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Long-Term Reliability",
+        desc: "Heavy-duty frame construction reduces vibration, ensuring safer operation, better control, and long-lasting machine durability.",
+      },
+    ],
+    galleryDescription:
+      "The Amuzma Elite 35EU Panel Saw is built for workshops that demand precision, reliability, and efficiency in every cut. Designed with industrial-grade engineering, it delivers smooth, accurate performance while maximizing productivity in a compact footprint.",
+    gallery: [
+      "/media/Panel-Saw-Elite-35EU-gallery.jpeg",
+      "/media/Panel-Saw-Elite-35EU-1.png",
+      "/media/Panel-Saw-Elite-35EU-2.png",
+      "/media/Panel-Saw-Elite-35EU-3.png",
+      "/media/Panel-Saw-Elite-35EU-4.jpg",
+    ],
+    dimensionsImage: "/media/Panel-Saw-Elite-35EU--1024x702.png",
+    dimensionsHeading: "Machine Dimensions",
+    dimensionsDescription: "",
+    partsSectionTitle: "Product Image",
+    partsImages: [
+      "/media/Panel-Saw-Elite-35EU-1.png",
+      "/media/Panel-Saw-Elite-35EU-2.png",
+      "/media/Panel-Saw-Elite-35EU-3.png",
+      "/media/Panel-Saw-Elite-35EU-4.jpg",
+      "/media/Panel-Saw-Elite-35EU-1.png",
+      "/media/Panel-Saw-Elite-35EU-3.png",
+    ],
+    parts: [
+      { name: "UltraSaw 65", image: "/media/Panel-Saw-Elite-35EU-1.png" },
+      { name: "PowerCut 65BS", image: "/media/Panel-Saw-Elite-35EU-2.png" },
+      { name: "ProBand 65", image: "/media/Panel-Saw-Elite-35EU-3.png" },
+      { name: "MasterCut 65", image: "/media/Panel-Saw-Elite-35EU-4.jpg" },
+      { name: "PrecisionSaw 65", image: "/media/Panel-Saw-Elite-35EU-1.png" },
+      { name: "HeavyBand 65", image: "/media/Panel-Saw-Elite-35EU-3.png" },
+    ],
+  },
 };
 
 export const SAW_OPERATIONAL_TABS: Record<string, OperationalTab[]> = {
@@ -580,6 +736,18 @@ export const SAW_OPERATIONAL_TABS: Record<string, OperationalTab[]> = {
     "The AMUZMA Elite 35TS is engineered to deliver exceptional precision and efficiency in plastic processing applications. Designed to handle a wide variety of commercially available plastics, it provides clean, accurate cuts and smooth finishes across a broad range of materials and production requirements. From acrylic and PVC to advanced composite materials, the Elite 35TS ensures reliable performance and outstanding cutting quality. It is also capable of processing carbon composite panels and other high-performance materials with exceptional accuracy, achieving cutting tolerances within a tenth of a millimetre.",
     "The AMUZMA Elite 35TS is engineered to streamline and enhance modern panel processing, making it the ideal solution for carpenters, cabinet-makers, and professional woodworking workshops. Designed to handle the everyday challenges of cutting and sizing sheet materials, it delivers exceptional accuracy, efficiency, and ease of operation. Whether processing full-size panels, half-size boards, or reusable offcuts, the Elite 35TS ensures smooth material handling and precise, repeatable cutting performance. Its advanced engineering helps maximize material utilization, reduce waste, and improve overall workflow efficiency.",
   ),
+  "panel-saw-elite-35ps": materialTabs(
+    "The AMUZMA Elite 35PS is engineered to deliver exceptional precision for aluminium cutting applications. Trusted for years in the aluminium-processing industry, this sliding table saw provides outstanding accuracy, clean cutting results, and reliable performance for professional workshops. Designed as the ideal solution for cutting and sawing aluminium profiles and panels, the Elite 35PS achieves sharp contours and precision cutting accuracy within a tenth of a millimetre. Its advanced engineering ensures smooth operation, reduced vibration, and superior finishing quality across a wide range of aluminium applications.",
+    "The AMUZMA Elite 35PS is designed to handle the unique demands of solid wood processing with exceptional precision and reliability. From trimming and ripping to refining natural wood boards, the machine delivers smooth, accurate, and high-quality cutting performance for professional woodworking applications. Solid wood furniture is valued for its natural grain patterns, strength, and premium feel. To meet these demanding requirements, the Elite 35PS offers advanced feature options specifically engineered for efficient and effortless solid wood machining. Its precision engineering ensures clean cuts, smooth finishes, and consistent results, making complex woodworking operations simple and efficient.",
+    "The AMUZMA Elite 35PS is engineered for precise and efficient plastic processing across a wide range of applications. Capable of cutting all commercially available plastics in virtually any required shape or form, the machine delivers outstanding accuracy, smooth finishes, and reliable performance. The Elite 35PS also handles advanced composite materials such as carbon composite plates with exceptional precision, achieving cutting tolerances within a tenth of a millimetre. Its advanced engineering ensures clean cuts, reduced material damage, and consistent results for demanding industrial applications.",
+    "The AMUZMA Elite 35PS is designed to simplify and optimize modern panel processing for carpenters, cabinet-makers, and professional woodworking workshops. Large panel handling, precise sizing, and efficient material management are daily challenges in production environments — and the Elite 35PS is built to handle them with ease. Whether working with full-size panels, half-size boards, or reusable offcuts, the machine provides smooth handling, precise cutting accuracy, and efficient workflow support. Its advanced features help reduce material waste, improve productivity, and make complex panel-processing operations faster and more manageable.",
+  ),
+  "panel-saw-elite-35eu": materialTabs(
+    "The Amuzma Elite 35EU Panel Saw is built for workshops that demand precision, reliability, and efficiency in every cut. Designed with industrial-grade engineering, it delivers smooth, accurate performance while maximizing productivity in a compact footprint.",
+    "The AMUZMA 35EU is designed to handle the unique demands of solid wood processing with exceptional precision and reliability. From trimming and ripping to refining natural wood boards, the machine delivers smooth, accurate, and high-quality cutting performance for professional woodworking applications. Solid wood furniture is valued for its natural grain patterns, strength, and premium feel. To meet these demanding requirements, the Elite 35EU offers advanced feature options specifically engineered for efficient and effortless solid wood machining. Its precision engineering ensures clean cuts, smooth finishes, and consistent results, making complex woodworking operations simple and efficient.",
+    "The Amuzma 35EU is engineered for precise and efficient plastic processing across a wide range of applications. Capable of cutting all commercially available plastics in virtually any required shape or form, the machine delivers outstanding accuracy, smooth finishes, and reliable performance. The Elite 35EU also handles advanced composite materials such as carbon composite plates with exceptional precision, achieving cutting tolerances within a tenth of a millimetre. Its advanced engineering ensures clean cuts, reduced material damage, and consistent results for demanding industrial applications.",
+    "The Amuzma Elite 35EU Panel Saw is built for workshops that demand precision, reliability, and efficiency in every cut. Designed with industrial-grade engineering, it delivers smooth, accurate performance while maximizing productivity in a compact footprint.",
+  ),
 };
 
 export const SAW_OPERATIONAL_HEADINGS: Record<string, string> = {
@@ -589,6 +757,8 @@ export const SAW_OPERATIONAL_HEADINGS: Record<string, string> = {
   "panel-saw-firma-35ps": "Operational",
   "panel-saw-forte-40pa": "Operational Excellence",
   "panel-saw-elite-35ts": "Operational",
+  "panel-saw-elite-35ps": "Operational Excellence",
+  "panel-saw-elite-35eu": "Operational Excellence",
 };
 
 const BAND_SAW_65BS_SPECS_LEFT: SpecItem[] = [
@@ -599,14 +769,18 @@ const BAND_SAW_65BS_SPECS_LEFT: SpecItem[] = [
   { label: "With European style roller guide", value: "370 mm" },
   { label: "Throat Width", value: "580 mm" },
   { label: "Table Size", value: "700×608 mm" },
+];
+
+const BAND_SAW_65BS_SPECS_RIGHT: SpecItem[] = [
   { label: "Table Tilt", value: "0-20°" },
   { label: "Band wheel Diameter", value: "610 mm" },
   { label: "Motor Power Output 4kW S1", value: "" },
   { label: "Foot Brake", value: "N/A" },
   { label: "Extractor Port Diameter", value: "2×100 mm" },
+  { label: "Motor Power Output 4kW S1", value: "" },
 ];
 
-const BAND_SAW_65BS_SPECS_RIGHT: SpecItem[] = [
+const BAND_SAW_65BS_DIMENSIONS_ITEMS: SpecItem[] = [
   { label: "Net/Gross Weight", value: "323/359 Kgs" },
   { label: "Net / Package", value: "300x100x60 mm" },
   { label: "Wooden box Packegs Size", value: "1119x777x2070 mm" },
@@ -619,12 +793,12 @@ const BEAM_SAW_33BS_SPECS_LEFT: SpecItem[] = [
   { label: "Robot servo motor power", value: "1.8KW" },
   { label: "Maximum sawing length", value: "3300mm" },
   { label: "Sawing height", value: "100mm" },
-  { label: "The speed of the saw", value: "0-120/min" },
-  { label: "Blade speeds", value: "0-100m/min" },
 ];
 
 const BEAM_SAW_33BS_SPECS_RIGHT: SpecItem[] = [
-  { label: "Fan power", value: "4kw*1" },
+  { label: "The speed of the saw", value: "0-120/min" },
+  { label: "Blade speeds 0-100m/min", value: "" },
+  { label: "Fan power 4kw*1", value: "" },
   { label: "Computer display screen", value: "19 inch" },
   { label: "Gross power", value: "26.5kw" },
   { label: "Overall dimensions", value: "5900*5900*1850mm" },
@@ -633,7 +807,8 @@ const BEAM_SAW_33BS_SPECS_RIGHT: SpecItem[] = [
 const BEAM_SAW_33BS_DIMENSIONS_ITEMS: SpecItem[] = [
   { label: "Table Size", value: "800 × 550 mm" },
   { label: "Dust Extraction Outlet", value: "100 mm" },
-  { label: "Main Motor Output", value: "3 × 400V : 5.5 KW / 7.5HP" },
+  { label: "Main Motor Output", value: "" },
+  { label: "3 × 400V", value: "5.5 KW / 7.5HP" },
   { label: "Scoring Motor Output", value: "1.1 kW" },
   { label: "Net / Gross Weight", value: "800 / 850 kg" },
   { label: "Package Size", value: "1300 × 1190 × 1000 mm" },
@@ -641,37 +816,45 @@ const BEAM_SAW_33BS_DIMENSIONS_ITEMS: SpecItem[] = [
 
 const FIRMA_40PL_SPECS_LEFT: SpecItem[] = [
   { label: "Main Blade Diameter", value: "400 mm" },
-  { label: "Main Blade Speed", value: "3000 / 4000 / 5000 rpm" },
+  { label: "Main Blade Speed", value: "4500 rpm" },
   { label: "Scoring Blade Diameter", value: "120 mm" },
   { label: "Scoring Blade Speed", value: "8000 rpm" },
-  { label: "Blade Tilt", value: "0–45°" },
+  { label: "Blade Tilt", value: "0-45°" },
   { label: "Max Depth of Cut @ 45°", value: "85 mm" },
   { label: "Max Depth of Cut @ 90°", value: "125 mm" },
   { label: "Max Rip Capacity", value: "1250 mm" },
-  { label: "Sliding Beam Size", value: "" },
-  { label: "Standard", value: "3200 × 418 mm" },
-  { label: "Option", value: "3800 × 418 mm" },
-  { label: "Sliding Beam Cutting Capacity", value: "" },
-  { label: "Standard", value: "3200 mm" },
-  { label: "Option", value: "3800 mm" },
   { label: "Blade Rising", value: "" },
+  { label: "Standard", value: "Manual Raised" },
+  { label: "Option", value: "Motor Raised" },
 ];
 
 const FIRMA_40PL_SPECS_RIGHT: SpecItem[] = [
-  { label: "Standard", value: "Manual Raised" },
-  { label: "Option", value: "Motor Raised" },
   { label: "Blade Tilting", value: "" },
   { label: "Standard", value: "Manual Tilting" },
   { label: "Option", value: "Motor Tilting" },
   { label: "Table Size", value: "1020 (690+720) mm" },
-  { label: "Dust Extraction Outlet", value: "120 mm" },
-  { label: "Main Motor Output", value: "" },
-  { label: "3 × 380V", value: "5 kW" },
+  { label: "Dust Extraction Outlet", value: "100 mm" },
+  { label: "Sliding Beam Size", value: "" },
+  { label: "Standard", value: "3200 × 418 mm" },
+  { label: "Option", value: "3800 × 418 mm" },
+  { label: "Main Motor Output", value: "3 × 380V : 7 kW" },
   { label: "Scoring Motor Output", value: "0.75 kW S1" },
+];
+
+const FIRMA_40PL_DIMENSIONS_ITEMS: SpecItem[] = [
   { label: "Net / Gross Weight", value: "760 / 870 kgs" },
-  { label: "CE Over Head Guard", value: "1360 × 1000 × 320 mm / 28.5 / 56.5 kg" },
-  { label: "Angle Cutting Device", value: "940 × 150 × 150 mm / 4 × 4.5 kg" },
-  { label: "Wood Box Package Size", value: "2300 × 1190 × 910 mm / 3675 × 505 × 280 mm" },
+  {
+    label: "CE Over Head Guard",
+    value: "1360 × 1000 × 320 mm / 28.5 / 56.5 kg",
+  },
+  {
+    label: "Angle Cutting Device",
+    value: "940 × 150 × 150 mm / 4 × 4.5 kg",
+  },
+  {
+    label: "Wood Box Package Size",
+    value: "2300×1190×910/3675×505×280 mm",
+  },
 ];
 
 const FIRMA_35PS_SPECS_LEFT: SpecItem[] = [
@@ -768,12 +951,63 @@ const ELITE_35TS_SPECS_RIGHT: SpecItem[] = [
   { label: "Package Size", value: "1300 × 1000 × 1100 mm" },
 ];
 
+const ELITE_35PS_SPECS_LEFT: SpecItem[] = [
+  { label: "Main Blade Diameter", value: "350 mm" },
+  { label: "Main Blade Speed", value: "4000 rpm" },
+  { label: "Scoring Blade Diameter", value: "120 mm" },
+  { label: "Scoring Blade Speed", value: "8000 rpm" },
+  { label: "Blade Tilt", value: "0 – 45°" },
+  { label: "Max Depth of Cut @ 45°", value: "67 mm" },
+  { label: "Max Depth of Cut @ 90°", value: "90 mm" },
+  { label: "Max Rip Capacity", value: "" },
+  { label: "Sliding Beam Size", value: "" },
+  { label: "Standard", value: "3200×435 mm" },
+  { label: "Sliding Beam Cutting Capacity", value: "" },
+  { label: "Standard", value: "3200 mm" },
+];
+
+const ELITE_35PS_SPECS_RIGHT: SpecItem[] = [
+  { label: "Table Size", value: "800x470mm/800x820mm" },
+  { label: "Dust Extraction Outlet", value: "120mm" },
+  { label: "Main Motor Output", value: "" },
+  { label: "3 × 400V", value: "5kW" },
+  { label: "Scoring Motor Output", value: "0.75kW S1" },
+  { label: "Net / Gross Weight", value: "561/680kgs" },
+  { label: "Package Size", value: "6700 x 4450 x 1350 mm" },
+];
+
+const ELITE_35EU_SPECS_LEFT: SpecItem[] = [
+  { label: "Main Blade Diameter", value: "315 mm" },
+  { label: "Main Blade Speed", value: "3400rpm/50Hz" },
+  { label: "Scoring Blade Diameter", value: "120 mm" },
+  { label: "Scoring Blade Speed", value: "7600rpm/50Hz" },
+  { label: "Blade Tilt", value: "0 – 45°" },
+];
+
+const ELITE_35EU_SPECS_RIGHT: SpecItem[] = [
+  { label: "Max Depth of Cut @ 45°", value: "65mm" },
+  { label: "Max Depth of Cut @ 90°", value: "93 mm" },
+  { label: "Max Rip Capacity", value: "975 mm" },
+  { label: "Sliding Beam Size", value: "3000×360 mm" },
+  { label: "Sliding Beam Cutting Capacity", value: "3000mm" },
+];
+
+const ELITE_35EU_DIMENSIONS_ITEMS: SpecItem[] = [
+  { label: "Table Size", value: "819(374+650) mm" },
+  { label: "Dust Extraction Outlet", value: "100 mm" },
+  { label: "Main Motor Output", value: "" },
+  { label: "3*380V", value: "4 kw" },
+  { label: "Net / Gross Weight", value: "800 / 850 kg" },
+  { label: "Package Size", value: "2005 x 1140 x 870 mm" },
+];
+
 export const SAW_SPEC_CONFIGS: Record<string, SpecConfig> = {
   "band-saw-65bs": {
     parametersTabLabel: "System Specifications",
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: BAND_SAW_65BS_SPECS_LEFT,
     right: BAND_SAW_65BS_SPECS_RIGHT,
+    dimensionsItems: BAND_SAW_65BS_DIMENSIONS_ITEMS,
   },
   "beam-saw-firma-33bs": {
     parametersTabLabel: "System Specifications",
@@ -787,6 +1021,7 @@ export const SAW_SPEC_CONFIGS: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[280px] whitespace-nowrap",
     left: FIRMA_40PL_SPECS_LEFT,
     right: FIRMA_40PL_SPECS_RIGHT,
+    dimensionsItems: FIRMA_40PL_DIMENSIONS_ITEMS,
   },
   "panel-saw-firma-35ps": {
     parametersTabLabel: "Technical Specifications",
@@ -806,5 +1041,19 @@ export const SAW_SPEC_CONFIGS: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[220px] whitespace-nowrap",
     left: ELITE_35TS_SPECS_LEFT,
     right: ELITE_35TS_SPECS_RIGHT,
+  },
+  "panel-saw-elite-35ps": {
+    parametersTabLabel: "System Specifications",
+    parametersTabWidthClass: "w-[280px] whitespace-nowrap",
+    left: ELITE_35PS_SPECS_LEFT,
+    right: ELITE_35PS_SPECS_RIGHT,
+    dimensionsItems: ELITE_35PS_SPECS_RIGHT,
+  },
+  "panel-saw-elite-35eu": {
+    parametersTabLabel: "System Specifications",
+    parametersTabWidthClass: "w-[280px] whitespace-nowrap",
+    left: ELITE_35EU_SPECS_LEFT,
+    right: ELITE_35EU_SPECS_RIGHT,
+    dimensionsItems: ELITE_35EU_DIMENSIONS_ITEMS,
   },
 };

@@ -203,179 +203,144 @@ const OPERATIONAL_TABS_RDC3800: OperationalTab[] = [
 
 const OPERATIONAL_TABS_E5: OperationalTab[] = [
   {
-    label: "Automatic",
-    heading: "Automatic Feeding",
+    label: "Board Materials",
+    heading: "Board Materials",
     description:
       "Ensures smooth and consistent panel movement through a precision feeding system that maintains alignment and stability. The synchronized drive prevents misfeeds and surface damage while supporting various panel sizes. This steady transport improves edge quality, reduces waste, and keeps production running efficiently without interruptions.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Amuzma-E5-1-1-1-1.webp",
+    image: "/media/Board-Materials-Edge-Banding.jpg.webp",
   },
   {
-    label: "Trimming",
-    heading: "Precision Trimming",
+    label: "Edge Banding Materials",
+    heading: "Edge Banding Materials",
     description:
       "Delivers accurate edge cutting for clean and professional results.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/Amuzma-E5-2-1-1-1.webp",
+    image: "/media/Edge-Banding-Materials.jpg.webp",
   },
   {
-    label: "Fast Heat-Up",
-    heading: "UnderStanding Workflow",
+    label: "Common Applications",
+    heading: "Common Applications",
     description:
-      "Engineered for extended production cycles, this machine delivers consistent, stable, and dependable performance throughout demanding workloads. Its robust construction and precision components ensure smooth operation with minimal interruptions. Designed to handle high-volume tasks efficiently, it maintains accuracy and quality .",
+      "Engineered for extended production cycles, this machine delivers consistent, stable, and dependable performance throughout demanding workloads. Its robust construction and precision components ensure smooth operation with minimal interruptions. Designed to handle high-volume tasks efficiently, it maintains accuracy and quality.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/Amuzma-E5-3-1-1.webp",
-  },
-  {
-    label: "Workflow",
-    heading: "Continuous Workflow",
-    description:
-      "Built for long production runs, this machine delivers stable and reliable performance during continuous operations. Its durable construction ensures smooth functioning with minimal downtime. Designed for high-volume tasks, it maintains consistent accuracy, quality, and efficiency throughout demanding manufacturing cycles.",
-    icon: "/media/New-Project-12.webp",
-    image: "/media/Amuzma-E5-4-1-1.webp",
+    image: "/media/Common-Applications-Edge-Banding.jpg.webp",
   },
 ];
 
 const OPERATIONAL_TABS_P6: OperationalTab[] = [
   {
-    label: "Reliable",
-    heading: "Superior Edge Performance",
+    label: "Board Materials",
+    heading: "Board Materials",
     description:
       "Elite P6 delivers smooth, precise, and durable edge bonding for professional woodworking applications. Designed for consistent operation and clean finishing, it enhances productivity while ensuring high-quality results in every project.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Amuzma-E5-1-1-1-1.webp",
+    image: "/media/Board-Materials-Edge-Banding.jpg.webp",
   },
   {
-    label: "Precision",
-    heading: "Production",
+    label: "Edge Banding Materials",
+    heading: "Edge Banding Materials",
     description:
       "Engineered for accurate edge application and clean trimming, Elite P6 ensures seamless results. It enhances product appearance while maintaining consistent performance throughout daily operations.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/Amuzma-E5-2-1-1-1.webp",
+    image: "/media/Edge-Banding-Materials.jpg.webp",
   },
   {
-    label: "Efficiency",
-    heading: "Durable Performance",
+    label: "Common Applications",
+    heading: "Common Applications",
     description:
       "Designed with heavy-duty components and advanced bonding technology, Elite P6 delivers long-lasting reliability and consistent edge quality in demanding workshop environments.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/Amuzma-E5-3-1-1.webp",
-  },
-  {
-    label: "Production",
-    heading: "Reliable Productivity",
-    description:
-      "Built for stable feeding and smooth operation, Elite P6 supports faster workflow with reduced rework. It helps workshops achieve efficient production with professional-quality output.",
-    icon: "/media/New-Project-12.webp",
-    image: "/media/Amuzma-E5-4-1-1.webp",
+    image: "/media/Common-Applications-Edge-Banding.jpg.webp",
   },
 ];
 
-const P100T_OPERATIONAL_IMAGE_1 =
-  "/media/185573b1-4a69-419c-9489-394dab282514-1.webp";
-
 const OPERATIONAL_TABS_P100T: OperationalTab[] = [
   {
-    label: "Reliable",
-    heading: "Superior Edge Performance",
+    label: "Wood based panels",
+    heading: "Wood based panels",
     description:
-      "Veneer Door Press P 100T delivers smooth, precise, and durable edge bonding for professional woodworking applications. Designed for consistent operation and clean finishing, it enhances productivity while ensuring high-quality results in every project.",
+      "Veneer Door Press Firma C8 delivers smooth, precise, and durable edge bonding for professional woodworking applications. Designed for consistent operation and clean finishing, it enhances productivity while ensuring high-quality results in every project.",
     icon: "/media/New-Project-9.webp",
-    image: P100T_OPERATIONAL_IMAGE_1,
+    image: "/media/Wood-based-panels-Hotpress.jpg",
   },
   {
-    label: "Precision",
-    heading: "Production",
+    label: "Surface Materials",
+    heading: "Surface Materials",
     description:
-      "Engineered for accurate edge application and clean trimming, Veneer Door Press P 100T ensures seamless results. It enhances product appearance while maintaining consistent performance throughout daily operations.",
+      "Engineered for accurate edge application and clean trimming, Veneer Door Press Firma C8 ensures seamless results. It enhances product appearance while maintaining consistent performance throughout daily operations.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/0d0fd8f5-09ab-4521-a662-ca89776bedb0.webp",
+    image: "/media/Surface-Materials-Hotpress.jpg",
   },
   {
-    label: "Efficiency",
-    heading: "Durable Performance",
+    label: "Door Materials",
+    heading: "Door Materials",
     description:
-      "Designed with heavy-duty components and advanced bonding technology, Veneer Door Press P 100T delivers long-lasting reliability and consistent edge quality in demanding workshop environments.",
+      "Designed with heavy-duty components and advanced bonding technology, Veneer Door Press Firma C8 delivers long-lasting reliability and consistent edge quality in demanding workshop environments.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/c07cc7f1-09d0-46cb-a0c8-04a6109b91af-1-1.webp",
-  },
-  {
-    label: "Production",
-    heading: "Reliable Productivity",
-    description:
-      "Built for stable feeding and smooth operation, Veneer Door Press P 100T supports faster workflow with reduced rework. It helps workshops achieve efficient production with professional-quality output.",
-    icon: "/media/New-Project-12.webp",
-    image: P100T_OPERATIONAL_IMAGE_1,
+    image: "/media/Door-Materials-hotpress.jpg",
   },
 ];
 
 const OPERATIONAL_TABS_C7: OperationalTab[] = [
   {
-    label: "Gluing",
-    heading: "Adhesive Application",
+    label: "Board Materials",
+    heading: "Board Materials",
     description:
       "Applies hot melt adhesive evenly on panel edges, ensuring strong bonding and long-lasting edge durability for furniture components.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Amuzma-E5-3-1-opt.webp",
+    image: "/media/Board-Materials-Edge-Banding.jpg.webp",
   },
   {
-    label: "Trimming",
-    heading: "Edge Cutting",
+    label: "Edge Banding Materials",
+    heading: "Edge Banding Materials",
     description:
       "Precisely trims excess edge band material, delivering clean and smooth panel sides with professional finishing quality.",
     icon: "/media/New-Project-10.webp",
-    image: "/media/Amuzma-E5-4-1-opt.webp",
+    image: "/media/Edge-Banding-Materials.jpg.webp",
   },
   {
-    label: "Scraping",
-    heading: "Surface Refining",
+    label: "Common Applications",
+    heading: "Common Applications",
     description:
       "Removes minor glue residues and imperfections, enhancing edge smoothness and improving final surface appearance.",
     icon: "/media/New-Project-11.webp",
-    image: "/media/Amuzma-E5-2-1.webp",
-  },
-  {
-    label: "Buffing",
-    heading: "Polish Finish",
-    description:
-      "Polishes the edge surface to provide a clean, glossy, and refined look for high-quality furniture production.",
-    icon: "/media/New-Project-12.webp",
-    image: "/media/Amuzma-E5-5-1.webp",
+    image: "/media/Common-Applications-Edge-Banding.jpg.webp",
   },
 ];
 
 const OPERATIONAL_TABS_30SM: OperationalTab[] = [
   {
-    label: "Accurancy",
-    heading: "Power and Control Combined",
+    label: "Solid wood",
+    heading: "Solid wood",
     description:
       "Built with rugged construction and quality components, the Elite 30SM supports continuous workshop use. Its robust design ensures long-lasting performance, minimal vibration, and dependable results over extended production cycles.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/material_massivholz7.webp",
+    image: "/media/Solid-wood-Spindle-Moulder-working.jpg",
   },
   {
-    label: "Performance",
-    heading: "Production",
+    label: "Wood based Panels",
+    heading: "Wood based Panels",
     description:
-      "Equipped with powerful spindle drive and advanced control systems, Elite 30SM increases productivity and consistency. It handles a wide range of materials efficiently, making it ideal for batch production and complex shaping tasks.",
-    icon: "/media/Wood-and-Panel-Material.webp",
-    image: "/media/frist-one-J4-1.webp",
+      "Equipped with powerful spindle drive and advanced control systems. Elite 30SM increases productivity and consistency. It handles a wide range of materials efficiently, making it ideal for batch production and complex shaping tasks.",
+    icon: "/media/Wood-and-Panel-Material.png",
+    image: "/media/Wood-based-Panels-Spindle-Moulder-working.jpg",
   },
   {
-    label: "Efficiency",
-    heading: "Versatility",
+    label: "Composite Materials",
+    heading: "Composite Materials",
     description:
       "Elite 30SM supports various cutter heads and woodworking tasks, making it suitable for furniture production, decorative mouldings, and customized shaping projects with high precision and efficiency.",
-    icon: "/media/Wood-Components-1.webp",
-    image: "/media/frist-one-J3-1.webp",
+    icon: "/media/Wood-Components-1.png",
+    image: "/media/Composite-Materials-Spindle-Moulder-working.jpg",
   },
   {
-    label: "Stability",
-    heading: "Reliable Productivity",
+    label: "Common Operations",
+    heading: "Common Operations",
     description:
       "Designed with a heavy-duty frame, the machine minimizes vibration and ensures accurate machining, providing clean finishes and reliable operation even during continuous workshop use.",
-    icon: "/media/Common-operations.webp",
-    image: "/media/frist-one-J1-1.webp",
+    icon: "/media/Common-operations.png",
+    image: "/media/Common-Operations-Spindle-Moulder-working.jpg",
   },
 ];
 
@@ -413,93 +378,77 @@ const OPERATIONAL_TABS_41CS: OperationalTab[] = [
     description:
       "Elite 41CS / CM ensures precise planing and thickness calibration, delivering smooth surfaces and consistent material dimensions for professional woodworking applications.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Solid-Wood-planer-working.webp",
+    image: "/media/Solid-Wood-Planer-Thicknesser.jpg",
   },
   {
     label: "Wood Components",
     heading: "Wood Components",
     description:
       "Combining planing and thicknessing in one unit, it saves workshop space while maintaining high productivity and reliable machining performance.",
-    icon: "/media/Wood-Components-1.webp",
-    image: "/media/Wood-Components-planer-working.webp",
+    icon: "/media/Wood-Components-1.png",
+    image: "/media/Wood-Components-Planer-Thicknesser.jpg",
   },
   {
     label: "Machine Operations",
     heading: "Machine Operations",
     description:
       "Constructed with a heavy-duty frame and quality components, Elite 41CS / CM ensures long-term reliability and consistent output in demanding workshop environments.",
-    icon: "/media/Common-operations.webp",
-    image: "/media/Solid-Wood-planer-working.webp",
+    icon: "/media/Common-operations.png",
+    image: "/media/Machine-Operations-Planer-Thicknesser.jpg",
   },
 ];
 
 const OPERATIONAL_TABS_41TH: OperationalTab[] = [
   {
-    label: "Accuracy",
-    heading: "Heavy-Duty Performance",
+    label: "Solid Wood",
+    heading: "Solid Wood",
     description:
       "Built with a powerful motor and rigid construction, the Elite 41TH delivers consistent cutting strength and reliable operation, making it ideal for demanding woodworking environments and continuous production tasks.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Thicknesser-25-Elite-41th-2.webp",
+    image: "/media/Solid-Wood-thicknesser-elite-41th.jpg",
   },
   {
-    label: "Precision",
-    heading: "Robust Cutter System",
+    label: "Wood Components",
+    heading: "Wood Components",
     description:
       "Equipped with a high-speed cutter block, the Elite 41TH provides clean, sharp cuts with reduced vibration, improving surface quality and enhancing overall machining efficiency.",
-    icon: "/media/New-Project-10.webp",
-    image: "/media/Thicknesser-25-Elite-41th-4.webp",
+    icon: "/media/Wood-Components-1.png",
+    image: "/media/Wood-Components-thicknesser-elite-41th.jpg",
   },
   {
-    label: "Stablity",
-    heading: "Stable Work Support",
+    label: "Machine Operations",
+    heading: "Machine Operations",
     description:
       "Featuring a strong and well-balanced table structure, it ensures stable material feeding, minimizes movement during operation, and improves safety and accuracy during thicknessing processes.",
-    icon: "/media/New-Project-11.webp",
-    image: "/media/Thicknesser-25-Elite-41th-1-1.webp",
-  },
-  {
-    label: "Supported",
-    heading: "Extended Table Support",
-    description:
-      "Optional extended infeed and outfeed tables provide enhanced support for longer workpieces, ensuring stable feeding, improved accuracy.",
-    icon: "/media/New-Project-12.webp",
-    image: "/media/Thicknesser-25-Elite-41th-3-1.webp",
+    icon: "/media/Common-operations.png",
+    image: "/media/Machine-Operations-thicknesser-elite-41th.jpg",
   },
 ];
 
 const OPERATIONAL_TABS_63TH: OperationalTab[] = [
   {
-    label: "Accuracy",
-    heading: "Spiral Cutterhead",
+    label: "Solid Wood",
+    heading: "Solid Wood",
     description:
       "Upgrade to a spiral cutterhead for smoother cutting performance, reduced noise levels, and longer tool life. Ideal for achieving superior surface finish with minimal tear-out on hardwood.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Thicknesser-25-Firma-63TH-J1.webp",
+    image: "/media/Solid-Wood-thicknesser.jpg",
   },
   {
-    label: "Versatility",
-    heading: "Digital Thickness Display",
+    label: "Wood Components",
+    heading: "Wood Components",
     description:
       "A digital readout system allows precise thickness measurement and easy adjustments, improving accuracy and reducing setup time for repeated or high-volume production tasks.",
-    icon: "/media/New-Project-10.webp",
-    image: "/media/Thicknesser-25-Firma-63TH-J2.webp",
+    icon: "/media/Wood-Components-1.png",
+    image: "/media/Wood-Component-thicknesser.jpg",
   },
   {
-    label: "Stablity",
-    heading: "Extended Table Support",
+    label: "Machine Operations",
+    heading: "Machine Operations",
     description:
-      "Constructed with a heavy-duty frame and quality components, Elite 41CS / CM ensures long-term reliability and consistent output in demanding workshop environments.",
-    icon: "/media/New-Project-11.webp",
-    image: "/media/Thicknesser-25-Firma-63TH-J3.webp",
-  },
-  {
-    label: "Performance",
-    heading: "Power & Precision",
-    description:
-      "Efficient material removal capability reduces processing time while maintaining smooth finishes, improving overall workshop productivity.",
-    icon: "/media/New-Project-12.webp",
-    image: "/media/Thicknesser-25-Firma-63TH-J3.webp",
+      "Constructed with a heavy-duty frame and quality components, Firma 63TH ensures long-term reliability and consistent output in demanding workshop environments.",
+    icon: "/media/Common-operations.png",
+    image: "/media/Machine-Operations-thicknesser.jpg",
   },
 ];
 
@@ -559,6 +508,7 @@ const OPERATIONAL_TABS_BY_PRODUCT: Record<string, OperationalTab[]> = {
 
 const OPERATIONAL_HEADING_BY_PRODUCT: Record<string, string> = {
   ...SAW_OPERATIONAL_HEADINGS,
+  "edge-banding-e5": "Operational Excellence",
   "edge-banding-p6": "Operational Excellence",
   "veneer-door-press-p-100t": "Operational Excellence",
   "edge-banding-c7": "Operational Excellence",

@@ -24,4 +24,7 @@ export const PRODUCT_CATALOGUE_PDFS: Record<string, string> = {
   "panel-saw-firma-35ps": "/assets/documents/Panel Saw Firma 35PS U.pdf",
   "panel-saw-forte-40pa": "/assets/documents/Panel Saw Forte 40PA n.pdf",
   "panel-saw-elite-35ts": "/assets/documents/Panel Saw 35TS.pdf",
+  "panel-saw-elite-35ps": "/assets/documents/Panel Saw Elite 35PS.pdf",
+  "panel-saw-elite-35eu": "/assets/documents/Panel Saw 35EU.pdf",
+  "veneer-door-press-p-100t": "/assets/documents/Veneer Door Press C8.pdf",
 };

@@ -1,5 +1,7 @@
+"use client";
+
 import Image, { type ImageProps } from "next/image";
-import type { MouseEvent } from "react";
+import type { DragEvent, MouseEvent } from "react";
 
 const STATIC_ASSET_PREFIXES = ["/media/", "/assets/", "/fonts/"];
 
@@ -8,57 +10,69 @@ function isStaticAsset(src: ImageProps["src"]): boolean {
   return STATIC_ASSET_PREFIXES.some((prefix) => src.startsWith(prefix));
 }
 
-function blockContextMenu(event: MouseEvent<HTMLImageElement>) {
+function blockEvent(event: MouseEvent | DragEvent) {
   event.preventDefault();
-  event.stopPropagation();
 }
 
 /**
  * Serves pre-optimized static assets directly from /public instead of routing
- * them through the Next.js image optimizer, which adds several seconds of
- * latency per image in development and on cold cache hits.
+ * them through the Next.js image optimizer.
  *
- * Also discourages casual saving of product/banner images (right-click "Save
- * image as", drag-and-drop out of the page, mobile long-press). This is a
- * deterrent only: the image bytes are still delivered to the browser to be
- * displayed, so anyone using devtools, "view source", or a screenshot can
- * still obtain them.
- *
- * `pointer-events: none` is the reliable part — the browser only offers
- * "Save image as" when the right-click target is an <img>. Clicks still
- * reach parent links/buttons. Pass `style={{ pointerEvents: "auto" }}`
- * (and optionally your own onContextMenu) to opt a specific image out.
+ * Casual download deterrents (not foolproof — DevTools/screenshots still work):
+ * - Wrapper + overlay block right-click "Save image as" (click never hits <img>)
+ * - draggable={false} + onDragStart prevent drag-to-desktop
+ * - CSS: no selection, no iOS long-press save, pointer-events none on <img>
  */
 export function MediaImage({
   src,
   priority,
   loading,
   unoptimized,
+  fill,
   style,
   className,
   draggable,
   onContextMenu,
+  onDragStart,
   ...props
 }: ImageProps) {
   const serveDirectly = unoptimized ?? isStaticAsset(src);
 
   return (
-    <Image
-      src={src}
-      unoptimized={serveDirectly}
-      priority={priority}
-      loading={loading ?? (priority ? undefined : "lazy")}
-      className={className}
-      {...props}
-      draggable={draggable ?? false}
-      onContextMenu={onContextMenu ?? blockContextMenu}
-      style={{
-        WebkitTouchCallout: "none",
-        WebkitUserDrag: "none",
-        userSelect: "none",
-        pointerEvents: "none",
-        ...style,
-      }}
-    />
+    <span
+      data-protect-image=""
+      className={
+        fill
+          ? "absolute inset-0 block overflow-hidden"
+          : "relative inline-block max-w-full leading-[0]"
+      }
+      onContextMenu={blockEvent}
+    >
+      <Image
+        src={src}
+        fill={fill}
+        unoptimized={serveDirectly}
+        priority={priority}
+        loading={loading ?? (priority ? undefined : "lazy")}
+        className={className}
+        {...props}
+        draggable={draggable ?? false}
+        onContextMenu={onContextMenu ?? blockEvent}
+        onDragStart={onDragStart ?? blockEvent}
+        style={{
+          WebkitTouchCallout: "none",
+          userSelect: "none",
+          pointerEvents: "none",
+          ...style,
+        }}
+      />
+      {/* Transparent shield: right-click / long-press hit this, not the <img>. */}
+      <span
+        aria-hidden
+        className="absolute inset-0 z-[1]"
+        onContextMenu={blockEvent}
+        onDragStart={blockEvent}
+      />
+    </span>
   );
 }

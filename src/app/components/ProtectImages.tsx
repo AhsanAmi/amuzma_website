@@ -2,30 +2,29 @@
 
 import { useEffect } from "react";
 
-function isImageTarget(target: EventTarget | null): boolean {
+function shouldBlock(target: EventTarget | null): boolean {
   if (!(target instanceof Element)) return false;
   return (
     target instanceof HTMLImageElement ||
-    target.closest("picture") !== null ||
-    target.closest("svg image") !== null
+    target.closest("[data-protect-image]") !== null ||
+    target.closest("picture") !== null
   );
 }
 
 /**
- * Site-wide deterrent against casual image downloads. Complements MediaImage
- * (pointer-events / drag / long-press) with a capture-phase contextmenu block
- * so "Save image as" cannot appear even if an image somehow receives the event.
+ * Site-wide backup for MediaImage: capture-phase block of context menu / drag
+ * on images and protected wrappers (including the transparent overlay).
  */
 export function ProtectImages() {
   useEffect(() => {
     const blockContextMenu = (event: MouseEvent) => {
-      if (isImageTarget(event.target)) {
+      if (shouldBlock(event.target)) {
         event.preventDefault();
       }
     };
 
     const blockDragStart = (event: DragEvent) => {
-      if (isImageTarget(event.target)) {
+      if (shouldBlock(event.target)) {
         event.preventDefault();
       }
     };

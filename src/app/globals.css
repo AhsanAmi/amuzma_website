@@ -28,14 +28,19 @@ body {
 }
 
 /*
- * Discourage casual image downloads: no drag-to-desktop, no iOS long-press
- * "Save Image", and no text selection of the image itself. Combined with
- * MediaImage pointer-events:none + ProtectImages contextmenu listener.
+ * Casual image-download deterrents (with MediaImage overlay + ProtectImages):
+ * no drag-to-desktop, no iOS long-press "Save Image", no image selection.
  */
 img {
   -webkit-user-drag: none;
   user-select: none;
   -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+[data-protect-image] {
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 /*

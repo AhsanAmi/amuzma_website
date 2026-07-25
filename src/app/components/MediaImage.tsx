@@ -10,6 +10,7 @@ function isStaticAsset(src: ImageProps["src"]): boolean {
 
 function blockContextMenu(event: MouseEvent<HTMLImageElement>) {
   event.preventDefault();
+  event.stopPropagation();
 }
 
 /**
@@ -21,8 +22,12 @@ function blockContextMenu(event: MouseEvent<HTMLImageElement>) {
  * image as", drag-and-drop out of the page, mobile long-press). This is a
  * deterrent only: the image bytes are still delivered to the browser to be
  * displayed, so anyone using devtools, "view source", or a screenshot can
- * still obtain them. Pass `onContextMenu`/`draggable` explicitly to opt a
- * specific image out if it ever needs to remain saveable.
+ * still obtain them.
+ *
+ * `pointer-events: none` is the reliable part — the browser only offers
+ * "Save image as" when the right-click target is an <img>. Clicks still
+ * reach parent links/buttons. Pass `style={{ pointerEvents: "auto" }}`
+ * (and optionally your own onContextMenu) to opt a specific image out.
  */
 export function MediaImage({
   src,
@@ -30,6 +35,7 @@ export function MediaImage({
   loading,
   unoptimized,
   style,
+  className,
   draggable,
   onContextMenu,
   ...props
@@ -42,10 +48,17 @@ export function MediaImage({
       unoptimized={serveDirectly}
       priority={priority}
       loading={loading ?? (priority ? undefined : "lazy")}
+      className={className}
+      {...props}
       draggable={draggable ?? false}
       onContextMenu={onContextMenu ?? blockContextMenu}
-      style={{ WebkitTouchCallout: "none", userSelect: "none", ...style }}
-      {...props}
+      style={{
+        WebkitTouchCallout: "none",
+        WebkitUserDrag: "none",
+        userSelect: "none",
+        pointerEvents: "none",
+        ...style,
+      }}
     />
   );
 }

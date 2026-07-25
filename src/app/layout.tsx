@@ -9,6 +9,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { WelcomeModal } from "./components/WelcomeModal";
 import { LanguageModal } from "./components/LanguageModal";
 import { GoogleTranslate } from "./components/GoogleTranslate";
+import { ProtectImages } from "./components/ProtectImages";
 import { LanguageProvider } from "./context/LanguageContext";
 import { QuoteCartProvider } from "./context/QuoteCartContext";
 import "./globals.css";
@@ -63,6 +64,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
+        <ProtectImages />
         <Suspense fallback={null}>
           <NavigationProgress />
         </Suspense>

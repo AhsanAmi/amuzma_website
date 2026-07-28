@@ -406,6 +406,30 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
     left: RDC3800_SPECIFICATIONS_LEFT,
     right: RDC3800_SPECIFICATIONS_RIGHT,
   },
+  "cnc-router-forte-20cr": {
+    parametersTabLabel: "Specifications",
+    left: [
+      { label: "Table Structure", value: "Aluminum profile table+T slots" },
+      { label: "Working Size", value: "2000*3800*200mm" },
+      { label: "Control System", value: "Richauto DSP A11 Controller" },
+      { label: "Spindle", value: "HQD 6.0 kW Air-Cooling Spindle" },
+      { label: "Inverter", value: "Delta 7.5 kW" },
+      { label: "Motor and Driver", value: "Delta 750 W Servo Motor & Driver" },
+      { label: "Tool Sensor / Tool Block", value: "" },
+    ],
+    right: [
+      { label: "Reducer", value: "Oubang Reducer" },
+      { label: "Rails", value: "Taiwan HIWIN 25 / 25 / 25 Square Rails" },
+      { label: "Racks", value: "PCRCH 1.5M Helical Rack on X & Y Axis" },
+      { label: "Ball Screw", value: "Taiwan 2510 TBI Ball Screw on Z Axis" },
+      { label: "Weight", value: "2500 KG" },
+    ],
+  },
+  "cnc-router-firma-150atc": {
+    parametersTabLabel: "Specifications",
+    left: SPECIFICATIONS_LEFT,
+    right: SPECIFICATIONS_RIGHT,
+  },
 };
 
 const DEFAULT_SPEC_CONFIG: SpecConfig = {

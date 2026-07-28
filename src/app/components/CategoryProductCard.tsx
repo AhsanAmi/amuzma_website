@@ -1,11 +1,10 @@
 import Link from "next/link";
 import type { CatalogProduct } from "../data/productCatalog";
-import { AddToQuoteButton } from "./AddToQuoteButton";
 import { MediaImage } from "./MediaImage";
 
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
   return (
-    <div className="flex flex-col border border-[#E5E5E5] bg-white">
+    <div className="flex min-w-0 flex-col border border-[#E5E5E5] bg-white">
       <div className="group flex h-[220px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[280px] sm:p-6">
         <MediaImage
           src={product.image}
@@ -16,21 +15,10 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
-        <div className="mb-2 flex items-center gap-2">
-          <MediaImage
-            src="/media/logoheader.webp"
-            alt="AMUZMA"
-            width={80}
-            height={20}
-            className="h-5 w-auto object-contain"
-          />
-          <span className="text-[#D0D0D0]">|</span>
-          <span className="font-heading text-[14px] font-medium uppercase tracking-wide text-[#666666]">
-            {product.model}
-          </span>
-        </div>
         <h2 className="mb-3 font-gothic text-[20px] font-normal text-[#666666]">
-          {product.name}
+          {product.category}
+          <span className="mx-2 text-[#D0D0D0]">|</span>
+          {product.model}
         </h2>
         <hr className="mb-4 border-[#E5E5E5]" />
         <ul className="mb-6 flex-1 space-y-2 font-gothic text-[16px] font-normal text-[#666666]">
@@ -44,19 +32,16 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
         <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
           <Link
             href={product.detailsHref}
-            className="inline-flex h-[41px] items-center justify-center border border-[#C0202F] bg-white px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-[#C0202F] transition-colors hover:bg-[#FFF8F8]"
+            className="btn-red-outline inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-[#C0202F]"
           >
             View Details
           </Link>
-          <AddToQuoteButton
-            name={product.name}
-            model={product.model}
-            image={product.image}
+          <Link
             href={product.detailsHref}
-            className="inline-flex h-[41px] items-center justify-center bg-black px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-white transition-colors hover:bg-[#222222]"
+            className="btn-black-fill inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none"
           >
             Get Quote
-          </AddToQuoteButton>
+          </Link>
         </div>
       </div>
     </div>

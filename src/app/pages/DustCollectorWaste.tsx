@@ -1,47 +1,11 @@
 import { CategoryProductCard } from "../components/CategoryProductCard";
 import { PageBanner } from "../components/PageBanner";
-import type { CatalogProduct } from "../data/productCatalog";
+import { ALL_PRODUCTS } from "../data/productCatalog";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
-const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
-
-const DUST_COLLECTOR_PRODUCTS: CatalogProduct[] = [
-  {
-    category: "Dust Collector",
-    image: "/media/Prodocts/Dust Collector dc2200.png",
-    model: "DC2200",
-    name: "Dust Collector",
-    specs: [
-      "Power : 230V-50Hz, 400V,3-50Hz 3.8W",
-      "Airflow : 3900m3/hr 380Ltr",
-      "Tank Capacity : 1x150 3x100mm",
-    ],
-    detailsHref: "/products/dust-collector-dc2200",
-  },
-  {
-    category: "Dust Collector",
-    image: "/media/Prodocts/Dust Collector ABS5000 shadow.png",
-    model: "ABS5000",
-    name: "Dust Collector",
-    specs: [
-      "Power : 3 HP / 2200W",
-      "Airflow : Up to 5000 m³/h",
-      "Tank Capacity : 200 mm (with 4 x 100 mm)",
-    ],
-    detailsHref: "/products/dust-collector-abs5000",
-  },
-  {
-    category: "Dust Collector",
-    image: "/media/Prodocts/Dust Collector RDC3800.png",
-    model: "RDC3800",
-    name: "Dust Collector",
-    specs: [
-      "Power : 230V-50Hz, 400V-3ph-50Hz, 3.8",
-      "Airflow : 380 Ltr / 3900 m³/hr",
-      "Tank Capacity : 1 x 150 mm, 3 x 100 mm",
-    ],
-    detailsHref: "/products/dust-collector-rdc3800",
-  },
-];
+const DUST_PRODUCTS = ALL_PRODUCTS.filter(
+  (p) => p.category === "Dust Extractors & Waste",
+);
 
 export function DustCollectorWaste() {
   return (
@@ -51,8 +15,8 @@ export function DustCollectorWaste() {
       <section className="bg-white py-10">
         <div className={PAGE_CONTAINER}>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DUST_COLLECTOR_PRODUCTS.map((product) => (
-              <CategoryProductCard key={product.model} product={product} />
+            {DUST_PRODUCTS.map((product) => (
+              <CategoryProductCard key={product.detailsHref} product={product} />
             ))}
           </div>
         </div>

@@ -222,6 +222,193 @@ const PRODUCTS_DATA: Record<string, {
       { name: "Spindle Brush Kit", image: "https://images.unsplash.com/photo-1735494033794-b82c88743a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200&q=80" },
     ],
   },
+  "cnc-router-forte-20cr": {
+    name: "CNC ROUTER",
+    model: "FORTE 20CR",
+    category: "CNC Router",
+    tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
+    heroImage: "/media/CNC-13CR-1.webp",
+    featuresSubtitle:
+      "High-performance CNC router with 2000*3800*200 mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
+    galleryDescription:
+      "The Forte 20CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
+    dimensionsImage: "/media/CNC-15CR-scaled.webp",
+    dimensionsDescription:
+      "The FORTE 20CR features a spacious 2000*3800 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
+    partsLabel: "Forte 20CR",
+    partsImages: [
+      "/media/cnc-1-1.webp",
+      "/media/cnc-1-2-1024x640-1.webp",
+      "/media/cnc-1-3-1024x640-1-1.webp",
+      "/media/cnc-1-4-1024x640-1.webp",
+      "/media/CNC-01.jpg-scaled.webp",
+      "/media/CNC-03.jpg-scaled.webp",
+    ],
+    features: [
+      {
+        title: "Large Working Area",
+        image: "/media/CNC-01.jpg-scaled.webp",
+        desc: "The FORTE 20CR features a 2000*3800*200 mm working area, ideal for full-size sheets. It enables efficient cutting, carving, and shaping without repositioning, saving time and boosting productivity.",
+      },
+      {
+        title: "High-Speed Performance",
+        image: "/media/CNC-03.jpg-scaled.webp",
+        desc: "Designed for speed and precision, this CNC router delivers smooth, accurate performance in continuous production. Its advanced motion system ensures consistent results in woodworking, signage, and panel processing tasks.",
+      },
+      {
+        title: "Rigid Steel Frame Build",
+        image: "/media/CNC-04.jpg-scaled.webp",
+        desc: "Built with a heavy-duty steel frame, it delivers strong stability and vibration control, ensuring smooth finishes and lasting durability in industry.",
+      },
+      {
+        title: "Precision Motion System",
+        image: "/media/CNC-05.jpg-scaled.webp",
+        desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 20CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
+      },
+    ],
+    benefitsSubtitle:
+      "Fast cutting and smooth motion improve workflow and output speed.",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "High Productivity",
+        desc: "Fast cutting and smooth motion improve workflow and output speed.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Large Work Area",
+        desc: "2000*3800 × 200 mm table handles full sheets easily and efficiently.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Strong Construction",
+        desc: "Rigid steel frame ensures stability and long service life.",
+      },
+    ],
+    gallery: [
+      "/media/Prodocts/CNC Router Firma 20CR.png",
+      "/media/cnc-1-1.webp",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
+    ],
+    specs: [
+      { label: "Table Structure", value: "Aluminum profile table+T slots" },
+      { label: "Working Size", value: "2000*3800*200mm" },
+      { label: "Control System", value: "Richauto DSP A11 Controller" },
+      { label: "Spindle", value: "HQD 6.0 kW Air-Cooling Spindle" },
+      { label: "Inverter", value: "Delta 7.5 kW" },
+      { label: "Motor and Driver", value: "Delta 750 W Servo Motor & Driver" },
+      { label: "Reducer", value: "Oubang Reducer" },
+      { label: "Rails", value: "Taiwan HIWIN 25 / 25 / 25 Square Rails" },
+      { label: "Racks", value: "PCRCH 1.5M Helical Rack on X & Y Axis" },
+      { label: "Ball Screw", value: "Taiwan 2510 TBI Ball Screw on Z Axis" },
+      { label: "Weight", value: "2500 KG" },
+    ],
+    videoId: "dX38tWhBpH4",
+    parts: [
+      { name: "Forte 20CR", image: "/media/Prodocts/CNC Router Firma 20CR.png" },
+      { name: "Forte 20CR", image: "/media/CNC-01.jpg-scaled.webp" },
+      { name: "Forte 20CR", image: "/media/CNC-03.jpg-scaled.webp" },
+      { name: "Forte 20CR", image: "/media/CNC-04.jpg-scaled.webp" },
+      { name: "Forte 20CR", image: "/media/cnc-1-1.webp" },
+      { name: "Forte 20CR", image: "/media/cnc-1-2-1024x640-1.webp" },
+    ],
+  },
+  "cnc-router-firma-150atc": {
+    name: "CNC ROUTER",
+    model: "Firma 150ATC",
+    category: "CNC Router",
+    tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
+    heroImage: "/media/CNC-13CR-1.webp",
+    featuresSubtitle:
+      "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
+    galleryDescription:
+      "The FORTE 1325CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
+    dimensionsImage: "/media/CNC-13CR-scaled.webp",
+    dimensionsDescription:
+      "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
+    partsLabel: "Forte 1325CR",
+    partsImages: [
+      "/media/CNC-01.jpg-scaled.webp",
+      "/media/CNC-03.jpg-scaled.webp",
+      "/media/CNC-04.jpg-scaled.webp",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
+    ],
+    features: [
+      {
+        title: "Large Working Area",
+        image: "/media/CNC-01.jpg-scaled.webp",
+        desc: "The FORTE 1325CR features a 1300 × 2500 mm working area, ideal for full-size sheets. It enables efficient cutting, carving, and shaping without repositioning, saving time and boosting productivity.",
+      },
+      {
+        title: "High-Speed Performance",
+        image: "/media/CNC-03.jpg-scaled.webp",
+        desc: "Designed for speed and precision, this CNC router delivers smooth, accurate performance in continuous production. Its advanced motion system ensures consistent results in woodworking, signage, and panel processing tasks.",
+      },
+      {
+        title: "Rigid Steel Frame Build",
+        image: "/media/CNC-04.jpg-scaled.webp",
+        desc: "Built with a heavy-duty steel frame, it delivers strong stability and vibration control, ensuring smooth finishes and lasting durability in industry.",
+      },
+      {
+        title: "Precision Motion System",
+        image: "/media/CNC-05.jpg-scaled.webp",
+        desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 1325CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
+      },
+    ],
+    benefitsSubtitle:
+      "Fast cutting and smooth motion improve workflow and output speed.",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "High Productivity",
+        desc: "Fast cutting and smooth motion improve workflow and output speed.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Large Work Area",
+        desc: "1300 × 2500 mm table handles full sheets easily and efficiently.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Strong Construction",
+        desc: "Rigid steel frame ensures stability and long service life.",
+      },
+    ],
+    gallery: [
+      "/media/Prodocts/CNC routerFirma 4X.png",
+      "/media/cnc-1-1.webp",
+      "/media/1-1.webp",
+      "/media/2-1.webp",
+      "/media/3.webp",
+    ],
+    specs: [
+      { label: "Aluminum Profile", value: "" },
+      { label: "Table + T slots", value: "1300 × 2500 × 200" },
+      { label: "Table + T slots", value: "1500 × 3000 × 200" },
+      { label: "Control System", value: "Richauto DSP A11" },
+      { label: "Air-cooling Spindle", value: "HQD 6.0 kW" },
+      { label: "Inverter", value: "Delta 7.5 kW" },
+      { label: "Servo Motor and Driver", value: "Delta 750 W" },
+      { label: "China Oubang Reducer", value: "—" },
+      { label: "Square Rails Taiwan HIWIN", value: "25 / 25 / 25 mm" },
+      { label: "Helical Rack", value: "PCRCH 1.5" },
+      { label: "Taiwan Ball Screw on Z Axis", value: "Taiwan 2505" },
+      { label: "Independent Control Cabinet", value: "D06" },
+    ],
+    videoId: "dX38tWhBpH4",
+    parts: [
+      { name: "Forte 1325CR", image: "/media/Prodocts/CNC routerFirma 4X.png" },
+      { name: "Forte 1325CR", image: "/media/CNC-01.jpg-scaled.webp" },
+      { name: "Forte 1325CR", image: "/media/CNC-03.jpg-scaled.webp" },
+      { name: "Forte 1325CR", image: "/media/CNC-04.jpg-scaled.webp" },
+      { name: "Forte 1325CR", image: "/media/cnc-1-1.webp" },
+      { name: "Forte 1325CR", image: "/media/1-1.webp" },
+    ],
+  },
   "wide-belt-sander-firma-1300ws": {
     name: "WIDE BELT SANDER",
     model: "Firma 1300WS",
@@ -728,7 +915,7 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "edge-banding-e5": {
     name: "EDGE BANDING",
-    model: "E5",
+    model: "Elite E5",
     category: "Edge Banders",
     heroImage: "/media/amuzma-web-banners-for-Edge-Banding-E5.jpg",
     tagline: "Precision Edging. Compact Design. Professional Finish.",
@@ -880,7 +1067,7 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "edge-banding-c7": {
     name: "Edge Banding",
-    model: "C7",
+    model: "Elite C7",
     category: "Edge Banders",
     heroImage: "/media/amuzma-web-banners-for-Edge-Banding-C7.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -1435,8 +1622,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                     image={product.gallery?.[0] ?? product.heroImage}
                     className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
                   >
-                    <span className="lg:hidden">Get Quote</span>
-                    <span className="hidden lg:inline">Add to Quote</span>
+                    Add to Quote
                   </AddToQuoteButton>
                 </div>
               </div>
@@ -1476,13 +1662,13 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {product.features.map((feature) => (
               <div key={feature.title} className="p-[10px]">
-                <div className="overflow-hidden border border-[#666666]">
+                <div className="relative h-[290px] overflow-hidden border border-[#666666]">
                   <Image
                     src={feature.image}
                     alt={feature.title}
-                    width={290}
-                    height={290}
-                    className="h-[290px] w-full object-cover"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
                 <h3 className="mt-4 font-gothic text-[20px] font-normal leading-[20px] text-black">

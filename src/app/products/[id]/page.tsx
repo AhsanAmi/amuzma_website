@@ -5,6 +5,8 @@ import { getPageTitle } from "../../data/pageMetadata";
 const PRODUCT_IDS = [
   "cnc-router-forte-13cr",
   "cnc-router-forte-15cr",
+  "cnc-router-forte-20cr",
+  "cnc-router-firma-150atc",
   "wide-belt-sander-firma-1300ws",
   "band-saw-65bs",
   "beam-saw-firma-33bs",

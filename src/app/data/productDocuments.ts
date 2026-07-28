@@ -8,6 +8,7 @@ export const FULL_CATALOGUE_PDF = "/assets/documents/Amuzma Full Catalogue.pdf";
 export const PRODUCT_CATALOGUE_PDFS: Record<string, string> = {
   "cnc-router-forte-13cr": "/assets/documents/CNC Router 13CR.pdf",
   "cnc-router-forte-15cr": "/assets/documents/CNC Router 15CR.pdf",
+  "cnc-router-forte-20cr": "/assets/documents/CNC Router 20CR.pdf",
   "dust-collector-dc2200": "/assets/documents/Dust Collector Amuzma DC2200.pdf",
   "dust-collector-abs5000": "/assets/documents/Dust Collector Amuzma ABS5000.pdf",
   "dust-collector-rdc3800": "/assets/documents/Dust Collector Amuzma RDC3800.pdf",

@@ -28,6 +28,13 @@ const PRODUCT_META: Record<
     image: "/media/Prodocts/CNC Router 15CR.png",
     date: "February 23, 2026",
   },
+  "cnc-router-forte-20cr": {
+    title: "CNC ROUTER FORTE 20CR",
+    excerpt:
+      "Smart Technology. Industrial Strength. Precision in Every Cut. High-performance CNC router with 2000×3800×200 mm area, rigid steel frame, and powerful spindle.",
+    image: "/media/Prodocts/CNC Router Firma 20CR.png",
+    date: "February 23, 2026",
+  },
   "wide-belt-sander-firma-1300ws": {
     title: "Wide Belt Sander Firma 1300WS",
     excerpt:

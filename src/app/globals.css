@@ -15,6 +15,33 @@
   }
 }
 
+@utility btn-red-outline {
+  border: 1px solid #C0202F;
+  background-color: #ffffff;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+
+  &:hover {
+    background-color: #C0202F;
+    color: #ffffff;
+  }
+}
+
+@utility btn-black-fill {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
 @utility banner-title {
   font-family: var(--font-goldie);
   font-weight: 700;

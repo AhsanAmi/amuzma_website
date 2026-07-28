@@ -1,23 +1,9 @@
 import { CategoryProductCard } from "../components/CategoryProductCard";
 import { PageBanner } from "../components/PageBanner";
-import type { CatalogProduct } from "../data/productCatalog";
+import { ALL_PRODUCTS } from "../data/productCatalog";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
-const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
-
-const SANDER_PRODUCTS: CatalogProduct[] = [
-  {
-    category: "Sander",
-    image: "/media/Prodocts/wide belt sander.png",
-    model: "1300WS",
-    name: "Wide Belt Sander",
-    specs: [
-      "Conveyor Belt Width : 240 mm",
-      "Minimum Working : 3 mm",
-      "Maximum Working : 1300 mm",
-    ],
-    detailsHref: "/products/wide-belt-sander-firma-1300ws",
-  },
-];
+const SANDER_PRODUCTS = ALL_PRODUCTS.filter((p) => p.category === "Sanders");
 
 export function Sanders() {
   return (
@@ -28,7 +14,7 @@ export function Sanders() {
         <div className={PAGE_CONTAINER}>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SANDER_PRODUCTS.map((product) => (
-              <CategoryProductCard key={product.model} product={product} />
+              <CategoryProductCard key={product.detailsHref} product={product} />
             ))}
           </div>
         </div>

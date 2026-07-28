@@ -1,23 +1,11 @@
 import { CategoryProductCard } from "../components/CategoryProductCard";
 import { PageBanner } from "../components/PageBanner";
-import type { CatalogProduct } from "../data/productCatalog";
+import { ALL_PRODUCTS } from "../data/productCatalog";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
-const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
-
-const PRESS_PRODUCTS: CatalogProduct[] = [
-  {
-    category: "Press",
-    image: "/media/Prodocts/Hot Press C8.png",
-    model: "Firma C8",
-    name: "Veneer Door Press",
-    specs: [
-      "Total Pressure : 1000 kN",
-      "Platen No & Size : 3 - 3000 x 1300 x 42 mm",
-      "Specific Pressure : 2.6 kg/cm²",
-    ],
-    detailsHref: "/products/veneer-door-press-p-100t",
-  },
-];
+const PRESSING_PRODUCTS = ALL_PRODUCTS.filter(
+  (p) => p.category === "Pressing",
+).map((p) => ({ ...p, category: "Press" }));
 
 export function Pressing() {
   return (
@@ -27,8 +15,8 @@ export function Pressing() {
       <section className="bg-white py-10">
         <div className={PAGE_CONTAINER}>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {PRESS_PRODUCTS.map((product) => (
-              <CategoryProductCard key={product.model} product={product} />
+            {PRESSING_PRODUCTS.map((product) => (
+              <CategoryProductCard key={product.detailsHref} product={product} />
             ))}
           </div>
         </div>

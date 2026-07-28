@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
   async headers() {
     // Static assets in public/ never change without a filename change,
     // so let browsers and the CDN cache them for a year.
-    return [
+    const rules = [
       {
         source: "/:prefix(media|fonts|assets)/:path*",
         headers: [
@@ -49,7 +49,14 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
+    ];
+
+    // Only pin /_next/static in production builds — those filenames are
+    // content-hashed. In dev, Turbopack reuses chunk names across rebuilds,
+    // so a 1-year immutable cache makes browsers keep serving stale JS/CSS
+    // after every restart, which looks like edits "aren't applying".
+    if (process.env.NODE_ENV === "production") {
+      rules.push({
         source: "/_next/static/:path*",
         headers: [
           {
@@ -57,8 +64,10 @@ const nextConfig: NextConfig = {
             value: "public, max-age=31536000, immutable",
           },
         ],
-      },
-    ];
+      });
+    }
+
+    return rules;
   },
   async redirects() {
     return [

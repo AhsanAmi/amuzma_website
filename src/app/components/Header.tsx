@@ -47,6 +47,7 @@ const productCategories = [
     items: [
       { label: "Forte 13CR", href: "/products/cnc-router-forte-13cr" },
       { label: "Forte 15CR", href: "/products/cnc-router-forte-15cr" },
+      { label: "Forte 20CR", href: "/products/cnc-router-forte-20cr" },
     ],
   },
   {
@@ -107,10 +108,7 @@ const productCategories = [
       { label: "Beam saw Firma 33BS", href: "/products/beam-saw-firma-33bs" },
       { label: "Panel saw Firma 40PL", href: "/products/panel-saw-firma-40pl" },
       { label: "Panel saw Firma 35PS", href: "/products/panel-saw-firma-35ps" },
-      { label: "Panel saw Forte 40PA", href: "/products/panel-saw-forte-40pa" },
       { label: "Panel saw Elite 35TS", href: "/products/panel-saw-elite-35ts" },
-      { label: "Panel saw Elite 35PS", href: "/products/panel-saw-elite-35ps" },
-      { label: "Panel saw Elite 35EU", href: "/products/panel-saw-elite-35eu" },
     ],
   },
 ];
@@ -212,11 +210,11 @@ export function Header() {
     };
   }, []);
 
-  const menuPanelClass = (menu: ActiveMenu, maxHeight: string) =>
-    `absolute top-full z-50 hidden lg:block overflow-hidden transition-all duration-300 ease-out ${maxHeight} ${
+  const menuPanelClass = (menu: ActiveMenu, openExtras: string) =>
+    `absolute top-full z-50 hidden lg:block transition-all duration-300 ease-out ${
       activeMenu === menu
-        ? "pointer-events-auto opacity-100"
-        : "pointer-events-none max-h-0 opacity-0"
+        ? `pointer-events-auto opacity-100 ${openExtras}`
+        : "pointer-events-none max-h-0 overflow-hidden opacity-0"
     }`;
 
   return (
@@ -361,7 +359,10 @@ export function Header() {
         style={{ left: companyMenuBounds.left, width: companyMenuBounds.width }}
         onMouseEnter={() => openMenu("company")}
         onMouseLeave={scheduleCloseMenu}
-        className={menuPanelClass("company", activeMenu === "company" ? "max-h-[400px]" : "")}
+        className={menuPanelClass(
+          "company",
+          "max-h-[400px] overflow-hidden",
+        )}
       >
         <div className="flex">
           <div
@@ -416,16 +417,16 @@ export function Header() {
         style={{ left: productsMenuBounds.left, width: productsMenuBounds.width }}
         onMouseEnter={() => openMenu("products")}
         onMouseLeave={scheduleCloseMenu}
-        className={menuPanelClass("products", activeMenu === "products" ? "max-h-[780px]" : "")}
+        className={menuPanelClass("products", "max-h-[420px]")}
       >
-        <div className="grid grid-cols-4 grid-rows-2 items-stretch">
+        <div className="grid grid-cols-4 grid-rows-2">
           {productCategories.map((category) => (
             <div
               key={category.title}
-              className="px-5 py-5 xl:px-7 xl:py-6"
+              className="px-4 py-3 xl:px-5 xl:py-3.5"
               style={{ backgroundColor: category.color }}
             >
-              <h3 className="mb-2 font-heading text-[20px] font-medium leading-tight text-white xl:text-[22px]">
+              <h3 className="mb-1.5 font-heading text-[16px] font-medium leading-tight text-white xl:text-[17px]">
                 {"href" in category && category.href ? (
                   <Link
                     href={category.href}
@@ -439,13 +440,19 @@ export function Header() {
                   category.title
                 )}
               </h3>
-              <ul className="space-y-1">
+              <ul
+                className={
+                  category.items.length > 5
+                    ? "grid grid-cols-2 gap-x-4 gap-y-0.5"
+                    : "space-y-0.5"
+                }
+              >
                 {category.items.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
                       prefetch={activeMenu === "products" ? null : false}
-                      className="font-heading text-[13px] font-medium leading-snug text-white/95 transition-colors hover:text-white xl:text-[14px]"
+                      className="font-heading text-[12px] font-medium leading-[1.35] text-white/95 transition-colors hover:text-white xl:text-[13px]"
                       onClick={closeMenu}
                     >
                       {item.label}

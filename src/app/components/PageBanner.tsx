@@ -14,7 +14,7 @@ export function PageBanner({ title }: { title: string }) {
         className="object-cover"
         aria-hidden
       />
-      <div className="relative mx-auto w-full max-w-[1410px] px-6 py-10 text-center sm:py-[63px] lg:px-0">
+      <div className="relative mx-auto w-full max-w-[1410px] px-5 py-10 text-center sm:px-6 sm:py-[63px] lg:px-12 xl:px-16">
         <h1 className="banner-title text-[28px] leading-tight sm:text-[36px] sm:leading-[36px]">
           {title}
         </h1>

@@ -3,9 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchResultCard } from "../components/SearchResultCard";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 import { paginateResults, RESULTS_PER_PAGE, searchEntries } from "../lib/search";
-
-const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
 
 export function SearchResults() {
   const searchParams = useSearchParams();

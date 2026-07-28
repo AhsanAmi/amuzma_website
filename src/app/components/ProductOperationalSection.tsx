@@ -491,6 +491,8 @@ const OPERATIONAL_TABS_BY_PRODUCT: Record<string, OperationalTab[]> = {
   ...SAW_OPERATIONAL_TABS,
   "cnc-router-forte-13cr": OPERATIONAL_TABS_13CR,
   "cnc-router-forte-15cr": OPERATIONAL_TABS_15CR,
+  "cnc-router-forte-20cr": OPERATIONAL_TABS_15CR,
+  "cnc-router-firma-150atc": OPERATIONAL_TABS_13CR,
   "edge-banding-e5": OPERATIONAL_TABS_E5,
   "edge-banding-p6": OPERATIONAL_TABS_P6,
   "veneer-door-press-p-100t": OPERATIONAL_TABS_P100T,

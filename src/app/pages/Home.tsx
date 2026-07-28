@@ -6,7 +6,6 @@ import { MediaImage as Image } from "../components/MediaImage";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ExpertiseCard } from "../components/ExpertiseCard";
 import { YouTubeFacade } from "../components/YouTubeFacade";
-import { AddToQuoteButton } from "../components/AddToQuoteButton";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 import { mediaUrl } from "../lib/mediaUrl";
 
@@ -68,8 +67,29 @@ function AnimatedCounter({
   format: (n: number) => string;
 }) {
   const [value, setValue] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        setStarted(true);
+      },
+      { threshold: 0.3 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+
     let start: number | null = null;
     let frame = 0;
 
@@ -85,13 +105,13 @@ function AnimatedCounter({
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [target]);
+  }, [started, target]);
 
   return (
-    <>
+    <span ref={ref} suppressHydrationWarning>
       {format(value)}
       {suffix}
-    </>
+    </span>
   );
 }
 
@@ -114,10 +134,10 @@ const FACILITIES = [
     image: "/media/Prodocts/Edge Banding E5.png",
     category: "EDGE BANDING",
     name: "Edge Banding",
-    model: "E5",
+    model: "Elite E5",
     specs: [
-      "Thickness of edge-banding belt : 0.4-3 mm",
-      "Height of Edge-banding tape : 12-45 mm",
+      "Feeding speed : 11m/min",
+      "Workpiece thickness : 10-45 mm",
       "Gross power : 6.5 kw",
     ],
     href: "/products/edge-banding-e5",
@@ -426,7 +446,7 @@ export function Home() {
       {/* About Section */}
       <section ref={aboutSectionRef} className="bg-white py-10 font-gothic sm:py-16">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
+          <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
               <h2 className="mb-5 text-[24px] font-normal leading-tight text-black sm:text-[28px] sm:leading-[28px]">
                 About Us
@@ -449,7 +469,7 @@ export function Home() {
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <HoverPrefetchLink
                   href="/about"
-                  className="inline-flex items-center border border-[#C0202F] bg-white px-6 py-3 text-[15px] font-normal text-black transition-colors hover:bg-[#FFF8F8]"
+                  className="btn-red-outline inline-flex items-center px-6 py-3 text-[15px] font-normal text-black"
                 >
                   View More
                 </HoverPrefetchLink>
@@ -460,20 +480,19 @@ export function Home() {
                   onMouseEnter={prefetchCatalogue}
                   onTouchStart={prefetchCatalogue}
                   onFocus={prefetchCatalogue}
-                  className="inline-flex items-center border border-[#C0202F] bg-white px-6 py-3 text-[15px] font-normal text-black transition-colors hover:bg-[#FFF8F8]"
+                  className="btn-red-outline inline-flex items-center px-6 py-3 text-[15px] font-normal text-black"
                 >
                   Full Catelouge
                 </a>
               </div>
             </div>
-            <div>
+            <div className="relative min-h-[260px] sm:min-h-[320px] lg:min-h-0">
               <Image
                 src="/media/office-image-copy.webp"
                 alt="AMUZMA office"
-                width={1280}
-                height={853}
+                fill
                 sizes="(min-width: 1024px) 640px, 100vw"
-                className="h-auto w-full object-cover"
+                className="object-cover"
               />
             </div>
           </div>
@@ -831,20 +850,9 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
         />
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
-        <div className="mb-2 flex items-center gap-2">
-          <Image
-            src="/media/logoheader.webp"
-            alt="AMUZMA"
-            width={89}
-            height={20}
-            className="h-5 w-auto object-contain"
-          />
-          <span className="text-[#D0D0D0]">|</span>
-          <span className="font-heading text-[14px] font-medium uppercase tracking-wide text-[#666666]">
-            {product.category}
-          </span>
-        </div>
         <h3 className="mb-3 font-gothic text-[20px] font-normal text-[#666666]">
+          {product.category}
+          <span className="mx-2 text-[#D0D0D0]">|</span>
           {product.model}
         </h3>
         <hr className="mb-4 border-[#E5E5E5]" />
@@ -859,19 +867,16 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
         <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
           <HoverPrefetchLink
             href={product.href}
-            className="inline-flex h-[41px] items-center justify-center border border-[#C0202F] bg-white px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-[#C0202F] transition-colors hover:bg-[#FFF8F8]"
+            className="btn-red-outline inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-[#C0202F]"
           >
             View Details
           </HoverPrefetchLink>
-          <AddToQuoteButton
-            name={product.name}
-            model={product.model}
-            image={product.image}
+          <HoverPrefetchLink
             href={product.href}
-            className="inline-flex h-[41px] items-center justify-center bg-black px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none text-white transition-colors hover:bg-[#222222]"
+            className="btn-black-fill inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none"
           >
             Get Quote
-          </AddToQuoteButton>
+          </HoverPrefetchLink>
         </div>
       </div>
     </div>

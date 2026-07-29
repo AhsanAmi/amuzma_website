@@ -38,9 +38,9 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
     model: "FORTE 20CR",
     name: "CNC Router",
     specs: [
-      "Working Size : 2000×3800×200 mm",
-      "Control System : Richauto DSP A11",
-      "Spindle : HQD 6.0 kW Air-Cooling",
+      "Aluminum profile",
+      "Table + T slots : 2000*3800*200",
+      "Inverter : Delta 7.5 kW",
     ],
     detailsHref: "/products/cnc-router-forte-20cr",
   },

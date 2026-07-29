@@ -212,7 +212,7 @@ const OPERATIONAL_TABS_E5: OperationalTab[] = [
   },
   {
     label: "Edge Banding Materials",
-    heading: "Edge Banding Materials",
+    heading: "Precision Trimming",
     description:
       "Delivers accurate edge cutting for clean and professional results.",
     icon: "/media/New-Project-10.webp",
@@ -351,7 +351,7 @@ const OPERATIONAL_TABS_41PF: OperationalTab[] = [
     description:
       "Elite 41PF allows quick setup with adjustable cutting depth and fence alignment. Operators can easily configure the machine for various wood sizes, ensuring precise planing and consistent results every time.",
     icon: "/media/New-Project-9.webp",
-    image: "/media/Solid-Wood-planer-working.webp",
+    image: "/media/Solid-Wood-planer-working-ii.webp",
   },
   {
     label: "Wood Components",
@@ -367,7 +367,7 @@ const OPERATIONAL_TABS_41PF: OperationalTab[] = [
     description:
       "The planer features built-in safety devices, including emergency stop and protective guards, ensuring operator protection during operation. Safe handling reduces accidents while maintaining efficient workflow in professional workshops.",
     icon: "/media/Common-operations.webp",
-    image: "/media/Solid-Wood-planer-working.webp",
+    image: "/media/Machine-Operations-planer-working.webp",
   },
 ];
 
@@ -543,7 +543,15 @@ export function ProductOperationalSection({
         </h2>
 
         <div className="mt-8 bg-[#F4F4F4] px-4 py-6 sm:px-10 sm:py-10 lg:px-20 lg:py-14">
-          <div className="grid grid-cols-2 border-b border-[#DDDDDD] lg:grid-cols-4">
+          <div
+            className={`grid border-b border-[#DDDDDD] ${
+              tabs.length === 4
+                ? "grid-cols-2 lg:grid-cols-4"
+                : tabs.length === 3
+                  ? "grid-cols-3"
+                  : "grid-cols-2"
+            }`}
+          >
             {tabs.map((tab, index) => {
               const isActive = index === activeTab;
 

@@ -170,32 +170,34 @@ export function ProductGallerySection({
               </button>
             </div>
 
-            <div className="mt-3 flex gap-2 overflow-x-auto">
-              {images.map((image, index) => (
-                <button
-                  key={`${image}-${index}`}
-                  type="button"
-                  onClick={() => setActiveIdx(index)}
-                  className={`relative h-[72px] w-[72px] shrink-0 overflow-hidden border bg-white ${
-                    index === activeIdx ? "border-black" : "border-[#E5E5E5]"
-                  }`}
-                  aria-label={`View gallery image ${index + 1}`}
-                  aria-current={index === activeIdx ? "true" : undefined}
-                >
-                  <Image
-                    src={image}
-                    alt=""
-                    width={72}
-                    height={72}
-                    className="h-full w-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+            {images.length > 1 ? (
+              <div className="mt-3 flex gap-2 overflow-x-auto">
+                {images.map((image, index) => (
+                  <button
+                    key={`${image}-${index}`}
+                    type="button"
+                    onClick={() => setActiveIdx(index)}
+                    className={`relative h-[72px] w-[72px] shrink-0 overflow-hidden border bg-white ${
+                      index === activeIdx ? "border-black" : "border-[#E5E5E5]"
+                    }`}
+                    aria-label={`View gallery image ${index + 1}`}
+                    aria-current={index === activeIdx ? "true" : undefined}
+                  >
+                    <Image
+                      src={image}
+                      alt=""
+                      fill
+                      sizes="72px"
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </div>
 
           <div className="flex flex-col">
-            <p className="border-y border-[#E5E5E5] py-6 font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666]">
+            <p className="whitespace-pre-line border-y border-[#E5E5E5] py-6 font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666]">
               {description}
             </p>
 

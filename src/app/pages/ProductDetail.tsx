@@ -967,9 +967,9 @@ const ADDITIONAL_PRODUCTS: Record<
     gallery: [
       "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
-      "/media/Amuzma-E5-1-1-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
+      "/media/Amuzma-E5-5-2.webp",
     ],
     dimensionsImage: "/media/Edge-banding-E5-01-scaled.webp",
     dimensionsHeading: "Compact & Efficient",
@@ -1038,9 +1038,9 @@ const ADDITIONAL_PRODUCTS: Record<
     gallery: [
       "/media/Untitled-design-9.webp",
       "/media/Amuzma-E5-2-1-1.webp",
+      "/media/Amuzma-E5-1-1-1-1.webp",
       "/media/Amuzma-E5-3-1.webp",
       "/media/Amuzma-E5-4-1.webp",
-      "/media/Amuzma-E5-5-1.webp",
     ],
     dimensionsImage: "/media/Edge-banding-P6-01-scaled.webp",
     dimensionsHeading: "Machine Dimensions",
@@ -1132,7 +1132,7 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "planer-elite-41pf": {
     name: "PLANER",
-    model: "Elite 41PF",
+    model: "Elite 41",
     category: "Planer",
     heroImage: "/media/amuzma-web-banners-for-Planer.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -1206,7 +1206,7 @@ const ADDITIONAL_PRODUCTS: Record<
   },
   "planer-elite-41cm-cs": {
     name: "PLANER & THICKNESSER",
-    model: "Elite 41CM/CS",
+    model: "Elite 41CS / CM",
     category: "Planer",
     heroImage: "/media/amuzma-web-banners-for-Planer-Thicknesser.jpg",
     tagline: "Efficient Extraction. Compact Design. Clean Results.",
@@ -1433,7 +1433,7 @@ const ADDITIONAL_PRODUCTS: Record<
       },
     ],
     galleryDescription:
-      "The Firma 63TH is a high-capacity industrial thicknesser engineered for demanding production workshops. Its precision spiral cutter head, sound-insulated cabinet, and heavy-duty thicknessing bed deliver consistent calibration, superior surface finish, and reliable performance on wide workpieces.",
+      "Meet the Firma 63TH Thicknesser – built for industrial-level woodworking where accuracy and durability matter most. This heavy-duty machine is designed to handle high-volume production with ease, offering Variable feed speeds, Electronic table adjustment, Digital thickness control, Spring-loaded pressure bar, 4-column support for unmatched stability.",
     gallery: [
       "/media/Untitled-design-15.webp",
       "/media/Thicknesser-25-Firma-63TH-J1.webp",
@@ -1504,7 +1504,7 @@ const ADDITIONAL_PRODUCTS: Record<
       },
     ],
     galleryDescription:
-      "The Amuzma Firma C8 Hot Press is engineered to deliver uniform pressure, consistent heat distribution, and reliable performance for professional woodworking applications. Built with a robust frame and precision hydraulic system, it ensures superior bonding quality and outstanding productivity for demanding production environments. Whether you're producing furniture, doors, or decorative panels, the Firma C8 Hot Press provides the strength, precision, and reliability your workshop demands.",
+      "The Amuzma Firma C8 Hot Press is engineered to deliver uniform pressure, consistent heat distribution, and reliable performance for professional woodworking applications. Built with a robust frame and precision hydraulic system, it ensures superior bonding quality and outstanding productivity for demanding production environments.\n\nWhether you're producing furniture, doors, or decorative panels, the Firma C8 Hot Press provides the strength, precision, and reliability your workshop demands.",
     gallery: [
       "/media/Hotpress-C8.jpeg",
       "/media/Heavy-Duty-Machine-Frame.jpg.jpeg",

@@ -15,6 +15,7 @@ export const PRODUCT_CATALOGUE_PDFS: Record<string, string> = {
   "spindle-moulder-elite-30sm": "/assets/documents/Spindal 30SM.pdf",
   "edge-banding-e5": "/assets/documents/edge banding Elite E5.pdf",
   "edge-banding-p6": "/assets/documents/edge banding Elite P6.pdf",
+  "edge-banding-c7": FULL_CATALOGUE_PDF,
   "planer-elite-41pf": "/assets/documents/Planer 41PF.pdf",
   "planer-elite-41cm-cs": "/assets/documents/thicknesser 41CM.pdf",
   "thicknesser-elite-41th": "/assets/documents/Thicknesser Elite 41TH.pdf",

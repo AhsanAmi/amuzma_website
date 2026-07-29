@@ -361,16 +361,16 @@ export function Header() {
             className="flex-1 px-10 py-9 xl:px-14 xl:py-10"
             style={{ backgroundColor: COMPANY_RED }}
           >
-            <h3 className="font-heading font-medium text-[28px] text-white mb-5 xl:text-[30px]">
+            <h3 className="font-heading font-medium text-[22px] text-white mb-4 xl:text-[24px]">
               {companyMenu.quickLinks.title}
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="space-y-2.5">
               {companyMenu.quickLinks.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     prefetch={activeMenu === "company" ? null : false}
-                    className="font-heading font-medium text-[20px] leading-snug text-white/90 underline-offset-[6px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[22px]"
+                    className="font-heading font-medium text-[16px] leading-snug text-white/70 transition-colors duration-200 hover:text-white xl:text-[17px]"
                     onClick={closeMenu}
                   >
                     {link.label}
@@ -383,16 +383,16 @@ export function Header() {
             className="flex-1 px-10 py-9 xl:px-14 xl:py-10"
             style={{ backgroundColor: COMPANY_GREEN }}
           >
-            <h3 className="font-heading font-medium text-[28px] text-white mb-5 xl:text-[30px]">
+            <h3 className="font-heading font-medium text-[22px] text-white mb-4 xl:text-[24px]">
               {companyMenu.services.title}
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="space-y-2.5">
               {companyMenu.services.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     prefetch={activeMenu === "company" ? null : false}
-                    className="font-heading font-medium text-[20px] leading-snug text-white/90 underline-offset-[6px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[22px]"
+                    className="font-heading font-medium text-[16px] leading-snug text-white/70 transition-colors duration-200 hover:text-white xl:text-[17px]"
                     onClick={closeMenu}
                   >
                     {link.label}
@@ -423,7 +423,7 @@ export function Header() {
                   <Link
                     href={category.href}
                     prefetch={activeMenu === "products" ? null : false}
-                    className="underline-offset-[6px] decoration-2 transition-all duration-200 hover:underline"
+                    className="opacity-90 transition-opacity duration-200 hover:opacity-100"
                     onClick={closeMenu}
                   >
                     {category.title}
@@ -444,7 +444,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       prefetch={activeMenu === "products" ? null : false}
-                      className="font-heading text-[15px] font-medium leading-[1.4] text-white/90 underline-offset-[5px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[16px]"
+                      className="font-heading text-[15px] font-medium leading-[1.4] text-white/70 transition-colors duration-200 hover:text-white xl:text-[16px]"
                       onClick={closeMenu}
                     >
                       {item.label}

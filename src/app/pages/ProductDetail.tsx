@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { MediaImage as Image } from "../components/MediaImage";
 import { useParams } from "next/navigation";
 import { ProductGallerySection } from "../components/ProductGallerySection";
@@ -989,7 +989,7 @@ const ADDITIONAL_PRODUCTS: Record<
     name: "EDGE BANDING",
     model: "Elite P6",
     category: "Edge Banders",
-    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-P6.jpg",
+    heroImage: "/media/amuzma-web-banners-for-Edge-Banding-E5.jpg",
     tagline: "Powerful & Industrial",
     featuresSubtitle:
       "The Elite P6 combines advanced bonding technology with stable operation, ensuring clean edges, reduced material waste, and high-efficiency production.",
@@ -1570,7 +1570,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
   const params = useParams();
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
-  const [activeSection, setActiveSection] = useState<string>("Features");
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (section: string) => {
@@ -1588,37 +1588,6 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
 
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   };
-
-  useEffect(() => {
-    const sectionIds = NAV_SECTIONS.map((s) => s.toLowerCase());
-    const elements = sectionIds
-      .map((sid) => document.getElementById(sid))
-      .filter((el): el is HTMLElement => Boolean(el));
-
-    if (elements.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]?.target?.id) {
-          const label = NAV_SECTIONS.find(
-            (s) => s.toLowerCase() === visible[0].target.id,
-          );
-          if (label) setActiveSection(label);
-        }
-      },
-      {
-        // Account for sticky header + section nav
-        rootMargin: "-140px 0px -55% 0px",
-        threshold: [0.1, 0.25, 0.5],
-      },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [id]);
 
   const heroImageClassName = `${product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS} ${LARGE_SCREEN_HERO_IMAGE_CLASS}`;
 
@@ -1676,7 +1645,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
       {/* Section nav — sticky below site header for the full product page */}
       <div
         ref={navRef}
-        className="sticky top-[64px] z-30 hidden border-t border-[#C0202F] bg-[#E4E4E4] lg:block lg:top-[92.16px]"
+        className="sticky top-[64px] z-30 hidden bg-[#E4E4E4] lg:block lg:top-[92.16px]"
       >
         <div className={PAGE_CONTAINER}>
           <div className="flex w-full items-stretch justify-between gap-1 overflow-x-auto scrollbar-hide sm:gap-2 lg:gap-0">
@@ -1687,10 +1656,10 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                   key={section}
                   type="button"
                   onClick={() => scrollTo(section)}
-                  className={`shrink-0 border-b-[3px] px-3 py-3 font-gothic text-[14px] font-normal transition-colors sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center ${
+                  className={`shrink-0 border-b px-3 py-3 font-gothic text-[14px] font-normal transition-colors sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center ${
                     isActive
-                      ? "border-[#C0202F] bg-white text-black"
-                      : "border-transparent text-black hover:border-[#C0202F] hover:bg-white"
+                      ? "border-[#C0202F] bg-[#F2F2F2] text-black"
+                      : "border-transparent text-black hover:border-[#C0202F] hover:bg-[#F2F2F2]"
                   }`}
                 >
                   {section}

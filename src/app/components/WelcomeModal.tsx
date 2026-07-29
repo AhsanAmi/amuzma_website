@@ -53,7 +53,7 @@ export function WelcomeModal() {
       />
 
       <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-        <div className="relative w-full max-w-[438px] max-h-[calc(100dvh-2rem)] pt-7 pr-7 sm:pt-8 sm:pr-8">
+        <div className="relative w-full max-w-[482px] max-h-[calc(100dvh-2rem)] pt-7 pr-7 sm:pt-8 sm:pr-8">
           <button
             type="button"
             onClick={dismiss}
@@ -63,8 +63,8 @@ export function WelcomeModal() {
             <X size={11} strokeWidth={2} className="text-[#333333]" />
           </button>
 
-          <div className="relative max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[8px] border-2 border-[#4F4F4F] bg-white px-4 py-5 shadow-[3px_5px_14px_rgba(0,0,0,0.22)] sm:px-10 sm:py-6">
-            <div className="mb-4 flex justify-center sm:mb-5">
+          <div className="relative max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[8px] border-2 border-[#4F4F4F] bg-white px-8 py-8 shadow-[3px_5px_14px_rgba(0,0,0,0.22)] sm:px-14 sm:py-10">
+            <div className="mb-5 flex justify-center sm:mb-6">
               <Image
                 src="/media/logoheader.webp"
                 alt="AMUZMA"
@@ -75,7 +75,7 @@ export function WelcomeModal() {
               />
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-3.5">
               <div>
                 <label className="mb-1 block font-heading text-[12px] font-medium text-[#1A1A1A]">
                   Name <span style={{ color: BRAND_RED }}>*</span>

@@ -116,8 +116,8 @@ export function Contact() {
 
   return (
     <div>
-      {/* Hero Banner */}
-      <section className="relative h-[198px] w-full overflow-hidden sm:h-[242px] md:h-[286px] lg:h-[330px]">
+      {/* Hero Banner — full image (2400×900) */}
+      <section className="relative aspect-[8/3] w-full overflow-hidden">
         <Image
           src="/media/contactapge.jpeg"
           alt="AMUZMA — worldwide sales partners"

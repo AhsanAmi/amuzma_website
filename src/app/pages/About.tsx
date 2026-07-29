@@ -30,7 +30,7 @@ export function About() {
       {/* Founder Section */}
       <section className="bg-white pb-12 pt-5 sm:pb-16 sm:pt-8 lg:pt-20 xl:pt-[5.5rem]">
         <div
-          className={`mt-4 grid items-start gap-10 lg:mt-5 lg:grid-cols-[1fr_auto] lg:gap-x-8 xl:gap-x-10 ${PAGE_CONTAINER}`}
+          className={`${PAGE_CONTAINER} mt-4 grid items-start gap-10 lg:mt-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-x-10 xl:gap-x-12`}
         >
           <div className="min-w-0 lg:mt-[5%]">
             <p className="mb-2 font-gothic text-[20px] font-normal text-black">
@@ -57,7 +57,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="flex shrink-0 justify-center lg:-translate-x-[10%] lg:justify-start lg:pl-[10%]">
+          <div className="flex min-w-0 justify-center lg:justify-end">
             <MediaImage
               src="/media/New-Project-57.webp"
               alt="Asif Javed – Founder & CEO"
@@ -68,7 +68,9 @@ export function About() {
           </div>
         </div>
 
-        <p className={`mt-4 font-heading text-[16px] font-normal leading-relaxed text-[#666666] ${PAGE_CONTAINER}`}>
+        <p
+          className={`${PAGE_CONTAINER} mt-4 font-heading text-[16px] font-normal leading-relaxed text-[#666666]`}
+        >
           In 2016, Asif Javed moved to Dubai, UAE, where his independent journey
           began. Since then, he has spent nearly a decade selling machinery across
           the UAE, Oman, and Pakistan, gaining valuable insights into customer
@@ -95,7 +97,7 @@ export function About() {
             "url('/media/abstract-blue-geometric-shapes-background-scaled-1.webp')",
         }}
       >
-        <div className={`space-y-10 ${PAGE_CONTAINER}`}>
+        <div className={`${PAGE_CONTAINER} space-y-10`}>
           {BRAND_SECTIONS.map((section) => (
             <div key={section.title}>
               <h2 className="mb-4 font-gothic text-[22px] font-normal leading-[22px] text-[#C0202F]">

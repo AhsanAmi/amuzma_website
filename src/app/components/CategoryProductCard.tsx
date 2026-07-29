@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { CatalogProduct } from "../data/productCatalog";
+import { AddToQuoteButton } from "./AddToQuoteButton";
 import { MediaImage } from "./MediaImage";
 
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
@@ -49,12 +50,15 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
           >
             View Details
           </Link>
-          <Link
+          <AddToQuoteButton
+            name={product.name}
+            model={product.model}
+            image={product.image}
             href={product.detailsHref}
             className="btn-black-fill inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none"
           >
             Get Quote
-          </Link>
+          </AddToQuoteButton>
         </div>
       </div>
     </div>

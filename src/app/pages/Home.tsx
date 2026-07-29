@@ -9,6 +9,7 @@ import { YouTubeFacade } from "../components/YouTubeFacade";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 import { mediaUrl } from "../lib/mediaUrl";
 import { PAGE_CONTAINER } from "../lib/pageLayout";
+import { AddToQuoteButton } from "../components/AddToQuoteButton";
 
 const HERO_SLIDES = [
   {
@@ -885,12 +886,15 @@ function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
           >
             View Details
           </HoverPrefetchLink>
-          <HoverPrefetchLink
+          <AddToQuoteButton
+            name={product.name}
+            model={product.model}
+            image={product.image}
             href={product.href}
             className="btn-black-fill inline-flex h-[41px] items-center justify-center px-4 py-3 sm:px-6 font-gothic text-[15px] font-normal leading-none"
           >
             Get Quote
-          </HoverPrefetchLink>
+          </AddToQuoteButton>
         </div>
       </div>
     </div>

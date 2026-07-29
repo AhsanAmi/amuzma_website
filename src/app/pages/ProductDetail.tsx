@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { MediaImage as Image } from "../components/MediaImage";
 import { useParams } from "next/navigation";
 import { ProductGallerySection } from "../components/ProductGallerySection";
@@ -1570,11 +1570,9 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
   const params = useParams();
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
-  const [activeSection, setActiveSection] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (section: string) => {
-    setActiveSection(section);
     const el = document.getElementById(section.toLowerCase());
     if (!el) return;
 
@@ -1649,23 +1647,16 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
       >
         <div className={PAGE_CONTAINER}>
           <div className="flex w-full items-stretch justify-between gap-1 overflow-x-auto scrollbar-hide sm:gap-2 lg:gap-0">
-            {NAV_SECTIONS.map((section) => {
-              const isActive = activeSection === section;
-              return (
-                <button
-                  key={section}
-                  type="button"
-                  onClick={() => scrollTo(section)}
-                  className={`shrink-0 border-b px-3 py-3 font-gothic text-[14px] font-normal transition-colors sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center ${
-                    isActive
-                      ? "border-[#C0202F] bg-[#F2F2F2] text-black"
-                      : "border-transparent text-black hover:border-[#C0202F] hover:bg-[#F2F2F2]"
-                  }`}
-                >
-                  {section}
-                </button>
-              );
-            })}
+            {NAV_SECTIONS.map((section) => (
+              <button
+                key={section}
+                type="button"
+                onClick={() => scrollTo(section)}
+                className="shrink-0 border-b border-transparent px-3 py-3 font-gothic text-[14px] font-normal text-black transition-colors hover:border-[#C0202F] hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center"
+              >
+                {section}
+              </button>
+            ))}
           </div>
         </div>
       </div>

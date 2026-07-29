@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { YouTubeFacade } from "./YouTubeFacade";
+import { PAGE_CONTAINER, SECTION_SCROLL_MARGIN } from "../lib/pageLayout";
 
 const PRODUCT_VIDEO_ID = "YD5zLrIn_AI";
 
@@ -247,8 +248,8 @@ function ReachOutForm() {
 
 export function ProductVideoContactSection() {
   return (
-    <section id="contact" className="w-full bg-white py-12">
-      <div className="mx-auto max-w-[1410px] px-6 lg:px-[100px]">
+    <section id="contact" className={`w-full bg-white py-12 ${SECTION_SCROLL_MARGIN}`}>
+      <div className={PAGE_CONTAINER}>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-14">
           <div className="flex flex-col">
             <h2 className="font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px] sm:leading-[30px]">

@@ -110,9 +110,9 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
     model: "Elite C7",
     name: "Edge Banding",
     specs: [
-      "Motor Power : 10.3 kW",
-      "Feeding Speed : 8–11–13 m/min",
-      "Panel Thickness : 10–45 mm",
+      "Feeding speed : 8-11-13 m/min",
+      "Panel thickness : 10-45 mm",
+      "Panel width/length : 80/120mm",
     ],
     detailsHref: "/products/edge-banding-c7",
   },

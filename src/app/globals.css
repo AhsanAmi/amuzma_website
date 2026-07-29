@@ -17,6 +17,7 @@
 
 @utility btn-red-outline {
   border: 1px solid #C0202F;
+  border-radius: 5px;
   background-color: #ffffff;
   transition:
     background-color 150ms ease,
@@ -30,6 +31,7 @@
 
 @utility btn-black-fill {
   border: 1px solid #000000;
+  border-radius: 5px;
   background-color: #000000;
   color: #ffffff;
   transition:

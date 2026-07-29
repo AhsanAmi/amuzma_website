@@ -1,9 +1,5 @@
 import { MediaImage } from "../components/MediaImage";
-
-const PAGE_X =
-  "px-5 sm:px-8 lg:px-24 xl:px-36 2xl:px-48";
-
-const FOOTER_ALIGN_LEFT = "pl-5 pr-5 sm:pl-6 sm:pr-6 lg:pl-[55px] lg:pr-24 xl:pr-36 2xl:pr-48";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
 const BRAND_SECTIONS = [
   {
@@ -32,11 +28,11 @@ export function About() {
   return (
     <div>
       {/* Founder Section */}
-      <section className="bg-white pb-12 pt-10 sm:pb-16 sm:pt-16 lg:pt-40 xl:pt-44">
+      <section className="bg-white pb-12 pt-5 sm:pb-16 sm:pt-8 lg:pt-20 xl:pt-[5.5rem]">
         <div
-          className={`mt-8 grid items-start gap-10 lg:mt-10 lg:grid-cols-[1fr_auto] lg:gap-x-8 xl:gap-x-10 ${FOOTER_ALIGN_LEFT}`}
+          className={`mt-4 grid items-start gap-10 lg:mt-5 lg:grid-cols-[1fr_auto] lg:gap-x-8 xl:gap-x-10 ${PAGE_CONTAINER}`}
         >
-          <div className="min-w-0 lg:mt-[10%]">
+          <div className="min-w-0 lg:mt-[5%]">
             <p className="mb-2 font-gothic text-[20px] font-normal text-black">
               Founder &amp; CEO
             </p>
@@ -65,14 +61,14 @@ export function About() {
             <MediaImage
               src="/media/New-Project-57.webp"
               alt="Asif Javed – Founder & CEO"
-              width={668}
-              height={800}
-              className="h-auto w-full max-w-[609px] object-contain lg:max-w-[668px]"
+              width={735}
+              height={880}
+              className="h-auto w-full max-w-[670px] object-contain lg:max-w-[735px]"
             />
           </div>
         </div>
 
-        <p className={`mt-4 font-heading text-[16px] font-normal leading-relaxed text-[#666666] ${PAGE_X}`}>
+        <p className={`mt-4 font-heading text-[16px] font-normal leading-relaxed text-[#666666] ${PAGE_CONTAINER}`}>
           In 2016, Asif Javed moved to Dubai, UAE, where his independent journey
           began. Since then, he has spent nearly a decade selling machinery across
           the UAE, Oman, and Pakistan, gaining valuable insights into customer
@@ -99,7 +95,7 @@ export function About() {
             "url('/media/abstract-blue-geometric-shapes-background-scaled-1.webp')",
         }}
       >
-        <div className={`space-y-10 ${FOOTER_ALIGN_LEFT}`}>
+        <div className={`space-y-10 ${PAGE_CONTAINER}`}>
           {BRAND_SECTIONS.map((section) => (
             <div key={section.title}>
               <h2 className="mb-4 font-gothic text-[22px] font-normal leading-[22px] text-[#C0202F]">

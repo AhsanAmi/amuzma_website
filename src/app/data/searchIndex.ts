@@ -80,7 +80,7 @@ const PRODUCT_META: Record<
   "edge-banding-c7": {
     title: "Edge Banding C7",
     excerpt:
-      "Professional edge banding machine delivering seamless finishes, strong adhesion, and precise trimming for furniture manufacturing.",
+      "Professional edge banding with feeding speed 8-11-13 m/min, panel thickness 10-45 mm, and panel width/length 80/120mm.",
     image: "/media/img41.webp",
     date: "February 17, 2026",
   },

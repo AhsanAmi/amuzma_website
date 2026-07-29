@@ -5,6 +5,7 @@ import { X, CheckCircle } from "lucide-react";
 import { MediaImage as Image } from "../components/MediaImage";
 import Link from "next/link";
 import { useQuoteCart } from "../context/QuoteCartContext";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
 const inputClassName =
   "w-full border border-[#D9D9D9] bg-white px-4 py-3.5 font-gothic text-[15px] font-normal text-black placeholder:text-[#666666] focus:border-[#C0202F] focus:outline-none";
@@ -31,7 +32,7 @@ export function Quote() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-[1320px] px-6 py-12 lg:py-16">
+      <div className={`${PAGE_CONTAINER} py-12 lg:py-16`}>
         {submitted ? (
           <div className="mx-auto max-w-lg py-20 text-center">
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#C0202F]/10">

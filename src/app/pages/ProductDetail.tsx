@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MediaImage as Image } from "../components/MediaImage";
 import { useParams } from "next/navigation";
 import { ProductGallerySection } from "../components/ProductGallerySection";
@@ -11,6 +11,7 @@ import { ProductPartsSection } from "../components/ProductPartsSection";
 import { SAW_PRODUCT_OVERRIDES } from "../data/sawProducts";
 import { PRODUCT_CATALOGUE_PDFS } from "../data/productDocuments";
 import { AddToQuoteButton } from "../components/AddToQuoteButton";
+import { PAGE_CONTAINER, SECTION_SCROLL_MARGIN } from "../lib/pageLayout";
 
 const PRODUCTS_DATA: Record<string, {
   name: string;
@@ -1563,24 +1564,66 @@ const DEFAULT_HERO_IMAGE_CLASS =
 const LARGE_SCREEN_HERO_IMAGE_CLASS =
   "origin-center min-[1800px]:scale-[1.05] min-[2200px]:scale-[1.1] min-[2800px]:scale-[1.15]";
 
-const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"];
+const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"] as const;
 
 export function ProductDetail({ productId }: { productId?: string } = {}) {
   const params = useParams();
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
-  const [activeSection, setActiveSection] = useState("Features");
+  const [activeSection, setActiveSection] = useState<string>("Features");
+  const navRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (section: string) => {
     setActiveSection(section);
     const el = document.getElementById(section.toLowerCase());
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!el) return;
+
+    const headerOffset =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches
+        ? 92.16
+        : 64;
+    const navHeight = navRef.current?.offsetHeight ?? 52;
+    const top =
+      el.getBoundingClientRect().top + window.scrollY - headerOffset - navHeight;
+
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const sectionIds = NAV_SECTIONS.map((s) => s.toLowerCase());
+    const elements = sectionIds
+      .map((sid) => document.getElementById(sid))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]?.target?.id) {
+          const label = NAV_SECTIONS.find(
+            (s) => s.toLowerCase() === visible[0].target.id,
+          );
+          if (label) setActiveSection(label);
+        }
+      },
+      {
+        // Account for sticky header + section nav
+        rootMargin: "-140px 0px -55% 0px",
+        threshold: [0.1, 0.25, 0.5],
+      },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [id]);
 
   const heroImageClassName = `${product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS} ${LARGE_SCREEN_HERO_IMAGE_CLASS}`;
 
   return (
-    <div className="max-w-full overflow-x-hidden">
+    <div className="max-w-full overflow-x-clip">
       {/* Hero */}
       <div className="relative w-full max-w-full">
         <div
@@ -1628,29 +1671,42 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Secondary Nav */}
-        <div className="sticky top-[64px] z-30 hidden bg-[#E4E4E4] lg:block lg:top-[92.16px]">
-          <div className="mx-auto w-full max-w-[1410px] px-4 sm:px-6 lg:px-[100px]">
-            <div className="flex w-full items-center justify-between gap-5 overflow-x-auto py-1 scrollbar-hide sm:gap-6 lg:gap-0">
-              {NAV_SECTIONS.map((section) => (
+      {/* Section nav — sticky below site header for the full product page */}
+      <div
+        ref={navRef}
+        className="sticky top-[64px] z-30 hidden border-t border-[#C0202F] bg-[#E4E4E4] lg:block lg:top-[92.16px]"
+      >
+        <div className={PAGE_CONTAINER}>
+          <div className="flex w-full items-stretch justify-between gap-1 overflow-x-auto scrollbar-hide sm:gap-2 lg:gap-0">
+            {NAV_SECTIONS.map((section) => {
+              const isActive = activeSection === section;
+              return (
                 <button
                   key={section}
                   type="button"
                   onClick={() => scrollTo(section)}
-                  className="shrink-0 py-3 font-gothic text-[14px] font-normal text-black transition-opacity hover:opacity-80 sm:py-4 sm:text-[16px] lg:shrink"
+                  className={`shrink-0 border-b-[3px] px-3 py-3 font-gothic text-[14px] font-normal transition-colors sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center ${
+                    isActive
+                      ? "border-[#C0202F] bg-white text-black"
+                      : "border-transparent text-black hover:border-[#C0202F] hover:bg-white"
+                  }`}
                 >
                   {section}
                 </button>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1410px] space-y-16 px-5 py-10 sm:px-6 sm:py-12 lg:px-[100px]">
+      <div className={`${PAGE_CONTAINER} space-y-16 py-10 sm:py-12`}>
         {/* Features */}
-        <section id="features" className="mt-5 mb-10 sm:mb-[70px]">
+        <section
+          id="features"
+          className={`mt-5 mb-10 sm:mb-[70px] ${SECTION_SCROLL_MARGIN}`}
+        >
           <h2 className="text-center font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px]">
             {product.tagline}
           </h2>
@@ -1683,8 +1739,11 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
       </div>
 
       {/* Benefits */}
-      <section id="benefits" className="w-full bg-[#E4E4E4] py-10 sm:py-12">
-        <div className="mx-auto max-w-[1410px] px-5 sm:px-6 lg:px-[100px]">
+      <section
+        id="benefits"
+        className={`w-full bg-[#E4E4E4] py-10 sm:py-12 ${SECTION_SCROLL_MARGIN}`}
+      >
+        <div className={PAGE_CONTAINER}>
           <h2 className="text-center font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px] sm:leading-[30px]">
             {product.benefitsSectionTitle ?? "Benefits"}
           </h2>
@@ -1714,7 +1773,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1410px] space-y-16 px-5 py-10 sm:px-6 sm:py-12 lg:px-[100px]">
+      <div className={`${PAGE_CONTAINER} space-y-16 py-10 sm:py-12`}>
         <ProductGallerySection
           images={product.gallery}
           description={product.galleryDescription}
@@ -1724,7 +1783,6 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
           productModel={product.model}
           productImage={product.gallery?.[0] ?? product.heroImage}
         />
-
       </div>
 
       <ProductOperationalSection key={id} productId={id} />

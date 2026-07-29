@@ -6,6 +6,7 @@ import {
   SAW_OPERATIONAL_HEADINGS,
   SAW_OPERATIONAL_TABS,
 } from "../data/sawProducts";
+import { PAGE_CONTAINER, SECTION_SCROLL_MARGIN } from "../lib/pageLayout";
 
 type OperationalTab = {
   label: string;
@@ -536,8 +537,8 @@ export function ProductOperationalSection({
   const currentTab = tabs[activeTab];
 
   return (
-    <section id="operational" className="w-full bg-white py-12">
-      <div className="mx-auto max-w-[1410px] px-6 lg:px-[100px]">
+    <section id="operational" className={`w-full bg-white py-12 ${SECTION_SCROLL_MARGIN}`}>
+      <div className={PAGE_CONTAINER}>
         <h2 className="text-center font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px] sm:leading-[30px]">
           {sectionHeading}
         </h2>

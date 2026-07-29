@@ -1,7 +1,6 @@
 import { MediaImage } from "../components/MediaImage";
 import { PageBanner } from "../components/PageBanner";
-
-const PAGE_CONTAINER = "mx-auto w-full max-w-[1410px] px-6 lg:px-0";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
 const MISSION_PILLARS = [
   {

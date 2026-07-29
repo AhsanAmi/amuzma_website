@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MediaImage as Image } from "../components/MediaImage";
 import { Phone, Headphones, Mail, MapPin, Globe } from "lucide-react";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
 const CONTACT_CARDS = [
   {
@@ -129,7 +130,7 @@ export function Contact() {
 
       {/* Choose How We Can Help You */}
       <section className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-8 text-center text-[26px] font-normal leading-tight text-black sm:mb-12 sm:text-[32px] sm:leading-[35px]">
             Choose How We Can Help You
           </h2>
@@ -174,7 +175,7 @@ export function Contact() {
 
       {/* Find Your International Sales Partner */}
       <section className="bg-white pb-10 font-gothic sm:pb-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-8 text-center text-[26px] font-normal leading-tight text-black sm:mb-10 sm:text-[32px] sm:leading-[35px]">
             Find Your International Sales Partner
           </h2>

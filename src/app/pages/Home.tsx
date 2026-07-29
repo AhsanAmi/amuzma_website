@@ -8,6 +8,7 @@ import { ExpertiseCard } from "../components/ExpertiseCard";
 import { YouTubeFacade } from "../components/YouTubeFacade";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 import { mediaUrl } from "../lib/mediaUrl";
+import { PAGE_CONTAINER } from "../lib/pageLayout";
 
 const HERO_SLIDES = [
   {
@@ -420,7 +421,7 @@ export function Home() {
 
       {/* Why Choose Us Counters */}
       <section className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-8 text-center text-[28px] font-normal leading-tight text-black sm:mb-12 sm:text-[35px] sm:leading-[35px]">
             Why Choose Us
           </h2>
@@ -445,7 +446,7 @@ export function Home() {
 
       {/* About Section */}
       <section ref={aboutSectionRef} className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
               <h2 className="mb-5 text-[24px] font-normal leading-tight text-black sm:text-[28px] sm:leading-[28px]">
@@ -501,7 +502,7 @@ export function Home() {
 
       {/* Our Facilities & Features */}
       <section className="bg-white py-10 sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <p className="mb-3 text-center font-gothic text-[14px] font-normal uppercase text-[#C0202F]">
             Trusted Global Performance
           </p>
@@ -518,7 +519,7 @@ export function Home() {
 
       {/* Crafted By Experience */}
       <section className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-6 text-center text-[28px] font-normal leading-tight text-black sm:text-[35px] sm:leading-[35px]">
             Crafted By Experience. Engineered For Production.
           </h2>
@@ -543,7 +544,7 @@ export function Home() {
 
       {/* Experience Shared By Our Clients */}
       <section className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-8 text-center text-[28px] font-normal leading-tight text-black sm:mb-12 sm:text-[35px] sm:leading-[35px]">
             Experience Shared By Our Clients
           </h2>
@@ -599,7 +600,7 @@ export function Home() {
             "url('/media/b1f45558-41a8-4a75-aed2-e7f9d34c90af.jpg.webp')",
         }}
       >
-        <div className="mx-auto max-w-[1320px] px-5 py-6 sm:px-6 sm:py-0">
+        <div className={`${PAGE_CONTAINER} py-6 sm:py-0`}>
           <div className="grid min-h-[480px] items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="max-w-[650px]">
               <h2 className="mb-5 text-[28px] font-normal leading-tight text-[#C0202F] sm:text-[35px] sm:leading-[35px]">
@@ -650,7 +651,7 @@ export function Home() {
 
       {/* Product Video */}
       <section className="bg-white py-10 font-gothic sm:py-16">
-        <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
+        <div className={PAGE_CONTAINER}>
           <h2 className="mb-6 text-center text-[28px] font-normal leading-tight text-black sm:text-[35px] sm:leading-[35px]">
             Product Video
           </h2>
@@ -839,21 +840,34 @@ function TestimonialCard({
 
 function ProductCard({ product }: { product: typeof FACILITIES[0] }) {
   return (
-    <div className="flex flex-col border border-[#E5E5E5] bg-white">
-      <div className="group relative flex h-[220px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[280px] sm:p-6">
-        <Image
-          src={product.image}
-          alt={product.model}
-          fill
-          sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-contain p-5 sm:p-6 transition-transform duration-300 ease-out group-hover:scale-110"
-        />
+    <div className="group flex flex-col border border-[#E5E5E5] bg-white">
+      <div className="relative h-[220px] overflow-hidden bg-white sm:h-[280px]">
+        {/*
+          Scale this whole padded box on hover (not the <img> itself): the image's
+          own wrapper clips tightly at its edges, so zooming the image directly
+          would crop it. Scaling the box instead keeps the image intact, and the
+          20-24px gap to the outer (clipped) edge is comfortably more than the
+          ~5% growth, so it never escapes the card either.
+        */}
+        <div className="absolute inset-5 origin-center transition-transform duration-300 ease-out group-hover:scale-105 sm:inset-6">
+          <Image
+            src={product.image}
+            alt={product.model}
+            fill
+            sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-contain"
+          />
+        </div>
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
         <h3 className="mb-3 font-gothic text-[20px] font-normal text-[#666666]">
-          {product.category}
+          <span className="transition-all duration-300 ease-out group-hover:font-bold group-hover:text-[#C0202F]">
+            {product.category}
+          </span>
           <span className="mx-2 text-[#D0D0D0]">|</span>
-          {product.model}
+          <span className="inline-block origin-left transition-all duration-300 ease-out group-hover:scale-105 group-hover:text-black">
+            {product.model}
+          </span>
         </h3>
         <hr className="mb-4 border-[#E5E5E5]" />
         <ul className="mb-6 flex-1 space-y-2 font-heading text-[16px] font-normal text-[#666666]">

@@ -5,6 +5,7 @@ import { MediaImage as Image } from "./MediaImage";
 import { ChevronLeft, ChevronRight, Eye, FileText, X } from "lucide-react";
 import { FULL_CATALOGUE_PDF } from "../data/productDocuments";
 import { AddToQuoteButton } from "./AddToQuoteButton";
+import { SECTION_SCROLL_MARGIN } from "../lib/pageLayout";
 
 const DEFAULT_GALLERY_IMAGES = [
   "/media/cnc-1-1.webp",
@@ -132,7 +133,7 @@ export function ProductGallerySection({
 
   return (
     <>
-      <section id="gallery" className="py-8">
+      <section id="gallery" className={`py-8 ${SECTION_SCROLL_MARGIN}`}>
         <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <div

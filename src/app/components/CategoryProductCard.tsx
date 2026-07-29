@@ -4,21 +4,34 @@ import { MediaImage } from "./MediaImage";
 
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
   return (
-    <div className="flex min-w-0 flex-col border border-[#E5E5E5] bg-white">
-      <div className="group flex h-[220px] items-center justify-center overflow-hidden bg-white p-5 sm:h-[280px] sm:p-6">
-        <MediaImage
-          src={product.image}
-          alt={product.model}
-          width={400}
-          height={280}
-          className="max-h-full max-w-full object-contain transition-transform duration-300 ease-out group-hover:scale-110"
-        />
+    <div className="group flex min-w-0 flex-col border border-[#E5E5E5] bg-white">
+      <div className="relative h-[220px] overflow-hidden bg-white sm:h-[280px]">
+        {/*
+          Scale this whole padded box on hover (not the <img> itself): MediaImage's
+          own wrapper clips tightly at its edges, so zooming the image directly
+          would crop it. Scaling the box instead keeps the image intact, and the
+          20-24px gap to the outer (clipped) edge is comfortably more than the
+          ~5% growth, so it never escapes the card either.
+        */}
+        <div className="absolute inset-5 origin-center transition-transform duration-300 ease-out group-hover:scale-105 sm:inset-6">
+          <MediaImage
+            src={product.image}
+            alt={product.model}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-contain"
+          />
+        </div>
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
         <h2 className="mb-3 font-gothic text-[20px] font-normal text-[#666666]">
-          {product.category}
+          <span className="transition-all duration-300 ease-out group-hover:font-bold group-hover:text-[#C0202F]">
+            {product.category}
+          </span>
           <span className="mx-2 text-[#D0D0D0]">|</span>
-          {product.model}
+          <span className="inline-block origin-left transition-all duration-300 ease-out group-hover:scale-105 group-hover:text-black">
+            {product.model}
+          </span>
         </h2>
         <hr className="mb-4 border-[#E5E5E5]" />
         <ul className="mb-6 flex-1 space-y-2 font-gothic text-[16px] font-normal text-[#666666]">

@@ -123,34 +123,26 @@ export function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const companyRef = useRef<HTMLButtonElement>(null);
   const productsRef = useRef<HTMLSpanElement>(null);
-  const searchRef = useRef<HTMLButtonElement>(null);
+  const languageRef = useRef<HTMLButtonElement>(null);
   const menuCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [companyMenuBounds, setCompanyMenuBounds] = useState({ left: 0, width: 0 });
-  const [productsMenuBounds, setProductsMenuBounds] = useState({ left: 0, width: 0 });
+  /** Both mega menus span Company → language chevron (same as page content edges). */
+  const [menuBounds, setMenuBounds] = useState({ left: 0, width: 0 });
   const [mobileCompanyExpanded, setMobileCompanyExpanded] = useState(false);
   const [mobileProductsExpanded, setMobileProductsExpanded] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const updateMenuBounds = useCallback(() => {
-    if (!headerRef.current || !productsRef.current || !searchRef.current) return;
+    if (!headerRef.current || !companyRef.current || !languageRef.current) return;
 
     const headerRect = headerRef.current.getBoundingClientRect();
-    const productsRect = productsRef.current.getBoundingClientRect();
-    const searchRect = searchRef.current.getBoundingClientRect();
+    const companyRect = companyRef.current.getBoundingClientRect();
+    const languageRect = languageRef.current.getBoundingClientRect();
 
-    setProductsMenuBounds({
-      left: productsRect.left - headerRect.left,
-      width: searchRect.right - productsRect.left,
+    setMenuBounds({
+      left: companyRect.left - headerRect.left,
+      width: languageRect.right - companyRect.left,
     });
-
-    if (companyRef.current) {
-      const companyRect = companyRef.current.getBoundingClientRect();
-      setCompanyMenuBounds({
-        left: companyRect.left - headerRect.left,
-        width: searchRect.right - companyRect.left,
-      });
-    }
   }, []);
 
   const openMenu = useCallback(
@@ -333,7 +325,6 @@ export function Header() {
             {cartLabel}
           </button>
           <button
-            ref={searchRef}
             type="button"
             onClick={openSearch}
             className="text-[#333333] hover:text-[#BF1A2B] transition-colors"
@@ -342,6 +333,7 @@ export function Header() {
             <Search size={26} strokeWidth={1.5} />
           </button>
           <button
+            ref={languageRef}
             type="button"
             onClick={openLanguageModal}
             className={`flex items-center gap-1.5 ${headerTextClass}`}
@@ -354,9 +346,9 @@ export function Header() {
         </div>
       </div>
 
-      {/* Company Mega Menu */}
+      {/* Company Mega Menu — full content width: Company → language arrow */}
       <div
-        style={{ left: companyMenuBounds.left, width: companyMenuBounds.width }}
+        style={{ left: menuBounds.left, width: menuBounds.width }}
         onMouseEnter={() => openMenu("company")}
         onMouseLeave={scheduleCloseMenu}
         className={menuPanelClass(
@@ -369,16 +361,16 @@ export function Header() {
             className="flex-1 px-10 py-9 xl:px-14 xl:py-10"
             style={{ backgroundColor: COMPANY_RED }}
           >
-            <h3 className="font-heading font-medium text-[26px] text-white mb-5">
+            <h3 className="font-heading font-medium text-[28px] text-white mb-5 xl:text-[30px]">
               {companyMenu.quickLinks.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3.5">
               {companyMenu.quickLinks.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     prefetch={activeMenu === "company" ? null : false}
-                    className="font-heading font-medium text-[18px] text-white/95 hover:text-white transition-colors"
+                    className="font-heading font-medium text-[20px] leading-snug text-white/90 underline-offset-[6px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[22px]"
                     onClick={closeMenu}
                   >
                     {link.label}
@@ -391,16 +383,16 @@ export function Header() {
             className="flex-1 px-10 py-9 xl:px-14 xl:py-10"
             style={{ backgroundColor: COMPANY_GREEN }}
           >
-            <h3 className="font-heading font-medium text-[26px] text-white mb-5">
+            <h3 className="font-heading font-medium text-[28px] text-white mb-5 xl:text-[30px]">
               {companyMenu.services.title}
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3.5">
               {companyMenu.services.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     prefetch={activeMenu === "company" ? null : false}
-                    className="font-heading font-medium text-[18px] text-white/95 hover:text-white transition-colors"
+                    className="font-heading font-medium text-[20px] leading-snug text-white/90 underline-offset-[6px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[22px]"
                     onClick={closeMenu}
                   >
                     {link.label}
@@ -412,26 +404,26 @@ export function Header() {
         </div>
       </div>
 
-      {/* Products Mega Menu */}
+      {/* Products Mega Menu — same width as Company menu */}
       <div
-        style={{ left: productsMenuBounds.left, width: productsMenuBounds.width }}
+        style={{ left: menuBounds.left, width: menuBounds.width }}
         onMouseEnter={() => openMenu("products")}
         onMouseLeave={scheduleCloseMenu}
-        className={menuPanelClass("products", "max-h-[420px]")}
+        className={menuPanelClass("products", "max-h-[520px]")}
       >
         <div className="grid grid-cols-4 grid-rows-2">
           {productCategories.map((category) => (
             <div
               key={category.title}
-              className="px-4 py-3 xl:px-5 xl:py-3.5"
+              className="px-4 py-4 xl:px-5 xl:py-5"
               style={{ backgroundColor: category.color }}
             >
-              <h3 className="mb-1.5 font-heading text-[16px] font-medium leading-tight text-white xl:text-[17px]">
+              <h3 className="mb-2 font-heading text-[20px] font-medium leading-tight text-white xl:text-[22px]">
                 {"href" in category && category.href ? (
                   <Link
                     href={category.href}
                     prefetch={activeMenu === "products" ? null : false}
-                    className="hover:text-white/90 transition-colors"
+                    className="underline-offset-[6px] decoration-2 transition-all duration-200 hover:underline"
                     onClick={closeMenu}
                   >
                     {category.title}
@@ -443,8 +435,8 @@ export function Header() {
               <ul
                 className={
                   category.items.length > 5
-                    ? "grid grid-cols-2 gap-x-4 gap-y-0.5"
-                    : "space-y-0.5"
+                    ? "grid grid-cols-2 gap-x-4 gap-y-1"
+                    : "space-y-1"
                 }
               >
                 {category.items.map((item) => (
@@ -452,7 +444,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       prefetch={activeMenu === "products" ? null : false}
-                      className="font-heading text-[12px] font-medium leading-[1.35] text-white/95 transition-colors hover:text-white xl:text-[13px]"
+                      className="font-heading text-[15px] font-medium leading-[1.4] text-white/90 underline-offset-[5px] decoration-2 transition-all duration-200 hover:text-white hover:underline xl:text-[16px]"
                       onClick={closeMenu}
                     >
                       {item.label}

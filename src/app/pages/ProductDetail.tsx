@@ -47,11 +47,11 @@ const PRODUCTS_DATA: Record<string, {
     featuresSubtitle:
       "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
-      "The FORTE 1325CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
+      "The FORTE 13CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
     dimensionsImage: "/media/CNC-13CR-scaled.webp",
     dimensionsDescription:
-      "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
-    partsLabel: "Forte 1325CR",
+      "The FORTE 13CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
+    partsLabel: "Forte 13CR",
     partsImages: [
       "/media/CNC-01.jpg-scaled.webp",
       "/media/CNC-03.jpg-scaled.webp",
@@ -79,7 +79,7 @@ const PRODUCTS_DATA: Record<string, {
       {
         title: "Gantry Side Support",
         image: "/media/CNC-05.jpg-scaled.webp",
-        desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 1325CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
+        desc: "Equipped with precision linear guides and a powerful spindle, the FORTE 13CR guarantees smooth motion and reliable cutting performance. It processes wood, MDF, plywood, acrylic, and composites with accuracy.",
       },
     ],
     benefitsSubtitle:
@@ -137,13 +137,13 @@ const PRODUCTS_DATA: Record<string, {
     tagline: "Smart Technology. Industrial Strength. Precision in Every Cut.",
     heroImage: "/media/CNC-13CR-1.webp",
     featuresSubtitle:
-      "High-performance CNC router with 1300×2500mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
+      "High-performance CNC router with 1500×3000mm area, rigid steel frame, precision guides, powerful spindle for accurate sheet processing.",
     galleryDescription:
-      "The FORTE 1325CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
+      "The FORTE 15CR is a high-performance CNC router designed for woodworking, sign-making, and panel processing, delivering speed, precision, and reliable results across wood, MDF, plywood, acrylic, and composite materials.",
     dimensionsImage: "/media/CNC-15CR-scaled.webp",
     dimensionsDescription:
-      "The FORTE 1325CR features a spacious 1300 × 2500 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
-    partsLabel: "Forte 1325CR",
+      "The FORTE 15CR features a spacious 1500 × 3000 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
+    partsLabel: "Forte 15CR",
     partsImages: [
       "/media/cnc-1-1.webp",
       "/media/cnc-1-2-1024x640-1.webp",
@@ -185,7 +185,7 @@ const PRODUCTS_DATA: Record<string, {
       {
         icon: "/media/Untitled-design-5.webp",
         title: "Large Work Area",
-        desc: "1300 × 2500 mm table handles full sheets easily and efficiently.",
+        desc: "1500 × 3000 mm table handles full sheets easily and efficiently.",
       },
       {
         icon: "/media/Untitled-design-6.webp",
@@ -421,8 +421,7 @@ const PRODUCTS_DATA: Record<string, {
       "The Wide Belt Sander Firma 1300WS delivers precision sanding for wood panels, doors, and furniture components. Its 1300mm working width, powerful motor, and adjustable feed speed ensure smooth, consistent finishes. Built with a heavy-duty frame and user-friendly controls, it's ideal for professional workshops seeking efficiency, accuracy, and reliable performance.",
     dimensionsImage: "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
     dimensionsHeading: "Wide Belt Sander Firma 1300WS:",
-    dimensionsDescription:
-      "Working Width: 1300 mm\nWorking Thickness: 3–110 mm\nConveyor Table Length: 2200 mm\nMachine Length: 2500 mm\nMachine Width: 2000 mm\nMachine Height: 2100 mm\nNet Weight: 2800 kg\nGross Weight: 3200 kg\n\nIf you need exact factory-certified dimensions, I can format them according to your brochure style.",
+    dimensionsDescription: "",
     partsLabel: "Firma 1300WS",
     partsImages: [
       "/media/wide_belt_sander_21.jpg-removebg-preview.webp",
@@ -674,7 +673,7 @@ const ADDITIONAL_PRODUCTS: Record<
       "/media/3-2.webp",
       "/media/4-3.webp",
     ],
-    dimensionsImage: "/media/DSC_2375-removebg-preview-2.webp",
+    dimensionsImage: "/media/Dust-collector-ABS5000-03-1024x702.png",
     dimensionsHeading: "Dust Reduction",
     dimensionsDescription:
       "The ABS5000 dust collector efficiently removes airborne dust, fine particles, and industrial waste generated during machine operation. Its powerful suction system ensures cleaner air circulation, reduces dust accumulation on equipment, and improves workplace safety.",
@@ -776,7 +775,7 @@ const ADDITIONAL_PRODUCTS: Record<
       "/media/3-1.webp",
       "/media/4-2.webp",
     ],
-    dimensionsImage: "/media/Dusy-Collector-RDC3800.webp",
+    dimensionsImage: "/media/Dust-collector-RDC3800-1024x702.png",
     dimensionsHeading: "Dust Reduction",
     dimensionsDescription:
       "The RDC3800 is a compact yet powerful dust collector engineered to deliver efficient dust and chip extraction for small to mid-sized workshops. Designed with performance and reliability at its core, it strikes the perfect balance between strong suction power and convenient portability—keeping your workspace cleaner and your equipment operating smoothly.",

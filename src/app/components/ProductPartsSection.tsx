@@ -14,7 +14,7 @@ const DEFAULT_PART_IMAGES = [
 
 export function ProductPartsSection({
   sectionTitle = "Parts",
-  partsLabel = "Forte 1325CR",
+  partsLabel = "Forte 13CR",
   images = DEFAULT_PART_IMAGES,
   parts,
 }: {

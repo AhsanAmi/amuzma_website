@@ -47,6 +47,17 @@ const SANDER_SPECIFICATIONS_RIGHT = [
   { label: "Weight", value: "3000 kg" },
 ];
 
+const SANDER_DIMENSIONS_ITEMS = [
+  { label: "Working Width", value: "1300 mm" },
+  { label: "Working Thickness", value: "3–110 mm" },
+  { label: "Conveyor Table Length", value: "2200 mm" },
+  { label: "Machine Length", value: "2500 mm" },
+  { label: "Machine Width", value: "2000 mm" },
+  { label: "Machine Height", value: "2100 mm" },
+  { label: "Net Weight", value: "2800 kg" },
+  { label: "Gross Weight", value: "3200 kg" },
+];
+
 type SpecConfig = {
   parametersTabLabel: string;
   dimensionsTabLabel?: string;
@@ -84,15 +95,20 @@ const ABS5000_SPECIFICATIONS_RIGHT = [
 ];
 
 const RDC3800_SPECIFICATIONS_LEFT = [
-  { label: "Motor", value: "230V-50Hz, 400V-3Ø-50Hz, 3.8" },
-  { label: "Tank", value: "380 Ltr / 3900 m³/hr" },
-  { label: "Pipe", value: "1 × 150 mm, 3 × 100 mm" },
+  { label: "Power / Voltage", value: "230V / 50Hz" },
+  { label: "Three Phase Voltage", value: "400V, 3 Phase, 50Hz" },
+  { label: "Motor Power", value: "3.8 kW" },
+  { label: "Air Flow Capacity", value: "380 Liter" },
+  { label: "Main Inlet Size", value: "1 × 150 mm" },
+  { label: "Additional Inlet Size", value: "3 × 100 mm" },
 ];
 
 const RDC3800_SPECIFICATIONS_RIGHT = [
-  { label: "Dimension", value: "1170 × 590 × 570 mm" },
-  { label: "Quantity", value: "Qty/20 : 80 pc, Qty/40 : 160 pc" },
-  { label: "Weight", value: "60 / 65 kgs" },
+  { label: "Packing Size", value: "1170 × 590 × 570 mm" },
+  { label: "20 ft Container Quantity", value: "80 pcs" },
+  { label: "40 ft Container Quantity", value: "160 pcs" },
+  { label: "Net / Gross Weight", value: "60 / 65 kg" },
+  { label: "Dimensions", value: "1170 × 590 × 570 mm" },
 ];
 
 const ELITE_E5_SPECIFICATIONS_LEFT = [
@@ -387,6 +403,7 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
     parametersTabWidthClass: "w-[340px] whitespace-nowrap",
     left: SANDER_SPECIFICATIONS_LEFT,
     right: SANDER_SPECIFICATIONS_RIGHT,
+    dimensionsItems: SANDER_DIMENSIONS_ITEMS,
   },
   "dust-collector-dc2200": {
     parametersTabLabel: "System Specifications",

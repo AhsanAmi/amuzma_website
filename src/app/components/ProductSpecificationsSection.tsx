@@ -535,10 +535,10 @@ function ColumnTab({
     <button
       type="button"
       onClick={onClick}
-      className={`w-full min-w-0 max-w-[340px] border-b-[3px] px-2 py-3 text-center font-gothic text-[13px] font-normal uppercase tracking-wide text-black transition-all duration-300 sm:px-4 sm:py-4 sm:text-[16px] ${
+      className={`w-full min-w-0 max-w-[340px] px-2 py-3 text-center font-gothic text-[13px] font-normal uppercase tracking-wide text-black transition-all duration-300 sm:px-4 sm:py-4 sm:text-[16px] ${
         isActive
-          ? "-mb-px border-b-[#C0202F] bg-[#F0F0F0]"
-          : "border-b-transparent bg-transparent hover:bg-[#FAFAFA]"
+          ? "bg-[#F0F0F0]"
+          : "bg-transparent hover:bg-[#FAFAFA]"
       }`}
       aria-current={isActive ? "true" : undefined}
     >

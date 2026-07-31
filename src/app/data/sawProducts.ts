@@ -390,22 +390,22 @@ export const SAW_PRODUCT_OVERRIDES = {
     features: [
       {
         title: "Digital Readout (DRO)",
-        image: "/media/Panel-Saw-Elite-40PA-profile-1.webp",
+        image: "/media/panel-saw-Forte-40PA-Update-July-2026-4-up-768x526.webp",
         desc: "The Forte 40PA is equipped with an advanced Digital Measurement System for precise and reliable fence positioning. Featuring a clear LCD display, the system allows operators to make fast and accurate adjustments.",
       },
       {
         title: "Outrigger Table",
-        image: "/media/Panel-Saw-Elite-40PA-profile-2.webp",
+        image: "/media/panel-saw-Forte-40PA-Update-July-2026-3-768x526.webp",
         desc: "The Forte 40PA features an advanced Motorised Cross-Cut Table with 4th Axis control, designed for fast, accurate, and efficient rectangular cutting operations. the system automatically positions the saw blades.",
       },
       {
         title: "Overhead Saw Blade Guard",
-        image: "/media/Panel-Saw-Elite-40PA-profile-3.webp",
+        image: "/media/panel-saw-Forte-40PA-Update-July-2026-2-768x526..webp",
         desc: "The Forte 40PA features a fully integrated Scoring Saw System designed to deliver exceptional cutting precision and operator convenience.",
       },
       {
         title: "Carriage Handle",
-        image: "/media/Panel-Saw-Elite-40PA-profile-4.webp",
+        image: "/media/panel-saw-Forte-40PA-Update-July-2026-1-768x526.webp",
         desc: "The Forte 40PA is equipped with a robust Sliding Table Lock System designed to provide maximum stability, safety, and precision during cutting operations.",
       },
     ],
@@ -431,11 +431,11 @@ export const SAW_PRODUCT_OVERRIDES = {
     galleryDescription:
       "The Panel saw Forte 40PA is a powerful and precise cutting machine designed for smooth, accurate wood processing. Its heavy-duty construction ensures stable operation, reliable performance, and consistent results for professional woodworking applications.",
     gallery: [
-      "/media/Panel-Saw-Elite-40PA-profile-5.webp",
-      "/media/Panel-Saw-Elite-40PA-profile-1.webp",
-      "/media/Panel-Saw-Elite-40PA-profile-2.webp",
-      "/media/Panel-Saw-Elite-40PA-profile-3.webp",
-      "/media/Panel-Saw-Elite-40PA-profile-4.webp",
+      "/media/panel-saw-Forte-40PA-Update-July-2026-scaled.jpg",
+      "/media/panel-saw-Forte-40PA-Update-July-2026-1.webp",
+      "/media/panel-saw-Forte-40PA-Update-July-2026-2.webp",
+      "/media/panel-saw-Forte-40PA-Update-July-2026-3.webp",
+      "/media/panel-saw-Forte-40PA-Update-July-2026-4-up-768x526.webp",
     ],
     dimensionsImage: "/media/PANEL-SAW-Forte-40PA-04-scaled.webp",
     dimensionsHeading: "Machine Dimensions",

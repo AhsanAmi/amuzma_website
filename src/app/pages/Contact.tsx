@@ -134,7 +134,7 @@ export function Contact() {
           <h2 className="mb-8 text-center text-[26px] font-normal leading-tight text-black sm:mb-12 sm:text-[32px] sm:leading-[35px]">
             Choose How We Can Help You
           </h2>
-          <div className="mx-auto grid max-w-[1000px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {CONTACT_CARDS.map((card) => {
               const Icon = card.icon;
               return (
@@ -181,7 +181,7 @@ export function Contact() {
           </h2>
 
           {/* Region Tabs */}
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <div className="mb-10 flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-3">
             {REGIONS.map((r, i) => (
               <button
                 key={r.name}
@@ -199,7 +199,7 @@ export function Contact() {
           </div>
 
           {/* Partners */}
-          <div className="mx-auto max-w-[1000px]">
+          <div>
             {region.partners.length > 0 ? (
               <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 {region.partners.map((partner) => (
@@ -257,7 +257,7 @@ export function Contact() {
           </div>
 
           {/* Factory Image + Map */}
-          <div className="mx-auto mt-12 grid max-w-[1000px] gap-2 md:grid-cols-2">
+          <div className="mt-12 grid gap-2 md:grid-cols-2">
             <Image
               src="/media/office-image-copy.webp"
               alt="AMUZMA Machinery building"

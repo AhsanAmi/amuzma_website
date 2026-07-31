@@ -1557,12 +1557,38 @@ const DEFAULT_PRODUCT = PRODUCTS_DATA["cnc-router-forte-13cr"];
 const DEFAULT_HERO_HEIGHT_CLASS =
   "h-[304px] sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]";
 
-const DEFAULT_HERO_IMAGE_CLASS =
-  "object-cover max-lg:object-[78%_center] lg:object-center";
+const PRODUCT_DETAIL_HERO_IMAGE = "/media/AMUZMA Product background.jpeg";
 
-/** Keeps laptop composition; mild zoom on ultra-wide so the machine stays near the text. */
-const LARGE_SCREEN_HERO_IMAGE_CLASS =
-  "origin-center min-[1800px]:scale-[1.05] min-[2200px]:scale-[1.1] min-[2800px]:scale-[1.15]";
+const DEFAULT_HERO_IMAGE_CLASS = "object-cover object-center";
+
+/** Product cutouts for the red hero banner (right side, aligned to English dropdown). */
+const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
+  "cnc-router-forte-13cr": "/media/PNG/CNC.png",
+  "cnc-router-forte-15cr": "/media/PNG/CNC.png",
+  "cnc-router-forte-20cr": "/media/PNG/CNC.png",
+  "cnc-router-firma-150atc": "/media/PNG/CNC.png",
+  "wide-belt-sander-firma-1300ws": "/media/PNG/wide belt sander.png",
+  "dust-collector-dc2200": "/media/PNG/DustCollector-AMUZMA DC2200.png",
+  "dust-collector-abs5000": "/media/PNG/DustCollector-AMUZMA ABS5000.png",
+  "dust-collector-rdc3800": "/media/PNG/DustCollector-AMUZMA RDC3800.png",
+  "spindle-moulder-elite-30sm": "/media/PNG/Spindle Moulder - Elite  30SM.png",
+  "edge-banding-e5": "/media/PNG/Edge Banding-Amuzma EliteE5.png",
+  "edge-banding-p6": "/media/PNG/Edge banding-Amuzma eliteP6.png",
+  "edge-banding-c7": "/media/PNG/Edge banding-Amuzma eliteP6.png",
+  "planer-elite-41pf": "/media/PNG/Planner-Elite 41PF.png",
+  "planer-elite-41cm-cs": "/media/PNG/Planner and Thicknesser- Elite 41CS.png",
+  "thicknesser-elite-41th": "/media/PNG/Thicknesser- Elite 41TH.png",
+  "thicknesser-firma-63th": "/media/PNG/Thicknesser- Elite 63TH.png",
+  "veneer-door-press-p-100t": "/media/PNG/Veneer Door press.png",
+  "band-saw-65bs": "/media/PNG/BandSaw-Elite65BS.png",
+  "beam-saw-firma-33bs": "/media/PNG/Beam saw.png",
+  "panel-saw-firma-40pl": "/media/PNG/Panel Saw- Firma 40PL.png",
+  "panel-saw-firma-35ps": "/media/PNG/Panel Saw-Firma 35PS.png",
+  "panel-saw-forte-40pa": "/media/PNG/Panel Saw- Forte 40PA New.png",
+  "panel-saw-elite-35ts": "/media/PNG/Penel Saw - Elite 35TS.png",
+  "panel-saw-elite-35ps": "/media/PNG/elite 35ps.png",
+  "panel-saw-elite-35eu": "/media/PNG/ELITE 35EU (1).png",
+};
 
 const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"] as const;
 
@@ -1570,6 +1596,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
   const params = useParams();
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
+  const bannerMachineImage = id ? PRODUCT_BANNER_MACHINE_IMAGES[id] : undefined;
   const navRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (section: string) => {
@@ -1587,55 +1614,61 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   };
 
-  const heroImageClassName = `${product.heroImageClassName ?? DEFAULT_HERO_IMAGE_CLASS} ${LARGE_SCREEN_HERO_IMAGE_CLASS}`;
-
   return (
     <div className="max-w-full overflow-x-clip">
       {/* Hero */}
       <div className="relative w-full max-w-full">
         <div
-          className={`relative w-full max-w-full overflow-hidden ${product.heroHeightClassName ?? DEFAULT_HERO_HEIGHT_CLASS}`}
-          style={
-            product.heroBackgroundColor
-              ? { backgroundColor: product.heroBackgroundColor }
-              : undefined
-          }
+          className={`relative w-full max-w-full overflow-hidden ${DEFAULT_HERO_HEIGHT_CLASS}`}
         >
           <Image
-            src={product.heroImage}
-            alt={product.model}
+            src={PRODUCT_DETAIL_HERO_IMAGE}
+            alt=""
             fill
             priority
             sizes="100vw"
-            className={heroImageClassName}
+            className={DEFAULT_HERO_IMAGE_CLASS}
           />
 
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex items-center justify-start px-6 lg:justify-end lg:pl-[100px] lg:pr-10 min-[1800px]:justify-start min-[1800px]:pl-[72px] min-[1800px]:pr-6">
-              <div className="w-full max-w-[513px]">
-                <h1 className="font-gothic text-[26px] font-normal uppercase leading-none text-white sm:text-[36px]">
-                  {product.name}
-                </h1>
-                <p className="mt-2 font-gothic text-[16px] font-normal text-[#FFFCFC]">
-                  {product.model}
-                </p>
+          <div
+            className={`absolute inset-0 flex items-center justify-between gap-4 ${PAGE_CONTAINER}`}
+          >
+            <div className="relative z-10 w-full max-w-[513px] shrink-0">
+              <h1 className="font-gothic text-[26px] font-normal uppercase leading-none text-white sm:text-[36px]">
+                {product.name}
+              </h1>
+              <p className="mt-2 font-gothic text-[16px] font-normal text-[#FFFCFC]">
+                {product.model}
+              </p>
 
-                <div className="mt-6 flex w-full flex-col items-start gap-3 lg:min-h-[150px] lg:max-w-[310px] lg:justify-between lg:bg-white lg:px-5 lg:pb-6 lg:pt-4">
-                  <p className="hidden font-gothic text-[12px] font-normal text-[#666666] lg:block">
-                    Click &apos;Get Free Quote&apos; to customize
-                  </p>
-                  <AddToQuoteButton
-                    productId={id}
-                    name={product.name}
-                    model={product.model}
-                    image={product.gallery?.[0] ?? product.heroImage}
-                    className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
-                  >
-                    Add to Quote
-                  </AddToQuoteButton>
-                </div>
+              <div className="mt-6 flex w-full flex-col items-start gap-3 lg:min-h-[150px] lg:max-w-[310px] lg:justify-between lg:bg-white lg:px-5 lg:pb-6 lg:pt-4">
+                <p className="hidden font-gothic text-[12px] font-normal text-[#666666] lg:block">
+                  Click &apos;Get Free Quote&apos; to customize
+                </p>
+                <AddToQuoteButton
+                  productId={id}
+                  name={product.name}
+                  model={product.model}
+                  image={product.gallery?.[0] ?? product.heroImage}
+                  className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
+                >
+                  Add to Quote
+                </AddToQuoteButton>
               </div>
             </div>
+
+            {bannerMachineImage ? (
+              <div className="relative hidden h-[72%] w-[52%] max-w-[720px] shrink-0 self-center sm:block lg:h-[78%] lg:w-[55%]">
+                <Image
+                  src={bannerMachineImage}
+                  alt={product.model}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 50vw, 55vw"
+                  className="object-contain object-right object-bottom"
+                />
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -1652,7 +1685,7 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
                 key={section}
                 type="button"
                 onClick={() => scrollTo(section)}
-                className="shrink-0 border-b border-transparent px-3 py-3 font-gothic text-[14px] font-normal text-black transition-colors hover:border-[#C0202F] hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center"
+                className="shrink-0 px-3 py-3 font-gothic text-[14px] font-normal text-black transition-colors hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[16px] lg:shrink lg:flex-1 lg:text-center"
               >
                 {section}
               </button>

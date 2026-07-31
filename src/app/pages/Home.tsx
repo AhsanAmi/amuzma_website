@@ -1051,7 +1051,7 @@ function GetInTouchForm() {
       </label>
       <button
         type="submit"
-        className="mt-2 inline-flex h-[43px] items-center justify-center border border-[#C0202F] bg-white px-8 font-gothic text-[15px] font-normal text-[#C0202F] transition-colors hover:bg-[#FFF8F8]"
+        className="btn-red-outline mt-2 inline-flex h-[43px] items-center justify-center px-8 font-gothic text-[15px] font-normal text-[#C0202F]"
       >
         Submit Form
       </button>

@@ -89,9 +89,6 @@ const OPERATIONAL_TABS_15CR: OperationalTab[] = [
 const SANDER_OPERATIONAL_IMAGE =
   "/media/wide_belt_sander_21.jpg-removebg-preview.webp";
 
-const DC2200_OPERATIONAL_IMAGE =
-  "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp";
-
 const DUST_COMPOSITE_IMAGE = "/media/PNG/composite-material.jpg.jpeg";
 const DUST_PLASTIC_IMAGE = "/media/PNG/Plastic Materials.jpg.jpeg";
 const DUST_WOOD_IMAGE = "/media/PNG/Wood-Material.jpg.jpeg";
@@ -120,14 +117,6 @@ const OPERATIONAL_TABS_DC2200: OperationalTab[] = [
       "Designed to enhance workplace safety, the DC2200 offers powerful dust control with stable and efficient operation. Its durable construction ensures long-term performance in demanding workshop conditions.",
     icon: "/media/New-Project-11.webp",
     image: DUST_WOOD_IMAGE,
-  },
-  {
-    label: "Production",
-    heading: "Precision Driven Process",
-    description:
-      "The DC2200 delivers high-performance dust extraction to maintain a clean and efficient workspace. Engineered for strong airflow and consistent suction, it helps protect both equipment and operators during daily operations.",
-    icon: "/media/New-Project-12.webp",
-    image: DC2200_OPERATIONAL_IMAGE,
   },
 ];
 

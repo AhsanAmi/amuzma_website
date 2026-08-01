@@ -5,6 +5,8 @@ export type CatalogProduct = {
   name: string;
   specs: string[];
   detailsHref: string;
+  /** Optional CSS scale class so category cutouts match in visual size. */
+  imageScaleClass?: string;
 };
 
 export const ALL_PRODUCTS: CatalogProduct[] = [
@@ -58,7 +60,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/PNG/Dust Collector DC2200.jpg.jpeg",
+    image: "/media/PNG/DustCollector-AMUZMA DC2200.png",
     model: "DC2200",
     name: "Dust Collector",
     specs: [
@@ -67,6 +69,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Tank Capacity : 1x150 3x100mm",
     ],
     detailsHref: "/products/dust-collector-dc2200",
+    imageScaleClass: "scale-[1.12]",
   },
   {
     category: "Dust Extractors & Waste",
@@ -79,6 +82,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Tank Capacity : 200 mm (with 4 x 100 mm)",
     ],
     detailsHref: "/products/dust-collector-abs5000",
+    imageScaleClass: "scale-[1.12]",
   },
   {
     category: "Dust Extractors & Waste",
@@ -91,6 +95,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
       "Tank Capacity : 1 x 150 mm, 3 x 100 mm",
     ],
     detailsHref: "/products/dust-collector-rdc3800",
+    imageScaleClass: "scale-[1.12]",
   },
   {
     category: "Edgebanders",

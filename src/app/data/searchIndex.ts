@@ -54,7 +54,7 @@ const PRODUCT_META: Record<
     title: "Dust Collector DC2200",
     excerpt:
       "Efficient extraction with compact design and clean results. Power: 230V-50Hz, 400V, 3-50Hz 3.8W. Airflow: 3900m³/hr 380Ltr.",
-    image: "/media/PNG/Dust Collector DC2200.jpg.jpeg",
+    image: "/media/PNG/DustCollector-AMUZMA DC2200.png",
     date: "February 18, 2026",
   },
   "dust-collector-abs5000": {

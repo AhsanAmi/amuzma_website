@@ -4,25 +4,43 @@ import { AddToQuoteButton } from "./AddToQuoteButton";
 import { MediaImage } from "./MediaImage";
 
 export function CategoryProductCard({ product }: { product: CatalogProduct }) {
+  const hasCustomScale = Boolean(product.imageScaleClass);
+
   return (
     <div className="group flex min-w-0 flex-col border border-[#E5E5E5] bg-white">
       <div className="relative h-[220px] overflow-hidden bg-white sm:h-[280px]">
         {/*
-          Scale this whole padded box on hover (not the <img> itself): MediaImage's
-          own wrapper clips tightly at its edges, so zooming the image directly
-          would crop it. Scaling the box instead keeps the image intact, and the
-          20-24px gap to the outer (clipped) edge is comfortably more than the
-          ~5% growth, so it never escapes the card either.
+          Scale the padded box on hover (not the <img>): MediaImage's wrapper clips
+          tightly, so zooming the image would crop it. Extra inset leaves room for
+          the ~5% hover growth so nothing escapes the card.
+          Dust products also use a base imageScaleClass — nested so hover multiplies
+          instead of replacing it, with a larger inset to absorb both scales.
         */}
-        <div className="absolute inset-5 origin-center transition-transform duration-300 ease-out group-hover:scale-105 sm:inset-6">
-          <MediaImage
-            src={product.image}
-            alt={product.model}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-contain object-center"
-          />
-        </div>
+        {hasCustomScale ? (
+          <div
+            className={`absolute inset-6 origin-center sm:inset-7 ${product.imageScaleClass}`}
+          >
+            <div className="relative h-full w-full origin-center transition-transform duration-300 ease-out group-hover:scale-105">
+              <MediaImage
+                src={product.image}
+                alt={product.model}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-contain object-center"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="absolute inset-5 origin-center transition-transform duration-300 ease-out group-hover:scale-105 sm:inset-6">
+            <MediaImage
+              src={product.image}
+              alt={product.model}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-contain object-center"
+            />
+          </div>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-5 pt-4">
         <h2 className="mb-3 font-gothic text-[20px] font-normal text-[#666666]">

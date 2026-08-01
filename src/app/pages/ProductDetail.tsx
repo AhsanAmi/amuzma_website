@@ -1715,7 +1715,7 @@ const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
   "fiber-laser-stark-30fl": "/media/PNG/Fiber Laser - 3.png",
   "cnc-router-firma-150atc": "/media/PNG/CNC.png",
   "wide-belt-sander-firma-1300ws": "/media/PNG/wide belt sander.png",
-  "dust-collector-dc2200": "/media/PNG/Dust Collector DC2200.jpg.jpeg",
+  "dust-collector-dc2200": "/media/PNG/DustCollector-AMUZMA DC2200.png",
   "dust-collector-abs5000": "/media/PNG/Dust Collector ABS5000.png",
   "dust-collector-rdc3800": "/media/PNG/Dusy Collector RDC3800.png",
   "spindle-moulder-elite-30sm": "/media/PNG/Spindle Moulder - Elite  30SM.png",
@@ -1736,6 +1736,13 @@ const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
   "panel-saw-elite-35ps": "/media/PNG/elite 35ps.png",
   "panel-saw-elite-35eu": "/media/PNG/ELITE 35EU (1).png",
 };
+
+/** Product cutouts that render ~15% larger on the hero banner. */
+const BANNER_MACHINE_SCALE_115 = new Set([
+  "dust-collector-dc2200",
+  "dust-collector-abs5000",
+  "dust-collector-rdc3800",
+]);
 
 /** Product cutouts that render 10% smaller on the hero banner. */
 const BANNER_MACHINE_SCALE_90 = new Set([
@@ -1778,7 +1785,9 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
       ? "scale-[0.81]"
       : BANNER_MACHINE_SCALE_90.has(id)
         ? "scale-90"
-        : undefined
+        : BANNER_MACHINE_SCALE_115.has(id)
+          ? "scale-[1.15]"
+          : undefined
     : undefined;
   const bannerMachineRightAligned =
     Boolean(id) && BANNER_MACHINE_RIGHT_ALIGN.has(id);

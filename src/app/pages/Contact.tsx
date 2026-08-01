@@ -28,7 +28,8 @@ const CONTACT_CARDS = [
     icon: MapPin,
     title: "Address",
     lines: [
-      { text: "Ras Al Khor Industrial Area 2, Dubai, United Arab Emirates" },
+      { text: "Ras Al Khor Industrial Area 2 Dubai" },
+      { text: "United Arab Emirates" },
     ],
   },
 ];

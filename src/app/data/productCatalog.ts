@@ -58,7 +58,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/Prodocts/Dust Collector dc2200.png",
+    image: "/media/PNG/Dust Collector DC2200.jpg.jpeg",
     model: "DC2200",
     name: "Dust Collector",
     specs: [
@@ -70,7 +70,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/img37.webp",
+    image: "/media/PNG/Dust Collector ABS5000.png",
     model: "ABS5000",
     name: "Dust Collector",
     specs: [
@@ -82,7 +82,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/img38-1.webp",
+    image: "/media/PNG/Dusy Collector RDC3800.png",
     model: "RDC3800",
     name: "Dust Collector",
     specs: [

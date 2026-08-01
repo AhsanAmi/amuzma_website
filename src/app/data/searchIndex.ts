@@ -54,21 +54,21 @@ const PRODUCT_META: Record<
     title: "Dust Collector DC2200",
     excerpt:
       "Efficient extraction with compact design and clean results. Power: 230V-50Hz, 400V, 3-50Hz 3.8W. Airflow: 3900m³/hr 380Ltr.",
-    image: "/media/Prodocts/Dust Collector dc2200.png",
+    image: "/media/PNG/Dust Collector DC2200.jpg.jpeg",
     date: "February 18, 2026",
   },
   "dust-collector-abs5000": {
     title: "Dust Collector ABS5000",
     excerpt:
       "High-capacity dust extraction with 3 HP / 2200W power and airflow up to 5000 m³/h for industrial workshop environments.",
-    image: "/media/img37.webp",
+    image: "/media/PNG/Dust Collector ABS5000.png",
     date: "February 18, 2026",
   },
   "dust-collector-rdc3800": {
     title: "Dust Collector RDC3800",
     excerpt:
       "Reliable dust collection with 380 Ltr / 3900 m³/hr airflow and multi-port tank capacity for woodworking operations.",
-    image: "/media/img38-1.webp",
+    image: "/media/PNG/Dusy Collector RDC3800.png",
     date: "February 18, 2026",
   },
   "edge-banding-e5": {

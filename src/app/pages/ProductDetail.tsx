@@ -1712,7 +1712,7 @@ const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
   "cnc-router-forte-13cr": "/media/PNG/CNC.png",
   "cnc-router-forte-15cr": "/media/PNG/CNC.png",
   "cnc-router-forte-20cr": "/media/PNG/CNC.png",
-  "fiber-laser-stark-30fl": "/media/PNG/Fiber Laser.png",
+  "fiber-laser-stark-30fl": "/media/PNG/Fiber Laser - 3.png",
   "cnc-router-firma-150atc": "/media/PNG/CNC.png",
   "wide-belt-sander-firma-1300ws": "/media/PNG/wide belt sander.png",
   "dust-collector-dc2200": "/media/PNG/DustCollector-AMUZMA DC2200.png",
@@ -1743,11 +1743,16 @@ const BANNER_MACHINE_SCALE_90 = new Set([
   "cnc-router-forte-15cr",
   "cnc-router-forte-20cr",
   "fiber-laser-stark-30fl",
+  "thicknesser-firma-63th",
+  "panel-saw-elite-35ts",
+  "spindle-moulder-elite-30sm",
+]);
+
+/** Already at 90%; another 10% smaller → ~81% of original. */
+const BANNER_MACHINE_SCALE_81 = new Set([
   "planer-elite-41pf",
   "planer-elite-41cm-cs",
   "thicknesser-elite-41th",
-  "thicknesser-firma-63th",
-  "panel-saw-elite-35ts",
 ]);
 
 /** Pin PNG to the right, matching left PAGE_CONTAINER gap after the floating social bar (53px). */
@@ -1757,6 +1762,8 @@ const BANNER_MACHINE_RIGHT_ALIGN = new Set([
   "dust-collector-rdc3800",
   "wide-belt-sander-firma-1300ws",
   "band-saw-65bs",
+  "thicknesser-firma-63th",
+  "thicknesser-elite-41th",
 ]);
 
 const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"] as const;
@@ -1766,8 +1773,13 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
   const bannerMachineImage = id ? PRODUCT_BANNER_MACHINE_IMAGES[id] : undefined;
-  const bannerMachineScaleClass =
-    id && BANNER_MACHINE_SCALE_90.has(id) ? "scale-90" : undefined;
+  const bannerMachineScaleClass = id
+    ? BANNER_MACHINE_SCALE_81.has(id)
+      ? "scale-[0.81]"
+      : BANNER_MACHINE_SCALE_90.has(id)
+        ? "scale-90"
+        : undefined
+    : undefined;
   const bannerMachineRightAligned =
     Boolean(id) && BANNER_MACHINE_RIGHT_ALIGN.has(id);
   const navRef = useRef<HTMLDivElement>(null);

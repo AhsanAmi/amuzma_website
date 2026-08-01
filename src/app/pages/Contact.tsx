@@ -181,22 +181,22 @@ export function Contact() {
             Find Your International Sales Partner
           </h2>
 
-          {/* Region Tabs */}
-          <div className="mb-10 flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-3">
-            {REGIONS.map((r, i) => (
-              <button
-                key={r.name}
-                type="button"
-                onClick={() => setActiveRegion(i)}
-                className={`px-3 py-2 text-[12px] font-normal uppercase tracking-wide transition-colors ${
-                  i === activeRegion
-                    ? "border border-[#E5E5E5] bg-[#F7F7F7] text-black"
-                    : "border border-transparent text-black hover:text-[#C0202F]"
-                }`}
-              >
-                {r.name}
-              </button>
-            ))}
+          {/* Region Tabs — same bar style as product detail section nav */}
+          <div className="mb-10 bg-[#E4E4E4]">
+            <div className="flex w-full items-stretch justify-between gap-1 overflow-x-auto scrollbar-hide sm:gap-0">
+              {REGIONS.map((r, i) => (
+                <button
+                  key={r.name}
+                  type="button"
+                  onClick={() => setActiveRegion(i)}
+                  className={`shrink-0 px-3 py-3 font-gothic text-[12px] font-normal uppercase text-black transition-colors hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[14px] lg:shrink lg:flex-1 lg:text-center lg:text-[15px] ${
+                    i === activeRegion ? "bg-[#F2F2F2]" : ""
+                  }`}
+                >
+                  {r.name}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Partners */}

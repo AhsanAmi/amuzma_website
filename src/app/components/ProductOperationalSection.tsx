@@ -92,30 +92,34 @@ const SANDER_OPERATIONAL_IMAGE =
 const DC2200_OPERATIONAL_IMAGE =
   "/media/Dust-Collector-DC2200-1024x684-removebg-preview.webp";
 
+const DUST_COMPOSITE_IMAGE = "/media/PNG/composite-material.jpg.jpeg";
+const DUST_PLASTIC_IMAGE = "/media/PNG/Plastic Materials.jpg.jpeg";
+const DUST_WOOD_IMAGE = "/media/PNG/Wood-Material.jpg.jpeg";
+
 const OPERATIONAL_TABS_DC2200: OperationalTab[] = [
   {
-    label: "Reliable",
-    heading: "Production",
+    label: "Composite Materials",
+    heading: "Composite Materials",
     description:
       "The Dust Collector DC2200 is designed to provide powerful and efficient dust extraction for clean and safe workshop environments. With strong suction performance and reliable filtration, it ensures improved air quality and enhanced machine efficiency. Built for durability and continuous operation, DC2200 supports healthier and more productive workspaces.",
     icon: "/media/New-Project-9.webp",
-    image: DC2200_OPERATIONAL_IMAGE,
+    image: DUST_COMPOSITE_IMAGE,
   },
   {
-    label: "Performance",
-    heading: "Performance",
+    label: "Plastic Materials",
+    heading: "Plastic Materials",
     description:
       "Built for industrial reliability, the Dust Collector DC2200 effectively removes fine dust and debris, ensuring improved air quality and smoother machine performance. Ideal for professional woodworking environments.",
     icon: "/media/New-Project-10.webp",
-    image: DC2200_OPERATIONAL_IMAGE,
+    image: DUST_PLASTIC_IMAGE,
   },
   {
-    label: "Efficiency",
-    heading: "Stable Daily Production",
+    label: "Wood Material",
+    heading: "Wood Material",
     description:
       "Designed to enhance workplace safety, the DC2200 offers powerful dust control with stable and efficient operation. Its durable construction ensures long-term performance in demanding workshop conditions.",
     icon: "/media/New-Project-11.webp",
-    image: DC2200_OPERATIONAL_IMAGE,
+    image: DUST_WOOD_IMAGE,
   },
   {
     label: "Production",
@@ -127,78 +131,57 @@ const OPERATIONAL_TABS_DC2200: OperationalTab[] = [
   },
 ];
 
-const ABS5000_OPERATIONAL_IMAGE =
-  "/media/DSC_2375-removebg-preview-2.webp";
-
 const OPERATIONAL_TABS_ABS5000: OperationalTab[] = [
   {
-    label: "Consistent",
-    heading: "Production",
+    label: "Composite Materials",
+    heading: "Composite Materials",
     description:
       "The ABS5000 delivers stable and powerful suction throughout operation, ensuring continuous dust removal without interruption in workflow.",
     icon: "/media/New-Project-9.webp",
-    image: ABS5000_OPERATIONAL_IMAGE,
+    image: DUST_COMPOSITE_IMAGE,
   },
   {
-    label: "Energy",
-    heading: "Energy",
+    label: "Plastic Materials",
+    heading: "Plastic Materials",
     description:
       "The ABS5000 Dust Collector is a powerful industrial dust extraction system designed to remove dust, wood chips, and fine particles from machines and work areas. It ensures clean air, safe working conditions, and efficient machine performance. It is ideal for woodworking workshops, manufacturing plants.",
     icon: "/media/New-Project-10.webp",
-    image: ABS5000_OPERATIONAL_IMAGE,
+    image: DUST_PLASTIC_IMAGE,
   },
   {
-    label: "Efficiency",
-    heading: "Motor Power and Performance",
+    label: "Wood Material",
+    heading: "Wood Material",
     description:
       "The ABS5000 is equipped with a powerful 3 HP (2200W) motor that delivers strong suction performance up to 5000 m³/h. This high suction capacity ensures efficient dust removal and smooth workflow in demanding industrial environments.",
     icon: "/media/New-Project-11.webp",
-    image: ABS5000_OPERATIONAL_IMAGE,
-  },
-  {
-    label: "Machine",
-    heading: "Machine Connectivity and Inlet Design",
-    description:
-      "The ABS5000 supports multiple machine connections with 4 outlet ports (Ø100 mm each) and a main inlet diameter of 200 mm. This allows simultaneous dust extraction from several machines, improving productivity and efficiency.",
-    icon: "/media/New-Project-12.webp",
-    image: ABS5000_OPERATIONAL_IMAGE,
+    image: DUST_WOOD_IMAGE,
   },
 ];
 
-const RDC3800_OPERATIONAL_IMAGE = "/media/Dusy-Collector-RDC3800-1.webp";
-
 const OPERATIONAL_TABS_RDC3800: OperationalTab[] = [
   {
-    label: "Consistent",
-    heading: "Easy Setup and Mobility",
+    label: "Composite Materials",
+    heading: "Composite Materials",
     description:
       "The RDC3800 is designed for quick installation and effortless movement around your workshop. Its compact size and built-in casters allow you to position it wherever extraction is needed, saving time and effort.",
     icon: "/media/New-Project-9.webp",
-    image: RDC3800_OPERATIONAL_IMAGE,
+    image: DUST_COMPOSITE_IMAGE,
   },
   {
-    label: "Energy",
-    heading: "Versatile Tool Compatibility",
+    label: "Plastic Materials",
+    heading: "Plastic Materials",
     description:
       "Whether you're using a table saw, planer, or sander, the RDC3800 adapts to multiple machines. Its efficient suction ensures consistent dust removal, keeping all connected tools clean and operating at peak performance.",
     icon: "/media/New-Project-10.webp",
-    image: RDC3800_OPERATIONAL_IMAGE,
+    image: DUST_PLASTIC_IMAGE,
   },
   {
-    label: "Efficiency",
-    heading: "Simple Maintenance and Collection",
+    label: "Wood Material",
+    heading: "Wood Material",
     description:
       "Maintenance is straightforward with a user-friendly collection system and accessible filters. Emptying dust bins and cleaning or replacing filters is fast and easy, minimizing downtime and ensuring uninterrupted daily operations.",
     icon: "/media/New-Project-11.webp",
-    image: RDC3800_OPERATIONAL_IMAGE,
-  },
-  {
-    label: "Machine",
-    heading: "Continuous and Reliable Operation",
-    description:
-      "Built with durable steel construction and high-efficiency components, the RDC3800 delivers dependable performance every day. It handles extended use without losing suction power, ensuring consistent extraction during long or multi-tool work sessions.",
-    icon: "/media/New-Project-12.webp",
-    image: RDC3800_OPERATIONAL_IMAGE,
+    image: DUST_WOOD_IMAGE,
   },
 ];
 
@@ -522,6 +505,7 @@ const OPERATIONAL_HEADING_BY_PRODUCT: Record<string, string> = {
   "thicknesser-firma-63th": "Operational Excellence",
   "spindle-moulder-elite-30sm": "Precision Spindle Machining",
   "dust-collector-dc2200": "Operational Excellence",
+  "dust-collector-abs5000": "Operational Excellence",
   "dust-collector-rdc3800": "Operational Excellence",
 };
 

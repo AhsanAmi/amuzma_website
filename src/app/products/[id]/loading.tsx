@@ -38,21 +38,23 @@ export default function ProductLoading() {
 
       {/* Hero — matches product detail banner */}
       <div className="relative h-[304px] w-full overflow-hidden bg-[#C0202F] sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]">
-        <div
-          className={`absolute inset-0 flex items-center justify-between gap-4 ${PAGE_CONTAINER}`}
-        >
-          <div className="w-full max-w-[513px] shrink-0 space-y-4">
-            <Shimmer className="h-8 w-[70%] max-w-[280px] sm:h-10" />
-            <Shimmer className="h-4 w-32" />
-            <div className="mt-6 hidden h-[150px] max-w-[310px] flex-col justify-between bg-white px-5 pb-6 pt-4 lg:flex">
-              <Block className="h-3 w-48 bg-[#ECECEC]" />
-              <Block className="h-9 w-28 bg-[#C0202F]/25" />
+        <div className={`absolute inset-0 ${PAGE_CONTAINER}`}>
+          <div className="flex h-full w-full items-center gap-6 sm:gap-8 lg:gap-10">
+            <div className="w-full max-w-[340px] shrink-0 space-y-4 lg:max-w-[360px]">
+              <Shimmer className="h-8 w-[70%] max-w-[280px] sm:h-10" />
+              <Shimmer className="h-4 w-32" />
+              <div className="mt-6 hidden h-[150px] max-w-[310px] flex-col justify-between bg-white px-5 pb-6 pt-4 lg:flex">
+                <Block className="h-3 w-48 bg-[#ECECEC]" />
+                <Block className="h-9 w-28 bg-[#C0202F]/25" />
+              </div>
+              <Shimmer className="mt-6 h-10 w-36 lg:hidden" />
             </div>
-            <Shimmer className="mt-6 h-10 w-36 lg:hidden" />
-          </div>
 
-          <div className="relative hidden h-[72%] w-[52%] max-w-[720px] shrink-0 self-center sm:block lg:h-[78%] lg:w-[55%]">
-            <Shimmer className="absolute inset-y-[8%] right-0 w-[88%] rounded-sm" />
+            <div className="relative hidden min-h-0 min-w-0 flex-1 self-stretch sm:block">
+              <div className="absolute inset-y-[6%] inset-x-0 flex items-center justify-center lg:inset-y-[5%]">
+                <Shimmer className="h-full w-full max-w-[90%] rounded-sm" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

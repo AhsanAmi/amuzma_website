@@ -1630,45 +1630,49 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
             className={DEFAULT_HERO_IMAGE_CLASS}
           />
 
-          <div
-            className={`absolute inset-0 flex items-center justify-between gap-4 ${PAGE_CONTAINER}`}
-          >
-            <div className="relative z-10 w-full max-w-[513px] shrink-0">
-              <h1 className="font-gothic text-[26px] font-normal uppercase leading-none text-white sm:text-[36px]">
-                {product.name}
-              </h1>
-              <p className="mt-2 font-gothic text-[16px] font-normal text-[#FFFCFC]">
-                {product.model}
-              </p>
-
-              <div className="mt-6 flex w-full flex-col items-start gap-3 lg:min-h-[150px] lg:max-w-[310px] lg:justify-between lg:bg-white lg:px-5 lg:pb-6 lg:pt-4">
-                <p className="hidden font-gothic text-[12px] font-normal text-[#666666] lg:block">
-                  Click &apos;Get Free Quote&apos; to customize
+          <div className={`absolute inset-0 ${PAGE_CONTAINER}`}>
+            <div className="flex h-full w-full items-center gap-6 sm:gap-8 lg:gap-10">
+              <div className="relative z-10 w-full max-w-[340px] shrink-0 lg:max-w-[360px]">
+                <h1 className="font-gothic text-[26px] font-normal uppercase leading-none text-white sm:text-[36px]">
+                  {product.name}
+                </h1>
+                <p className="mt-2 font-gothic text-[16px] font-normal text-[#FFFCFC]">
+                  {product.model}
                 </p>
-                <AddToQuoteButton
-                  productId={id}
-                  name={product.name}
-                  model={product.model}
-                  image={product.gallery?.[0] ?? product.heroImage}
-                  className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
-                >
-                  Add to Quote
-                </AddToQuoteButton>
-              </div>
-            </div>
 
-            {bannerMachineImage ? (
-              <div className="relative hidden h-[72%] w-[52%] max-w-[720px] shrink-0 self-center sm:block lg:h-[78%] lg:w-[55%]">
-                <Image
-                  src={bannerMachineImage}
-                  alt={product.model}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 50vw, 55vw"
-                  className="object-contain object-right object-bottom"
-                />
+                <div className="mt-6 flex w-full flex-col items-start gap-3 lg:min-h-[150px] lg:max-w-[310px] lg:justify-between lg:bg-white lg:px-5 lg:pb-6 lg:pt-4">
+                  <p className="hidden font-gothic text-[12px] font-normal text-[#666666] lg:block">
+                    Click &apos;Get Free Quote&apos; to customize
+                  </p>
+                  <AddToQuoteButton
+                    productId={id}
+                    name={product.name}
+                    model={product.model}
+                    image={product.gallery?.[0] ?? product.heroImage}
+                    className="inline-flex items-center justify-center border border-white bg-black px-4 py-2 font-gothic text-[14px] font-normal leading-none text-white transition-colors hover:bg-[#222222] lg:inline-block lg:w-auto lg:self-start lg:border-0 lg:bg-[#C0202F] lg:px-[15px] lg:py-[10px] lg:text-[12px] lg:uppercase lg:transition-opacity lg:hover:bg-[#C0202F] lg:hover:opacity-90"
+                  >
+                    Add to Quote
+                  </AddToQuoteButton>
+                </div>
               </div>
-            ) : null}
+
+              {bannerMachineImage ? (
+                <div className="relative hidden min-h-0 min-w-0 flex-1 self-stretch sm:block">
+                  <div className="absolute inset-y-[6%] inset-x-0 flex items-center justify-center lg:inset-y-[5%]">
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={bannerMachineImage}
+                        alt={product.model}
+                        fill
+                        priority
+                        sizes="(max-width: 1024px) 55vw, 50vw"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>

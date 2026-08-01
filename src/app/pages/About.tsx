@@ -28,11 +28,11 @@ export function About() {
   return (
     <div>
       {/* Founder Section */}
-      <section className="bg-white pb-12 pt-5 sm:pb-16 sm:pt-8 lg:pt-20 xl:pt-[5.5rem]">
+      <section className="bg-white pb-12 pt-3 sm:pb-16 sm:pt-[1.28rem] lg:pt-[3.2rem] xl:pt-[3.52rem]">
         <div
-          className={`${PAGE_CONTAINER} mt-4 grid items-start gap-10 lg:mt-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-x-10 xl:gap-x-12`}
+          className={`${PAGE_CONTAINER} mt-2 grid items-center gap-10 lg:mt-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-x-10 xl:gap-x-12`}
         >
-          <div className="min-w-0 lg:mt-[5%]">
+          <div className="min-w-0">
             <p className="mb-2 font-gothic text-[20px] font-normal text-black">
               Founder &amp; CEO
             </p>
@@ -54,6 +54,12 @@ export function About() {
               machine operations, troubleshooting, and sales. This foundation of
               hands-on knowledge was built through years of practical experience and
               mentorship.
+              <br />
+              In 2016, Asif Javed moved to Dubai, UAE, where his independent journey
+              began. Since then, he has spent nearly a decade selling machinery across
+              the UAE, Oman, and Pakistan, gaining valuable insights into customer
+              requirements, market trends, pricing structures, and the strengths and
+              weaknesses of European, Chinese, and Turkish machinery brands.
             </p>
           </div>
 
@@ -71,12 +77,6 @@ export function About() {
         <p
           className={`${PAGE_CONTAINER} mt-4 font-heading text-[16px] font-normal leading-relaxed text-[#666666]`}
         >
-          In 2016, Asif Javed moved to Dubai, UAE, where his independent journey
-          began. Since then, he has spent nearly a decade selling machinery across
-          the UAE, Oman, and Pakistan, gaining valuable insights into customer
-          requirements, market trends, pricing structures, and the strengths and
-          weaknesses of European, Chinese, and Turkish machinery brands.
-          <br />
           During this period, Asif Javed founded AMUZMA, combining the knowledge
           inherited from his family&apos;s legacy with his own market experience to
           create a brand focused on delivering practical, reliable, and

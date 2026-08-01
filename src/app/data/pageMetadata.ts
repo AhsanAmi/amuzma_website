@@ -40,6 +40,7 @@ export const PAGE_TITLES: Record<string, string> = {
   "products/cnc-router-forte-13cr": "CNC ROUTER Forte 13CR – Amuzma",
   "products/cnc-router-forte-15cr": "CNC ROUTER FORTE 15CR – Amuzma",
   "products/cnc-router-forte-20cr": "CNC ROUTER FORTE 20CR – Amuzma",
+  "products/fiber-laser-stark-30fl": "Fiber Laser Stark 30FL – Amuzma",
   "products/cnc-router-firma-150atc": "CNC ROUTER Firma 150ATC – Amuzma",
   "products/wide-belt-sander-firma-1300ws":
     "Wide Belt Sander Firma 1300WS – Amuzma",

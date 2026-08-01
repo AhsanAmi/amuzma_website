@@ -72,7 +72,7 @@ function WarrantyList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li
           key={item}
-          className="font-gothic text-[17px] font-normal leading-relaxed text-black"
+          className="font-gothic text-[16px] font-normal leading-relaxed text-[#666666]"
         >
           {item}
         </li>
@@ -92,12 +92,12 @@ export function Warranties() {
         <div className="space-y-8">
           {SECTIONS.map((section) => (
             <section key={section.title}>
-              <h2 className="mb-2 font-heading text-[20px] font-bold uppercase leading-relaxed text-black">
+              <h2 className="mb-2 font-gothic text-[20px] font-normal uppercase text-black">
                 {section.title}
               </h2>
 
               {section.intro ? (
-                <p className="font-gothic text-[17px] font-normal leading-relaxed text-black">
+                <p className="font-gothic text-[16px] font-normal leading-relaxed text-[#666666]">
                   {section.intro}
                 </p>
               ) : null}
@@ -105,7 +105,7 @@ export function Warranties() {
               {section.items ? <WarrantyList items={section.items} /> : null}
 
               {section.outro ? (
-                <p className="mt-2 font-gothic text-[17px] font-normal leading-relaxed text-black">
+                <p className="mt-2 font-gothic text-[16px] font-normal leading-relaxed text-[#666666]">
                   {section.outro}
                 </p>
               ) : null}
@@ -115,7 +115,7 @@ export function Warranties() {
                   {section.lines.map((line) => (
                     <p
                       key={line}
-                      className="font-gothic text-[17px] font-normal leading-relaxed text-black"
+                      className="font-gothic text-[16px] font-normal leading-relaxed text-[#666666]"
                     >
                       {line}
                     </p>

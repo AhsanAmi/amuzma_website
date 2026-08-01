@@ -62,9 +62,13 @@ export function SearchResults() {
             </p>
           ) : (
             <>
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="border-t border-[#C5D4E0]">
                 {items.map((entry) => (
-                  <SearchResultCard key={entry.id} entry={entry} />
+                  <SearchResultCard
+                    key={entry.id}
+                    entry={entry}
+                    query={displayQuery}
+                  />
                 ))}
               </div>
 

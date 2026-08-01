@@ -1,6 +1,6 @@
 import { SEARCH_INDEX, type SearchEntry } from "../data/searchIndex";
 
-export const RESULTS_PER_PAGE = 6;
+export const RESULTS_PER_PAGE = 10;
 
 function scoreEntry(entry: SearchEntry, terms: string[]): number {
   const title = entry.title.toLowerCase();

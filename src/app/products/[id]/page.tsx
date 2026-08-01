@@ -6,6 +6,7 @@ const PRODUCT_IDS = [
   "cnc-router-forte-13cr",
   "cnc-router-forte-15cr",
   "cnc-router-forte-20cr",
+  "fiber-laser-stark-30fl",
   "cnc-router-firma-150atc",
   "wide-belt-sander-firma-1300ws",
   "band-saw-65bs",

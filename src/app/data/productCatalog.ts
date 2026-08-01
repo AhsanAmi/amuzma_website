@@ -34,15 +34,15 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "CNC Router",
-    image: "/media/Prodocts/CNC Router Firma 20CR.png",
-    model: "FORTE 20CR",
-    name: "CNC Router",
+    image: "/media/PNG/Fiber Laser.png",
+    model: "Stark 30FL",
+    name: "Fiber Laser",
     specs: [
-      "Aluminum profile",
-      "Table + T slots : 2000*3800*200",
-      "Inverter : Delta 7.5 kW",
+      "Laser power : 6000W Fiber Laser",
+      "Working area : 3000 × 1500 mm",
+      "Control System : Cypcut 4000E",
     ],
-    detailsHref: "/products/cnc-router-forte-20cr",
+    detailsHref: "/products/fiber-laser-stark-30fl",
   },
   {
     category: "Dust Extractors & Waste",
@@ -250,7 +250,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Saws",
-    image: "/media/Prodocts/Panel Saw 40PA.png",
+    image: "/media/PNG/Panel Saw- Forte 40PA New.png",
     model: "Forte 40PA",
     name: "Panel Saw",
     specs: [

@@ -316,6 +316,152 @@ const PRODUCTS_DATA: Record<string, {
       { name: "Forte 20CR", image: "/media/cnc-1-2-1024x640-1.webp" },
     ],
   },
+  "fiber-laser-stark-30fl": {
+    name: "FIBER LASER",
+    model: "Stark 30FL",
+    category: "CNC Router",
+    tagline: "High-Speed Cutting. Precision Engineering. Industrial Performance.",
+    heroImage: "/media/fiber-laser/Stark-30FL.jpg",
+    featuresSubtitle:
+      "The AMUZMA Stark 30FL is a high-performance fiber laser cutting machine designed to deliver exceptional speed, precision, and efficiency",
+    galleryDescription:
+      "The AMUZMA Stark 30FL is equipped with a high-performance Precision Motion System, engineered to deliver exceptional accuracy, smooth movement, and high-speed positioning. Utilizing advanced servo drive technology and precision linear guide rails, the system ensures stable, repeatable motion for outstanding cutting performance.\n\nDesigned for demanding industrial production, the Precision Motion System minimizes vibration and positioning errors, enabling intricate cuts, sharp contours, and consistent dimensional accuracy across every job.",
+    dimensionsImage: "/media/PNG/Fiber Laser.png",
+    dimensionsHeading: "Machine Dimensions & Working Area",
+    dimensionsDescription:
+      "The Stark 30FL features a spacious 1500 × 3000 mm working area, ideal for full-size sheet processing. Its robust structural design ensures stability while accommodating large panels and complex machining tasks efficiently.",
+    partsLabel: "Stark 30FL",
+    partsSectionTitle: "Parts",
+    partsImages: [
+      "/media/fiber-laser/Stark-30FL.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL2.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL3.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL4.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL5.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL6.jpg",
+    ],
+    features: [
+      {
+        title: "Large Working Area",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL2.jpg",
+        desc: "The AMUZMA Stark 30FL features a large working area designed to accommodate a wide range of sheet sizes and fabrication requirements. Its spacious cutting bed provides greater flexibility for processing large metal sheet",
+      },
+      {
+        title: "High-Speed Performance",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL3.jpg",
+        desc: "The AMUZMA Stark 30FL is engineered for high-speed laser cutting, delivering exceptional productivity without compromising precision. Powered by advanced fiber laser technology and a high-performance motion.",
+      },
+      {
+        title: "Rigid Steel Frame Build",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL7-800x450.jpg",
+        desc: "The AMUZMA Stark 30FL is built on a heavy-duty rigid steel frame, engineered to provide exceptional strength, stability, and long-term durability.",
+      },
+      {
+        title: "Precision Motion System",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL8-800x450.jpg",
+        desc: "The AMUZMA Stark 30FL is equipped with a high-performance Precision Motion System, engineered to deliver exceptional accuracy, smooth movement, and high-speed positioning.",
+      },
+    ],
+    benefitsSectionTitle: "Benifits",
+    benefitsSubtitle:
+      "Fast cutting and smooth motion improve workflow and output speed.",
+    benefits: [
+      {
+        icon: "/media/Untitled-design-7.webp",
+        title: "High Productivity",
+        desc: "Fast cutting and smooth motion improve workflow and output speed.",
+      },
+      {
+        icon: "/media/Untitled-design-5.webp",
+        title: "Large Work Area",
+        desc: "1500 × 3000 × 200 mm table handles full sheets easily and efficiently.",
+      },
+      {
+        icon: "/media/Untitled-design-6.webp",
+        title: "Strong Construction",
+        desc: "Rigid steel frame ensures stability and long service life.",
+      },
+    ],
+    gallery: [
+      "/media/fiber-laser/Stark-30FL.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL6.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL3.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL2.jpg",
+      "/media/fiber-laser/Fiber-laser-Stark-30FL3.jpg",
+    ],
+    specs: [
+      { label: "Laser power", value: "6000W Fiber Laser Machine" },
+      { label: "Working area", value: "3000*1500mm" },
+      { label: "Control System", value: "Cypcut 4000E control system" },
+      { label: "Laser source", value: "6000W Raycus laser Source" },
+      {
+        label: "Fiber laser cutting head",
+        value: "BOCI BLT 421S Auto focus laser cutting head",
+      },
+      {
+        label: "Beam",
+        value:
+          "Suspension Console+24-inch non- touch screen+wireless control system",
+      },
+      {
+        label: "Sever motor and driver",
+        value: "Fuji Y=1800W*2/X=1800W/Z=850W servo motor",
+      },
+      {
+        label: "X/Y/Z gear wheel and rack",
+        value: "Taiwan Hiwin 30/30/30 guide rail",
+      },
+      {
+        label: "Transmission",
+        value: "Taiwan TBI 2005 ball screw transmission",
+      },
+      {
+        label: "Pneumatic&Gas tube system",
+        value: "6000 Hanli water chiller",
+      },
+      {
+        label: "Electric proportional valve",
+        value: "Germany Alfa reducer",
+      },
+      {
+        label: "Electrical components",
+        value: "Schneider electrical components",
+      },
+      {
+        label: "Number of monitor/Screen",
+        value: "Independent electrical cabinet",
+      },
+      {
+        label: "Smoke emission system",
+        value: "Aventics Proportional Valve",
+      },
+      { label: "Overall power distribution", value: "7.5KW fan" },
+    ],
+    videoId: "dX38tWhBpH4",
+    parts: [
+      { name: "Stark 30FL", image: "/media/fiber-laser/Stark-30FL.jpg" },
+      {
+        name: "Stark 30FL",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL2.jpg",
+      },
+      {
+        name: "Stark 30FL",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL3.jpg",
+      },
+      {
+        name: "Stark 30FL",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL4.jpg",
+      },
+      {
+        name: "Stark 30FL",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL5.jpg",
+      },
+      {
+        name: "Stark 30FL",
+        image: "/media/fiber-laser/Fiber-laser-Stark-30FL6.jpg",
+      },
+    ],
+  },
   "cnc-router-firma-150atc": {
     name: "CNC ROUTER",
     model: "Firma 150ATC",
@@ -1557,15 +1703,16 @@ const DEFAULT_PRODUCT = PRODUCTS_DATA["cnc-router-forte-13cr"];
 const DEFAULT_HERO_HEIGHT_CLASS =
   "h-[304px] sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]";
 
-const PRODUCT_DETAIL_HERO_IMAGE = "/media/AMUZMA Product background.jpeg";
+const PRODUCT_DETAIL_HERO_IMAGE = "/media/amuzma background.png";
 
 const DEFAULT_HERO_IMAGE_CLASS = "object-cover object-center";
 
-/** Product cutouts for the red hero banner (right side, aligned to English dropdown). */
+/** Product cutouts for the hero banner (right side, aligned to English dropdown). */
 const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
   "cnc-router-forte-13cr": "/media/PNG/CNC.png",
   "cnc-router-forte-15cr": "/media/PNG/CNC.png",
   "cnc-router-forte-20cr": "/media/PNG/CNC.png",
+  "fiber-laser-stark-30fl": "/media/PNG/Fiber Laser.png",
   "cnc-router-firma-150atc": "/media/PNG/CNC.png",
   "wide-belt-sander-firma-1300ws": "/media/PNG/wide belt sander.png",
   "dust-collector-dc2200": "/media/PNG/DustCollector-AMUZMA DC2200.png",
@@ -1590,6 +1737,28 @@ const PRODUCT_BANNER_MACHINE_IMAGES: Record<string, string> = {
   "panel-saw-elite-35eu": "/media/PNG/ELITE 35EU (1).png",
 };
 
+/** Product cutouts that render 10% smaller on the hero banner. */
+const BANNER_MACHINE_SCALE_90 = new Set([
+  "cnc-router-forte-13cr",
+  "cnc-router-forte-15cr",
+  "cnc-router-forte-20cr",
+  "fiber-laser-stark-30fl",
+  "planer-elite-41pf",
+  "planer-elite-41cm-cs",
+  "thicknesser-elite-41th",
+  "thicknesser-firma-63th",
+  "panel-saw-elite-35ts",
+]);
+
+/** Pin PNG to the right, matching left PAGE_CONTAINER gap after the floating social bar (53px). */
+const BANNER_MACHINE_RIGHT_ALIGN = new Set([
+  "dust-collector-dc2200",
+  "dust-collector-abs5000",
+  "dust-collector-rdc3800",
+  "wide-belt-sander-firma-1300ws",
+  "band-saw-65bs",
+]);
+
 const NAV_SECTIONS = ["Features", "Benefits", "Gallery", "Operational", "Specifications", "Contact", "Parts"] as const;
 
 export function ProductDetail({ productId }: { productId?: string } = {}) {
@@ -1597,6 +1766,10 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
   const id = productId ?? (params.id as string);
   const product = (id && PRODUCTS_DATA[id]) || DEFAULT_PRODUCT;
   const bannerMachineImage = id ? PRODUCT_BANNER_MACHINE_IMAGES[id] : undefined;
+  const bannerMachineScaleClass =
+    id && BANNER_MACHINE_SCALE_90.has(id) ? "scale-90" : undefined;
+  const bannerMachineRightAligned =
+    Boolean(id) && BANNER_MACHINE_RIGHT_ALIGN.has(id);
   const navRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (section: string) => {
@@ -1658,15 +1831,27 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
 
               {bannerMachineImage ? (
                 <div className="relative hidden min-h-0 min-w-0 flex-1 self-stretch sm:block">
-                  <div className="absolute inset-y-[6%] inset-x-0 flex items-center justify-center lg:inset-y-[5%]">
-                    <div className="relative h-full w-full">
+                  <div
+                    className={`absolute inset-y-[6%] inset-x-0 flex items-center lg:inset-y-[5%] ${
+                      bannerMachineRightAligned
+                        ? "justify-end pr-[53px]"
+                        : "justify-center"
+                    }`}
+                  >
+                    <div
+                      className={`relative h-full w-full${bannerMachineScaleClass ? ` ${bannerMachineScaleClass}` : ""}`}
+                    >
                       <Image
                         src={bannerMachineImage}
                         alt={product.model}
                         fill
                         priority
                         sizes="(max-width: 1024px) 55vw, 50vw"
-                        className="object-contain object-center"
+                        className={`object-contain ${
+                          bannerMachineRightAligned
+                            ? "object-right"
+                            : "object-center"
+                        }`}
                       />
                     </div>
                   </div>
@@ -1707,7 +1892,13 @@ export function ProductDetail({ productId }: { productId?: string } = {}) {
           <h2 className="text-center font-gothic text-[24px] font-normal leading-tight text-black sm:text-[30px]">
             {product.tagline}
           </h2>
-          <p className="mx-auto mt-4 max-w-[900px] text-center font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666]">
+          <p
+            className={`mx-auto mt-4 text-center font-gothic text-[16px] font-normal leading-[27.2px] text-[#666666] ${
+              id === "fiber-laser-stark-30fl"
+                ? "max-w-none lg:whitespace-nowrap"
+                : "max-w-[900px]"
+            }`}
+          >
             {product.featuresSubtitle}
           </p>
 

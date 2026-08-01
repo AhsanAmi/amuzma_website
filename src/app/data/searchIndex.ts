@@ -6,6 +6,7 @@ export type SearchEntry = {
   excerpt: string;
   href: string;
   image?: string;
+  category: string;
   date: string;
   keywords: string;
 };
@@ -34,6 +35,13 @@ const PRODUCT_META: Record<
       "Smart Technology. Industrial Strength. Precision in Every Cut. High-performance CNC router with 2000×3800×200 mm area, rigid steel frame, and powerful spindle.",
     image: "/media/Prodocts/CNC Router Firma 20CR.png",
     date: "February 23, 2026",
+  },
+  "fiber-laser-stark-30fl": {
+    title: "Fiber Laser Stark 30FL",
+    excerpt:
+      "High-Speed Cutting. Precision Engineering. Industrial Performance. 6000W fiber laser with 3000×1500 mm working area and Cypcut 4000E control.",
+    image: "/media/PNG/Fiber Laser.png",
+    date: "August 1, 2026",
   },
   "wide-belt-sander-firma-1300ws": {
     title: "Wide Belt Sander Firma 1300WS",
@@ -158,7 +166,7 @@ const PRODUCT_META: Record<
     title: "Panel Saw Forte 40PA",
     excerpt:
       "High-performance panel saw delivering precision cutting for panel processing and furniture manufacturing.",
-    image: "/media/Prodocts/Panel Saw 40PA.png",
+    image: "/media/PNG/Panel Saw- Forte 40PA New.png",
     date: "February 13, 2026",
   },
   "panel-saw-elite-35ts": {
@@ -184,158 +192,6 @@ const PRODUCT_META: Record<
   },
 };
 
-const CATEGORY_PAGES: SearchEntry[] = [
-  {
-    id: "category-cnc",
-    title: "CNC Machines",
-    excerpt:
-      "Explore AMUZMA CNC router machines engineered for precision cutting, carving, and shaping with smart automation and reliable industrial performance.",
-    href: "/cnc-machines",
-    date: "February 23, 2026",
-    keywords: "cnc machines router woodworking automation precision cutting carving",
-  },
-  {
-    id: "category-saws",
-    title: "Amuzma Factory - Saws",
-    excerpt:
-      "High-precision sawing solutions engineered for clean, accurate cuts, maximizing material efficiency, safety, and productivity across solid wood and panel processing.",
-    href: "/saws",
-    date: "February 23, 2026",
-    keywords: "saws factory panel saw band saw cutting woodworking amuzma",
-  },
-  {
-    id: "category-edgebanders",
-    title: "Amuzma Factory – Edgebanders",
-    excerpt:
-      "High-performance edge banding machines deliver seamless finishes, strong adhesion, precise trimming, enhanced durability, and premium aesthetics for modern furniture manufacturing.",
-    href: "/edge-banders",
-    date: "February 23, 2026",
-    keywords: "edgebanders edge banding factory furniture manufacturing amuzma",
-  },
-  {
-    id: "category-dust",
-    title: "Dust Extractors & Waste",
-    excerpt:
-      "Industrial dust collection systems designed for efficient extraction, compact installation, and clean workshop environments.",
-    href: "/dust-collector-waste",
-    date: "February 20, 2026",
-    keywords: "dust collector extractor waste workshop extraction",
-  },
-  {
-    id: "category-pressing",
-    title: "Pressing Machines",
-    excerpt:
-      "Veneer door presses and pressing solutions for high-quality panel production and furniture manufacturing.",
-    href: "/pressing",
-    date: "February 19, 2026",
-    keywords: "pressing veneer door press panel furniture",
-  },
-  {
-    id: "category-sanders",
-    title: "Sanders",
-    excerpt:
-      "Wide belt sanders and surface finishing machines for superior quality in professional woodworking operations.",
-    href: "/sanders",
-    date: "February 19, 2026",
-    keywords: "sanders wide belt sanding surface finishing",
-  },
-  {
-    id: "category-moulder",
-    title: "Moulder",
-    excerpt:
-      "Advanced moulding technology designed to deliver precise profiling and smooth, consistent finishes in woodworking.",
-    href: "/moulder",
-    date: "February 18, 2026",
-    keywords: "moulder spindle moulding profiling woodworking",
-  },
-  {
-    id: "category-planer",
-    title: "Planer",
-    excerpt:
-      "Planers and thicknessers for accurate dimensioning, smooth surfaces, and reliable workshop performance.",
-    href: "/planer",
-    date: "February 18, 2026",
-    keywords: "planer thicknesser dimensioning woodworking",
-  },
-];
-
-const STATIC_PAGES: SearchEntry[] = [
-  {
-    id: "page-about",
-    title: "About Us",
-    excerpt:
-      "We are a mainland UAE-based machinery brand committed to delivering high-performance solutions to customers worldwide with German engineering standards.",
-    href: "/about",
-    date: "February 10, 2026",
-    keywords: "about amuzma brand company uae machinery",
-  },
-  {
-    id: "page-mission",
-    title: "Mission & Vision",
-    excerpt:
-      "AMUZMA's mission and vision for delivering precision machinery and building long-term partnerships with customers worldwide.",
-    href: "/mission-vision",
-    date: "February 10, 2026",
-    keywords: "mission vision amuzma goals values",
-  },
-  {
-    id: "page-contact",
-    title: "Contact Us",
-    excerpt:
-      "Get in touch with AMUZMA for machinery inquiries, dealer information, quotes, and professional support.",
-    href: "/contact",
-    date: "February 10, 2026",
-    keywords: "contact amuzma support dealer quote inquiry",
-  },
-  {
-    id: "page-warranties",
-    title: "Warranties",
-    excerpt:
-      "Learn about AMUZMA warranty coverage, service support, and protection for your machinery investment.",
-    href: "/warranties",
-    date: "February 10, 2026",
-    keywords: "warranty service support coverage machinery",
-  },
-  {
-    id: "page-products",
-    title: "Products",
-    excerpt:
-      "Browse the full AMUZMA product catalogue including CNC routers, saws, edge banders, sanders, planers, and more.",
-    href: "/products",
-    date: "February 23, 2026",
-    keywords: "products catalogue machinery woodworking cnc saws",
-  },
-  {
-    id: "article-cnc-40",
-    title: "CNC machines 4.0 – Innovation that transforms manufacturing",
-    excerpt:
-      "Innovative CNC router machines deliver accurate cutting, detailed carving, and smooth shaping with smart automation, reliability, speed, and consistent results for woodworking.",
-    href: "/cnc-machines",
-    date: "February 23, 2026",
-    keywords: "cnc machines 4.0 innovation manufacturing automation woodworking router",
-  },
-  {
-    id: "article-cnc-furniture",
-    title: "CNC router for furniture production",
-    excerpt:
-      "AMUZMA CNC routers are designed for furniture production with precision motion systems, large working areas, and reliable performance for continuous industrial use.",
-    href: "/products/cnc-router-forte-15cr",
-    image: "/media/Prodocts/CNC Router 15CR.png",
-    date: "February 23, 2026",
-    keywords: "cnc router furniture production woodworking manufacturing panels",
-  },
-  {
-    id: "article-cnc-router-firma",
-    title: "CNC Router Firma 15CR",
-    excerpt:
-      "The FORTE 15CR CNC router features a 1500 x 3000 mm working area with rigid steel frame construction and high-speed performance for professional production.",
-    href: "/products/cnc-router-forte-15cr",
-    image: "/media/Prodocts/CNC Router 15CR.png",
-    date: "February 23, 2026",
-    keywords: "cnc router firma 15cr forte woodworking",
-  },
-];
-
 function productToSearchEntry(product: (typeof ALL_PRODUCTS)[number]): SearchEntry {
   const slug = product.detailsHref.replace("/products/", "");
   const meta = PRODUCT_META[slug];
@@ -351,7 +207,6 @@ function productToSearchEntry(product: (typeof ALL_PRODUCTS)[number]): SearchEnt
     title,
     product.name,
     product.model,
-    product.category,
     ...product.specs,
     excerpt,
   ]
@@ -364,6 +219,7 @@ function productToSearchEntry(product: (typeof ALL_PRODUCTS)[number]): SearchEnt
     excerpt,
     href: product.detailsHref,
     image,
+    category: product.category,
     date,
     keywords,
   };
@@ -371,6 +227,4 @@ function productToSearchEntry(product: (typeof ALL_PRODUCTS)[number]): SearchEnt
 
 export const SEARCH_INDEX: SearchEntry[] = [
   ...ALL_PRODUCTS.map(productToSearchEntry),
-  ...CATEGORY_PAGES,
-  ...STATIC_PAGES,
 ];

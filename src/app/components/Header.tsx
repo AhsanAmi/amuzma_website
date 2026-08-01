@@ -47,7 +47,7 @@ const productCategories = [
     items: [
       { label: "Forte 13CR", href: "/products/cnc-router-forte-13cr" },
       { label: "Forte 15CR", href: "/products/cnc-router-forte-15cr" },
-      { label: "Forte 20CR", href: "/products/cnc-router-forte-20cr" },
+      { label: "Stark 30FL", href: "/products/fiber-laser-stark-30fl" },
     ],
   },
   {

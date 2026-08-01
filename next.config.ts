@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const PRODUCT_SLUGS = [
+  "fiber-laser-stark-30fl",
   "band-saw-65bs",
   "panel-saw-firma-40pl",
   "panel-saw-firma-35ps",

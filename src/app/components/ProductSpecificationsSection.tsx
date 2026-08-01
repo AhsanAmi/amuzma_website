@@ -443,6 +443,59 @@ const SPECIFICATIONS_BY_PRODUCT: Record<string, SpecConfig> = {
       { label: "Weight", value: "2500 KG" },
     ],
   },
+  "fiber-laser-stark-30fl": {
+    parametersTabLabel: "Specifications",
+    left: [
+      { label: "Laser power", value: "6000W Fiber Laser Machine" },
+      { label: "Working area", value: "3000*1500mm" },
+      { label: "Control System", value: "Cypcut 4000E control system" },
+      { label: "Laser source", value: "6000W Raycus laser Source" },
+      {
+        label: "Fiber laser cutting head",
+        value: "BOCI BLT 421S Auto focus laser cutting head",
+      },
+      {
+        label: "Beam",
+        value:
+          "Suspension Console+24-inch non- touch screen+wireless control system",
+      },
+      {
+        label: "Sever motor and driver",
+        value: "Fuji Y=1800W*2/X=1800W/Z=850W servo motor",
+      },
+    ],
+    right: [
+      {
+        label: "X/Y/Z gear wheel and rack",
+        value: "Taiwan Hiwin 30/30/30 guide rail",
+      },
+      {
+        label: "Transmission",
+        value: "Taiwan TBI 2005 ball screw transmission",
+      },
+      {
+        label: "Pneumatic&Gas tube system",
+        value: "6000 Hanli water chiller",
+      },
+      {
+        label: "Electric proportional valve",
+        value: "Germany Alfa reducer",
+      },
+      {
+        label: "Electrical components",
+        value: "Schneider electrical components",
+      },
+      {
+        label: "Number of monitor/Screen",
+        value: "Independent electrical cabinet",
+      },
+      {
+        label: "Smoke emission system",
+        value: "Aventics Proportional Valve",
+      },
+      { label: "Overall power distribution", value: "7.5KW fan" },
+    ],
+  },
   "cnc-router-firma-150atc": {
     parametersTabLabel: "Specifications",
     left: SPECIFICATIONS_LEFT,

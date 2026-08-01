@@ -37,10 +37,15 @@ export default function ProductLoading() {
       `}</style>
 
       {/* Hero — matches product detail banner */}
-      <div className="relative h-[304px] w-full overflow-hidden bg-[#C0202F] sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]">
+      <div className="relative h-[304px] w-full overflow-hidden sm:h-[345px] md:h-[386px] lg:h-[649px] min-[1800px]:h-[500px] min-[2200px]:h-[460px]">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/media/amuzma background.png')" }}
+          aria-hidden
+        />
         <div className={`absolute inset-0 ${PAGE_CONTAINER}`}>
           <div className="flex h-full w-full items-center gap-6 sm:gap-8 lg:gap-10">
-            <div className="w-full max-w-[340px] shrink-0 space-y-4 lg:max-w-[360px]">
+            <div className="relative z-10 w-full max-w-[340px] shrink-0 space-y-4 lg:max-w-[360px]">
               <Shimmer className="h-8 w-[70%] max-w-[280px] sm:h-10" />
               <Shimmer className="h-4 w-32" />
               <div className="mt-6 hidden h-[150px] max-w-[310px] flex-col justify-between bg-white px-5 pb-6 pt-4 lg:flex">

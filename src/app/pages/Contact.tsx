@@ -181,15 +181,15 @@ export function Contact() {
             Find Your International Sales Partner
           </h2>
 
-          {/* Region Tabs — hover fill like product detail, no bar background */}
+          {/* Region Tabs — product detail nav hover (#F2F2F2) only; no bar bg */}
           <div className="mb-10 flex w-full items-stretch justify-between gap-1 overflow-x-auto scrollbar-hide sm:gap-0">
             {REGIONS.map((r, i) => (
               <button
                 key={r.name}
                 type="button"
                 onClick={() => setActiveRegion(i)}
-                className={`shrink-0 px-3 py-3 font-gothic text-[12px] font-normal uppercase text-black transition-colors hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[14px] lg:shrink lg:flex-1 lg:text-center lg:text-[15px] ${
-                  i === activeRegion ? "bg-[#F2F2F2]" : ""
+                className={`shrink-0 px-3 py-3 font-gothic text-[12px] uppercase text-black transition-colors hover:bg-[#F2F2F2] sm:px-4 sm:py-4 sm:text-[14px] lg:shrink lg:flex-1 lg:text-center lg:text-[15px] ${
+                  i === activeRegion ? "font-bold" : "font-normal"
                 }`}
               >
                 {r.name}

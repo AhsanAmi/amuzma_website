@@ -34,6 +34,18 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "CNC Router",
+    image: "/media/Prodocts/CNC Router Firma 20CR.png",
+    model: "FORTE 20CR",
+    name: "CNC Router",
+    specs: [
+      "Aluminum profile",
+      "Table - T slots 2000 × 3800 × 200",
+      "Rigid steel frame, precision guides",
+    ],
+    detailsHref: "/products/cnc-router-forte-20cr",
+  },
+  {
+    category: "CNC Router",
     image: "/media/PNG/Fiber Laser.png",
     model: "Stark 30FL",
     name: "Fiber Laser",
@@ -58,7 +70,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/Prodocts/Dust Collector ABS5000 shadow.png",
+    image: "/media/img37.webp",
     model: "ABS5000",
     name: "Dust Collector",
     specs: [
@@ -70,7 +82,7 @@ export const ALL_PRODUCTS: CatalogProduct[] = [
   },
   {
     category: "Dust Extractors & Waste",
-    image: "/media/Prodocts/Dust Collector RDC3800.png",
+    image: "/media/img38-1.webp",
     model: "RDC3800",
     name: "Dust Collector",
     specs: [

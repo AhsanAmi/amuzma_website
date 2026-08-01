@@ -61,14 +61,14 @@ const PRODUCT_META: Record<
     title: "Dust Collector ABS5000",
     excerpt:
       "High-capacity dust extraction with 3 HP / 2200W power and airflow up to 5000 m³/h for industrial workshop environments.",
-    image: "/media/Prodocts/Dust Collector ABS5000 shadow.png",
+    image: "/media/img37.webp",
     date: "February 18, 2026",
   },
   "dust-collector-rdc3800": {
     title: "Dust Collector RDC3800",
     excerpt:
       "Reliable dust collection with 380 Ltr / 3900 m³/hr airflow and multi-port tank capacity for woodworking operations.",
-    image: "/media/Prodocts/Dust Collector RDC3800.png",
+    image: "/media/img38-1.webp",
     date: "February 18, 2026",
   },
   "edge-banding-e5": {

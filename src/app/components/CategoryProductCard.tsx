@@ -20,7 +20,7 @@ export function CategoryProductCard({ product }: { product: CatalogProduct }) {
             alt={product.model}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-contain"
+            className="object-contain object-center"
           />
         </div>
       </div>
